@@ -26,6 +26,7 @@ public:
 	friend ostream& operator<<(ostream& in, const Date& d);
 
 	bool cargarFecha(string entrada);
+	void pedirFecha(int anyo, int mes, int dia);
 
 private:
 	int daysInMonth(int m) const;

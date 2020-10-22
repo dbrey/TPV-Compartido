@@ -55,8 +55,15 @@ bool Alquiler::cargarElemAlquiler(string RENT, ListaCoches NCoches)
 	}
 
 	return read;
+}
 
-	
+void Alquiler::meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches)
+{
+	coche = NCoches.coches[PCoche];
+
+	codigo = code;
+	fecha = date;
+	diasA = daysA;
 }
 
 

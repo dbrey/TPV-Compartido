@@ -43,3 +43,10 @@ bool Coche::cargarElemCoches(string FICHERO_COCHES)
 		return true;
 	}
 }
+
+void  Coche::darValores(int code, string name, int price)
+{
+	codigo = code;
+	nombre = name;
+	precio = price;
+}

@@ -28,4 +28,6 @@ public:
 	}
 
 	bool cargarElemAlquiler(string RENT, ListaCoches NCoches);
+
+	void meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches);
 };

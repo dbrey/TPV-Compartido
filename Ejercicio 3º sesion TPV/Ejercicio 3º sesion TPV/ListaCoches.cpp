@@ -84,3 +84,16 @@ Coche* ListaCoches::buscarCoche(int code)
 
 	return aux;
 }
+
+void  ListaCoches::meterCoche(int code, string name, int precio)
+{
+	if (numElem == capacidad)
+	{
+		cout << "Lista llena \n";
+	}
+	else
+	{
+		coches[numElem].darValores(code, name, precio);
+		numElem++;
+	}
+}

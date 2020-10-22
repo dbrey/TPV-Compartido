@@ -22,5 +22,7 @@ public:
 
 	bool cargarCoches(string FICHERO_COCHES);
 	Coche* buscarCoche(int code);
+
+	void meterCoche(int code, string name, int precio);
 };
 

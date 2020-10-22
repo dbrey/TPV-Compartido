@@ -128,3 +128,11 @@ bool Date::cargarFecha(string entrada)
 		return true;
 	}
 }
+
+void Date::pedirFecha(int anyo, int mes, int dia)
+{
+	year = anyo;
+	month = mes;
+	day = dia;
+
+}

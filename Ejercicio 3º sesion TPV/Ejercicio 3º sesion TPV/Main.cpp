@@ -42,17 +42,54 @@ int main()
 
 		if (opcion == 1)
 		{
-			if (NCoches.cargarCoches("coches.txt") && NAlquileres.leeAlquileres("rent", NCoches))
-			{
-				NAlquileres.ordenarAlquileres();
-			}
+			NAlquileres.mostrarAlquileres();
 		}
 		else if (opcion = 2)
 		{
+			int code;
+			cout << "Codigo del coche: \n";
+			cin >> code;
 
+			string nombre;
+			cout << "Nombre del coche: \n";
+			cin >> nombre;
+
+			int precio;
+			cout << "Precio al dia: \n";
+			cin >> precio; 
+
+			NCoches.meterCoche(code, nombre , precio);
 		}
 		else if (opcion == 3)
 		{
+			int PCoche;
+			cout << "Numero del coche en la lista: \n";
+			cin >> PCoche;
+			PCoche += NCoches.getnumElem();
+
+			int codigo;
+			cout << "Codigo del alquiler: \n";
+			cin >> codigo;
+			
+			Date fecha;
+			int anyo, mes, dia;
+			cout << "Año: \n";
+			cin >> anyo;
+
+			cout << "Mes: \n";
+			cin >> mes;
+
+			cout << "Dia: \n";
+			cin >> dia;
+
+			fecha.pedirFecha(anyo, mes, dia);
+
+			int diasA;
+			cout << "Dias que lleva alquilado el coche: \n";
+			cin >> diasA;
+
+			NAlquileres.meterAlquiler(PCoche, codigo, fecha, diasA, NCoches)
+
 
 		}
 		else

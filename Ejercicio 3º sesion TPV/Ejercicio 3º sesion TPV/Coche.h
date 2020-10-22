@@ -23,6 +23,6 @@ public:
 
 	// Metodo para cargar los elementos del coche (ifstream)
 	bool cargarElemCoches(string FICHERO_COCHES);
-
+	void darValores(int code, string name, int price);
 };
 
