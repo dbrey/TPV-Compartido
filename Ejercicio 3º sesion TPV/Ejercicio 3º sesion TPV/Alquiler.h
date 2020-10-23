@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include "Date.cpp"
-#include "ListaCoches.cpp"
+#include "Date.h"
+#include "ListaCoches.h"
 #include <string>
 using namespace std;
 

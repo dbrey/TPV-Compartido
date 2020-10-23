@@ -1,9 +1,5 @@
 #include "Alquiler.h"
 
-Alquiler::Alquiler() : coche(), codigo(0), fecha(), diasA (0){}
-
-Alquiler::Alquiler(Coche* coche, int codigo, Date fecha, int diasA) : coche(coche), codigo(codigo), fecha(fecha), diasA(diasA) {}
-
 Coche* Alquiler::getCoche() const
 {
 	return coche;
@@ -57,14 +53,14 @@ bool Alquiler::cargarElemAlquiler(string RENT, ListaCoches NCoches)
 	return read;
 }
 
-void Alquiler::meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches)
+/*void Alquiler::meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches)
 {
 	coche = NCoches.coches[PCoche];
 
 	codigo = code;
 	fecha = date;
 	diasA = daysA;
-}
+}*/
 
 
 

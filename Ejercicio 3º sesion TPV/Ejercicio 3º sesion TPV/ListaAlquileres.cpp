@@ -1,10 +1,6 @@
 #include "ListaAlquileres.h"
 #include <algorithm>
 
-ListaAlquileres::ListaAlquileres() : numElem(), capacidad(), alquileres() {}
-
-ListaAlquileres::ListaAlquileres(int numElem, int capacidad, Alquiler* alquileres) : numElem(numElem), capacidad(capacidad), alquileres(alquileres) {}
-
 int ListaAlquileres::getnumElem() const
 {
 	return numElem;

@@ -3,14 +3,13 @@
 // Pablo Gonzalez Alvarez
 
 #include <iostream>
-#include <string>;
-#include <algorithm>;
-#include <vector>;
-#include <iostream>;
-#include <fstream>;
-#include "Date.cpp"
-#include "ListaCoches.cpp"
-#include "ListaAlquileres.cpp"
+#include <string>
+#include <algorithm>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include "ListaCoches.h"
+#include "ListaAlquileres.h"
 
 using namespace std;
 
@@ -19,14 +18,15 @@ int main()
 	ListaCoches NCoches = {};
 	ListaAlquileres NAlquileres = {};
 
-	if (NCoches.cargarCoches("coches.txt") && NAlquileres.leeAlquileres("rent", NCoches))
+	if (NCoches.cargarCoches("coches.txt") && NAlquileres.leeAlquileres("rent.txt", NCoches))
 	{
 		NAlquileres.ordenarAlquileres();
+		NAlquileres.mostrarAlquileres();
 	}
 	
 	int opcion = 0;
 	int exit = false;
-	while (!exit)
+	/*while (!exit)
 	{
 		do
 		{
@@ -97,6 +97,6 @@ int main()
 			exit = true;
 		}
 	}
-	
+	*/
 
 }

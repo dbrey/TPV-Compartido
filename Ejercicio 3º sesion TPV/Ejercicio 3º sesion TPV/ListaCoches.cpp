@@ -1,11 +1,7 @@
 #include "ListaCoches.h"
-#include "Coche.cpp"
+#include "Coche.h"
 
 
-
-ListaCoches::ListaCoches() : numElem(), capacidad(), coches() {}
-
-ListaCoches::ListaCoches(int numElem, int capacidad, Coche* coches) : numElem(numElem), capacidad(capacidad), coches(coches) {}
 
 int ListaCoches::getnumElem() const
 {
@@ -47,7 +43,7 @@ bool ListaCoches::cargarCoches(string FICHERO_COCHES)
 		int i = 0;
 		while (i<numElem && read)
 		{
-			if (!coches[i].cargarElemCoches(FICHERO_COCHES))
+			if (!coches[i].cargarElemCoches(input))
 			{
 				read = false;
 			}

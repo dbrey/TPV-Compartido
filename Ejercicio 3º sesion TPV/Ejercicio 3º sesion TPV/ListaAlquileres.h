@@ -1,5 +1,5 @@
 #pragma once
-#include "Alquiler.cpp"
+#include "Alquiler.h"
 
 class ListaAlquileres
 {
