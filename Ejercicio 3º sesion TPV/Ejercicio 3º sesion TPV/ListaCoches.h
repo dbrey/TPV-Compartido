@@ -21,8 +21,9 @@ public:
 	Coche* getCoche()const;
 
 	bool cargarCoches(string FICHERO_COCHES);
-	Coche* buscarCoche(int code);
+	Coche* buscarCoche(const int& code);
+	void del();
 
-	void meterCoche(int code, string name, int precio);
+	void meterCoche(const int& code,const string& name, const int& precio);
 };
 

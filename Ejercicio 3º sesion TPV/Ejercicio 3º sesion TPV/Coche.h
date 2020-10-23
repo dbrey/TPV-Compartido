@@ -22,6 +22,6 @@ public:
 
 	// Metodo para cargar los elementos del coche (ifstream)
 	bool cargarElemCoches(ifstream& input);
-	void darValores(int code, string name, int price);
+	void darValores(const int& code,const string& name, const int& price);
 };
 

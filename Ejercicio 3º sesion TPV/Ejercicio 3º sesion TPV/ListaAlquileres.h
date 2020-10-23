@@ -24,6 +24,8 @@ public:
 
 	void mostrarAlquileres();
 
-	void meterAlquiler(int PCoche, int codigo, Date fecha, int diasA, ListaCoches NCoches);
+	void meterAlquiler(const int& PCoche,const int& codigo,const Date& fecha,const int& diasA, ListaCoches NCoches);
+
+	void del();
 };
 

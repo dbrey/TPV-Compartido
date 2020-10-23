@@ -18,7 +18,7 @@ public:
 	Alquiler() : coche(), codigo(0), fecha(), diasA(0) {};
 	Alquiler(Coche* coche, int codigo, Date fecha, int diasA);
 
-	void darValores(Coche* c, int code, Date f, int dA);
+	void darValores(Coche* c, const int& code,const Date& f, const int& dA);
 
 	int getCodigo()const;
 	int getDiasA()const;

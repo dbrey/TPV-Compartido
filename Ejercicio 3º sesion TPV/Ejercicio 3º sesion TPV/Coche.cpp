@@ -1,8 +1,5 @@
 #include "Coche.h"
 
-
-// Quitar todos los constructores (Alquiler...)
-
 int Coche::getCodigo() const
 {
 	return codigo;
@@ -28,7 +25,7 @@ bool Coche::cargarElemCoches(ifstream& input)
 		return true;
 }
 
-void  Coche::darValores(int code, string name, int price)
+void  Coche::darValores(const int& code,const string& name, const int& price)
 {
 	codigo = code;
 	nombre = name;

@@ -59,8 +59,7 @@ bool ListaCoches::cargarCoches(string FICHERO_COCHES)
 	return read;
 }
 
-
-Coche* ListaCoches::buscarCoche(int code) // Pasar por referencia (const& int code)
+Coche* ListaCoches::buscarCoche(const int& code) // Pasar por referencia (const& int code)
 {
 	Coche* aux;
 	int cont = 0;
@@ -85,7 +84,7 @@ Coche* ListaCoches::buscarCoche(int code) // Pasar por referencia (const& int co
 	return aux;
 }
 
-void  ListaCoches::meterCoche(int code, string name, int precio)
+void ListaCoches::meterCoche(const int& code, const string& name, const int& precio)
 {
 	if (numElem == capacidad)
 	{
@@ -96,4 +95,9 @@ void  ListaCoches::meterCoche(int code, string name, int precio)
 		coches[numElem].darValores(code, name, precio);
 		numElem++;
 	}
+}
+
+void ListaCoches::del()
+{	
+	delete[] coches;
 }

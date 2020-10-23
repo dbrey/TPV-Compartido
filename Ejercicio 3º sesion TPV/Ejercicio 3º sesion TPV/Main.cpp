@@ -22,7 +22,6 @@ int main()
 	if (NCoches.cargarCoches("coches.txt") && NAlquileres.leeAlquileres("rent.txt", NCoches))
 	{
 		NAlquileres.ordenarAlquileres();
-		NAlquileres.mostrarAlquileres();
 	}
 	
 	int opcion = 0;
@@ -33,13 +32,14 @@ int main()
 		{
 			cout << "-------------------------------------------------------------------- \n";
 			cout << "Bienvenido a la lista de coches y alquileres, que le gustaria hacer? \n";
-			cout << "Pulse 1 para ver los alquileres        Pulse 2 para añadir un coche \n";
-			cout << "Pulse 3 para añadir un alquiler                   Pulse 4 para salir \n";
+			cout << "Pulse 1 para ver los alquileres        Pulse 2 para meter un coche \n";
+			cout << "Pulse 3 para meter un alquiler     Pulse 4 para ordenar alquileres \n";
+			cout << "                          Pulse 5 para salir                       \n";
 			cout << "-------------------------------------------------------------------- \n";
 
 			cin >> opcion;
 
-		} while (opcion <= 0 || opcion > 4);
+		} while (opcion <= 0 || opcion > 5);
 
 		if (opcion == 1)
 		{
@@ -74,7 +74,7 @@ int main()
 			
 			Date fecha;
 			int anyo, mes, dia;
-			cout << "Año: \n";
+			cout << "Anyo: \n";
 			cin >> anyo;
 
 			cout << "Mes: \n";
@@ -93,11 +93,17 @@ int main()
 
 
 		}
+		else if (opcion == 4)
+		{
+			NAlquileres.ordenarAlquileres();
+		}
 		else
 		{
-			exit = true;
+			exit = true;		
 		}
 	}
 	
-
+	// Borramos los arrays dinamicos
+	NCoches.del();
+	NAlquileres.del();
 }

@@ -45,7 +45,6 @@ bool Date::operator<(const Date& date) const {
 		(year == date.year && (month < date.month || (month == date.month && day < date.day))));
 }
 
-
 int Date::diff(const Date& date) const {
 	return (calculateValue() - date.calculateValue());
 }
@@ -109,9 +108,6 @@ ostream& operator<<(ostream& out, const Date& d) {
 
 bool Date::cargarFecha(ifstream& entrada)
 {
-	/*ifstream input;
-	input.open(entrada);*/
-
 	// Comprobamos si el fichero se ha encontrado y esta abierto
 	if (!entrada.is_open())
 	{

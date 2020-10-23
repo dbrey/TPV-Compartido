@@ -87,9 +87,9 @@ void ListaAlquileres::mostrarAlquileres()
 	}
 }
 
-void ListaAlquileres::meterAlquiler(int PCoche, int codigo, Date fecha, int diasA, ListaCoches NCoches) {
-
-
+void ListaAlquileres::meterAlquiler(const int& PCoche, const int& codigo,const Date& fecha,const int& diasA, ListaCoches NCoches)
+{
+	// Comprobamos si ha espacio. En caso de haber un sitio libre, metemos los valores al alquiler vacio
 	if (numElem == capacidad) {
 		cout << "Lista llena \n";
 	}
@@ -99,4 +99,9 @@ void ListaAlquileres::meterAlquiler(int PCoche, int codigo, Date fecha, int dias
 	}
 
 
+}
+
+void ListaAlquileres::del()
+{
+	delete[] alquileres;
 }
