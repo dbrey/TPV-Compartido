@@ -18,6 +18,7 @@ int main()
 	ListaCoches NCoches = {};
 	ListaAlquileres NAlquileres = {};
 
+
 	if (NCoches.cargarCoches("coches.txt") && NAlquileres.leeAlquileres("rent.txt", NCoches))
 	{
 		NAlquileres.ordenarAlquileres();
@@ -26,7 +27,7 @@ int main()
 	
 	int opcion = 0;
 	int exit = false;
-	/*while (!exit)
+	while (!exit)
 	{
 		do
 		{
@@ -44,7 +45,7 @@ int main()
 		{
 			NAlquileres.mostrarAlquileres();
 		}
-		else if (opcion = 2)
+		else if (opcion == 2)
 		{
 			int code;
 			cout << "Codigo del coche: \n";
@@ -88,7 +89,7 @@ int main()
 			cout << "Dias que lleva alquilado el coche: \n";
 			cin >> diasA;
 
-			NAlquileres.meterAlquiler(PCoche, codigo, fecha, diasA, NCoches)
+			NAlquileres.meterAlquiler(PCoche, codigo, fecha, diasA, NCoches);
 
 
 		}
@@ -97,6 +98,6 @@ int main()
 			exit = true;
 		}
 	}
-	*/
+	
 
 }

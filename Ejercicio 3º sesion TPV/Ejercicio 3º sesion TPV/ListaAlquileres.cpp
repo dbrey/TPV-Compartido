@@ -1,6 +1,12 @@
 #include "ListaAlquileres.h"
 #include <algorithm>
 
+ListaAlquileres::ListaAlquileres(int n, int c, Alquiler* a) {
+	numElem = n;
+	capacidad = c;
+	alquileres = a;
+}
+
 int ListaAlquileres::getnumElem() const
 {
 	return numElem;
@@ -46,7 +52,7 @@ bool ListaAlquileres::leeAlquileres(string RENT, ListaCoches NCoches)
 		int i = 0;
 		while (i < numElem && read)
 		{
-			if (!alquileres[i].cargarElemAlquiler(RENT, NCoches))
+			if (!alquileres[i].cargarElemAlquiler(input, NCoches))
 			{
 				read = false;
 			}
@@ -72,11 +78,25 @@ void ListaAlquileres::mostrarAlquileres()
 
 		if (alquileres[i].getCoche() == nullptr)
 		{
-			cout << "ERROR: Modelo inexistente \n";
+			cout << " ERROR: Modelo inexistente \n";
 		}
 		else
 		{
-			cout << alquileres[i].getCoche()->getName()<< " " << alquileres[i].getDiasA() << " dia(s) por " << alquileres[i].getCoche()->getPrecio() << " euros \n";
+			cout << " "<< alquileres[i].getCoche()->getName()<< " " << alquileres[i].getDiasA() << " dia(s) por " << alquileres[i].getCoche()->getPrecio()* alquileres[i].getDiasA() << " euros \n";
 		}
 	}
+}
+
+void ListaAlquileres::meterAlquiler(int PCoche, int codigo, Date fecha, int diasA, ListaCoches NCoches) {
+
+
+	if (numElem == capacidad) {
+		cout << "Lista llena \n";
+	}
+	else {
+		alquileres[numElem].darValores(NCoches.buscarCoche(codigo), codigo, fecha, diasA);
+		numElem++;
+	}
+
+
 }

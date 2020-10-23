@@ -1,7 +1,11 @@
 #include "ListaCoches.h"
 #include "Coche.h"
 
-
+ListaCoches::ListaCoches(int n, int c, Coche* co) {
+	numElem = n;
+	capacidad = c;
+	coches = co;
+}
 
 int ListaCoches::getnumElem() const
 {

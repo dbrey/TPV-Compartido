@@ -10,7 +10,7 @@ private:
 
 public:
 	ListaAlquileres() : numElem(0), capacidad(0), alquileres() {};
-	ListaAlquileres(int numElem, int capacidad, Alquiler* alquileres);
+	ListaAlquileres(int n, int c, Alquiler* a);
 
 	int getnumElem()const;
 	int getCapacidad()const;
@@ -23,5 +23,7 @@ public:
 	void ordenarAlquileres();
 
 	void mostrarAlquileres();
+
+	void meterAlquiler(int PCoche, int codigo, Date fecha, int diasA, ListaCoches NCoches);
 };
 

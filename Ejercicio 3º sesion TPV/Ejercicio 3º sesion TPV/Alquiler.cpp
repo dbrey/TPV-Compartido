@@ -20,38 +20,44 @@ int Alquiler::getDiasA() const
 	return diasA;
 }
 
-bool Alquiler::cargarElemAlquiler(string RENT, ListaCoches NCoches)
+bool Alquiler::cargarElemAlquiler(ifstream& RENT, ListaCoches NCoches)
 {
 	bool read = true;
-	ifstream input;
-	input.open(RENT);
+	/*ifstream input;
+	input.open(RENT);*/
 
 	// Comprobamos si el fichero se ha encontrado y esta abierto
-	if (!input.is_open())
+	if (!RENT.is_open())
 	{
 		cout << "Fichero no encontrado\n";
-		read = false;
+		//read = false;
 	}
 	else
 	{
 		// Leemos el codigo del coche y lo buscamos en nuestra lista de coches
-		input >> codigo;
+		RENT >> codigo;
 		// Pasar por referencia
 		coche = NCoches.buscarCoche(codigo);
 
 		// Meter "Excepciones" con cout
 		if (!fecha.cargarFecha(RENT))
 		{
-			read = false;
+			//read = false;
 		}
 
-		input.ignore();
-		input >> diasA;
-		input.close();
+		RENT.ignore();
+		RENT >> diasA;
 
 	}
 
 	return read;
+}
+
+void Alquiler::darValores(Coche* c, int code, Date f, int dA) {
+	coche = c;
+	codigo = code;
+	fecha = f;
+	diasA = dA;
 }
 
 /*void Alquiler::meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches)

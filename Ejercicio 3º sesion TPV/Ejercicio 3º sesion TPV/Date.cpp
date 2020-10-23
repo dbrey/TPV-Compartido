@@ -107,24 +107,24 @@ ostream& operator<<(ostream& out, const Date& d) {
 	return out;
 }
 
-bool Date::cargarFecha(string entrada)
+bool Date::cargarFecha(ifstream& entrada)
 {
-	ifstream input;
-	input.open(entrada);
+	/*ifstream input;
+	input.open(entrada);*/
 
 	// Comprobamos si el fichero se ha encontrado y esta abierto
-	if (!input.is_open())
+	if (!entrada.is_open())
 	{
 		cout << "Fichero no encontrado\n";
 		return false;
 	}
 	else
 	{
-		input >> day;
-		input.ignore();
-		input >> month;
-		input.ignore(); // Esto es para ignorar el siguiente espacio (ya que si no se mete en el siguiente string)
-		input >> year;
+		entrada >> day;
+		entrada.ignore();
+		entrada >> month;
+		entrada.ignore(); // Esto es para ignorar el siguiente espacio (ya que si no se mete en el siguiente string)
+		entrada >> year;
 		return true;
 	}
 }

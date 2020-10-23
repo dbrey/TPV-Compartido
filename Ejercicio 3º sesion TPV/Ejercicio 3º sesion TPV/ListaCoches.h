@@ -14,7 +14,7 @@ private:
 public:
 
 	ListaCoches() : numElem(0), capacidad(0), coches() {};
-	ListaCoches(int numElem, int capacidad, Coche* coches);
+	ListaCoches(int n, int c, Coche* co);
 
 	int getnumElem()const;
 	int getCapacidad()const;

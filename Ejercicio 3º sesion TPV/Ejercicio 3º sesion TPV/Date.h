@@ -25,7 +25,7 @@ public:
 	friend istream& operator>>(istream& in, Date& d);
 	friend ostream& operator<<(ostream& in, const Date& d);
 
-	bool cargarFecha(string entrada);
+	bool cargarFecha(ifstream& entrada);
 	void pedirFecha(int anyo, int mes, int dia);
 
 private:

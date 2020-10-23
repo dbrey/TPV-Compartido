@@ -18,6 +18,8 @@ public:
 	Alquiler() : coche(), codigo(0), fecha(), diasA(0) {};
 	Alquiler(Coche* coche, int codigo, Date fecha, int diasA);
 
+	void darValores(Coche* c, int code, Date f, int dA);
+
 	int getCodigo()const;
 	int getDiasA()const;
 	Coche* getCoche()const;
@@ -27,7 +29,7 @@ public:
 		return (fecha < a.fecha);
 	}
 
-	bool cargarElemAlquiler(string RENT, ListaCoches NCoches);
+	bool cargarElemAlquiler(ifstream& RENT, ListaCoches NCoches);
 
 	void meterAlquiler(int PCoche, int code, Date date, int daysA, ListaCoches NCoches);
 };
