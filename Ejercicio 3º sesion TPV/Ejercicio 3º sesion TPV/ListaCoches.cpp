@@ -56,7 +56,7 @@ bool ListaCoches::cargarCoches(string FICHERO_COCHES)
 }
 
 
-Coche* ListaCoches::buscarCoche(int code)
+Coche* ListaCoches::buscarCoche(int code) // Pasar por referencia (const& int code)
 {
 	Coche* aux;
 	int cont = 0;

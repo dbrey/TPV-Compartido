@@ -36,6 +36,7 @@ bool Alquiler::cargarElemAlquiler(string RENT, ListaCoches NCoches)
 	{
 		// Leemos el codigo del coche y lo buscamos en nuestra lista de coches
 		input >> codigo;
+		// Pasar por referencia
 		coche = NCoches.buscarCoche(codigo);
 
 		// Meter "Excepciones" con cout

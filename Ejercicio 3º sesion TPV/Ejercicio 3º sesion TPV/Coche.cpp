@@ -25,7 +25,6 @@ bool Coche::cargarElemCoches(ifstream& input)
 		input >> precio;
 		input.ignore(); // Esto es para ignorar el siguiente espacio (ya que si no se mete en el siguiente string)
 		getline(input, nombre);
-		input.close();
 		return true;
 }
 
