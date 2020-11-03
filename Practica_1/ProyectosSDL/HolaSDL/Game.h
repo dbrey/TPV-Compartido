@@ -8,7 +8,7 @@ class Game
 {
 private:
 
-	int VentX, VentY, tamCell, comida;
+	int VentX, VentY, tamCellX, tamCellY, comida;
 	bool exit;
 	PacMan* pacman;
 	GameMap* mapa;
@@ -20,7 +20,7 @@ private:
 
 public:
 
-	Game(int vx, int  vy, int  ct, int c, PacMan* p, GameMap* m) { VentX = vx, VentY = vy, tamCell = ct, comida = c, pacman = p, mapa = m; };
+	Game(int vx, int  vy, int  ctx, int cty, int c, PacMan* p, GameMap* m) { VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty, comida = c, pacman = p, mapa = m; };
 
 	bool LeeArchivo(string archivo);
 };
