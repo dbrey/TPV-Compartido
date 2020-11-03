@@ -1,3 +1,6 @@
+// Grupo 2
+// David Brey Plaza
+// Pablo Gonzalez Alvarez
 #pragma once
 #include "Alquiler.h"
 

@@ -1,8 +1,6 @@
 // Grupo 2
 // David Brey Plaza
 // Pablo Gonzalez Alvarez
-
-
 #include "Date.h"
 #include <iostream>
 

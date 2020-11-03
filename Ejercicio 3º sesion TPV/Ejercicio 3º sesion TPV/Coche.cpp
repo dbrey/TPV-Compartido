@@ -15,7 +15,6 @@ string Coche::getName() const
 	return nombre;
 }
 
-// Carga UNICAMENTE los elementos del coche
 bool Coche::cargarElemCoches(ifstream& input)
 {	
 		input >> codigo;

@@ -1,3 +1,6 @@
+// Grupo 2
+// David Brey Plaza
+// Pablo Gonzalez Alvarez
 #include "ListaAlquileres.h"
 #include <algorithm>
 
