@@ -4,23 +4,33 @@
 #include "GameMap.h"
 #include "PacMan.h"
 #include "Ghost.h"
+
+const int NUM_TEXTURES = 10;
+const enum TextureName { PacManT, MuroT, GhostT, FoodT, BurguerT };
+
 class Game
 {
 private:
 
-	int VentX, VentY, tamCellX, tamCellY, comida;
+	int VentX, VentY, tamCellX, tamCellY;
+	int comida = 0;
 	bool exit;
-	PacMan* pacman;
+	//PacMan* pacman;
 	GameMap* mapa;
-	// Array de punteros a fantasmas Ghost* fantasmas[];
-	//Puntero Ventana
-	//Puntero Renderer
-	// Array de texturas
+	//Ghost* fantasmas[4];
+
+	SDL_Window* window_;
+	SDL_Renderer* renderer_;
+
+	//Texture texturas[NUM_TEXTURES];
+	Texture* muro;
 	
 
 public:
 
-	Game(int vx, int  vy, int  ctx, int cty, int c, PacMan* p, GameMap* m) { VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty, comida = c, pacman = p, mapa = m; };
+	Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx, int cty, PacMan* p, GameMap* m);
 
 	bool LeeArchivo(string archivo);
+
+	void render() { mapa->render(); }
 };

@@ -1,20 +1,32 @@
 #pragma once
 
 #include <iostream>
-using Point2D = Vector2D; //??
+
+class Point2D {
+private:
+	int x;
+	int y;
+
+public:
+	Point2D(int newx, int newy) {
+		x = newx;
+		y = newy;
+	}
+
+	int getX() { return x; }
+	int getY() { return y; }
+};
 
 class Vector2D
 {
 private:
-	// Crear una clase Point2D con X e Y como privados, 
-	int x;
-	int y;
+	Point2D punto;
 public:
-	Vector2D() : x(0), y(0){};
-	Vector2D(int X, int Y) {x = X; y = Y;}
+	Vector2D() : punto(0, 0){};
+	Vector2D(int X, int Y) : punto(X, Y) {}
 	
-	int GetX()const { return x; }
-	int GetY()const { return y; }
+	int GetX() { return punto.getX(); }
+	int GetY() { return punto.getY(); }
 
 	Vector2D operator+(const Vector2D& v) const;
 	Vector2D operator*(double d) const;

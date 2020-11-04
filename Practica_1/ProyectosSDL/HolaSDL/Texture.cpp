@@ -8,7 +8,7 @@
 using namespace std;
 
 // Si el free no funciona, cambiar el nombre y ya se soluciona (en caso de error)
-void Texture::free() {
+void Texture::libera() {
 	SDL_DestroyTexture(texture);
 	texture = nullptr;
 	w = h = 0;
@@ -18,7 +18,7 @@ void Texture::free() {
 void Texture::load(string filename, uint nRows, uint nCols) {
 	SDL_Surface* tempSurface = IMG_Load(filename.c_str());
 	if (tempSurface == nullptr) throw "Error loading surface from " + filename;
-	free();
+	libera();
 	texture = SDL_CreateTextureFromSurface(renderer, tempSurface);
 	if (texture == nullptr) throw "Error loading texture from " + filename;
 	numRows = nRows;

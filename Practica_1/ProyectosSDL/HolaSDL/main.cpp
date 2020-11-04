@@ -6,12 +6,13 @@
 #include "SDL_image.h"
 #include "checkML.h"
 #include <iostream>
+#include "Game.h"
 
 using namespace std;
 
 using uint = unsigned int;
 
-void firstTest() {
+int main(int argc, char* argv[]){
 	// Variables declaradas
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Check Memory Leaks
 	SDL_Window* window = nullptr;
@@ -25,24 +26,22 @@ void firstTest() {
 	window = SDL_CreateWindow("First test with SDL", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, winWidth, winHeight, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-	
-	
+
+
 	// Ejecucion del metodo
 	if (window == nullptr || renderer == nullptr)
 		cout << "Error cargando SDL" << endl;
-	else 
+	else
 	{
-		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 		SDL_RenderClear(renderer);
+
+		Game game = Game(window, renderer, 200, 200, 10, 10, nullptr, nullptr);
+		game.render();
+
 		SDL_RenderPresent(renderer);
-		SDL_Delay(5000);
 	}
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
-}
-
-int main(int argc, char* argv[]){
-	firstTest();
 	return 0;
 }
