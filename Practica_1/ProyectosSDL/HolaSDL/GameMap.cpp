@@ -1,10 +1,15 @@
 
 #include "GameMap.h"
+#include "Game.h"
 
 
-GameMap::GameMap(int c, int f, Texture* textura)
+
+// Constructora
+GameMap::GameMap(int c, int f, Texture* tM, Texture* tC, Texture* tV)
 {
-	texturaMuro = textura;
+	tMuro = tM;
+	tComida = tC;
+	tVitamin = tV;
 	cols = c;
 	fils = f;
 	Mapa = new MapCell* [cols];
@@ -26,7 +31,7 @@ void GameMap::render() {
 				rect.w = 10;
 				rect.h = 10;
 
-				texturaMuro->render(rect);
+				tMuro->render(rect);
 			}
 		}
 	}

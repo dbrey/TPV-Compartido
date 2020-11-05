@@ -35,7 +35,7 @@ int main(int argc, char* argv[]){
 	{
 		SDL_RenderClear(renderer);
 
-		Game game = Game(window, renderer, 200, 200, 10, 10, nullptr, nullptr);
+		Game game = Game(window, renderer, 200, 200, 10, 10);
 		game.render();
 
 		SDL_RenderPresent(renderer);

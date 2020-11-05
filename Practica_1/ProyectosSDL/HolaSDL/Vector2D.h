@@ -15,6 +15,10 @@ public:
 
 	int getX() { return x; }
 	int getY() { return y; }
+	void Suma(int i, int j) { x += i; y += j; }
+	void Mul(double i) { x *= i; y *= i;}
+
+	bool iguales(Point2D aux) { return (x == aux.getX() && y == aux.getY()); }
 };
 
 class Vector2D
@@ -27,10 +31,12 @@ public:
 	
 	int GetX() { return punto.getX(); }
 	int GetY() { return punto.getY(); }
+	
 
-	Vector2D operator+(const Vector2D& v) const;
-	Vector2D operator*(double d) const;
-	double operator*(const Vector2D& d) const;
+	Vector2D operator+(Point2D p) const;
+	Vector2D operator*(double i) const;
+
+	// Producto de un vector por un escalar
 
 	bool operator==(const Vector2D& v);
 };
