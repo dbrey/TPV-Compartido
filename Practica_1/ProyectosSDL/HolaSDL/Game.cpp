@@ -56,7 +56,7 @@ bool Game::LeeArchivo(string archivo)
 					mapa->writeCell(j, i, Empty);
 					if (aux2 == 9)
 					{
-
+						// pacman = new PacMan(Point2D(j,i), textures[?], ...);
 					}
 				}
 			}
@@ -66,6 +66,8 @@ bool Game::LeeArchivo(string archivo)
 	input.close();
 	return read;
 }
+
+
 Point2D Game::getPos(int x, int y)
 {
 	Point2D aux(0,0);

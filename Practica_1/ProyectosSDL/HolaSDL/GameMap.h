@@ -6,17 +6,16 @@ class Game;
 enum MapCell { Empty, Wall, Food, Vitamins };
 class GameMap
 {
+	friend class Game; // ??
 private:
 	MapCell **Mapa;
 	int cols, fils;
 
-	Texture* tMuro;
-	Texture* tComida;
-	Texture* tVitamin;
+	Game* game;
 
 public:
 
-	GameMap(int c, int f, Texture* tM, Texture* tC, Texture* tV);
+	GameMap(int c, int f);
 
 
 	MapCell readCell(int col, int fil)const { return Mapa[col][fil]; };

@@ -5,11 +5,9 @@
 
 
 // Constructora
-GameMap::GameMap(int c, int f, Texture* tM, Texture* tC, Texture* tV)
+GameMap::GameMap(int c, int f)
 {
-	tMuro = tM;
-	tComida = tC;
-	tVitamin = tV;
+
 	cols = c;
 	fils = f;
 	Mapa = new MapCell* [cols];
@@ -25,13 +23,13 @@ void GameMap::render() {
 		for (int j = 0; j < cols; j++) {
 			if (Mapa[i][j] == Wall) {
 
-				SDL_Rect rect;
-				rect.x = i*10;
-				rect.y = j*10;
-				rect.w = 10;
-				rect.h = 10;
+				SDL_Rect destRect;
+				destRect.x = i*10;
+				destRect.y = j*10;
+				destRect.w = 10;
+				destRect.h = 10;
 
-				tMuro->render(rect);
+				game->getTexture(Wall)->render(destRect);
 			}
 		}
 	}
