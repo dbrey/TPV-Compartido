@@ -17,6 +17,7 @@ public:
 	int getY() { return y; }
 	void Suma(int i, int j) { x += i; y += j; }
 	void Mul(double i) { x *= i; y *= i;}
+	void SetPos(int i, int j) { x = i; y = j; }
 
 	bool iguales(Point2D aux) { return (x == aux.getX() && y == aux.getY()); }
 };
@@ -26,12 +27,16 @@ class Vector2D
 private:
 	Point2D punto;
 public:
-	Vector2D() : punto(0, 0){};
+	Vector2D() : punto(0, 0){}
 	Vector2D(int X, int Y) : punto(X, Y) {}
 	
 	int GetX() { return punto.getX(); }
 	int GetY() { return punto.getY(); }
 	
+	void izquierda() { punto.Suma(-1, 0); }
+	void derecha() { punto.Suma(1, 0); }
+	void arriba() { punto.Suma(0, -1); }
+	void abajo() { punto.Suma(0, 1); }
 
 	Vector2D operator+(Point2D p) const;
 	Vector2D operator*(double i) const;

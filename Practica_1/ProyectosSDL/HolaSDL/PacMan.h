@@ -16,9 +16,9 @@ private:
 	Texture* pac;
 	// Puntero a Game
 public:
-	PacMan(Texture* tTexture) {  , pac = tTexture; }
+	PacMan(int x, int y, Texture* tTexture) { point(x, y); pac = tTexture; }
 
-	void HandleEvent(SDL_Event* tecla);
+	void HandleEvent(SDL_Event tecla);
 	void Render();
 	void Actualizar();
 };

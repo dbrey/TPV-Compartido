@@ -33,30 +33,37 @@ bool Game::LeeArchivo(string archivo)
 		input >> x;
 		input >> y;
 		
-		int aux2;
+		int aux;
+
+		int contf = 0;
 		for (int i = 0; i < x; i++)
 		{
 			for (int j = 0; j < y; j++)
 			{
-				input >> aux2;
-				if (aux2 == 1)
+				input >> aux;
+				if (aux == 1)
 				{
-					mapa->writeCell(j, i, Wall);
+					mapa->writeCell(i, j, Wall);
 				}
-				else if (aux2 = 2)
+				else if (aux = 2)
 				{
-					mapa->writeCell(j, i, Food);
+					mapa->writeCell(i, j, Food);
 					comida++;
 				}
-				else if (aux2 = 3)
+				else if (aux = 3)
 				{
-					mapa->writeCell(j, i, Vitamins);
+					mapa->writeCell(i, j, Vitamins);
 				}
 				else {
-					mapa->writeCell(j, i, Empty);
-					if (aux2 == 9)
+					mapa->writeCell(i, j, Empty);
+					if (aux == 9)
 					{
-						// pacman = new PacMan(Point2D(j,i), textures[?], ...);
+						pac = new PacMan( int i, int j, textures[?]);
+					}
+					else if (aux == 5 || aux == 6 || aux == 7 || aux == 8)
+					{
+						//fantasmas[contf] = new Ghots(...)
+						contf++;
 					}
 				}
 			}
