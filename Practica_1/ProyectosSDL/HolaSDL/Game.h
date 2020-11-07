@@ -6,7 +6,7 @@
 #include "Ghost.h"
 #include <array>
 
-const int NUM_TEXTURES = 9;
+const int NUM_TEXTURES = 4;
 
 const enum textureName { burguer, characters, food, wall};
 
@@ -18,7 +18,7 @@ struct TextureAtribs
 };
 
 const TextureAtribs TEXTURE_ATRIBS[NUM_TEXTURES] =
-{ { burguer, "..\\images\\burguer1.png",1,1 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 }, { characters, "..\\images\\characters1.png", 4, 14 } };
+{ { burguer, "..\\images\\burguer1.png",1,1 }, { characters, "..\\images\\characters1.png", 4, 14 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 } };
 
 
 class Game
@@ -29,7 +29,7 @@ private:
 	int comida = 0;
 	bool exit = false;
 
-	//PacMan* pac;
+	PacMan* pac;
 	GameMap* mapa;
 
 	//Ghost* fantasmas[4];
@@ -48,9 +48,14 @@ public:
 
 	bool LeeArchivo(string archivo);
 
-	void render() { mapa->render(); }
+	void render();
+
+	bool fin() { return exit; }
 
 	void Inicializa();
+
+	GameMap* getMapa() { return mapa; }
+	PacMan* getPac() {return pac; }
 
 
 };

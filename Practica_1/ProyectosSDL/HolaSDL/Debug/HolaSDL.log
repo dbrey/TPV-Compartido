@@ -1,9 +1,5 @@
-﻿  Game.cpp
-  GameMap.cpp
-  Ghost.cpp
-  PacMan.cpp
-  main.cpp
+﻿  main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-  Generando código...
-  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\bin\PacManDebug.exe
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\main.cpp(38,13): warning C4101: 'event': variable local sin referencia
+  HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1\ProyectosSDL\bin\PacManDebug.exe

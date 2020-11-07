@@ -13,15 +13,16 @@ private:
 	int energia;
 
 	Point2D point;
+	Point2D iniPoint;
 	Vector2D dir;
-	//Texture* pac;
-	GameMap* mapa; 
-	// Puntero a Game
+	Game* game;
+	Texture* textura;
+
 public:
 	
-	/*PacMan(int x, int y, Texture* tTexture) { point(x, y); pac = tTexture; }*/
+	PacMan(int x, int y, Game* g);
 
-	void HandleEvent(SDL_Event tecla);
-	void Render();
-	void Actualizar();
+	void handleEvent(SDL_Event tecla);
+	void render();
+	void actualizar();
 };

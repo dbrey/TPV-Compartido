@@ -17,7 +17,7 @@ private:
 	Vector2D direc;
 	//Texture* tfantasmas;
 	Game* game;
-	GameMap* mapa;
+	//GameMap* mapa;
 
 	direction dir;
 	array<bool, 4> mov; //  0 = left   1 = up    2 = right    3 = down

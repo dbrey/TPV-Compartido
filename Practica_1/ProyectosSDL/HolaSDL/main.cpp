@@ -33,12 +33,17 @@ int main(int argc, char* argv[]){
 		cout << "Error cargando SDL" << endl;
 	else
 	{
-		SDL_RenderClear(renderer);
 
 		Game game = Game(window, renderer, 200, 200, 10, 10);
-		game.render();
+		SDL_Event event;
+		while (!game.fin()) {
 
-		SDL_RenderPresent(renderer);
+
+			SDL_RenderClear(renderer);
+			game.render();
+
+			SDL_RenderPresent(renderer);
+		}
 	}
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);

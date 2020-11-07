@@ -30,6 +30,8 @@ bool Game::LeeArchivo(string archivo)
 		int x, y;
 		input >> x;
 		input >> y;
+
+		mapa = new GameMap(x, y, this);
 		
 		int aux;
 
@@ -56,7 +58,7 @@ bool Game::LeeArchivo(string archivo)
 					mapa->writeCell(i, j, Empty);
 					if (aux == 9)
 					{
-						//pac = new PacMan( int i, int j, textures[?]);
+						pac = new PacMan(i, j, this);
 					}
 					else if (aux == 5 || aux == 6 || aux == 7 || aux == 8)
 					{
@@ -79,5 +81,10 @@ void Game::Inicializa()
 	{
 		textures[i] = new Texture( renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
 	}
+}
+
+void Game::render() {
+	mapa->render();
+	pac->render();
 }
 

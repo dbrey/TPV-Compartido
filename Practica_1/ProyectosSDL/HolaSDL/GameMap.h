@@ -15,11 +15,11 @@ private:
 
 public:
 
-	GameMap(int c, int f);
+	GameMap(int c, int f, Game* g);
 
 
-	MapCell readCell(int col, int fil)const { return Mapa[col][fil]; };
-	void writeCell(int col, int fil, MapCell estado) { Mapa[col][fil] = estado; };
+	MapCell readCell(int col, int fil)const { return Mapa[fil][col]; };
+	void writeCell(int col, int fil, MapCell estado) { Mapa[fil][col] = estado; };
 
 	void render();
 

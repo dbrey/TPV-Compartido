@@ -3,9 +3,7 @@
 #include "Vector2D.h"
 #include "Texture.h"
 #include "Game.h"
-#include <list>
-
-
+#include <vector>
 
 //void Ghost::Render()
 
@@ -46,7 +44,7 @@
 //
 //direction Ghost::SelecMov()
 //{
-//    list<direction> variantsOfDirection;
+//    vector<direction> variantsOfDirection;
 //
 //    direction direc;
 //

@@ -2,12 +2,13 @@
 #include "Game.h"
 
 // Constructora
-GameMap::GameMap(int c, int f)
+GameMap::GameMap(int c, int f, Game* g)
 {
 
 	cols = c;
 	fils = f;
 	Mapa = new MapCell* [cols];
+	game = g;
 
 	for (int i = 0; i < cols; i++)
 	{
@@ -26,7 +27,7 @@ void GameMap::render() {
 				destRect.w = 10;
 				destRect.h = 10;
 
-				game->getTexture(Wall)->render(destRect);
+				game->getTexture(wall)->render(destRect);
 			}
 			else if (Mapa[i][j] == Vitamins)
 			{
@@ -36,7 +37,7 @@ void GameMap::render() {
 				destRect.w = 10;
 				destRect.h = 10;
 
-				game->getTexture(Vitamins)->render(destRect);
+				game->getTexture(burguer)->render(destRect);
 			}
 			else if (Mapa[i][j] == Food)
 			{
@@ -46,7 +47,7 @@ void GameMap::render() {
 				destRect.w = 10;
 				destRect.h = 10;
 
-				game->getTexture(Food)->render(destRect);
+				game->getTexture(food)->render(destRect);
 			}
 		}
 	}
