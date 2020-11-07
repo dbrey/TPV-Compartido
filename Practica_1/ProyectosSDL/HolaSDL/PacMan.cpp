@@ -13,41 +13,35 @@ void PacMan::HandleEvent(SDL_Event tecla)
 		{
 			case SDLK_LEFT:
 			{
-				if()
+				if(mapa->readCell(point.getX() - 1, point.getY()) != Wall)
 				dir.izquierda();
 
 				break;
 			}
 			case SDLK_RIGHT:
 			{
-				//if(A la izquierda no hay muro)
+				if(mapa->readCell(point.getX() + 1, point.getY()) != Wall)
 				dir.derecha();
 
 					break;
 			}
 			case SDLK_UP:
 			{
-				//if(A la izquierda no hay muro)
+				if(mapa->readCell(point.getX(), point.getY() - 1) != Wall)
 				dir.arriba();
 
 					break;
 			}
 			case SDLK_DOWN:
 			{
-				//if(A la izquierda no hay muro)
+				if(mapa->readCell(point.getX(), point.getY() + 1) != Wall)
 				dir.abajo();
 
 					break;
 			}
 		}
-			
-
-
-
 	}
 }
 
-void PacMan::Render()
-{
-	
-}
+//void PacMan::Render()
+

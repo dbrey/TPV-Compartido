@@ -1,15 +1,9 @@
 ﻿  Game.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Vector2D.h(19,21): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
   GameMap.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Vector2D.h(19,21): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
   Ghost.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Vector2D.h(19,21): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Ghost.cpp(5,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  PacMan.cpp
   main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Vector2D.h(19,21): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
-  PacMan.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\HolaSDL\Vector2D.h(19,21): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
   Generando código...
   HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1\ProyectosSDL\bin\PacManDebug.exe

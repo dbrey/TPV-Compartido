@@ -14,11 +14,11 @@ struct TextureAtribs
 {
 	textureName tipo;
 	string fileName;
-	int numRows, numCols;
+	uint numRows, numCols;
 };
 
 const TextureAtribs TEXTURE_ATRIBS[NUM_TEXTURES] =
-{ { burguer, "burguer1.png",1,1 }, { food, "food2.png", 1,1 }, { wall, "wall3.png", 1,1 }, { characters, "characters1.png", 4, 14 } };
+{ { burguer, "..\\images\\burguer1.png",1,1 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 }, { characters, "..\\images\\characters1.png", 4, 14 } };
 
 
 class Game
@@ -29,27 +29,22 @@ private:
 	int comida = 0;
 	bool exit = false;
 
-	//PacMan* pacman;
-	PacMan* pac;
+	//PacMan* pac;
 	GameMap* mapa;
 
 	//Ghost* fantasmas[4];
-	Ghost* fantasmas[4];
+	//Ghost* fantasmas[4];
 
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 
-	array<Texture*,NUM_TEXTURES> textures;
-	//Texture* muro;
-	
+	array<Texture*,NUM_TEXTURES> textures;	
 
 public:
 
 	Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx, int cty);
 
 	Texture* getTexture(int i) { return textures[i]; }
-
-	Point2D getPos(int i, int j);
 
 	bool LeeArchivo(string archivo);
 

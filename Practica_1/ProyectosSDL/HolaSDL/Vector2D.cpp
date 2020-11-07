@@ -8,7 +8,7 @@ Vector2D Vector2D::operator+(Point2D p) const
 }
 
 
-Vector2D Vector2D::operator*(double i) const
+Vector2D Vector2D::operator*(int i) const
 {
 	Vector2D r;
 	r.punto = punto;

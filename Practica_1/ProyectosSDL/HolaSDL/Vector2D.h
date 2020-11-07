@@ -16,7 +16,7 @@ public:
 	int getX() { return x; }
 	int getY() { return y; }
 	void Suma(int i, int j) { x += i; y += j; }
-	void Mul(double i) { x *= i; y *= i;}
+	void Mul(int i) { x *= i; y *= i;}
 	void SetPos(int i, int j) { x = i; y = j; }
 
 	bool iguales(Point2D aux) { return (x == aux.getX() && y == aux.getY()); }
@@ -39,7 +39,7 @@ public:
 	void abajo() { punto.Suma(0, 1); }
 
 	Vector2D operator+(Point2D p) const;
-	Vector2D operator*(double i) const;
+	Vector2D operator*(int i) const;
 
 	// Producto de un vector por un escalar
 

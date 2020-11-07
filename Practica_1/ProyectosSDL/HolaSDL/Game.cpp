@@ -8,11 +8,7 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 	window_ = window;
 	renderer_ = renderer;
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
-	
-	/*for (int i = 0; i < 4; i++)
-	{
-		fantasmas[i] = f[i];
-	}*/
+	Inicializa();
 	LeeArchivo("level01.dat");
 }
 
@@ -29,6 +25,8 @@ bool Game::LeeArchivo(string archivo)
 	}
 	else
 	{
+
+
 		int x, y;
 		input >> x;
 		input >> y;
@@ -45,12 +43,12 @@ bool Game::LeeArchivo(string archivo)
 				{
 					mapa->writeCell(i, j, Wall);
 				}
-				else if (aux = 2)
+				else if (aux == 2)
 				{
 					mapa->writeCell(i, j, Food);
 					comida++;
 				}
-				else if (aux = 3)
+				else if (aux == 3)
 				{
 					mapa->writeCell(i, j, Vitamins);
 				}
@@ -58,7 +56,7 @@ bool Game::LeeArchivo(string archivo)
 					mapa->writeCell(i, j, Empty);
 					if (aux == 9)
 					{
-						pac = new PacMan( int i, int j, textures[?]);
+						//pac = new PacMan( int i, int j, textures[?]);
 					}
 					else if (aux == 5 || aux == 6 || aux == 7 || aux == 8)
 					{
@@ -74,20 +72,8 @@ bool Game::LeeArchivo(string archivo)
 	return read;
 }
 
-
-Point2D Game::getPos(int x, int y)
-{
-	Point2D aux(0,0);
-	aux.Suma(x, y);
-
-	return aux;
-}
 void Game::Inicializa()
 {
-
-
-
-
 	//Crear texturas
 	for (int i = 0; i < NUM_TEXTURES; ++i)
 	{
