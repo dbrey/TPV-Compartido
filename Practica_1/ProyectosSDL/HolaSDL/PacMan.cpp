@@ -34,7 +34,6 @@ void PacMan::handleEvent(SDL_Event& tecla)
 			{
 				if(game->getMapa()->readCell(point.getX() + 1, point.getY()) != Wall)
 					ds = r;
-
 					break;
 			}
 			case SDLK_UP:
@@ -63,21 +62,29 @@ void PacMan::update()
 	case l:
 	{
 		dir.izquierda();
+		if (point.getX() == 0 && point.getY() == 16)
+		{
+			point.SetPos(27, 16);
+		}
 		break;
 	}
 	case r:
 	{
-		dir.izquierda();
+		dir.derecha();
+		if (point.getX() == 27 && point.getY() == 16)
+		{
+			point.SetPos(0, 16);
+		}
 		break;
 	}
 	case u:
 	{
-		dir.izquierda();
+		dir.arriba();
 		break;
 	}
 	case d:
 	{
-		dir.izquierda();
+		dir.abajo();
 		break;
 	}
 	default:
