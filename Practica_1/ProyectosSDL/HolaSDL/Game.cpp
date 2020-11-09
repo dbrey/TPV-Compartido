@@ -88,3 +88,21 @@ void Game::render() {
 	pac->render();
 }
 
+void Game::handleEvent(SDL_Event& tecla){
+	pac->handleEvent(tecla);
+}
+
+void Game::update() {
+	pac->update();
+}
+
+
+/*void Game::run() {
+	update();
+	render();
+	handleEvent();
+}*/
+
+/*void Game::destroy() {
+	delete
+}*/

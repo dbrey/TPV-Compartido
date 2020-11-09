@@ -19,34 +19,19 @@ GameMap::GameMap(int c, int f, Game* g)
 void GameMap::render() {
 	for (int i = 0; i < fils; i++) {
 		for (int j = 0; j < cols; j++) {
+			SDL_Rect destRect;
+			destRect.x = i * 10;
+			destRect.y = j * 10;
+			destRect.w = 10;
+			destRect.h = 10;
+
 			if (Mapa[i][j] == Wall) {
-
-				SDL_Rect destRect;
-				destRect.x = i*10;
-				destRect.y = j*10;
-				destRect.w = 10;
-				destRect.h = 10;
-
 				game->getTexture(wall)->render(destRect);
 			}
-			else if (Mapa[i][j] == Vitamins)
-			{
-				SDL_Rect destRect;
-				destRect.x = i * 10;
-				destRect.y = j * 10;
-				destRect.w = 10;
-				destRect.h = 10;
-
+			else if (Mapa[i][j] == Vitamins) {
 				game->getTexture(burguer)->render(destRect);
 			}
-			else if (Mapa[i][j] == Food)
-			{
-				SDL_Rect destRect;
-				destRect.x = i * 10;
-				destRect.y = j * 10;
-				destRect.w = 10;
-				destRect.h = 10;
-
+			else if (Mapa[i][j] == Food) {
 				game->getTexture(food)->render(destRect);
 			}
 		}

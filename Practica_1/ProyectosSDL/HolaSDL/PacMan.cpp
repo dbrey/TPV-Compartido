@@ -10,7 +10,14 @@ PacMan::PacMan(int x, int y, Game* g) : iniPoint(y,x), point(y, x) {
 	textura = g->getTexture(characters);
 }
 
-void PacMan::handleEvent(SDL_Event tecla)
+void PacMan::comida() {
+	if (game->getMapa()->readCell(point.getX(), point.getY()) == Food)
+	{
+		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
+	}
+}
+
+void PacMan::handleEvent(SDL_Event& tecla)
 {
 	if (tecla.type == SDL_KEYDOWN)
 	{
@@ -18,33 +25,63 @@ void PacMan::handleEvent(SDL_Event tecla)
 		{
 			case SDLK_LEFT:
 			{
-				if(game->getMapa()->readCell(point.getX() - 1, point.getY()) != Wall)
-				dir.izquierda();
+				if (game->getMapa()->readCell(point.getX() - 1, point.getY()) != Wall)
+					ds = l;
 
 				break;
 			}
 			case SDLK_RIGHT:
 			{
 				if(game->getMapa()->readCell(point.getX() + 1, point.getY()) != Wall)
-				dir.derecha();
+					ds = r;
 
 					break;
 			}
 			case SDLK_UP:
 			{
 				if(game->getMapa()->readCell(point.getX(), point.getY() - 1) != Wall)
-				dir.arriba();
+					ds = u;
 
 					break;
 			}
 			case SDLK_DOWN:
 			{
 				if(game->getMapa()->readCell(point.getX(), point.getY() + 1) != Wall)
-				dir.abajo();
+					ds = d;
 
 					break;
 			}
 		}
+		comida();
+	}
+}
+
+void PacMan::update()
+{
+	switch (ds)
+	{
+	case l:
+	{
+		dir.izquierda();
+		break;
+	}
+	case r:
+	{
+		dir.izquierda();
+		break;
+	}
+	case u:
+	{
+		dir.izquierda();
+		break;
+	}
+	case d:
+	{
+		dir.izquierda();
+		break;
+	}
+	default:
+		break;
 	}
 }
 
@@ -56,4 +93,6 @@ void PacMan::render() {
 	rect.h = 10;
 	textura->renderFrame(rect, 0, 11);
 }
+
+
 

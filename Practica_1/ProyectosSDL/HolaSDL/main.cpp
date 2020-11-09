@@ -36,8 +36,12 @@ int main(int argc, char* argv[]){
 
 		Game game = Game(window, renderer, 200, 200, 10, 10);
 		SDL_Event event;
-		while (!game.fin()) {
-
+		while (!game.fin()) 
+		{
+			while (SDL_PollEvent(&event) != 0)
+			{
+				game.handleEvent(event);
+			}
 
 			SDL_RenderClear(renderer);
 			game.render();

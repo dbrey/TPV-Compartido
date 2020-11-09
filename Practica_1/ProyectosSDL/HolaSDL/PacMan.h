@@ -7,6 +7,7 @@ class Game;
 
 class PacMan
 {
+	enum dirSelect {r,l,u,d};
 private:
 
 	int vidas = 3;
@@ -15,6 +16,7 @@ private:
 	Point2D point;
 	Point2D iniPoint;
 	Vector2D dir;
+	dirSelect ds;
 	Game* game;
 	Texture* textura;
 
@@ -22,7 +24,8 @@ public:
 	
 	PacMan(int x, int y, Game* g);
 
-	void handleEvent(SDL_Event tecla);
+	void comida();
+	void handleEvent(SDL_Event& tecla);
 	void render();
-	void actualizar();
+	void update();
 };
