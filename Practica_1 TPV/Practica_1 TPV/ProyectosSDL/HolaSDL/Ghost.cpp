@@ -135,3 +135,10 @@ void Ghost::render(int aux) {
         tfantasmas->renderFrame(rect, 0, 6);
     }
 }
+
+Ghost::~Ghost()
+{
+    delete game;
+    delete tfantasmas;
+    
+}

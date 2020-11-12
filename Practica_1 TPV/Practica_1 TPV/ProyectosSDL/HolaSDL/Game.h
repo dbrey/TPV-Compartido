@@ -56,11 +56,11 @@ public:
 	GameMap* getMapa() { return mapa; }
 	PacMan* getPac() {return pac; }
 
-	//void run();
+	void run();
 
 	void handleEvent(SDL_Event& tecla);
 
 	void update();
 
-	void destroy();
+	~Game();
 };

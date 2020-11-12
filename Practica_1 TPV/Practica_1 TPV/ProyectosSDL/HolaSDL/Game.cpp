@@ -103,12 +103,33 @@ void Game::update() {
 }
 
 
-/*void Game::run() {
-	update();
-	render();
-	handleEvent();
-}*/
+void Game::run() {
+	SDL_Event event;
+	while (!fin())
+	{
+		if (SDL_PollEvent(&event) != 0)
+		{
+			handleEvent(event);
+		}
+		update();
+		SDL_RenderClear(renderer_);
+		render();
 
-/*void Game::destroy() {
-	delete
-}*/
+		SDL_RenderPresent(renderer_);
+	}
+}
+
+Game::~Game()
+{
+	pac->~PacMan();
+	for (int i = 0; i < fantasmas.size(); i++)
+	{
+		fantasmas[i]->~Ghost();
+	}
+
+	mapa->~GameMap();
+
+	SDL_DestroyRenderer(renderer_);
+	SDL_DestroyWindow(window_);
+	SDL_Quit();
+}

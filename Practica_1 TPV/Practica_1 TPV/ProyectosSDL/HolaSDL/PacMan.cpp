@@ -66,5 +66,9 @@ void PacMan::render() {
 	textura->renderFrame(rect, 0, 11);
 }
 
-
+PacMan::~PacMan()
+{
+	delete game;
+	delete textura;
+}
 

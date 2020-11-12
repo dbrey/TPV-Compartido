@@ -6,7 +6,7 @@ class Game;
 enum MapCell { Empty, Wall, Food, Vitamins };
 class GameMap
 {
-	friend class Game; // ??
+	friend class Game; 
 private:
 	MapCell **Mapa;
 	int cols, fils;
@@ -23,5 +23,5 @@ public:
 
 	void render();
 
-
+	~GameMap();
 };

@@ -33,24 +33,17 @@ int main(int argc, char* argv[]){
 		cout << "Error cargando SDL" << endl;
 	else
 	{
-
-		Game game = Game(window, renderer, 200, 200, 10, 10);
-		SDL_Event event;
-		while (!game.fin()) 
+		try 
 		{
-			if (SDL_PollEvent(&event) != 0)
-			{
-				game.handleEvent(event);
-			}
-			game.update();
-			SDL_RenderClear(renderer);
-			game.render();
-
-			SDL_RenderPresent(renderer);
+			Game game = Game(window, renderer, 200, 200, 10, 10);
+			game.run();
+			game.~Game();
+		}
+		catch(string& e)
+		{
+			cout << e;
 		}
 	}
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
+
 	return 0;
 }

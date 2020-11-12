@@ -37,3 +37,9 @@ void GameMap::render() {
 		}
 	}
 }
+
+GameMap::~GameMap()
+{
+	delete Mapa;
+	delete game;
+}

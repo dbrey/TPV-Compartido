@@ -15,8 +15,8 @@ private:
 	Point2D point;
 	Vector2D direc;
 	Texture* tfantasmas;
-	Game* game;
-	//GameMap* mapa;
+
+	Game *game;
 
 	direction dir;
 	array<bool, 4> mov; //  0 = left   1 = up    2 = right    3 = down
@@ -32,4 +32,6 @@ public:
 	void Actualizar();
 
 	void render(int aux);
+
+	~Ghost();
 };

@@ -25,4 +25,7 @@ public:
 	void handleEvent(SDL_Event& tecla);
 	void render();
 	void update();
+	// void morir();
+
+	~PacMan();
 };
