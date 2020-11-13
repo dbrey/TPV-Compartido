@@ -95,13 +95,29 @@ void Game::handleEvent(SDL_Event& tecla){
 }
 
 void Game::update() {
-	//pac->update();
+	pac->update();
 	for (int i = 0; i < fantasmas.size(); i++)
 	{
 		fantasmas[i]->update();
 	}
 }
 
+bool Game::nextCell(Vector2D dir)
+{
+	if (dir.GetX() == -1) {
+		return	(getMapa()->readCell(dir.GetX() - 1, dir.GetY()) == Empty);
+	}
+	else if (dir.GetX() == 1) {
+		return (getMapa()->readCell(dir.GetX() + 1, dir.GetY()) == Empty);
+	}
+	else if (dir.GetY() == -1) {
+		return getMapa()->readCell(dir.GetX(), dir.GetY() - 1) == Wall;
+	}
+	else if (dir.GetY() == 1) {
+		return (getMapa()->readCell(dir.GetX(), dir.GetY() + 1) == Empty);
+	}
+
+}
 
 void Game::run() {
 	SDL_Event event;

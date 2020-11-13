@@ -37,6 +37,7 @@ public:
 	//void derecha() { punto.Suma(1, 0); }
 	//void arriba() { punto.Suma(0, -1); }
 	//void abajo() { punto.Suma(0, 1); }
+	void setdir(int x, int y) { punto.SetPos(x, y); }
 
 	Vector2D operator+(Point2D p) const;
 	Vector2D operator*(int i) const;

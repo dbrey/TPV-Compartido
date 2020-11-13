@@ -25,37 +25,49 @@ void PacMan::handleEvent(SDL_Event& tecla)
 		{
 			case SDLK_LEFT:
 			{
-				if (game->getMapa()->readCell(point.getX() - 1, point.getY()) != Wall)
-					point.Suma(-1, 0);
+				dir.setdir(-1, 0);
 				break;
 			}
 			case SDLK_RIGHT:
 			{
-				if(game->getMapa()->readCell(point.getX() + 1, point.getY()) != Wall)
-					point.Suma(1, 0);
-					break;
+				dir.setdir(1, 0);
+				break;
 			}
 			case SDLK_UP:
 			{
-				if(game->getMapa()->readCell(point.getX(), point.getY() - 1) != Wall)
-					point.Suma(0, -1);
-					break;
+				dir.setdir(0, -1);
+				break;
 			}
 			case SDLK_DOWN:
 			{
-				if(game->getMapa()->readCell(point.getX(), point.getY() + 1) != Wall)
-					point.Suma(0, 1);
-					break;
+				dir.setdir(0, 1);
+				break;
 			}
 		}
-		comida();
 	}
 }
 
-/*void PacMan::update()
+void PacMan::update()
 {
-
-}*/
+	// Por alguna razon esto no funciona correctamente
+	if (game->nextCell(dir))
+	{
+		if (dir.GetX() == -1) {
+			point.Suma(-1, 0);
+		}
+		else if (dir.GetX() == 1) {
+			point.Suma(1, 0);
+		}
+		else if (dir.GetY() == -1) {
+			point.Suma(0, -1);
+		}
+		else if (dir.GetY() == 1) {
+			point.Suma(0, 1);
+		}
+	}
+	dir.setdir(0, 0);
+	comida();
+}
 
 void PacMan::render() {
 	SDL_Rect rect;

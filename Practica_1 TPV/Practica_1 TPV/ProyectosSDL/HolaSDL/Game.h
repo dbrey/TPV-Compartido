@@ -62,5 +62,7 @@ public:
 
 	void update();
 
+	bool nextCell(Vector2D dir);
+
 	~Game();
 };
