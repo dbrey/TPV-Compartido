@@ -50,7 +50,7 @@ void PacMan::handleEvent(SDL_Event& tecla)
 void PacMan::update()
 {
 	// Por alguna razon esto no funciona correctamente
-	if (game->nextCell(dir))
+	if (game->nextCell(dir,point))
 	{
 		if (dir.GetX() == -1) {
 			point.Suma(-1, 0);

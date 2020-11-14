@@ -5,7 +5,6 @@
 #include <array>
 class Game;
 
-enum direction { left, up, right, down };
 
 class Ghost
 {
@@ -18,19 +17,15 @@ private:
 
 	Game *game;
 
-	direction dir;
 	array<bool, 4> mov; //  0 = left   1 = up    2 = right    3 = down
 	
 
 public:
 	Ghost(int x, int y, Game* g);
 
-	direction CheckMov();
-	direction SelecMov();
-	void CambiaPos();
+	void CheckMov();
+	void SelecMov();
 	void update();
-	void Actualizar();
-
 	void render(int aux);
 
 	~Ghost();

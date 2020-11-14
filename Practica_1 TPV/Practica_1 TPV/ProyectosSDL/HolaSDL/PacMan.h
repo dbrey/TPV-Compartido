@@ -21,6 +21,8 @@ private:
 public:
 	
 	PacMan(int x, int y, Game* g);
+	
+	Point2D PacP() { return point; }
 
 	void comida();
 	void handleEvent(SDL_Event& tecla);

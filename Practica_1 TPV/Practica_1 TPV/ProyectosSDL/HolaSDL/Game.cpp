@@ -102,19 +102,19 @@ void Game::update() {
 	}
 }
 
-bool Game::nextCell(Vector2D dir)
+bool Game::nextCell(Vector2D dir, Point2D pos)
 {
 	if (dir.GetX() == -1) {
-		return	(getMapa()->readCell(dir.GetX() - 1, dir.GetY()) == Empty);
+		return	(getMapa()->readCell(pos.getX() - 1, pos.getY()) != Wall);
 	}
 	else if (dir.GetX() == 1) {
-		return (getMapa()->readCell(dir.GetX() + 1, dir.GetY()) == Empty);
+		return (getMapa()->readCell(pos.getX() + 1, pos.getY()) != Wall);
 	}
 	else if (dir.GetY() == -1) {
-		return getMapa()->readCell(dir.GetX(), dir.GetY() - 1) == Wall;
+		return getMapa()->readCell(pos.getX(), pos.getY() - 1) != Wall;
 	}
 	else if (dir.GetY() == 1) {
-		return (getMapa()->readCell(dir.GetX(), dir.GetY() + 1) == Empty);
+		return (getMapa()->readCell(pos.getX(), pos.getY() + 1) != Wall);
 	}
 
 }

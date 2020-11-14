@@ -4,6 +4,7 @@
 #include "Texture.h"
 #include "Game.h"
 #include <vector>
+#include <cstdlib>
 
 
 Ghost::Ghost(int x, int y, Game* g) : iniPoint(x, y), point(x, y) {
@@ -12,104 +13,103 @@ Ghost::Ghost(int x, int y, Game* g) : iniPoint(x, y), point(x, y) {
 }
 
 
-direction Ghost::CheckMov() //Comprobar que se puede mover en x direccion
+void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
-    //Direccion abajo
-    if (game->getMapa()->readCell(point.getX(), point.getY() + 1) != Wall)
-    {
-        mov[3] = true;
-    }
-    else mov[3] = false;
-
-    //Direccion arriba
-    if (game->getMapa()->readCell(point.getX(), point.getY() - 1) != Wall)
-    {
-        mov[1] = true;
-    }
-    else mov[1] = false;
-
-    //Direccion derecha
-    if (game->getMapa()->readCell(point.getX() + 1, point.getY()) != Wall)
-    {
-        mov[2] = true;
-    }
-    else mov[2] = false;
-
-    //Direccion izquierda
-    if (game->getMapa()->readCell(point.getX() - 1, point.getY()) != Wall)
-    {
-        mov[0] = true;
-    }
-    else mov[0] = false;
-
-
-    return SelecMov();
+    Vector2D derecha(1, 0);
+    Vector2D izquierda(-1, 0);
+    Vector2D arriba(0, -1);
+    Vector2D abajo(0, 1);
+    
+    mov[0] = game->nextCell(derecha, point);
+    mov[1] = game->nextCell(izquierda, point);
+    mov[2] = game->nextCell(arriba, point);
+    mov[3] = game->nextCell(abajo, point);
 }
 
 
-direction Ghost::SelecMov()
+void Ghost::SelecMov()
 {
-    vector<direction> variantsOfDirection;
+    CheckMov();
+    vector<int> sel(4);
 
-    direction direc;
-
-    for (int i = 0; i < mov.size(); i++)//Almacenar las direcciones posibles
+    for (int x = 0; x < 4; x++)
     {
-        if (mov[i])
+        sel[x] = x;
+    }
+
+    int aux = rand() % 4;
+    int i = 0;
+    while (!mov[aux] && i < 4)
+    {
+        // Si la direccion seleccionada esta bloqueada, se descarta
+        if (!mov[aux])
         {
-            if (i == 0) variantsOfDirection.push_back(direction::left);
-            else if (i == 1) variantsOfDirection.push_back(up);
-            else if (i == 2) variantsOfDirection.push_back(direction::right);
-            else variantsOfDirection.push_back(down); //i == 3
+            int gg = 0;
+            while (sel[gg] != aux)
+            {
+                gg++;
+            }
+            sel[gg] = -1;
         }
 
+        // Escogemos una nueva direccion posible
+        aux = rand() % 4;
+        while (sel[aux] == -1)
+        {
+            aux = rand() % 4;
+        }
+        i++;
     }
-   
 
-        int pos = rand() % (variantsOfDirection.size() + 1); //Numero random
-        
-        
-        
-        direc = variantsOfDirection[1]; // Preguntar como acceder a cierta posicion de la lista
-
-
-        return direc;
-    
-}
-
-
-void Ghost::CambiaPos()
-{
-    direction aux = CheckMov();
     switch (aux)
     {
-        case direction::left:
+        // derecha
+        case 0:
         {
-            point.Suma(-1, 0);
+            direc.setdir(1, 0);
             break;
         }
-        case direction::right:
+        // izquierda
+        case 1:
         {
-            point.Suma(1, 0);
+            direc.setdir(-1, 0);
             break;
         }
-        case up:
+        // arriba
+        case 2:
         {
-            point.Suma(0, -1);
+            direc.setdir(0, -1);
             break;
         }
-        case down:
+        // abajo
+        case 3:
         {
-            point.Suma(0, 1);
+            direc.setdir(0, 1);
             break;
         }
     }
-
+   
 }
 
-void Ghost::update() 
+
+void Ghost::update()
 {
-    CambiaPos();
+    SelecMov();
+    if (direc.GetX() == -1) {
+        point.Suma(-1, 0);
+    }
+    else if (direc.GetX() == 1) {
+        point.Suma(1, 0);
+    }
+    else if (direc.GetY() == -1) {
+        point.Suma(0, -1);
+    }
+    else if (direc.GetY() == 1) {
+        point.Suma(0, 1);
+    }
+
+    direc.setdir(0, 0);
+
 }
 
 void Ghost::render(int aux) {

@@ -62,7 +62,7 @@ public:
 
 	void update();
 
-	bool nextCell(Vector2D dir);
+	bool nextCell(Vector2D dir, Point2D pos);
 
 	~Game();
 };
