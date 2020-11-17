@@ -33,10 +33,6 @@ public:
 	int GetX() { return punto.getX(); }
 	int GetY() { return punto.getY(); }
 	
-	//void izquierda() { punto.Suma(-1, 0); }
-	//void derecha() { punto.Suma(1, 0); }
-	//void arriba() { punto.Suma(0, -1); }
-	//void abajo() { punto.Suma(0, 1); }
 	void setdir(int x, int y) { punto.SetPos(x, y); }
 
 	Vector2D operator+(Point2D p) const;

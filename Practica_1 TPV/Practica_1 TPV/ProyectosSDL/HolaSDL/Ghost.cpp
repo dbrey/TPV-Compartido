@@ -61,9 +61,11 @@ void Ghost::SelecMov()
         i++;
     }
 
-    switch (aux)
+    if (mov[aux])
     {
-        // derecha
+        switch (aux)
+        {
+            // derecha
         case 0:
         {
             direc.setdir(1, 0);
@@ -87,10 +89,12 @@ void Ghost::SelecMov()
             direc.setdir(0, 1);
             break;
         }
+        }
     }
-   
+    else {
+        direc.setdir(0, 0);
+    }
 }
-
 
 void Ghost::update()
 {
@@ -108,8 +112,24 @@ void Ghost::update()
         point.Suma(0, 1);
     }
 
+    Point2D izq(0, 15);
+    Point2D der(28, 15);
+    if (point.iguales(izq))
+    {
+        point.SetPos(27, 15);
+    }
+    else if (point.iguales(der))
+    {
+        point.SetPos(1, 15);
+    }
+
     direc.setdir(0, 0);
 
+}
+
+void Ghost::morir()
+{
+    point = iniPoint;
 }
 
 void Ghost::render(int aux) {

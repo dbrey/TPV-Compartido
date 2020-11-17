@@ -1,2 +1,6 @@
-﻿  Ghost.cpp
+﻿  Game.cpp
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(87,20): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(99,20): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(144,20): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(122): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
   HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe

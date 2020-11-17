@@ -55,6 +55,7 @@ public:
 
 	GameMap* getMapa() { return mapa; }
 	PacMan* getPac() {return pac; }
+	Ghost* getGhost(int i) { return fantasmas[i]; }
 
 	void run();
 

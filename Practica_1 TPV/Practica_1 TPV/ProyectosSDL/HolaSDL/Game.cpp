@@ -100,6 +100,8 @@ void Game::update() {
 	{
 		fantasmas[i]->update();
 	}
+
+	SDL_Delay(235);
 }
 
 bool Game::nextCell(Vector2D dir, Point2D pos)
@@ -121,7 +123,7 @@ bool Game::nextCell(Vector2D dir, Point2D pos)
 
 void Game::run() {
 	SDL_Event event;
-	while (!fin())
+	while (!fin() && pac->returnLives() > 0)
 	{
 		if (SDL_PollEvent(&event) != 0)
 		{
@@ -133,6 +135,7 @@ void Game::run() {
 
 		SDL_RenderPresent(renderer_);
 	}
+	
 }
 
 Game::~Game()

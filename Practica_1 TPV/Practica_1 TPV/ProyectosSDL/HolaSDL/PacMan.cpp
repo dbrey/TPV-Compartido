@@ -15,6 +15,11 @@ void PacMan::comida() {
 	{
 		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
 	}
+	else if (game->getMapa()->readCell(point.getX(), point.getY()) == Vitamins)
+	{
+		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
+		force = true;
+	}
 }
 
 void PacMan::handleEvent(SDL_Event& tecla)
@@ -45,6 +50,7 @@ void PacMan::handleEvent(SDL_Event& tecla)
 			}
 		}
 	}
+
 }
 
 void PacMan::update()
@@ -65,8 +71,52 @@ void PacMan::update()
 			point.Suma(0, 1);
 		}
 	}
-	dir.setdir(0, 0);
+
+	Point2D izq(0, 15);
+	Point2D der(28, 15);
+	if (point.iguales(izq))
+	{
+		point.SetPos(27, 15);
+	}
+	else if (point.iguales(der))
+	{
+		point.SetPos(1, 15);
+	}
+
+	// Comprobamos si el pacman ha hecho contacto con un fantasmas
+	for (int i = 0; i < 4; i++)
+	{
+		if (point.iguales(game->getGhost(i)->getPoint()))
+		{
+			if (!force)
+			{
+				morir();
+			}
+			else
+			{
+				game->getGhost(i)->morir();
+			}
+
+		}
+	}
+
+	if (force)
+	{
+		tiempoforce++;
+		if (tiempoforce >= duracion)
+		{
+			force = false;
+			tiempoforce = 0;
+		}
+	}
+
 	comida();
+}
+
+void PacMan::morir()
+{
+	vidas--;
+	point = iniPoint;
 }
 
 void PacMan::render() {
@@ -75,7 +125,14 @@ void PacMan::render() {
 	rect.y = point.getY()*10;
 	rect.w = 10;
 	rect.h = 10;
-	textura->renderFrame(rect, 0, 11);
+	if (!force)
+	{
+		textura->renderFrame(rect, 0, 10);
+	}
+	else
+	{
+		textura->renderFrame(rect, 0, 11);
+	}
 }
 
 PacMan::~PacMan()

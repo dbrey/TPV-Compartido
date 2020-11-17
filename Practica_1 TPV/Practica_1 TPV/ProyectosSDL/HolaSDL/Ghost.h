@@ -23,9 +23,11 @@ private:
 public:
 	Ghost(int x, int y, Game* g);
 
+	Point2D getPoint() { return point; }
 	void CheckMov();
 	void SelecMov();
 	void update();
+	void morir();
 	void render(int aux);
 
 	~Ghost();

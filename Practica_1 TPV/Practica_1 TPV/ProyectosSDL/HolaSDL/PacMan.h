@@ -8,9 +8,13 @@ class Game;
 class PacMan
 {
 private:
+	const uint32_t  duracion = 35;
+
+	uint32_t  tiempoforce = 0;
 
 	int vidas = 3;
 	int energia;
+	bool force = false;
 
 	Point2D point;
 	Point2D iniPoint;
@@ -24,11 +28,13 @@ public:
 	
 	Point2D PacP() { return point; }
 
+	int returnLives() { return vidas; }
+
 	void comida();
 	void handleEvent(SDL_Event& tecla);
 	void render();
 	void update();
-	// void morir();
+	void morir();
 
 	~PacMan();
 };
