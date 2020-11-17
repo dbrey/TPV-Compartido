@@ -125,13 +125,14 @@ void Game::run() {
 	SDL_Event event;
 	while (!fin() && pac->returnLives() > 0)
 	{
+		SDL_RenderClear(renderer_);
+		render();
 		if (SDL_PollEvent(&event) != 0)
 		{
 			handleEvent(event);
 		}
 		update();
-		SDL_RenderClear(renderer_);
-		render();
+		
 
 		SDL_RenderPresent(renderer_);
 	}

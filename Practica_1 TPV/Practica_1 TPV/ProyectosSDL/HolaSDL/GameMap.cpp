@@ -25,15 +25,24 @@ void GameMap::render() {
 			destRect.w = 10;
 			destRect.h = 10;
 
-			if (Mapa[i][j] == Wall) {
-				game->getTexture(wall)->render(destRect);
+			try
+			{
+				if (Mapa[i][j] == Wall) {
+					game->getTexture(wall)->render(destRect);
+				}
+				else if (Mapa[i][j] == Vitamins) {
+					game->getTexture(burguer)->render(destRect);
+				}
+				else if (Mapa[i][j] == Food) {
+					game->getTexture(food)->render(destRect);
+				}
 			}
-			else if (Mapa[i][j] == Vitamins) {
-				game->getTexture(burguer)->render(destRect);
+			catch (string& e) {
+				e = "Hay una o varias texturas nulas";
+				cout << e;
 			}
-			else if (Mapa[i][j] == Food) {
-				game->getTexture(food)->render(destRect);
-			}
+
+			
 		}
 	}
 }

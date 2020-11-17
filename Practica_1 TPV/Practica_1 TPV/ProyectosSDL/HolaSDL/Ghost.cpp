@@ -138,22 +138,36 @@ void Ghost::render(int aux) {
     rect.y = point.getY() * 10;
     rect.w = 10;
     rect.h = 10;
-    if (aux == 0)
-    {
-        tfantasmas->renderFrame(rect, 0, 0);
+    
+    try {
+        if (aux == 0)
+        {
+            tfantasmas->renderFrame(rect, 0, 0);
+        }
+        else if (aux == 1)
+        {
+            tfantasmas->renderFrame(rect, 0, 2);
+        }
+        else if (aux == 2)
+        {
+            tfantasmas->renderFrame(rect, 0, 4);
+        }
+        else
+        {
+            tfantasmas->renderFrame(rect, 0, 6);
+        }
     }
-    else if (aux == 1)
+    catch (string& e)
     {
-        tfantasmas->renderFrame(rect, 0, 2);
+        if (tfantasmas == NULL)
+        {
+            e = "Los fantasmas no tienen texturas";
+        }
+        
+        cout << e;
     }
-    else if (aux == 2 )
-    {
-        tfantasmas->renderFrame(rect, 0, 4);
-    }
-    else
-    {
-        tfantasmas->renderFrame(rect, 0, 6);
-    }
+    
+    
 }
 
 Ghost::~Ghost()

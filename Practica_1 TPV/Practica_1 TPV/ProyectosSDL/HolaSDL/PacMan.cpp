@@ -125,14 +125,27 @@ void PacMan::render() {
 	rect.y = point.getY()*10;
 	rect.w = 10;
 	rect.h = 10;
-	if (!force)
-	{
-		textura->renderFrame(rect, 0, 10);
+	
+	try {
+		if (!force)
+		{
+			textura->renderFrame(rect, 0, 10);
+		}
+		else
+		{
+			textura->renderFrame(rect, 0, 11);
+		}
 	}
-	else
+	catch (string& e)
 	{
-		textura->renderFrame(rect, 0, 11);
+		if (textura == NULL)
+		{
+			e = "PacMan no tiene textura";
+		}
+		cout << e;
+
 	}
+	
 }
 
 PacMan::~PacMan()

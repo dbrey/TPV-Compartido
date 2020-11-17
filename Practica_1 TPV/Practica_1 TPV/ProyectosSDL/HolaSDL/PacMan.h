@@ -8,13 +8,13 @@ class Game;
 class PacMan
 {
 private:
-	const uint32_t  duracion = 35;
+	const uint32_t  duracion = 235;
 
 	uint32_t  tiempoforce = 0;
 
 	int vidas = 3;
 	int energia;
-	bool force = false;
+	bool force = true;
 
 	Point2D point;
 	Point2D iniPoint;
