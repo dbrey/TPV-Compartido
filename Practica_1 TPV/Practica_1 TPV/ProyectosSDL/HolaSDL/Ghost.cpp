@@ -26,104 +26,61 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
     mov[3] = game->nextCell(abajo, point);
 }
 
-
+// Optimizar
 void Ghost::SelecMov()
 {
     CheckMov();
     vector<int> sel(4);
 
-    for (int x = 0; x < 4; x++)
-    {
+    for (int x = 0; x < 4; x++) {
         sel[x] = x;
     }
 
     int aux = rand() % 4;
     int i = 0;
-    while (!mov[aux] && i < 4)
-    {
+    while (!mov[aux] && i < 4) {
         // Si la direccion seleccionada esta bloqueada, se descarta
-        if (!mov[aux])
-        {
-            int gg = 0;
-            while (sel[gg] != aux)
-            {
-                gg++;
-            }
-            sel[gg] = -1;
+        if (!mov[aux]) {
+            int aux2 = 0;
+            while (sel[aux2] != aux)
+                aux2++;
+            sel[aux2] = -1;
         }
-
         // Escogemos una nueva direccion posible
         aux = rand() % 4;
         while (sel[aux] == -1)
-        {
             aux = rand() % 4;
-        }
         i++;
     }
 
-    if (mov[aux])
-    {
-        switch (aux)
-        {
-            // derecha
-        case 0:
-        {
-            direc.setdir(1, 0);
-            break;
-        }
-        // izquierda
-        case 1:
-        {
-            direc.setdir(-1, 0);
-            break;
-        }
-        // arriba
-        case 2:
-        {
-            direc.setdir(0, -1);
-            break;
-        }
-        // abajo
-        case 3:
-        {
-            direc.setdir(0, 1);
-            break;
-        }
+    if (mov[aux]) {
+        switch (aux) {
+            case 0: {
+                direc.setdir(1, 0); // derecha
+                break;
+            }
+            case 1: {
+                direc.setdir(-1, 0); // izquierda
+                break;
+            }
+            case 2: {
+                direc.setdir(0, -1); // arriba
+                break;
+            }
+            case 3: {
+                direc.setdir(0, 1); // abajo
+                break;
+            }
         }
     }
-    else {
+    else 
         direc.setdir(0, 0);
-    }
 }
 
 void Ghost::update()
 {
     SelecMov();
-    if (direc.GetX() == -1) {
-        point.Suma(-1, 0);
-    }
-    else if (direc.GetX() == 1) {
-        point.Suma(1, 0);
-    }
-    else if (direc.GetY() == -1) {
-        point.Suma(0, -1);
-    }
-    else if (direc.GetY() == 1) {
-        point.Suma(0, 1);
-    }
-
-    Point2D izq(0, 15);
-    Point2D der(28, 15);
-    if (point.iguales(izq))
-    {
-        point.SetPos(27, 15);
-    }
-    else if (point.iguales(der))
-    {
-        point.SetPos(1, 15);
-    }
-
-    direc.setdir(0, 0);
+    direc.movimiento(point);
 
 }
 
@@ -141,38 +98,24 @@ void Ghost::render(int aux) {
     
     try {
         if (aux == 0)
-        {
             tfantasmas->renderFrame(rect, 0, 0);
-        }
         else if (aux == 1)
-        {
             tfantasmas->renderFrame(rect, 0, 2);
-        }
         else if (aux == 2)
-        {
             tfantasmas->renderFrame(rect, 0, 4);
-        }
         else
-        {
             tfantasmas->renderFrame(rect, 0, 6);
-        }
     }
-    catch (string& e)
-    {
+    catch (string& e) {
         if (tfantasmas == NULL)
-        {
             e = "Los fantasmas no tienen texturas";
-        }
-        
+
         cout << e;
     }
-    
-    
 }
 
 Ghost::~Ghost()
 {
     delete game;
-    delete tfantasmas;
-    
+    delete tfantasmas; 
 }

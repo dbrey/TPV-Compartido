@@ -37,8 +37,7 @@ public:
 
 	Vector2D operator+(Point2D p) const;
 	Vector2D operator*(int i) const;
-
-	// Producto de un vector por un escalar
+	void movimiento(Point2D& point);
 
 	bool operator==(const Vector2D& v);
 };
