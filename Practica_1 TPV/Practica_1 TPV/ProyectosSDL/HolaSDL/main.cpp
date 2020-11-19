@@ -33,6 +33,7 @@ int main(int argc, char* argv[]){
 		cout << "Error cargando SDL" << endl;
 	else
 	{
+		// Coge cualquier error aparte de otro tipo de errores (Ej: carga de texturas)
 		try 
 		{
 			Game game = Game(window, renderer, 200, 200, 10, 10);

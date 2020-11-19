@@ -18,7 +18,8 @@ private:
 
 	Point2D point;
 	Point2D iniPoint;
-	Vector2D dir;
+	Vector2D dir_actual;
+	Vector2D dir_sel;
 	Game* game;
 	Texture* textura;
 

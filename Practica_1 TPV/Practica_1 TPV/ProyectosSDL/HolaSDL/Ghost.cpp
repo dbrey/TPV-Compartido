@@ -12,18 +12,25 @@ Ghost::Ghost(int x, int y, Game* g) : iniPoint(x, y), point(x, y) {
 	tfantasmas = g->getTexture(characters);
 }
 
-
+// Comprobamos las direcciones a las que se puede mover el fantasma
 void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
     Vector2D derecha(1, 0);
     Vector2D izquierda(-1, 0);
     Vector2D arriba(0, -1);
     Vector2D abajo(0, 1);
-    
+
     mov[0] = game->nextCell(derecha, point);
     mov[1] = game->nextCell(izquierda, point);
     mov[2] = game->nextCell(arriba, point);
     mov[3] = game->nextCell(abajo, point);
+
+    if (game->nextCell(direc, point)) {
+        if (direc == izquierda) { mov[0] = false; }
+        else if (direc == derecha) { mov[1] = false; }
+        else if (direc == abajo) { mov[2] = false; }
+        else if (direc == arriba) { mov[3] = false;}
+    }
 }
 
 // Optimizar
@@ -31,64 +38,66 @@ void Ghost::SelecMov()
 {
     CheckMov();
     vector<int> sel(4);
-
-    for (int x = 0; x < 4; x++) {
-        sel[x] = x;
+    
+    for (int cont = 0; cont < 4; cont++) {
+        sel[cont] = cont;
     }
 
-    int aux = rand() % 4;
-    int i = 0;
-    while (!mov[aux] && i < 4) {
-        // Si la direccion seleccionada esta bloqueada, se descarta
-        if (!mov[aux]) {
-            int aux2 = 0;
-            while (sel[aux2] != aux)
-                aux2++;
-            sel[aux2] = -1;
-        }
-        // Escogemos una nueva direccion posible
-        aux = rand() % 4;
-        while (sel[aux] == -1)
+        int aux = rand() % 4;
+        int i = 0;
+        while (!mov[aux] && i < 4) {
+            // Si la direccion seleccionada esta bloqueada, se descarta
+            if (!mov[aux]) {
+                int aux2 = 0;
+                while (sel[aux2] != aux)
+                    aux2++;
+                sel[aux2] = -1;
+            }
+            // Escogemos una nueva direccion posible
             aux = rand() % 4;
-        i++;
-    }
+            while (sel[aux] == -1)
+                aux = rand() % 4;
+            i++;
+        }
 
-    if (mov[aux]) {
-        switch (aux) {
-            case 0: {
-                direc.setdir(1, 0); // derecha
-                break;
-            }
-            case 1: {
-                direc.setdir(-1, 0); // izquierda
-                break;
-            }
-            case 2: {
-                direc.setdir(0, -1); // arriba
-                break;
-            }
-            case 3: {
-                direc.setdir(0, 1); // abajo
-                break;
+        if (mov[aux]) {
+            switch (aux) {
+                case 0: {
+                    direc.setdir(1, 0); // derecha
+                    break;
+                }
+                case 1: {
+                    direc.setdir(-1, 0); // izquierda
+                    break;
+                }
+                case 2: {
+                    direc.setdir(0, -1); // arriba
+                    break;
+                }
+                case 3: {
+                    direc.setdir(0, 1); // abajo
+                    break;
+                }
             }
         }
-    }
-    else 
-        direc.setdir(0, 0);
+        else
+            direc.setdir(0, 0);
 }
 
+// Selecciona la direccion y se mueve
 void Ghost::update()
 {
     SelecMov();
     direc.movimiento(point);
-
 }
 
+// Mueve al fantasma a su posicion inicial
 void Ghost::morir()
 {
     point = iniPoint;
 }
 
+// Renderiza a su fantasma con su respectiva textura
 void Ghost::render(int aux) {
     SDL_Rect rect;
     rect.x = point.getX() * 10;

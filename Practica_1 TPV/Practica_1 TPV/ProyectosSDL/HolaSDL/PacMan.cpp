@@ -7,9 +7,11 @@
 
 PacMan::PacMan(int x, int y, Game* g) : iniPoint(x,y), point(x, y) {
 	game = g;
+	dir_actual.setdir(1, 0);
 	textura = g->getTexture(characters);
 }
 
+// Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio
 void PacMan::comida() {
 	if (game->getMapa()->readCell(point.getX(), point.getY()) == Food)
 	{
@@ -22,6 +24,7 @@ void PacMan::comida() {
 	}
 }
 
+// Recoge el input y establece la direccion a tomar
 void PacMan::handleEvent(SDL_Event& tecla)
 {
 	if (tecla.type == SDL_KEYDOWN)
@@ -30,32 +33,32 @@ void PacMan::handleEvent(SDL_Event& tecla)
 		{
 			case SDLK_LEFT:
 			{
-				dir.setdir(-1, 0);
+				dir_sel.setdir(-1, 0);
 				break;
 			}
 			case SDLK_RIGHT:
 			{
-				dir.setdir(1, 0);
+				dir_sel.setdir(1, 0);
 				break;
 			}
 			case SDLK_UP:
 			{
-				dir.setdir(0, -1);
+				dir_sel.setdir(0, -1);
 				break;
 			}
 			case SDLK_DOWN:
 			{
-				dir.setdir(0, 1);
+				dir_sel.setdir(0, 1);
 				break;
 			}
 		}
 	}
-
 }
 
+// Comprueba si PacMan esta en la misma posicion que algun fantasma y uno de los 2 muere
 void PacMan::check() {
-	// Comprobamos si el pacman ha hecho contacto con un fantasmas
 	for (int i = 0; i < 4; i++) {
+		// Si pacman tiene la vitamina todavia activa, mata al fantasma
 		if (point.iguales(game->getGhost(i)->getPoint())) {
 			if (tiempoforce == 0) {
 				morir();
@@ -67,25 +70,33 @@ void PacMan::check() {
 	}
 }
 
+// Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
 	check();
-	if (game->nextCell(dir,point)) {
-		dir.movimiento(point);
+
+	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
+	if (game->nextCell(dir_sel, point)) { dir_actual = dir_sel;	}
+	
+	if (game->nextCell(dir_actual, point))
+	{
+		dir_actual.movimiento(point);
 		comida();
 		check();
-	}
-
+	} 
+	// Si su poder esta activo, reducimos el tiempo
 	if (tiempoforce > 0) {
 		tiempoforce--;
 	}
 }
 
+// Lleva a Pacman al punto de spawn y le quita una vida
 void PacMan::morir()
 {
 	vidas--;
 	point = iniPoint;
 }
 
+// Renderizamos a PacMan
 void PacMan::render() {
 	SDL_Rect rect;
 	rect.x = point.getX()*10;
@@ -93,26 +104,20 @@ void PacMan::render() {
 	rect.w = 10;
 	rect.h = 10;
 	
+	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
 	try {
 		if (tiempoforce == 0)
-		{
 			textura->renderFrame(rect, 0, 10);
-		}
 		else
-		{
 			textura->renderFrame(rect, 0, 11);
-		}
 	}
-	catch (string& e)
-	{
+	catch (string& e) {
 		if (textura == NULL)
 		{
 			e = "PacMan no tiene textura";
 		}
 		cout << e;
-
 	}
-	
 }
 
 PacMan::~PacMan()

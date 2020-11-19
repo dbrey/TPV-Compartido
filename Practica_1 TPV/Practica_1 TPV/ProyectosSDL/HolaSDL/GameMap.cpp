@@ -16,6 +16,7 @@ GameMap::GameMap(int c, int f, Game* g)
 	}
 }
 
+// Renderiza todo el mapa y sus elementos del juego
 void GameMap::render() {
 	for (int i = 0; i < fils; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -25,24 +26,18 @@ void GameMap::render() {
 			destRect.w = 10;
 			destRect.h = 10;
 
-			try
-			{
-				if (Mapa[i][j] == Wall) {
+			try {
+				if (Mapa[i][j] == Wall) 
 					game->getTexture(wall)->render(destRect);
-				}
-				else if (Mapa[i][j] == Vitamins) {
+				else if (Mapa[i][j] == Vitamins) 
 					game->getTexture(burguer)->render(destRect);
-				}
-				else if (Mapa[i][j] == Food) {
+				else if (Mapa[i][j] == Food) 
 					game->getTexture(food)->render(destRect);
-				}
 			}
 			catch (string& e) {
 				e = "Hay una o varias texturas nulas";
 				cout << e;
 			}
-
-			
 		}
 	}
 }

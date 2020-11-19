@@ -8,10 +8,11 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 	window_ = window;
 	renderer_ = renderer;
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
-	Inicializa();
+	IniTextures();
 	LeeArchivo("level01.dat");
 }
 
+// Lee el archivo y asigna los elementos del archivo a las variables de Game(PacMan,Ghost,Mapa...)
 bool Game::LeeArchivo(string archivo) {
 	bool read = true;  ifstream input;
     input.open(archivo);
@@ -54,15 +55,16 @@ bool Game::LeeArchivo(string archivo) {
 	return read;
 }
 
-void Game::Inicializa()
+// Inicializa las texturas del juego
+void Game::IniTextures()
 {
-	//Crear texturas
 	for (int i = 0; i < NUM_TEXTURES; ++i)
 	{
 		textures[i] = new Texture( renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
 	}
 }
 
+// Renderiza todos los elementos del juego
 void Game::render() {
 	mapa->render();
 	pac->render();
@@ -72,10 +74,12 @@ void Game::render() {
 	}
 }
 
+// Maneja los eventos
 void Game::handleEvent(SDL_Event& tecla){
 	pac->handleEvent(tecla);
 }
 
+// Actualiza el juego
 void Game::update() {
 	pac->update();
 	for (int i = 0; i < fantasmas.size(); i++)
@@ -86,6 +90,7 @@ void Game::update() {
 	SDL_Delay(235);
 }
 
+// Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
 bool Game::nextCell(Vector2D dir, Point2D pos)
 {
 	if (dir.GetX() == -1) {
@@ -103,6 +108,7 @@ bool Game::nextCell(Vector2D dir, Point2D pos)
 
 }
 
+// Maneja el juego
 void Game::run() {
 	SDL_Event event;
 	while (!fin() && pac->returnLives() > 0)
@@ -114,11 +120,9 @@ void Game::run() {
 			handleEvent(event);
 		}
 		update();
-		
 
 		SDL_RenderPresent(renderer_);
 	}
-	
 }
 
 Game::~Game()

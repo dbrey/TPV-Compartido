@@ -51,7 +51,7 @@ public:
 
 	bool fin() { return exit; }
 
-	void Inicializa();
+	void IniTextures();
 
 	GameMap* getMapa() { return mapa; }
 	PacMan* getPac() {return pac; }

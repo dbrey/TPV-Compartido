@@ -15,15 +15,11 @@ Vector2D Vector2D::operator*(int i) const
 	r.punto.Mul(i);
 	return r;
 }
+
+// Dependiendo de la direccion tomada, mueve el punto dado y comprueba si ha llegado hasta el final de los pasillos
 void Vector2D::movimiento(Point2D& point) {
-	if (punto.getX() == -1)
-		point.Suma(-1, 0);
-	else if (punto.getX() == 1)
-		point.Suma(1, 0);
-	else if (punto.getY() == -1)
-		point.Suma(0, -1);
-	else if (punto.getY() == 1)
-		point.Suma(0, 1);
+	int x = punto.getX(), y = punto.getY();
+	point.Suma(x, y);
 
 	Point2D izq(0, 15), der(28, 15);
 	if (point.iguales(izq))
@@ -35,6 +31,7 @@ void Vector2D::movimiento(Point2D& point) {
 		point.SetPos(1, 15);
 	}
 }
+
 bool Vector2D::operator==(const Vector2D& v)
 {
 	return punto.iguales(v.punto) ;
