@@ -26,18 +26,34 @@ void GameMap::render() {
 			destRect.w = 10;
 			destRect.h = 10;
 
-			try {
-				if (Mapa[i][j] == Wall) 
-					game->getTexture(wall)->render(destRect);
-				else if (Mapa[i][j] == Vitamins) 
-					game->getTexture(burguer)->render(destRect);
-				else if (Mapa[i][j] == Food) 
-					game->getTexture(food)->render(destRect);
+			
+			if (Mapa[i][j] == Wall)
+			{
+				if (game->getTexture(wall) == NULL)
+				{
+					throw "No hay textura de muro";
+				}
+				else game->getTexture(wall)->render(destRect);
 			}
-			catch (string& e) {
-				e = "Hay una o varias texturas nulas";
-				cout << e;
+			else if (Mapa[i][j] == Vitamins)
+			{
+				if (game->getTexture(burguer) == NULL)
+				{
+					throw "No hay textura de burger";
+				}
+				else game->getTexture(burguer)->render(destRect);
 			}
+			else if (Mapa[i][j] == Food)
+			{
+				if (game->getTexture(food) == NULL)
+				{
+					throw "No hay textura food";
+				}
+				else game->getTexture(food)->render(destRect);
+			}
+					
+			
+				
 		}
 	}
 }

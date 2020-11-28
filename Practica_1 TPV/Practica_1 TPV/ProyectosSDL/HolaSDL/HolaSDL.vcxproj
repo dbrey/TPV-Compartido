@@ -77,9 +77,11 @@
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMap.h" />
     <ClInclude Include="Ghost.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="PacMan.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Vector2D.h" />

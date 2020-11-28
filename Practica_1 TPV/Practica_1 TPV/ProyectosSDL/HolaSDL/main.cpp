@@ -38,7 +38,6 @@ int main(int argc, char* argv[]){
 		{
 			Game game = Game(window, renderer, 200, 200, 10, 10);
 			game.run();
-			game.~Game();
 		}
 		catch(string& e)
 		{

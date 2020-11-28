@@ -4,8 +4,9 @@
 #include "GameMap.h"
 #include "PacMan.h"
 #include "Ghost.h"
+#include "List.h"
 #include <array>
-
+using namespace std;
 const int NUM_TEXTURES = 4;
 
 const enum textureName { burguer, characters, food, wall};
@@ -28,11 +29,13 @@ private:
 	int VentX, VentY, tamCellX, tamCellY;
 	int comida = 0;
 	bool exit = false;
+	int nMapa = 1;
 
 	PacMan* pac;
 	GameMap* mapa;
 
-	array<Ghost*, 4> fantasmas;
+	//array<Ghost*, 4> fantasmas;
+	List<Ghost*> fantasmas;
 
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
@@ -55,7 +58,7 @@ public:
 
 	GameMap* getMapa() { return mapa; }
 	PacMan* getPac() {return pac; }
-	Ghost* getGhost(int i) { return fantasmas[i]; }
+	Ghost* getGhost(int i);
 
 	void run();
 
@@ -63,7 +66,13 @@ public:
 
 	void update();
 
+	void CambioMapa();
+
+	string nombreNivel(int nMapa);
+
 	bool nextCell(Vector2D dir, Point2D pos);
+
+	void restaComida() { comida--; }
 
 	~Game();
 };

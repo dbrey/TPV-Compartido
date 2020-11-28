@@ -13,8 +13,7 @@ private:
 	uint32_t  tiempoforce = 0;
 
 	int vidas = 3;
-	int energia;
-
+	int puntuacion = 0;
 
 	Point2D point;
 	Point2D iniPoint;
@@ -36,5 +35,7 @@ public:
 	void update();
 	void morir();
 	void check();
+
+	int puntos() { return puntuacion; }
 	~PacMan();
 };

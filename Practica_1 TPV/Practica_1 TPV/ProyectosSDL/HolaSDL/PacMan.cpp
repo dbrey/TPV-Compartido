@@ -16,6 +16,8 @@ void PacMan::comida() {
 	if (game->getMapa()->readCell(point.getX(), point.getY()) == Food)
 	{
 		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
+		game->restaComida();
+		puntuacion += 10;
 	}
 	else if (game->getMapa()->readCell(point.getX(), point.getY()) == Vitamins)
 	{
@@ -105,23 +107,18 @@ void PacMan::render() {
 	rect.h = 10;
 	
 	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
-	try {
-		if (tiempoforce == 0)
-			textura->renderFrame(rect, 0, 10);
-		else
-			textura->renderFrame(rect, 0, 11);
+	if (textura == NULL)
+	{
+		throw "PacMan no tiene textura";
 	}
-	catch (string& e) {
-		if (textura == NULL)
-		{
-			e = "PacMan no tiene textura";
-		}
-		cout << e;
-	}
+	if (tiempoforce == 0)
+		textura->renderFrame(rect, 0, 10);
+	else
+		textura->renderFrame(rect, 0, 11);
+	
 }
 
 PacMan::~PacMan()
 {
-	delete game;
-	delete textura;
+
 }

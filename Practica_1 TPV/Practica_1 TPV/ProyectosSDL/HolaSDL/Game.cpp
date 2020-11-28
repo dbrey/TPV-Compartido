@@ -3,13 +3,23 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
+
+using namespace std;
 
 Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx, int cty) {
 	window_ = window;
 	renderer_ = renderer;
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
 	IniTextures();
-	LeeArchivo("level01.dat");
+	LeeArchivo(nombreNivel(nMapa));
+}
+
+string Game::nombreNivel(int nMapa)
+{
+	stringstream nombre;
+	nombre << "../mapas/level0" << nMapa << ".dat";
+	return nombre.str();
 }
 
 // Lee el archivo y asigna los elementos del archivo a las variables de Game(PacMan,Ghost,Mapa...)
@@ -27,7 +37,7 @@ bool Game::LeeArchivo(string archivo) {
 
 		mapa = new GameMap(x, y, this);
 		
-		int aux, contf = 0;
+		int aux;
 		for (int i = 0; i < x; i++) {
 			for (int j = 0; j < y; j++) {
 				input >> aux;
@@ -43,9 +53,8 @@ bool Game::LeeArchivo(string archivo) {
 					mapa->writeCell(j, i, Empty);
 					if (aux == 9)
 						pac = new PacMan(j,i, this);
-					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8) && contf <4) {
-						fantasmas[contf] = new Ghost(j , i, this);
-						contf++;
+					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
+						fantasmas.push_back(new Ghost(j, i, this));
 					}
 				}
 			}
@@ -64,30 +73,78 @@ void Game::IniTextures()
 	}
 }
 
+Ghost* Game::getGhost(int i)
+{
+	int aux = 0;
+	List<Ghost*>::Iterator it = fantasmas.begin();
+	while (it != fantasmas.end() && aux != i)
+	{
+		aux++;
+		++it;
+	}
+
+	return it.elem();
+}
+
 // Renderiza todos los elementos del juego
 void Game::render() {
+	SDL_RenderClear(renderer_);
 	mapa->render();
 	pac->render();
-	for (int i = 0; i < fantasmas.size(); i++)
+	
+	int aux = 0;
+	List<Ghost*>::Iterator it = fantasmas.begin();
+	while (it != fantasmas.end())
 	{
-		fantasmas[i]->render(i);
+		it.elem()->render(aux);
+		++it;
+		aux++;
 	}
+
+	SDL_RenderPresent(renderer_);
 }
 
 // Maneja los eventos
 void Game::handleEvent(SDL_Event& tecla){
-	pac->handleEvent(tecla);
+	if (SDL_PollEvent(&tecla) != 0)
+	{
+		pac->handleEvent(tecla);
+
+	}
 }
 
 // Actualiza el juego
 void Game::update() {
 	pac->update();
-	for (int i = 0; i < fantasmas.size(); i++)
+	
+	List<Ghost*>::Iterator it = fantasmas.begin();
+	while (it != fantasmas.end())
 	{
-		fantasmas[i]->update();
+		it.elem()->update();
+		++it;
 	}
 
+	if (comida == 0 && !fin())
+	{
+		nMapa++;
+		CambioMapa();
+	}
+	
 	SDL_Delay(235);
+}
+
+void Game::CambioMapa()
+{
+	delete pac;
+	List<Ghost*>::Iterator it = fantasmas.begin();
+	while (it != fantasmas.end())
+	{
+		delete* it;
+		++it;
+	}
+	delete mapa;
+
+	LeeArchivo(nombreNivel(nMapa));
 }
 
 // Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
@@ -111,29 +168,32 @@ bool Game::nextCell(Vector2D dir, Point2D pos)
 // Maneja el juego
 void Game::run() {
 	SDL_Event event;
-	while (!fin() && pac->returnLives() > 0)
+	while (!fin() && pac->returnLives() > 0 && nMapa <= 5)
 	{
-		SDL_RenderClear(renderer_);
 		render();
-		if (SDL_PollEvent(&event) != 0)
-		{
-			handleEvent(event);
-		}
+		handleEvent(event);
 		update();
-
-		SDL_RenderPresent(renderer_);
+		
 	}
 }
 
 Game::~Game()
 {
-	pac->~PacMan();
-	for (int i = 0; i < fantasmas.size(); i++)
+	delete pac;
+	
+	List<Ghost*>::Iterator it = fantasmas.begin();
+	while (it != fantasmas.end())
 	{
-		fantasmas[i]->~Ghost();
+		delete *it;
+		++it;
 	}
 
-	mapa->~GameMap();
+	for (int i = 0; i < NUM_TEXTURES; ++i)
+	{
+		delete textures[i];
+	}
+
+	delete mapa;
 
 	SDL_DestroyRenderer(renderer_);
 	SDL_DestroyWindow(window_);

@@ -15,10 +15,7 @@ Ghost::Ghost(int x, int y, Game* g) : iniPoint(x, y), point(x, y) {
 // Comprobamos las direcciones a las que se puede mover el fantasma
 void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
-    Vector2D derecha(1, 0);
-    Vector2D izquierda(-1, 0);
-    Vector2D arriba(0, -1);
-    Vector2D abajo(0, 1);
+    Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
     mov[0] = game->nextCell(derecha, point);
     mov[1] = game->nextCell(izquierda, point);
@@ -33,18 +30,15 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
     }
 }
 
-// Optimizar
+
 void Ghost::SelecMov()
 {
     CheckMov();
     vector<int> sel(4);
     
-    for (int cont = 0; cont < 4; cont++) {
-        sel[cont] = cont;
-    }
+    for (int cont = 0; cont < 4; cont++) { sel[cont] = cont; }
 
-        int aux = rand() % 4;
-        int i = 0;
+        int aux = rand() % 4, i = 0;
         while (!mov[aux] && i < 4) {
             // Si la direccion seleccionada esta bloqueada, se descarta
             if (!mov[aux]) {
@@ -80,8 +74,6 @@ void Ghost::SelecMov()
                 }
             }
         }
-        else
-            direc.setdir(0, 0);
 }
 
 // Selecciona la direccion y se mueve
@@ -105,7 +97,10 @@ void Ghost::render(int aux) {
     rect.w = 10;
     rect.h = 10;
     
-    try {
+    if (tfantasmas == NULL)
+    {
+        throw"Los fantasmas no tienen texturas";
+    }
         if (aux == 0)
             tfantasmas->renderFrame(rect, 0, 0);
         else if (aux == 1)
@@ -114,13 +109,8 @@ void Ghost::render(int aux) {
             tfantasmas->renderFrame(rect, 0, 4);
         else
             tfantasmas->renderFrame(rect, 0, 6);
-    }
-    catch (string& e) {
-        if (tfantasmas == NULL)
-            e = "Los fantasmas no tienen texturas";
+    
 
-        cout << e;
-    }
 }
 
 Ghost::~Ghost()
