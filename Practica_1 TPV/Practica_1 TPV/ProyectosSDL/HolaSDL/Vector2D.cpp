@@ -21,14 +21,27 @@ void Vector2D::movimiento(Point2D& point) {
 	int x = punto.getX(), y = punto.getY();
 	point.Suma(x, y);
 
-	Point2D izq(0, 15), der(28, 15);
+	int posx = point.getX();
+	int posy = point.getY();
+	
+	Point2D izq(0, posy), der(28, posy);
+	Point2D arr(posx, 0), abj(posx, 27);
+
 	if (point.iguales(izq))
 	{
-		point.SetPos(27, 15);
+		point.SetPos(27, posy);
 	}
 	else if (point.iguales(der))
 	{
-		point.SetPos(1, 15);
+		point.SetPos(1, posy);
+	}
+	else if (point.iguales(arr))
+	{
+		point.SetPos(posx, 26);
+	}
+	else if (point.iguales(abj))
+	{
+		point.SetPos(posx, 1);
 	}
 }
 

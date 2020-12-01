@@ -5,6 +5,7 @@
 #include "PacMan.h"
 #include "Ghost.h"
 #include "List.h"
+#include "GameObject.h"
 #include <array>
 using namespace std;
 const int NUM_TEXTURES = 4;
@@ -34,9 +35,8 @@ private:
 	PacMan* pac;
 	GameMap* mapa;
 
-	//array<Ghost*, 4> fantasmas;
 	List<Ghost*> fantasmas;
-
+	//List<GameObject*> objects;
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 

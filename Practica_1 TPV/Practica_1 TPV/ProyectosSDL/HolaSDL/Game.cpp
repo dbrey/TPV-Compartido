@@ -124,7 +124,7 @@ void Game::update() {
 		++it;
 	}
 
-	if (comida == 0 && !fin())
+	if (comida == 0)
 	{
 		nMapa++;
 		CambioMapa();
@@ -173,7 +173,6 @@ void Game::run() {
 		render();
 		handleEvent(event);
 		update();
-		
 	}
 }
 

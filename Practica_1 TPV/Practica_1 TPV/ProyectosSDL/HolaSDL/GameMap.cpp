@@ -58,6 +58,40 @@ void GameMap::render() {
 	}
 }
 
+bool GameMap::intersectsWall(const SDL_Rect& rect)
+{
+	bool aux = false;
+	SDL_Rect r;
+	int i = 0, j = 0;
+	while (!aux)
+	{
+		while (!aux)
+		{
+			if (Mapa[i][j] == Wall)
+			{
+				r = mapCoordsToSDLPoint()
+			}
+
+			j++;
+		}
+		i++;
+	}
+}
+
+SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& p)
+{
+	SDL_Point aux;
+	aux.x = p.getX();
+	aux.y = p.getY();
+	return aux;
+}
+
+Point2D GameMap::SDLPointToMapCoords(SDL_Point& Sp)
+{
+	Point2D aux(Sp.x, Sp.y);
+	return aux;
+}
+
 GameMap::~GameMap()
 {
 	delete Mapa;
