@@ -58,7 +58,7 @@ void GameMap::render() {
 	}
 }
 
-bool GameMap::intersectsWall(const SDL_Rect& rect)
+/*bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
 	bool aux = false;
 	SDL_Rect r;
@@ -90,7 +90,7 @@ Point2D GameMap::SDLPointToMapCoords(SDL_Point& Sp)
 {
 	Point2D aux(Sp.x, Sp.y);
 	return aux;
-}
+}*/
 
 GameMap::~GameMap()
 {

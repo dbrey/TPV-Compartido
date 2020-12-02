@@ -25,7 +25,7 @@ void Vector2D::movimiento(Point2D& point) {
 	int posy = point.getY();
 	
 	Point2D izq(0, posy), der(28, posy);
-	Point2D arr(posx, 0), abj(posx, 27);
+	Point2D arr(posx, 0), abj(posx, 28);
 
 	if (point.iguales(izq))
 	{

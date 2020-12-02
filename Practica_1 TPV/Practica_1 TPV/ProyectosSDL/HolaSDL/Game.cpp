@@ -178,7 +178,6 @@ void Game::run() {
 
 Game::~Game()
 {
-	delete pac;
 	
 	List<Ghost*>::Iterator it = fantasmas.begin();
 	while (it != fantasmas.end())
