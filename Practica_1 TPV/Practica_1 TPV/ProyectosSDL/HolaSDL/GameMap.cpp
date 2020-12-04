@@ -58,7 +58,7 @@ void GameMap::render() {
 	}
 }
 
-/*bool GameMap::intersectsWall(const SDL_Rect& rect)
+bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
 	bool aux = false;
 	SDL_Rect r;
@@ -76,21 +76,32 @@ void GameMap::render() {
 		}
 		i++;
 	}
+	
 }
 
 SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& p)
 {
+
+	//Averiguar que casilla del mapa corresponde al p
+
+	//Averiguar la relacion entre la casilla del mapa con la ventana
+
+	//
+
 	SDL_Point aux;
-	aux.x = p.getX();
-	aux.y = p.getY();
+	
+	aux.x =( xcasilla*800)/tamañojuegox
+	aux.y = (ycasilla*600)/tamañojuegoy
 	return aux;
 }
 
 Point2D GameMap::SDLPointToMapCoords(SDL_Point& Sp)
 {
-	Point2D aux(Sp.x, Sp.y);
+	Point2D aux
+
+		auxx = (sp.x *casillas del mapa x )/800
 	return aux;
-}*/
+}
 
 GameMap::~GameMap()
 {

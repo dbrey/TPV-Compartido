@@ -115,6 +115,7 @@ void Game::handleEvent(SDL_Event& tecla){
 
 // Actualiza el juego
 void Game::update() {
+	
 	pac->update();
 	
 	List<Ghost*>::Iterator it = fantasmas.begin();
