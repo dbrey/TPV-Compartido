@@ -70,6 +70,8 @@ public:
 
 	string nombreNivel(int nMapa);
 
+	bool tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos);
+
 	bool nextCell(Vector2D dir, Point2D pos);
 
 	void restaComida() { comida--; }

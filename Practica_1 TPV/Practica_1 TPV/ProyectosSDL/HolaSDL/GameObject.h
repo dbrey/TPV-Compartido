@@ -13,5 +13,5 @@ public:
 	virtual ~GameObject() {};
 	virtual void update();
 	virtual void render() const;
-	virtual void getDestRect(int& an, int& al) { an = anch; al = alt; };
+	virtual SDL_Rect getDestRect();
 };

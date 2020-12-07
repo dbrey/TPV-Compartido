@@ -1,14 +1,3 @@
 ﻿  Game.cpp
-  GameCharacter.cpp
-  GameMap.cpp
-  GameObject.cpp
-  Ghost.cpp
-  main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-  PacMan.cpp
-  Texture.cpp
-  Vector2D.cpp
-  Generando código...
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(166): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(173): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
+  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe

@@ -50,56 +50,50 @@ void GameMap::render() {
 					throw "No hay textura food";
 				}
 				else game->getTexture(food)->render(destRect);
-			}
-					
-			
-				
+			}	
 		}
 	}
 }
 
 bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
-	bool aux = false;
-	SDL_Rect r;
-	int i = 0, j = 0;
-	while (!aux)
-	{
-		while (!aux)
-		{
-			if (Mapa[i][j] == Wall)
-			{
-				r = mapCoordsToSDLPoint()
-			}
+	Point2D topLeft = SDLPointToMapCoords(rect.x, rect.y);
+	Point2D botRight = SDLPointToMapCoords((rect.x + rect.w), (rect.y+rect.h));
 
-			j++;
+	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un
+	for (int r = topLeft.getX(); r <= botRight.getX(); r++)
+	{
+		for (int c = topLeft.getY(); c <= botRight.getY(); c++)
+		{
+			if (readCell(r, c) == Wall)
+				return true;
 		}
-		i++;
-	}
-	
+	}	
 }
 
-SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& p)
+SDL_Rect GameMap::getDestRect()
 {
+	// Teniendo en cuenta un GameObject
 
+
+}
+
+SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& coords)
+{
 	//Averiguar que casilla del mapa corresponde al p
 
 	//Averiguar la relacion entre la casilla del mapa con la ventana
 
-	//
-
 	SDL_Point aux;
-	
-	aux.x =( xcasilla*800)/tamañojuegox
-	aux.y = (ycasilla*600)/tamañojuegoy
+
+	aux.x = (coords.getX() * 800) / cols*10;
+	aux.y = (coords.getY() * 600) / fils * 10;
 	return aux;
 }
 
-Point2D GameMap::SDLPointToMapCoords(SDL_Point& Sp)
+Point2D GameMap::SDLPointToMapCoords(int x, int y)
 {
-	Point2D aux
-
-		auxx = (sp.x *casillas del mapa x )/800
+	Point2D aux = Point2D((x * cols) / 800, (y*fils) / 600);
 	return aux;
 }
 

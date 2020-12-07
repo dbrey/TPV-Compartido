@@ -148,6 +148,33 @@ void Game::CambioMapa()
 	LeeArchivo(nombreNivel(nMapa));
 }
 
+bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
+{
+	SDL_Rect mapRect = mapa->getDestRect();
+	newPos.Suma(dir.GetX(), dir.GetY());
+
+	// Dudoso (de momento)
+	// Derecha
+	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
+		newPos.SetPos(mapRect.x, newPos.getY());
+
+	//Izquierda
+	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
+		newPos.SetPos(mapRect.x, newPos.getY());
+
+	// Arriba
+	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
+		newPos.SetPos(newPos.getX(), mapRect.y);
+
+	// Abajo
+	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
+		newPos.SetPos(newPos.getX(), mapRect.y);
+
+	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
+	return !(mapa->intersectsWall(newRect));
+
+}
+
 // Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
 bool Game::nextCell(Vector2D dir, Point2D pos)
 {
