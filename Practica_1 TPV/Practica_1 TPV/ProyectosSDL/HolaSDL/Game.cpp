@@ -51,10 +51,14 @@ bool Game::LeeArchivo(string archivo) {
 					mapa->writeCell(j, i, Vitamins);
 				else {
 					mapa->writeCell(j, i, Empty);
-					if (aux == 9)
-						pac = new PacMan(j,i, this);
+					if (aux == 9) {
+						pac = new PacMan(j, i, this);
+						objects.push_back(pac);
+					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
+						
 						fantasmas.push_back(new Ghost(j, i, this));
+						objects.push_back(fantasmas.back());
 					}
 				}
 			}
@@ -90,7 +94,7 @@ Ghost* Game::getGhost(int i)
 void Game::render() {
 	SDL_RenderClear(renderer_);
 	mapa->render();
-	pac->render();
+	/*pac->render();
 	
 	int aux = 0;
 	List<Ghost*>::Iterator it = fantasmas.begin();
@@ -99,6 +103,10 @@ void Game::render() {
 		it.elem()->render(aux);
 		++it;
 		aux++;
+	}*/
+
+	for (auto i : objects) {
+		i->render();
 	}
 
 	SDL_RenderPresent(renderer_);
@@ -207,8 +215,8 @@ void Game::run() {
 Game::~Game()
 {
 	
-	List<Ghost*>::Iterator it = fantasmas.begin();
-	while (it != fantasmas.end())
+	List<GameObject*>::Iterator it = objects.begin();
+	while (it != objects.end())
 	{
 		delete *it;
 		++it;

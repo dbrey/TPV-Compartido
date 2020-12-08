@@ -6,7 +6,7 @@
 class Game;
 
 
-class Ghost
+class Ghost : public GameCharacter
 {
 
 private:

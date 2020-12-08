@@ -36,7 +36,7 @@ private:
 	GameMap* mapa;
 
 	List<Ghost*> fantasmas;
-	//List<GameObject*> objects;
+	List<GameObject*> objects;
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 

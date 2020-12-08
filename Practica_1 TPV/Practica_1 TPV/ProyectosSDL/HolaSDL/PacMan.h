@@ -3,9 +3,10 @@
 #include "Vector2D.h"
 #include "Texture.h"
 #include "GameMap.h"
+#include "GameCharacter.h"
 class Game;
 
-class PacMan
+class PacMan : public GameCharacter
 {
 private:
 	const uint32_t  duracion = 40;
@@ -15,12 +16,7 @@ private:
 	int vidas = 90;
 	int puntuacion = 0;
 
-	Point2D point;
-	Point2D iniPoint;
-	Vector2D dir_actual;
 	Vector2D dir_sel;
-	Game* game;
-	Texture* textura;
 
 public:
 	

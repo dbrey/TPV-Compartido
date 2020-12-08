@@ -1,3 +1,33 @@
 ﻿  Game.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(173): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+  GameCharacter.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(25,26): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(10,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
+  GameMap.cpp
+  GameObject.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(7,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,67): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(25,26): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
+  Ghost.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
+  main.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(10,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
+  PacMan.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(10,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  Generando código...
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(79): error C4716: 'GameMap::getDestRect': debe devolver un valor
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(72): warning C4715: 'GameMap::intersectsWall': no todas las rutas de acceso de control devuelven un valor
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(202): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor

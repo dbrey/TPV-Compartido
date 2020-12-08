@@ -5,10 +5,8 @@
 #include "Game.h"
 #include "GameMap.h"
 
-PacMan::PacMan(int x, int y, Game* g) : iniPoint(x,y), point(x, y) {
-	game = g;
-	dir_actual.setdir(1, 0);
-	textura = g->getTexture(characters);
+PacMan::PacMan(int x, int y, Game* g) : GameCharacter(Point2D(x, y), Vector2D(1, 0), g->getTexture(characters), g) {
+
 }
 
 // Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio
