@@ -199,9 +199,12 @@ void Game::SaveToFile()
 	int x = mapa->cols;
 	int y = mapa->fils;
 
-	fil << x << " " << y << endl;
-	
-	// Cada objeto se tiene que guardar por si mismo
+	for (GameObject* o : objects)
+	{
+		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
+		if (c != nullptr) c->saveToFil(fil);
+	}
+
 	fil.close();
 }
 
