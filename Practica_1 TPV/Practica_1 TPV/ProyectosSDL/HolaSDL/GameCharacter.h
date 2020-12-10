@@ -1,7 +1,9 @@
 #pragma once
 
 #include "GameObject.h"
-#include "List.h"
+#include "Texture.h"
+#include <list>
+using namespace std;
 
 class GameCharacter : public GameObject
 {
@@ -11,14 +13,14 @@ protected:
 	Texture* textura;
 	// Coord del frame de la textura
 	// Iterador a la posicion del objeto dentro de la lista de GameObject
-	List<GameCharacter>::Iterator it;
+	list<GameCharacter*>::iterator it; 
 
 public:
 
 	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g) : GameObject(inipos, 10, 10, g), iniPoint(inipos), dir_actual(d), textura(t) {}
 
-	void setItList(List<GameCharacter>::Iterator i) { it = i; }
-	void savetofile(ifstream fil);
+	void setItList(list<GameCharacter*>::iterator i) { it = i; }
+	void savetofile(ifstream& fil);
 
 	virtual void render();
 	virtual void update() = 0;

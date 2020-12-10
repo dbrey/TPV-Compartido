@@ -35,7 +35,7 @@ bool Game::LeeArchivo(string archivo) {
 		int x, y;
 		input >> x >> y;
 
-		mapa = new GameMap(x, y, this);
+		mapa = new GameMap(x, y);
 		
 		int aux;
 		for (int i = 0; i < x; i++) {
@@ -80,14 +80,14 @@ void Game::IniTextures()
 Ghost* Game::getGhost(int i)
 {
 	int aux = 0;
-	List<Ghost*>::Iterator it = fantasmas.begin();
+	list<Ghost*>::iterator it = fantasmas.begin();
 	while (it != fantasmas.end() && aux != i)
 	{
 		aux++;
 		++it;
 	}
 
-	return it.elem();
+	return *it;
 }
 
 // Renderiza todos los elementos del juego
@@ -116,10 +116,10 @@ void Game::update() {
 	
 	pac->update();
 	
-	List<Ghost*>::Iterator it = fantasmas.begin();
+	list<Ghost*>::iterator it = fantasmas.begin();
 	while (it != fantasmas.end())
 	{
-		it.elem()->update();
+		it*->update();
 		++it;
 	}
 
@@ -135,7 +135,7 @@ void Game::update() {
 void Game::CambioMapa()
 {
 	delete pac;
-	List<Ghost*>::Iterator it = fantasmas.begin();
+	list<Ghost*>::iterator it = fantasmas.begin();
 	while (it != fantasmas.end())
 	{
 		delete* it;
@@ -151,21 +151,21 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 	SDL_Rect mapRect = mapa->getDestRect();
 	newPos.Suma(dir.GetX(), dir.GetY());
 
-	// Dudoso (de momento)
+	// Comprobamos direccion y averiguamos si nos salimos del mapa
 	// Derecha
 	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
 		newPos.SetPos(mapRect.x, newPos.getY());
 
 	//Izquierda
-	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
-		newPos.SetPos(mapRect.x, newPos.getY());
+	else if (dir.GetX() < 0 && (newPos.getX() - rect.w) <= mapRect.x + mapRect.w)
+		newPos.SetPos(mapRect.x - mapRect.w, newPos.getY());
 
 	// Arriba
 	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
 		newPos.SetPos(newPos.getX(), mapRect.y);
 
 	// Abajo
-	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
+	else if (dir.GetY() > 0 && (newPos.getY() - rect.h) <= mapRect.y + mapRect.y)
 		newPos.SetPos(newPos.getX(), mapRect.y);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
@@ -200,36 +200,8 @@ void Game::SaveToFile()
 	int y = mapa->fils;
 
 	fil << x << " " << y << endl;
-	for (int i = 0; i < y; i++) {
-		for (int j = 0; j < x; j++) 
-		{
-			if (mapa->readCell(i, j) == Wall)
-			{
-				fil << 1 << " ";
-			}
-			else if (mapa->readCell(i, j) == Food)
-			{
-				fil << 2 << " ";
-			}
-			else if (mapa->readCell(i, j) == Vitamins)
-			{
-				fil << 3 << " ";
-			}
-			else if (pac->getPoint().getX() == j && pac->getPoint().getY() == i)
-			{
-				fil << 9 << " ";
-			}
-			else if (fantasma->getPoint().getX() == j && fastasma->getPoint().getY() == i)
-			{
-				fil << 4 << " ";
-			}
-			else
-			{
-				fil << 0 << " ";
-			}
-		}
-		fil << endl;
-	}
+	
+	// Cada objeto se tiene que guardar por si mismo
 	fil.close();
 }
 
@@ -247,7 +219,7 @@ void Game::run() {
 Game::~Game()
 {
 	
-	List<GameObject*>::Iterator it = objects.begin();
+	list<GameObject*>::iterator it = objects.begin();
 	while (it != objects.end())
 	{
 		delete *it;

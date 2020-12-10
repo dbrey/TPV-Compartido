@@ -1,40 +1,23 @@
 ﻿  Game.cpp
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(122,6): error C2059: error de sintaxis: '->'
   GameCharacter.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(11,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,30): error C3646: 'getDestRect': especificador de invalidación desconocido
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,31): error C2059: error de sintaxis: ')'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,36): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(27,6): error C2065: 'pacman': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(29,6): error C2027: uso del tipo 'std::basic_ifstream<char,std::char_traits<char>>' sin definir
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(224): message : vea la declaración de 'std::basic_ifstream<char,std::char_traits<char>>'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(30,2): error C2059: error de sintaxis: '}'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(32,1): error C2059: error de sintaxis: '}'
   GameMap.cpp
   GameObject.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(7,1): error C2504: 'GameObject': clase base sin definir
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,67): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,30): error C3646: 'getDestRect': especificador de invalidación desconocido
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,31): error C2059: error de sintaxis: ')'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,36): error C2238: símbolos (token) inesperados delante de ';'
   Ghost.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(38,7): error C2065: 'Ghost': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(38,13): error C2059: error de sintaxis: '>'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,7): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,24): error C2238: símbolos (token) inesperados delante de ';'
   main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
   PacMan.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(11,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(35,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,7): error C2065: 'GameObject': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2059: error de sintaxis: '>'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(60,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(62,40): error C2039: "getPoint": no es un miembro de "Ghost"
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(10): message : vea la declaración de 'Ghost'
-  Texture.cpp
   Generando código...
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(70): warning C4715: 'GameMap::intersectsWall': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(192): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(71): warning C4715: 'GameMap::intersectsWall': no todas las rutas de acceso de control devuelven un valor

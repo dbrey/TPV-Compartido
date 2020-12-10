@@ -27,7 +27,7 @@ void Vector2D::movimiento(Point2D& point) {
 	Point2D izq(0, posy), der(28, posy);
 	Point2D arr(posx, 0), abj(posx, 28);
 
-	if (point.iguales(izq))
+	/*if (point.iguales(izq))
 	{
 		point.SetPos(27, posy);
 	}
@@ -42,7 +42,7 @@ void Vector2D::movimiento(Point2D& point) {
 	else if (point.iguales(abj))
 	{
 		point.SetPos(posx, 1);
-	}
+	}*/
 }
 
 bool Vector2D::operator==(const Vector2D& v)

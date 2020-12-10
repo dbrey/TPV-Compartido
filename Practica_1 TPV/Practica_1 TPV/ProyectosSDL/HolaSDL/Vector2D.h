@@ -25,7 +25,7 @@ public:
 class Vector2D
 {
 private:
-	Point2D punto;
+	Point2D punto; // Mejor X, Y
 public:
 	Vector2D() : punto(0, 0){}
 	Vector2D(int X, int Y) : punto(X, Y) {}

@@ -22,7 +22,7 @@ SDL_Rect GameCharacter::getDestRect()
 	return aux;
 }
 
-void GameCharacter::savetofile(ifstream fil)
+void GameCharacter::savetofile(ifstream& fil)
 {
 	if (pacman)
 	{

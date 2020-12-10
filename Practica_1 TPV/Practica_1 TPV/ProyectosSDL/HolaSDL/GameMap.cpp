@@ -2,12 +2,11 @@
 #include "Game.h"
 
 // Constructora
-GameMap::GameMap(int c, int f, Game* g)
+GameMap::GameMap(int c, int f) : GameObject(completabasura,cols,fils,game)
 {
 	cols = c;
 	fils = f;
 	Mapa = new MapCell* [cols];
-	game = g;
 
 	for (int i = 0; i < cols; i++)
 	{
@@ -52,6 +51,8 @@ void GameMap::render() {
 		}
 	}
 }
+
+void GameMap::update() {}
 
 bool GameMap::intersectsWall(const SDL_Rect& rect)
 {

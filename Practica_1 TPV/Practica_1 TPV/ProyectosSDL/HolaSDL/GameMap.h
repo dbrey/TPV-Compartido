@@ -2,23 +2,25 @@
 
 #include "Texture.h"
 #include "Vector2D.h"
+#include "GameObject.h"
 class Game;
 
 enum MapCell { Empty, Wall, Food, Vitamins };
-class GameMap
+class GameMap : public GameObject
 {
 	friend class Game; 
 private:
 	MapCell **Mapa;
 	int cols, fils;
+	Point2D completabasura = Point2D (0,0);
 	int windowW = 800;
 	int windowH = 600;
-
+	// El gamemap se guarda sus propias cosas
 	Game* game;
 
 public:
 
-	GameMap(int c, int f, Game* g);
+	GameMap(int c, int f);
 
 
 	MapCell readCell(int fil, int col)const { return Mapa[fil][col]; };
@@ -27,8 +29,9 @@ public:
 	Point2D SDLPointToMapCoords(int x, int y);
 	bool intersectsWall(const SDL_Rect& rect);
 	//void getTamMap(int& x, int& y) { x = cols, y = fils; }
-	SDL_Rect getDestRect();
 	void render();
+	void update(); // Metodo para que no de error
+	SDL_Rect getDestRect(); // Metodo para que no de error
 
 	~GameMap();
 };
