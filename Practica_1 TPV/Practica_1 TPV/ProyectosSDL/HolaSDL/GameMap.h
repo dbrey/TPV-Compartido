@@ -26,6 +26,7 @@ public:
 	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
 	Point2D SDLPointToMapCoords(int x, int y);
 	bool intersectsWall(const SDL_Rect& rect);
+	//void getTamMap(int& x, int& y) { x = cols, y = fils; }
 	SDL_Rect getDestRect();
 	void render();
 

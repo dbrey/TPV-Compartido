@@ -21,3 +21,12 @@ SDL_Rect GameCharacter::getDestRect()
 	aux.h = h;
 	return aux;
 }
+
+void GameCharacter::savetofile(ifstream fil)
+{
+	if (pacman)
+	{
+		fil.
+	}
+	else if (fantasma)
+}

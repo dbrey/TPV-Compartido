@@ -76,5 +76,7 @@ public:
 
 	void restaComida() { comida--; }
 
+	void SaveToFile();
+
 	~Game();
 };

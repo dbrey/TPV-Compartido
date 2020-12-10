@@ -22,7 +22,6 @@ public:
 	
 	PacMan(int x, int y, Game* g);
 	
-	Point2D PacP() { return point; }
 
 	int returnLives() { return vidas; }
 	void comida();

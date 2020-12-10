@@ -15,19 +15,12 @@ protected:
 
 public:
 
-	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g) : GameObject(inipos, 10, 10, g), iniPoint(inipos), dir_actual(d), textura(t) {
+	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g) : GameObject(inipos, 10, 10, g), iniPoint(inipos), dir_actual(d), textura(t) {}
 
-	}
-		// Constructora para todos los parametros menos el iterador
-
-	void setItList(List<GameCharacter>::Iterator i) {
-		it = i;
-	}
-	// Llamar setItList para el iterador (hay que crear dicho metodo)
+	void setItList(List<GameCharacter>::Iterator i) { it = i; }
+	void savetofile(ifstream fil);
 
 	virtual void render();
 	virtual void update() = 0;
 	virtual SDL_Rect getDestRect();
-	//void saveToFile();
-	// Metodos render y savetofile (Metodos que tienen en comun Pacman y Ghost)
 };

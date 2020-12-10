@@ -4,7 +4,6 @@
 // Constructora
 GameMap::GameMap(int c, int f, Game* g)
 {
-
 	cols = c;
 	fils = f;
 	Mapa = new MapCell* [cols];
@@ -26,7 +25,6 @@ void GameMap::render() {
 			destRect.w = 10;
 			destRect.h = 10;
 
-			
 			if (Mapa[i][j] == Wall)
 			{
 				if (game->getTexture(wall) == NULL)
@@ -71,19 +69,8 @@ bool GameMap::intersectsWall(const SDL_Rect& rect)
 	}	
 }
 
-SDL_Rect GameMap::getDestRect()
-{
-	// Teniendo en cuenta un GameObject
-
-
-}
-
 SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& coords)
 {
-	//Averiguar que casilla del mapa corresponde al p
-
-	//Averiguar la relacion entre la casilla del mapa con la ventana
-
 	SDL_Point aux;
 
 	aux.x = (coords.getX() * 800) / cols*10;

@@ -7,9 +7,8 @@
 #include <cstdlib>
 
 
-Ghost::Ghost(int x, int y, Game* g) : iniPoint(x, y), point(x, y) {
-	game = g;
-	tfantasmas = g->getTexture(characters);
+Ghost::Ghost(int x, int y, Game* g) : GameCharacter(Point2D(x, y), Vector2D(1, 0), g->getTexture(characters), g) {
+
 }
 
 // Comprobamos las direcciones a las que se puede mover el fantasma
@@ -22,11 +21,11 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
     mov[2] = game->nextCell(arriba, point);
     mov[3] = game->nextCell(abajo, point);
 
-    if (game->nextCell(direc, point)) {
-        if (direc == izquierda) { mov[0] = false; }
-        else if (direc == derecha) { mov[1] = false; }
-        else if (direc == abajo) { mov[2] = false; }
-        else if (direc == arriba) { mov[3] = false;}
+    if (game->nextCell(dir_actual, point)) {
+        if (dir_actual == izquierda) { mov[0] = false; }
+        else if (dir_actual == derecha) { mov[1] = false; }
+        else if (dir_actual == abajo) { mov[2] = false; }
+        else if (dir_actual == arriba) { mov[3] = false;}
     }
 }
 
@@ -57,19 +56,19 @@ void Ghost::SelecMov()
         if (mov[aux]) {
             switch (aux) {
                 case 0: {
-                    direc.setdir(1, 0); // derecha
+                    dir_actual.setdir(1, 0); // derecha
                     break;
                 }
                 case 1: {
-                    direc.setdir(-1, 0); // izquierda
+                    dir_actual.setdir(-1, 0); // izquierda
                     break;
                 }
                 case 2: {
-                    direc.setdir(0, -1); // arriba
+                    dir_actual.setdir(0, -1); // arriba
                     break;
                 }
                 case 3: {
-                    direc.setdir(0, 1); // abajo
+                    dir_actual.setdir(0, 1); // abajo
                     break;
                 }
             }
@@ -80,7 +79,7 @@ void Ghost::SelecMov()
 void Ghost::update()
 {
     SelecMov();
-    direc.movimiento(point);
+    dir_actual.movimiento(point);
 }
 
 // Mueve al fantasma a su posicion inicial
@@ -97,18 +96,18 @@ void Ghost::render(int aux) {
     rect.w = 10;
     rect.h = 10;
     
-    if (tfantasmas == NULL)
+    if (textura == NULL)
     {
         throw"Los fantasmas no tienen texturas";
     }
         if (aux == 0)
-            tfantasmas->renderFrame(rect, 0, 0);
+            textura->renderFrame(rect, 0, 0);
         else if (aux == 1)
-            tfantasmas->renderFrame(rect, 0, 2);
+            textura->renderFrame(rect, 0, 2);
         else if (aux == 2)
-            tfantasmas->renderFrame(rect, 0, 4);
+            textura->renderFrame(rect, 0, 4);
         else
-            tfantasmas->renderFrame(rect, 0, 6);
+            textura->renderFrame(rect, 0, 6);
     
 
 }
@@ -116,5 +115,5 @@ void Ghost::render(int aux) {
 Ghost::~Ghost()
 {
     delete game;
-    delete tfantasmas; 
+    delete textura;
 }

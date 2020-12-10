@@ -94,17 +94,7 @@ Ghost* Game::getGhost(int i)
 void Game::render() {
 	SDL_RenderClear(renderer_);
 	mapa->render();
-	/*pac->render();
 	
-	int aux = 0;
-	List<Ghost*>::Iterator it = fantasmas.begin();
-	while (it != fantasmas.end())
-	{
-		it.elem()->render(aux);
-		++it;
-		aux++;
-	}*/
-
 	for (auto i : objects) {
 		i->render();
 	}
@@ -199,6 +189,48 @@ bool Game::nextCell(Vector2D dir, Point2D pos)
 		return (getMapa()->readCell(pos.getX(), pos.getY() + 1) != Wall);
 	}
 
+}
+
+void Game::SaveToFile()
+{
+	ofstream fil;
+	fil.open("../mapas/partida.txt");
+
+	int x = mapa->cols;
+	int y = mapa->fils;
+
+	fil << x << " " << y << endl;
+	for (int i = 0; i < y; i++) {
+		for (int j = 0; j < x; j++) 
+		{
+			if (mapa->readCell(i, j) == Wall)
+			{
+				fil << 1 << " ";
+			}
+			else if (mapa->readCell(i, j) == Food)
+			{
+				fil << 2 << " ";
+			}
+			else if (mapa->readCell(i, j) == Vitamins)
+			{
+				fil << 3 << " ";
+			}
+			else if (pac->getPoint().getX() == j && pac->getPoint().getY() == i)
+			{
+				fil << 9 << " ";
+			}
+			else if (fantasma->getPoint().getX() == j && fastasma->getPoint().getY() == i)
+			{
+				fil << 4 << " ";
+			}
+			else
+			{
+				fil << 0 << " ";
+			}
+		}
+		fil << endl;
+	}
+	fil.close();
 }
 
 // Maneja el juego
