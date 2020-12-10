@@ -70,6 +70,16 @@ void PacMan::check() {
 	}
 }
 
+SDL_Rect PacMan::getDestRect()
+{
+	SDL_Rect rect;
+	rect.x = point.getX() * 10;
+	rect.y = point.getY() * 10;
+	rect.w = 10;
+	rect.h = 10;
+
+	return rect;
+}
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
 	check();
@@ -79,7 +89,7 @@ void PacMan::update() {
 	
 	if (game->nextCell(dir_actual, point))
 	{
-		dir_actual.movimiento(point);
+		game->tryMove(getDestRect(), dir_actual, point);
 		comida();
 		check();
 	} 

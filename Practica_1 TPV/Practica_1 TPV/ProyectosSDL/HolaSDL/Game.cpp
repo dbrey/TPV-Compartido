@@ -158,11 +158,11 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 
 	//Izquierda
 	else if (dir.GetX() < 0 && (newPos.getX() - rect.w) <= mapRect.x + mapRect.w)
-		newPos.SetPos(mapRect.x - mapRect.w, newPos.getY());
+		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY()); //10 = rect.w del pacman
 
 	// Arriba
 	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
-		newPos.SetPos(newPos.getX(), mapRect.y);
+		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
 
 	// Abajo
 	else if (dir.GetY() > 0 && (newPos.getY() - rect.h) <= mapRect.y + mapRect.y)

@@ -30,6 +30,8 @@ public:
 	void update();
 	void morir();
 	void check();
+	SDL_Rect getDestRect();
+
 
 	int puntos() { return puntuacion; }
 	~PacMan();

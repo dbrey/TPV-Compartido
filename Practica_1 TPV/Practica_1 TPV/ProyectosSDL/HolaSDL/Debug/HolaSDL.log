@@ -1,23 +1,19 @@
 ﻿  Game.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(122,6): error C2059: error de sintaxis: '->'
   GameCharacter.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,30): error C3646: 'getDestRect': especificador de invalidación desconocido
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,31): error C2059: error de sintaxis: ')'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,36): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(27,6): error C2065: 'pacman': identificador no declarado
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(29,6): error C2027: uso del tipo 'std::basic_ifstream<char,std::char_traits<char>>' sin definir
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(224): message : vea la declaración de 'std::basic_ifstream<char,std::char_traits<char>>'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(30,2): error C2059: error de sintaxis: '}'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(32,1): error C2059: error de sintaxis: '}'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(122,6): error C2059: error de sintaxis: '->'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(27,6): error C2065: 'pacman': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(29,6): error C2027: uso del tipo 'std::basic_ifstream<char,std::char_traits<char>>' sin definir
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\iosfwd(223): message : vea la declaración de 'std::basic_ifstream<char,std::char_traits<char>>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(30,2): error C2059: error de sintaxis: '}'
   GameMap.cpp
   GameObject.cpp
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,30): error C3646: 'getDestRect': especificador de invalidación desconocido
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,31): error C2059: error de sintaxis: ')'
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18,36): error C2238: símbolos (token) inesperados delante de ';'
   Ghost.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.cpp(32,1): error C2059: error de sintaxis: '}'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.cpp(82,26): error C2039: 'movimiento': no es un miembro de 'Vector2D'
   main.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Vector2D.h(25): message : vea la declaración de 'Vector2D'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
   PacMan.cpp
   Generando código...
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(71): warning C4715: 'GameMap::intersectsWall': no todas las rutas de acceso de control devuelven un valor
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(71): warning C4715: 'GameMap::intersectsWall': no todas las rutas de acceso de control devuelven un valor
