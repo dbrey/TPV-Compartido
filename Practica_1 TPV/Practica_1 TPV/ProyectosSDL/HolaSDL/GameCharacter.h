@@ -20,7 +20,7 @@ public:
 	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g) : GameObject(inipos, 10, 10, g), iniPoint(inipos), dir_actual(d), textura(t) {}
 
 	void setItList(list<GameCharacter*>::iterator i) { it = i; }
-	void savetofile(ifstream& fil);
+	virtual void saveToFil(ofstream& fil);
 
 	virtual void render();
 	virtual void update() = 0;

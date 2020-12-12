@@ -32,7 +32,6 @@ public:
 	void check();
 	SDL_Rect getDestRect();
 
-
 	int puntos() { return puntuacion; }
 	~PacMan();
 };
