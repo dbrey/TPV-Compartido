@@ -2,7 +2,7 @@
 #include "Game.h"
 
 // Constructora
-GameMap::GameMap(int c, int f) : GameObject(Point2D (-1,-1), 10, 10, game)
+GameMap::GameMap(int c, int f, Game* g) : GameObject(Point2D (0,0), 10, 10, g)
 {
 	cols = c;
 	fils = f;
@@ -91,8 +91,8 @@ SDL_Rect GameMap::getDestRect()
 	aux.x = point.getX();
 	aux.y = point.getY();
 
-	aux.w = w;
-	aux.h = h;
+	aux.w = w*cols;
+	aux.h = h*fils;
 	return aux;
 }
 

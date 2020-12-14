@@ -14,12 +14,10 @@ private:
 	int cols, fils;
 	int windowW = 800;
 	int windowH = 600;
-	// El gamemap se guarda sus propias cosas
-	Game* game;
 
 public:
 
-	GameMap(int c, int f);
+	GameMap(int c, int f, Game* g);
 
 
 	MapCell readCell(int fil, int col)const { return Mapa[fil][col]; };

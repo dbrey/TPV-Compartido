@@ -11,8 +11,6 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 	window_ = window;
 	renderer_ = renderer;
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
-	IniTextures();
-	LeeArchivo(nombreNivel(nMapa));
 }
 
 string Game::nombreNivel(int nMapa)
@@ -35,7 +33,7 @@ bool Game::LeeArchivo(string archivo) {
 		int x, y;
 		input >> x >> y;
 
-		mapa = new GameMap(x, y);
+		mapa = new GameMap(x, y, this);
 		
 		int aux;
 		for (int i = 0; i < x; i++) {
@@ -155,15 +153,15 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 		newPos.SetPos(mapRect.x, newPos.getY());
 
 	//Izquierda
-	else if (dir.GetX() < 0 && (newPos.getX() - rect.w) <= mapRect.x + mapRect.w)
+	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) <= 0)
 		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY()); //10 = rect.w del pacman
 
 	// Arriba
-	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
+	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) <= 0)
 		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
 
 	// Abajo
-	else if (dir.GetY() > 0 && (newPos.getY() - rect.h) <= mapRect.y + mapRect.y)
+	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
 		newPos.SetPos(newPos.getX(), mapRect.y);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
@@ -197,7 +195,7 @@ void Game::SaveToFile()
 	for (GameObject* o : objects)
 	{
 		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
-		//if (c != nullptr) c->saveToFil(fil);
+		if (c != nullptr) c->saveToFil(fil);
 	}
 
 	fil.close();
@@ -205,6 +203,8 @@ void Game::SaveToFile()
 
 // Maneja el juego
 void Game::run() {
+	IniTextures();
+	LeeArchivo(nombreNivel(nMapa));
 	SDL_Event event;
 	while (!fin() && pac->returnLives() > 0 && nMapa <= 5)
 	{

@@ -83,6 +83,7 @@ SDL_Rect PacMan::getDestRect()
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
 	check();
+	comida();
 
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
 	if (game->nextCell(dir_sel, point)) { dir_actual = dir_sel;	}
@@ -90,8 +91,6 @@ void PacMan::update() {
 	if (game->nextCell(dir_actual, point))
 	{
 		game->tryMove(getDestRect(), dir_actual, point);
-		comida();
-		check();
 	} 
 	// Si su poder esta activo, reducimos el tiempo
 	if (tiempoforce > 0) {
