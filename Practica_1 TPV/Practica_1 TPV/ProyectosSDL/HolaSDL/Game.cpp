@@ -63,6 +63,8 @@ bool Game::LeeArchivo(string archivo) {
 				}
 			}
 		}
+		
+		objects.push_back(mapa);
 	}
 	input.close();
 	return read;
@@ -113,14 +115,10 @@ void Game::handleEvent(SDL_Event& tecla){
 
 // Actualiza el juego
 void Game::update() {
-	
-	pac->update();
-	
-	list<Ghost*>::iterator it = fantasmas.begin();
-	while (it != fantasmas.end())
+	for (GameObject* o : objects)
 	{
-		it*->update();
-		++it;
+		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
+		if (c != nullptr) { c->update(); }
 	}
 
 	if (comida == 0)
@@ -196,13 +194,10 @@ void Game::SaveToFile()
 	ofstream fil;
 	fil.open("../mapas/partida.txt");
 
-	int x = mapa->cols;
-	int y = mapa->fils;
-
 	for (GameObject* o : objects)
 	{
 		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
-		if (c != nullptr) c->saveToFil(fil);
+		//if (c != nullptr) c->saveToFil(fil);
 	}
 
 	fil.close();
@@ -221,7 +216,6 @@ void Game::run() {
 
 Game::~Game()
 {
-	
 	list<GameObject*>::iterator it = objects.begin();
 	while (it != objects.end())
 	{
@@ -233,8 +227,6 @@ Game::~Game()
 	{
 		delete textures[i];
 	}
-
-	delete mapa;
 
 	SDL_DestroyRenderer(renderer_);
 	SDL_DestroyWindow(window_);

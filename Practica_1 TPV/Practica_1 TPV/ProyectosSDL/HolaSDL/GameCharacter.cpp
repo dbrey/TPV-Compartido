@@ -24,9 +24,9 @@ SDL_Rect GameCharacter::getDestRect()
 
 void GameCharacter::saveToFil(ofstream& fil)
 {
-	if (pacman)
+	/*if (pacman)
 	{
 		fil.
 	}
-	else if (fantasma)
+	else if (fantasma)*/
 }

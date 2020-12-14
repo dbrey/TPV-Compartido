@@ -79,7 +79,7 @@ void Ghost::SelecMov()
 void Ghost::update()
 {
     SelecMov();
-    dir_actual.movimiento(point);
+    game->tryMove(getDestRect(), dir_actual, point);
 }
 
 // Mueve al fantasma a su posicion inicial

@@ -12,7 +12,6 @@ class GameMap : public GameObject
 private:
 	MapCell **Mapa;
 	int cols, fils;
-	Point2D completabasura = Point2D (0,0);
 	int windowW = 800;
 	int windowH = 600;
 	// El gamemap se guarda sus propias cosas
