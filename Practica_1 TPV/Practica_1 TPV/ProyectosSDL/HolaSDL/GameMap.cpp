@@ -19,10 +19,10 @@ void GameMap::render() {
 	for (int i = 0; i < fils; i++) {
 		for (int j = 0; j < cols; j++) {
 			SDL_Rect destRect;
-			destRect.x = i*10;
-			destRect.y = j*10;
-			destRect.w = 10;
-			destRect.h = 10;
+			destRect.x = i*game->CellX();
+			destRect.y = j*game->CellY();
+			destRect.w = game->CellX();
+			destRect.h = game->CellY();
 
 			if (Mapa[i][j] == Wall)
 			{

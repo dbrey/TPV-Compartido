@@ -4,8 +4,8 @@ void GameCharacter::render() {
 	SDL_Rect rect;
 	rect.x = point.getX();
 	rect.y = point.getY();
-	rect.w = h;
-	rect.h = w;
+	rect.w = w;
+	rect.h = h;
 
 	textura->render(rect);
 }

@@ -33,6 +33,8 @@ bool Game::LeeArchivo(string archivo) {
 		int x, y;
 		input >> x >> y;
 
+		tamCellY = 600 /x;
+		tamCellX = 800 /y;
 		mapa = new GameMap(x, y, this);
 		
 		int aux;
@@ -81,14 +83,14 @@ SDL_Point Game::mapCoordsToSDLPoint(Point2D& coords)
 {
 	SDL_Point aux;
 
-	aux.x =coords.getX() * 10;
-	aux.y =coords.getY() * 10;
+	aux.x =coords.getX() * tamCellX;
+	aux.y =coords.getY() * tamCellY;
 	return aux;
 }
 
 Point2D Game::SDLPointToMapCoords(int x, int y)
 {
-	Point2D aux = Point2D((x /10), (y /10));
+	Point2D aux = Point2D((x / tamCellX), (y / tamCellY));
 	return aux;
 }
 
@@ -140,7 +142,7 @@ void Game::update() {
 		CambioMapa();
 	}
 	
-	SDL_Delay(235);
+	SDL_Delay(50);
 }
 
 void Game::CambioMapa()
@@ -184,6 +186,32 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 
 }
 
+bool Game::Movedir(const SDL_Rect rect, Vector2D dir, Point2D newPos)
+{
+	SDL_Rect mapRect = mapa->getDestRect();
+	newPos.Suma(dir.GetX(), dir.GetY());
+
+	// Comprobamos direccion y averiguamos si nos salimos del mapa
+	// Derecha
+	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
+		newPos.SetPos(mapRect.x, newPos.getY());
+
+	//Izquierda
+	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) <= 0)
+		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY()); //10 = rect.w del pacman
+
+	// Arriba
+	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) <= 0)
+		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
+
+	// Abajo
+	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
+		newPos.SetPos(newPos.getX(), mapRect.y);
+
+	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
+	return !(mapa->intersectsWall(newRect));
+
+}
 // Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
 //  bool Game::nextCell(Vector2D dir, Point2D pos)
 //{
@@ -226,6 +254,23 @@ void Game::run() {
 		render();
 		handleEvent(event);
 		update();
+	}
+}
+
+// Comprueba si PacMan esta en la misma posicion que algun fantasma y uno de los 2 muere
+void Game::check() {
+	for (Ghost* g : fantasmas)
+	{
+		SDL_Rect rectg = g->getDestRect();
+		if (SDL_HasIntersection(&rectg, &pac->getDestRect()))
+		{
+			if (pac->tiempo() == 0) {
+				pac->morir();
+			}
+			else {
+				g->morir();
+			}
+		}
 	}
 }
 

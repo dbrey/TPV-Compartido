@@ -48,6 +48,9 @@ public:
 
 	Texture* getTexture(int i) { return textures[i]; }
 
+	int CellX() { return tamCellX; }
+	int CellY() { return tamCellY; }
+
 	bool LeeArchivo(string archivo);
 
 	void render();
@@ -67,6 +70,10 @@ public:
 	void run();
 
 	void handleEvent(SDL_Event& tecla);
+
+	bool Movedir(const SDL_Rect rect, Vector2D dir, Point2D newPos);
+
+	void check();
 
 	void update();
 

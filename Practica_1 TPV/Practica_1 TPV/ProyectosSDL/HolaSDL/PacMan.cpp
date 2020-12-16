@@ -55,26 +55,13 @@ void PacMan::handleEvent(SDL_Event& tecla)
 	}
 }
 
-// Comprueba si PacMan esta en la misma posicion que algun fantasma y uno de los 2 muere
-void PacMan::check() {
-	for (int i = 0; i < 4; i++) {
-		// Si pacman tiene la vitamina todavia activa, mata al fantasma
-		if (point.iguales(game->getGhost(i)->getPoint())) {
-			if (tiempoforce == 0) {
-				morir();
-			}
-			else {
-				game->getGhost(i)->morir();
-			}
-		}
-	}
-}
+
 
 SDL_Rect PacMan::getDestRect()
 {
 	SDL_Rect rect;
-	rect.x = point.getX() * 10;
-	rect.y = point.getY() * 10;
+	rect.x = point.getX();
+	rect.y = point.getY();
 	rect.w = 10;
 	rect.h = 10;
 
@@ -82,13 +69,15 @@ SDL_Rect PacMan::getDestRect()
 }
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
-	check();
+	game->check();
 	comida();
 
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (game->tryMove(getDestRect(),dir_sel, point)) { dir_actual = dir_sel;	}
-	
-	if (game->tryMove(getDestRect(),dir_actual, point))
+	if (game->tryMove(getDestRect(),dir_sel, point)) //Me puedo mover
+	{ 
+		dir_actual = dir_sel;	
+	}
+	else if (game->tryMove(getDestRect(),dir_actual, point))
 	{
 
 	} 
@@ -110,8 +99,8 @@ void PacMan::render() {
 	SDL_Rect rect;
 	rect.x = point.getX();
 	rect.y = point.getY();
-	rect.w = 10;
-	rect.h = 10;
+	rect.w = game->CellX();
+	rect.h = game->CellY();
 	
 	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
 	if (textura == NULL)

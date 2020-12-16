@@ -29,7 +29,9 @@ public:
 	void render();
 	void update();
 	void morir();
-	void check();
+
+	uint32_t tiempo() { return tiempoforce; }
+
 	SDL_Rect getDestRect();
 
 	int puntos() { return puntuacion; }

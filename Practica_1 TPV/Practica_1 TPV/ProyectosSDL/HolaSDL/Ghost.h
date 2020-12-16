@@ -21,6 +21,5 @@ public:
 	void update();
 	void morir();
 	void render(int aux);
-
 	~Ghost();
 };

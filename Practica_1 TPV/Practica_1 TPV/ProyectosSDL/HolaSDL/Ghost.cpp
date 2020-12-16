@@ -16,18 +16,19 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
-    mov[0] = game->tryMove(getDestRect(),derecha, point);
-    mov[1] = game->tryMove(getDestRect(),izquierda, point);
-    mov[2] = game->tryMove(getDestRect(),arriba, point);
-    mov[3] = game->tryMove(getDestRect(),abajo, point);
+    mov[0] = game->Movedir(getDestRect(),derecha, point);
+    mov[1] = game->Movedir(getDestRect(),izquierda, point);
+    mov[2] = game->Movedir(getDestRect(),arriba, point);
+    mov[3] = game->Movedir(getDestRect(),abajo, point);
 
-    if (game->tryMove(getDestRect(),dir_actual, point)) {
+    if (game->Movedir(getDestRect(),dir_actual, point)) {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
         else if (dir_actual == abajo) { mov[2] = false; }
         else if (dir_actual == arriba) { mov[3] = false;}
     }
 }
+
 
 
 void Ghost::SelecMov()
@@ -79,7 +80,10 @@ void Ghost::SelecMov()
 void Ghost::update()
 {
     SelecMov();
-    game->tryMove(getDestRect(), dir_actual, point);
+	if (game->tryMove(getDestRect(), dir_actual, point))
+	{
+
+	}
 }
 
 // Mueve al fantasma a su posicion inicial
@@ -93,21 +97,14 @@ void Ghost::render(int aux) {
     SDL_Rect rect;
     rect.x = point.getX();
     rect.y = point.getY();
-    rect.w = 10;
-    rect.h = 10;
+	rect.w = game->CellX();
+	rect.h = game->CellY();
     
     if (textura == NULL)
     {
         throw"Los fantasmas no tienen texturas";
     }
-        if (aux == 0)
-            textura->renderFrame(rect, 0, 0);
-        else if (aux == 1)
-            textura->renderFrame(rect, 0, 2);
-        else if (aux == 2)
-            textura->renderFrame(rect, 0, 4);
-        else
-            textura->renderFrame(rect, 0, 6);
+	textura->renderFrame(rect, 0, 0);
     
 
 }
