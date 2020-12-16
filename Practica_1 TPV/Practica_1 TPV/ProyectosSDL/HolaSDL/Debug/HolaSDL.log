@@ -1,5 +1,2 @@
-﻿  Game.cpp
-  PacMan.cpp
-  Generando código...
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(188): warning C4715: 'Game::nextCell': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+﻿  GameMap.cpp
+  HolaSDL.vcxproj -> D:\ProyectosSDL\bin\PacManDebug.exe

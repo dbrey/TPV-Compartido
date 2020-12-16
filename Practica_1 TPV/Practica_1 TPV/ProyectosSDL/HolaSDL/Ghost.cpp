@@ -16,12 +16,12 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
-    mov[0] = game->nextCell(derecha, point);
-    mov[1] = game->nextCell(izquierda, point);
-    mov[2] = game->nextCell(arriba, point);
-    mov[3] = game->nextCell(abajo, point);
+    mov[0] = game->tryMove(getDestRect(),derecha, point);
+    mov[1] = game->tryMove(getDestRect(),izquierda, point);
+    mov[2] = game->tryMove(getDestRect(),arriba, point);
+    mov[3] = game->tryMove(getDestRect(),abajo, point);
 
-    if (game->nextCell(dir_actual, point)) {
+    if (game->tryMove(getDestRect(),dir_actual, point)) {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
         else if (dir_actual == abajo) { mov[2] = false; }
@@ -91,8 +91,8 @@ void Ghost::morir()
 // Renderiza a su fantasma con su respectiva textura
 void Ghost::render(int aux) {
     SDL_Rect rect;
-    rect.x = point.getX() * 10;
-    rect.y = point.getY() * 10;
+    rect.x = point.getX();
+    rect.y = point.getY();
     rect.w = 10;
     rect.h = 10;
     

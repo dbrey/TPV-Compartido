@@ -50,12 +50,12 @@ bool Game::LeeArchivo(string archivo) {
 				else {
 					mapa->writeCell(j, i, Empty);
 					if (aux == 9) {
-						pac = new PacMan(j, i, this);
+						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this);
 						objects.push_back(pac);
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 						
-						fantasmas.push_back(new Ghost(j, i, this));
+						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this));
 						objects.push_back(fantasmas.back());
 					}
 				}
@@ -75,6 +75,21 @@ void Game::IniTextures()
 	{
 		textures[i] = new Texture( renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
 	}
+}
+
+SDL_Point Game::mapCoordsToSDLPoint(Point2D& coords)
+{
+	SDL_Point aux;
+
+	aux.x =coords.getX() * 10;
+	aux.y =coords.getY() * 10;
+	return aux;
+}
+
+Point2D Game::SDLPointToMapCoords(int x, int y)
+{
+	Point2D aux = Point2D((x /10), (y /10));
+	return aux;
 }
 
 Ghost* Game::getGhost(int i)
@@ -170,22 +185,22 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 }
 
 // Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
-bool Game::nextCell(Vector2D dir, Point2D pos)
-{
-	if (dir.GetX() == -1) {
-		return	(getMapa()->readCell(pos.getX() - 1, pos.getY()) != Wall);
-	}
-	else if (dir.GetX() == 1) {
-		return (getMapa()->readCell(pos.getX() + 1, pos.getY()) != Wall);
-	}
-	else if (dir.GetY() == -1) {
-		return getMapa()->readCell(pos.getX(), pos.getY() - 1) != Wall;
-	}
-	else if (dir.GetY() == 1) {
-		return (getMapa()->readCell(pos.getX(), pos.getY() + 1) != Wall);
-	}
-
-}
+//  bool Game::nextCell(Vector2D dir, Point2D pos)
+//{
+//	if (dir.GetX() == -1) {
+//		return	(getMapa()->readCell(pos.getX() - 1, pos.getY()) != Wall);
+//	}
+//	else if (dir.GetX() == 1) {
+//		return (getMapa()->readCell(pos.getX() + 1, pos.getY()) != Wall);
+//	}
+//	else if (dir.GetY() == -1) {
+//		return getMapa()->readCell(pos.getX(), pos.getY() - 1) != Wall;
+//	}
+//	else if (dir.GetY() == 1) {
+//		return (getMapa()->readCell(pos.getX(), pos.getY() + 1) != Wall);
+//	}
+//
+//}
 
 void Game::SaveToFile()
 {

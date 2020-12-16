@@ -60,6 +60,10 @@ public:
 	PacMan* getPac() {return pac; }
 	Ghost* getGhost(int i);
 
+
+	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
+	Point2D SDLPointToMapCoords(int x, int y);
+
 	void run();
 
 	void handleEvent(SDL_Event& tecla);
@@ -72,7 +76,7 @@ public:
 
 	bool tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos);
 
-	bool nextCell(Vector2D dir, Point2D pos);
+	/*bool nextCell(Vector2D dir, Point2D pos);*/
 
 	void restaComida() { comida--; }
 

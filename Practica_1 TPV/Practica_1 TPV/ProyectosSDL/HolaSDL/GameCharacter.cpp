@@ -2,8 +2,8 @@
 
 void GameCharacter::render() {
 	SDL_Rect rect;
-	rect.x = point.getX() * 10;
-	rect.y = point.getY() * 10;
+	rect.x = point.getX();
+	rect.y = point.getY();
 	rect.w = h;
 	rect.h = w;
 

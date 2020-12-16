@@ -11,15 +11,15 @@ PacMan::PacMan(int x, int y, Game* g) : GameCharacter(Point2D(x, y), Vector2D(1,
 
 // Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio
 void PacMan::comida() {
-	if (game->getMapa()->readCell(point.getX(), point.getY()) == Food)
+	if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Food)
 	{
-		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
+		game->getMapa()->writeCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
 		game->restaComida();
 		puntuacion += 10;
 	}
-	else if (game->getMapa()->readCell(point.getX(), point.getY()) == Vitamins)
+	else if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Vitamins)
 	{
-		game->getMapa()->writeCell(point.getX(), point.getY(), Empty);
+		game->getMapa()->writeCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
 		tiempoforce = duracion;
 	}
 }
@@ -86,11 +86,11 @@ void PacMan::update() {
 	comida();
 
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (game->nextCell(dir_sel, point)) { dir_actual = dir_sel;	}
+	if (game->tryMove(getDestRect(),dir_sel, point)) { dir_actual = dir_sel;	}
 	
-	if (game->nextCell(dir_actual, point))
+	if (game->tryMove(getDestRect(),dir_actual, point))
 	{
-		game->tryMove(getDestRect(), dir_actual, point);
+
 	} 
 	// Si su poder esta activo, reducimos el tiempo
 	if (tiempoforce > 0) {
@@ -108,8 +108,8 @@ void PacMan::morir()
 // Renderizamos a PacMan
 void PacMan::render() {
 	SDL_Rect rect;
-	rect.x = point.getX()*10;
-	rect.y = point.getY()*10;
+	rect.x = point.getX();
+	rect.y = point.getY();
 	rect.w = 10;
 	rect.h = 10;
 	

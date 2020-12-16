@@ -19,8 +19,8 @@ void GameMap::render() {
 	for (int i = 0; i < fils; i++) {
 		for (int j = 0; j < cols; j++) {
 			SDL_Rect destRect;
-			destRect.x = i * 10;
-			destRect.y = j * 10;
+			destRect.x = i*10;
+			destRect.y = j*10;
 			destRect.w = 10;
 			destRect.h = 10;
 
@@ -56,8 +56,8 @@ void GameMap::update() {}
 
 bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
-	Point2D topLeft = SDLPointToMapCoords(rect.x, rect.y);
-	Point2D botRight = SDLPointToMapCoords((rect.x + rect.w), (rect.y+rect.h));
+	Point2D topLeft = game->SDLPointToMapCoords(rect.x, rect.y);
+	Point2D botRight = game->SDLPointToMapCoords((rect.x + rect.w), (rect.y+rect.h));
 
 	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un
 	for (int r = topLeft.getX(); r <= botRight.getX(); r++)
@@ -68,22 +68,11 @@ bool GameMap::intersectsWall(const SDL_Rect& rect)
 				return true;
 		}
 	}	
+
+	return false;
 }
 
-SDL_Point GameMap::mapCoordsToSDLPoint(Point2D& coords)
-{
-	SDL_Point aux;
 
-	aux.x = (coords.getX() * 800) / cols*10;
-	aux.y = (coords.getY() * 600) / fils * 10;
-	return aux;
-}
-
-Point2D GameMap::SDLPointToMapCoords(int x, int y)
-{
-	Point2D aux = Point2D((x * cols) / 800, (y*fils) / 600);
-	return aux;
-}
 
 SDL_Rect GameMap::getDestRect()
 {
