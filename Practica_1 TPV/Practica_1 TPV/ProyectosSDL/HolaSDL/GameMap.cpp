@@ -2,7 +2,7 @@
 #include "Game.h"
 
 // Constructora
-GameMap::GameMap(int c, int f, Game* g) : GameObject(Point2D (0,0), 10, 10, g)
+GameMap::GameMap(int c, int f, Game* g) : GameObject(Point2D (0,0), g->CellX() , g->CellY(), g)
 {
 	cols = c;
 	fils = f;
@@ -57,7 +57,7 @@ void GameMap::update() {}
 bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
 	Point2D topLeft = game->SDLPointToMapCoords(rect.x, rect.y);
-	Point2D botRight = game->SDLPointToMapCoords((rect.x + rect.w), (rect.y+rect.h));
+	Point2D botRight = game->SDLPointToMapCoords((rect.x + rect.w-1), (rect.y+rect.h-1));
 
 	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un
 	for (int r = topLeft.getX(); r <= botRight.getX(); r++)

@@ -72,15 +72,14 @@ void PacMan::update() {
 	game->check();
 	comida();
 
+	Point2D aux = point;
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (game->tryMove(getDestRect(),dir_sel, point)) //Me puedo mover
+	if (!game->tryMove(getDestRect(),dir_sel, point)) //Me puedo mover
 	{ 
-		dir_actual = dir_sel;	
+		//Si me da false el moverse que hago?	
+		point = aux;
 	}
-	else if (game->tryMove(getDestRect(),dir_actual, point))
-	{
 
-	} 
 	// Si su poder esta activo, reducimos el tiempo
 	if (tiempoforce > 0) {
 		tiempoforce--;

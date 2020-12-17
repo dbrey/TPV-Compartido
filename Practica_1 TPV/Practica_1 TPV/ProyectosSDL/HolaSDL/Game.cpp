@@ -166,12 +166,12 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
 	// Derecha
-	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
+	if (dir.GetX() > 0 && (newPos.getX() + rect.w) > mapRect.x + mapRect.w)
 		newPos.SetPos(mapRect.x, newPos.getY());
 
 	//Izquierda
 	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) <= 0)
-		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY()); //10 = rect.w del pacman
+		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY());
 
 	// Arriba
 	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) <= 0)

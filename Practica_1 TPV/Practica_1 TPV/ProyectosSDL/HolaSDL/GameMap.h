@@ -23,7 +23,6 @@ public:
 	MapCell readCell(int fil, int col)const { return Mapa[fil][col]; };
 	void writeCell(int fil, int col, MapCell estado) { Mapa[fil][col] = estado; };
 	bool intersectsWall(const SDL_Rect& rect);
-	//void getTamMap(int& x, int& y) { x = cols, y = fils; }
 	void render();
 	void update(); // Metodo para que no de error
 	SDL_Rect getDestRect(); // Metodo para que no de error
