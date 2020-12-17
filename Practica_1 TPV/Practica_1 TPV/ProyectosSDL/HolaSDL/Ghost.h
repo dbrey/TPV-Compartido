@@ -20,6 +20,6 @@ public:
 	void SelecMov();
 	void update();
 	void morir();
-	void render(int aux);
+	void render();
 	~Ghost();
 };

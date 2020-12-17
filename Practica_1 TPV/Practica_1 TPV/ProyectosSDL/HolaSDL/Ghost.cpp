@@ -80,9 +80,9 @@ void Ghost::SelecMov()
 void Ghost::update()
 {
     SelecMov();
-	if (game->tryMove(getDestRect(), dir_actual, point))
+	if (!game->tryMove(getDestRect(), dir_actual, point))
 	{
-
+        // Mandar error si es falso
 	}
 }
 
@@ -93,7 +93,7 @@ void Ghost::morir()
 }
 
 // Renderiza a su fantasma con su respectiva textura
-void Ghost::render(int aux) {
+void Ghost::render() {
     SDL_Rect rect;
     rect.x = point.getX();
     rect.y = point.getY();
@@ -104,7 +104,7 @@ void Ghost::render(int aux) {
     {
         throw"Los fantasmas no tienen texturas";
     }
-	textura->renderFrame(rect, 0, 0);
+	textura->renderFrame(rect, 0, 8);
     
 
 }
