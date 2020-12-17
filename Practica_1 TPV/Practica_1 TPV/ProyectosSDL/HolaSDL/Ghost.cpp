@@ -41,12 +41,12 @@ void Ghost::SelecMov()
         int aux = rand() % 4, i = 0;
         while (!mov[aux] && i < 4) {
             // Si la direccion seleccionada esta bloqueada, se descarta
-            if (!mov[aux]) {
+           /*if (!mov[aux]) {
                 int aux2 = 0;
-                while (sel[aux2] != aux)
+                while (sel[aux2] != aux && aux2 < 4) // Se meteria en este bucle y no saldria
                     aux2++;
                 sel[aux2] = -1;
-            }
+            }*/
             // Escogemos una nueva direccion posible
             aux = rand() % 4;
             while (sel[aux] == -1)

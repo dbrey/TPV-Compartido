@@ -33,8 +33,8 @@ bool Game::LeeArchivo(string archivo) {
 		int x, y;
 		input >> x >> y;
 
-		tamCellY = 600 /x;
-		tamCellX = 800 /y;
+		tamCellY = 600 /y;
+		tamCellX = 800 /x;
 		mapa = new GameMap(x, y, this);
 		
 		int aux;
@@ -162,7 +162,7 @@ void Game::CambioMapa()
 bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 {
 	SDL_Rect mapRect = mapa->getDestRect();
-	newPos.Suma(dir.GetX(), dir.GetY());
+	newPos.Suma(dir.GetX()*6, dir.GetY()*6);
 
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
 	// Derecha
@@ -182,7 +182,7 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 		newPos.SetPos(newPos.getX(), mapRect.y);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
-	return !(mapa->intersectsWall(newRect));
+	return (mapa->intersectsWall(newRect));
 
 }
 
