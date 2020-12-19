@@ -65,6 +65,7 @@ bool Game::LeeArchivo(string archivo) {
 					mapa->writeCell(j, i, Empty);
 					if (aux == 9) {
 						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0));
+						objects.push_back(pac);
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 						
@@ -224,8 +225,8 @@ void Game::CambioMapa()
 bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 {
 	SDL_Rect mapRect = mapa->getDestRect();
-	newPos.Suma(dir.GetX(), dir.GetY());
-
+	//newPos.Suma(dir.GetX(), dir.GetY());
+	newPos.Suma(0, 1);
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
 	// Derecha
 	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
@@ -240,7 +241,7 @@ bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
 
 	// Abajo
-	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
+	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
 		newPos.SetPos(newPos.getX(), mapRect.y);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };

@@ -1,5 +1,6 @@
 #pragma once
 #include "Ghost.h"
+#include<vector>
 
 class SmartGhost : public Ghost
 {
@@ -12,5 +13,6 @@ public:
 
 	void update();
 
+	void Mueve();
 };
 

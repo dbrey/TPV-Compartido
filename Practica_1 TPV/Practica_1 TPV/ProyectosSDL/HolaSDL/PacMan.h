@@ -32,8 +32,6 @@ public:
 	void saveToFil(ofstream& fil);
 	uint32_t tiempo() { return tiempoforce; }
 
-	SDL_Rect getDestRect();
-
 	int puntos() { return puntuacion; }
 	~PacMan();
 };

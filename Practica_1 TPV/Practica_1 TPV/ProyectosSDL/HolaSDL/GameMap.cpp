@@ -56,15 +56,15 @@ void GameMap::update() {}
 
 bool GameMap::intersectsWall(const SDL_Rect& rect)
 {
-	Point2D topLeft = game->SDLPointToMapCoords(rect.x - rect.w, rect.y - rect.h);
+	Point2D topLeft = game->SDLPointToMapCoords(rect.x, rect.y);
 	Point2D botRight = game->SDLPointToMapCoords((rect.x + rect.w-1), (rect.y+rect.h-1));
 
 	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un
-	for (int r = topLeft.getX(); r <= botRight.getX(); r++)
+	for (int c = topLeft.getX(); c <= botRight.getX(); c++)
 	{
-		for (int c = topLeft.getY(); c <= botRight.getY(); c++)
+		for (int r = topLeft.getY();r <= botRight.getY(); r++)
 		{
-			if (readCell(r, c) == Wall)
+			if (readCell(r,c) == Wall)
 				return true;
 		}
 	}	

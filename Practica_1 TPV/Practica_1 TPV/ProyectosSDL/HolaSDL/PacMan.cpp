@@ -55,19 +55,6 @@ void PacMan::handleEvent(SDL_Event& tecla)
 		}
 	}
 }
-
-
-
-SDL_Rect PacMan::getDestRect()
-{
-	SDL_Rect rect;
-	rect.x = point.getX();
-	rect.y = point.getY();
-	rect.w = 10;
-	rect.h = 10;
-
-	return rect;
-}
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
 	game->check();
