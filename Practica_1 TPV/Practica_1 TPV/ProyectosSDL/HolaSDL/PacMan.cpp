@@ -4,8 +4,9 @@
 #include "Texture.h"
 #include "Game.h"
 #include "GameMap.h"
+#include <fstream>
 
-PacMan::PacMan(int x, int y, Game* g) : GameCharacter(Point2D(x, y), Vector2D(1, 0), g->getTexture(characters), g) {
+PacMan::PacMan(int x, int y, Game* g, Vector2D dir) : GameCharacter(Point2D(x, y),dir, g->getTexture(characters), g) {
 
 }
 
@@ -72,12 +73,15 @@ void PacMan::update() {
 	game->check();
 	comida();
 
-	Point2D aux = point;
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (!game->tryMove(getDestRect(),dir_sel, point)) //Me puedo mover
+	if (!game->trymove(getDestRect(),dir_sel, point)) //Me puedo mover en la direccion seleccionada
 	{ 
-		//Si me da false el moverse que hago?	
-		point = aux;
+		dir_actual = dir_sel;
+		Move(point, dir_actual);
+	}
+	else if (game->trymove(getDestRect(), dir_actual, point)) //Me puedo mover en la direccion actual
+	{
+		Move(point, dir_actual);
 	}
 
 	// Si su poder esta activo, reducimos el tiempo
@@ -111,6 +115,12 @@ void PacMan::render() {
 	else
 		textura->renderFrame(rect, 0, 11);
 	
+}
+
+void PacMan::saveToFil(ofstream& fil)
+{
+	fil << "p " << point.getX() << " " << point.getY() << " "
+		<< dir_actual.GetX() << " " << dir_actual.GetY() << endl;
 }
 
 PacMan::~PacMan()

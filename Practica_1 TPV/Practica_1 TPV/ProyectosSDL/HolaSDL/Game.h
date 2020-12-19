@@ -71,7 +71,7 @@ public:
 
 	void handleEvent(SDL_Event& tecla);
 
-	bool Movedir(const SDL_Rect rect, Vector2D dir, Point2D newPos);
+	bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos);
 
 	void check();
 
@@ -81,7 +81,7 @@ public:
 
 	string nombreNivel(int nMapa);
 
-	bool tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos);
+	//bool tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos);
 
 	/*bool nextCell(Vector2D dir, Point2D pos);*/
 

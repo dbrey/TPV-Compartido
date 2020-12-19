@@ -20,7 +20,7 @@ private:
 
 public:
 	
-	PacMan(int x, int y, Game* g);
+	PacMan(int x, int y, Game* g, Vector2D dir);
 	
 
 	int returnLives() { return vidas; }
@@ -29,7 +29,7 @@ public:
 	void render();
 	void update();
 	void morir();
-
+	void saveToFil(ofstream& fil);
 	uint32_t tiempo() { return tiempoforce; }
 
 	SDL_Rect getDestRect();

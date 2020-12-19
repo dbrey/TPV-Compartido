@@ -15,9 +15,21 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 
 string Game::nombreNivel(int nMapa)
 {
-	stringstream nombre;
-	nombre << "../mapas/level0" << nMapa << ".dat";
-	return nombre.str();
+	cout << "Cargar nivel o empezar partida nueva? (0 o 1)";
+	int opcion;
+	cin >> opcion;
+	if (opcion == 1)
+	{
+		stringstream nombre;
+		nombre << "../mapas/level0" << nMapa << ".dat";
+		return nombre.str();
+	}
+	else
+	{
+		stringstream nombre;
+		nombre << "../mapas/partida.txt";
+		return nombre.str();
+	}
 }
 
 // Lee el archivo y asigna los elementos del archivo a las variables de Game(PacMan,Ghost,Mapa...)
@@ -52,12 +64,11 @@ bool Game::LeeArchivo(string archivo) {
 				else {
 					mapa->writeCell(j, i, Empty);
 					if (aux == 9) {
-						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this);
-						objects.push_back(pac);
+						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0));
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 						
-						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this));
+						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0)));
 						objects.push_back(fantasmas.back());
 					}
 				}
@@ -66,6 +77,30 @@ bool Game::LeeArchivo(string archivo) {
 		
 		objects.push_back(mapa);
 	}
+
+	if (archivo == "../mapas/partida.txt")
+	{
+		string aux;
+
+
+		if (aux == "p") {
+			int x, y, dirx, diry;
+			cin >> x >> y >> dirx >> diry;
+
+			Vector2D dir(dirx, diry);
+			pac = new PacMan(Point2D(x,y).getX(), Point2D(x,y).getY(), this, dir);
+			objects.push_back(pac);
+		}
+		else if (aux == "f") {
+			int x, y, dirx, diry;
+			cin >> x >> y >> dirx >> diry;
+
+			Vector2D dir(dirx, diry);
+			fantasmas.push_back(new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), this,dir));
+			objects.push_back(fantasmas.back());
+		}
+	}
+
 	input.close();
 	return read;
 }
@@ -159,7 +194,7 @@ void Game::CambioMapa()
 	LeeArchivo(nombreNivel(nMapa));
 }
 
-bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
+/*bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 {
 	SDL_Rect mapRect = mapa->getDestRect();
 	newPos.Suma(dir.GetX()*6, dir.GetY()*6);
@@ -184,9 +219,9 @@ bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
 	return (mapa->intersectsWall(newRect));
 
-}
+}*/
 
-bool Game::Movedir(const SDL_Rect rect, Vector2D dir, Point2D newPos)
+bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 {
 	SDL_Rect mapRect = mapa->getDestRect();
 	newPos.Suma(dir.GetX(), dir.GetY());
@@ -234,6 +269,30 @@ void Game::SaveToFile()
 {
 	ofstream fil;
 	fil.open("../mapas/partida.txt");
+
+	for (int i = 0; i < mapa->fils; i++)
+	{
+		for (int j = 0; j<mapa->cols;j++)
+		{
+			if (mapa->readCell(i, j) == Wall)
+			{
+				fil << "1 ";
+			}
+			else if (mapa->readCell(i, j) == Food)
+			{
+				fil << "2 ";
+			}
+			else if (mapa->readCell(i, j) == Vitamins)
+			{
+				fil << "3 ";
+			}
+			else if (mapa->readCell(i, j) == Empty)
+			{
+				fil << "0 ";
+			}
+		}
+		fil << endl;
+	}
 
 	for (GameObject* o : objects)
 	{

@@ -3,11 +3,12 @@
 #include "Vector2D.h"
 #include "Texture.h"
 #include "Game.h"
+#include <fstream>
 #include <vector>
 #include <cstdlib>
 
 
-Ghost::Ghost(int x, int y, Game* g) : GameCharacter(Point2D(x, y), Vector2D(1, 0), g->getTexture(characters), g) {
+Ghost::Ghost(int x, int y, Game* g, Vector2D dir) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g) {
 
 }
 
@@ -16,20 +17,18 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
-    mov[0] = game->Movedir(getDestRect(),derecha, point);
-    mov[1] = game->Movedir(getDestRect(),izquierda, point);
-    mov[2] = game->Movedir(getDestRect(),arriba, point);
-    mov[3] = game->Movedir(getDestRect(),abajo, point);
+    mov[0] = game->trymove(getDestRect(),derecha, point);
+    mov[1] = game->trymove(getDestRect(),izquierda, point);
+    mov[2] = game->trymove(getDestRect(),arriba, point);
+    mov[3] = game->trymove(getDestRect(),abajo, point);
 
-    if (game->Movedir(getDestRect(),dir_actual, point)) {
+    if (game->trymove(getDestRect(),dir_actual, point)) {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
         else if (dir_actual == abajo) { mov[2] = false; }
         else if (dir_actual == arriba) { mov[3] = false;}
     }
 }
-
-
 
 void Ghost::SelecMov()
 {
@@ -80,10 +79,11 @@ void Ghost::SelecMov()
 void Ghost::update()
 {
     SelecMov();
-	if (!game->tryMove(getDestRect(), dir_actual, point))
-	{
-        // Mandar error si es falso
-	}
+    if (game->trymove(getDestRect(), dir_actual, point))
+    {
+        Move(point, dir_actual);
+
+    }
 }
 
 // Mueve al fantasma a su posicion inicial
@@ -107,6 +107,12 @@ void Ghost::render() {
 	textura->renderFrame(rect, 0, 8);
     
 
+}
+
+void Ghost::saveToFil(ofstream& fil)
+{
+    fil << "f " << point.getX() << " " << point.getY() << " " 
+        << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
 }
 
 Ghost::~Ghost()

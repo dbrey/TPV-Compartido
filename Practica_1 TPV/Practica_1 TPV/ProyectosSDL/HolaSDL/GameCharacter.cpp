@@ -22,11 +22,7 @@ SDL_Rect GameCharacter::getDestRect()
 	return aux;
 }
 
-void GameCharacter::saveToFil(ofstream& fil)
+void GameCharacter::Move(Point2D& pos, Vector2D dir)
 {
-	/*if (pacman)
-	{
-		fil.
-	}
-	else if (fantasma)*/
+	pos.Suma(dir.GetX() * 6, dir.GetY() * 6);
 }

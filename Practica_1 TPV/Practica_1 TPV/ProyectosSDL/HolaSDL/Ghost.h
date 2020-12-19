@@ -10,16 +10,17 @@ class Game;
 class Ghost : public GameCharacter
 {
 
-private:
+protected:
 	array<bool, 4> mov; //  0 = left   1 = up    2 = right    3 = down
 
 public:
-	Ghost(int x, int y, Game* g);
+	Ghost(int x, int y, Game* g, Vector2D dir);
 
 	void CheckMov();
 	void SelecMov();
 	void update();
 	void morir();
 	void render();
+	void saveToFil(ofstream& fil);
 	~Ghost();
 };
