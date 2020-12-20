@@ -8,7 +8,7 @@
 #include <cstdlib>
 
 
-Ghost::Ghost(int x, int y, Game* g, Vector2D dir) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g) {
+Ghost::Ghost(int x, int y, Game* g, Vector2D dir,int ancho,int largo) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g,ancho,largo) {
 
 }
 
@@ -81,8 +81,8 @@ void Ghost::update()
     SelecMov();
     if (game->trymove(getDestRect(), dir_actual, point))
     {
-        Move(point, dir_actual);
-
+		SDL_Rect mapRect = game->map();
+		Move(point, dir_actual, mapRect);
     }
 }
 

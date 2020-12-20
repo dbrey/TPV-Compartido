@@ -63,6 +63,7 @@ public:
 	PacMan* getPac() {return pac; }
 	Ghost* getGhost(int i);
 
+	SDL_Rect map(){ return mapa->getDestRect(); }
 
 	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
 	Point2D SDLPointToMapCoords(int x, int y);

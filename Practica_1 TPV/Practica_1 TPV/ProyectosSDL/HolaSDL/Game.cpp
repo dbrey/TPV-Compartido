@@ -45,8 +45,8 @@ bool Game::LeeArchivo(string archivo) {
 		int x, y;
 		input >> x >> y;
 
-		tamCellY = 600 /y;
-		tamCellX = 800 /x;
+		tamCellY = 600 /x;
+		tamCellX = 800 /y;
 		mapa = new GameMap(x, y, this);
 		
 		int aux;
@@ -64,12 +64,12 @@ bool Game::LeeArchivo(string archivo) {
 				else {
 					mapa->writeCell(j, i, Empty);
 					if (aux == 9) {
-						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0));
+						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0),tamCellX,tamCellY);
 						objects.push_back(pac);
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 						
-						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0)));
+						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY));
 						objects.push_back(fantasmas.back());
 					}
 				}
@@ -89,7 +89,7 @@ bool Game::LeeArchivo(string archivo) {
 			cin >> x >> y >> dirx >> diry;
 
 			Vector2D dir(dirx, diry);
-			pac = new PacMan(Point2D(x,y).getX(), Point2D(x,y).getY(), this, dir);
+			pac = new PacMan(Point2D(x,y).getX(), Point2D(x,y).getY(), this, dir, tamCellX, tamCellY);
 			objects.push_back(pac);
 		}
 		else if (aux == "f") {
@@ -97,7 +97,7 @@ bool Game::LeeArchivo(string archivo) {
 			cin >> x >> y >> dirx >> diry;
 
 			Vector2D dir(dirx, diry);
-			fantasmas.push_back(new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), this,dir));
+			fantasmas.push_back(new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), this,dir, tamCellX, tamCellY));
 			objects.push_back(fantasmas.back());
 		}
 	}
@@ -178,7 +178,7 @@ void Game::update() {
 		CambioMapa();
 	}
 	
-	SDL_Delay(50);
+	SDL_Delay(10);
 }
 
 void Game::CambioMapa()
@@ -225,12 +225,12 @@ void Game::CambioMapa()
 bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 {
 	SDL_Rect mapRect = mapa->getDestRect();
-	//newPos.Suma(dir.GetX(), dir.GetY());
-	newPos.Suma(0, 1);
+	newPos.Suma(dir.GetX(), dir.GetY());
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
+
 	// Derecha
 	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
-		newPos.SetPos(mapRect.x + rect.x, newPos.getY());
+		newPos.SetPos(0, newPos.getY());
 
 	//Izquierda
 	else if (dir.GetX() < 0 && (newPos.getX()) <= 0)
@@ -242,7 +242,7 @@ bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 
 	// Abajo
 	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
-		newPos.SetPos(newPos.getX(), mapRect.y + rect.y);
+		newPos.SetPos(newPos.getX(), 0);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
 	return !(mapa->intersectsWall(newRect));

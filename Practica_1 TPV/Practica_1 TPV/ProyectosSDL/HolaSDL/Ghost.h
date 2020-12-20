@@ -14,7 +14,7 @@ protected:
 	array<bool, 4> mov; //  0 = left   1 = up    2 = right    3 = down
 
 public:
-	Ghost(int x, int y, Game* g, Vector2D dir);
+	Ghost(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
 
 	void CheckMov();
 	void SelecMov();

@@ -22,7 +22,24 @@ SDL_Rect GameCharacter::getDestRect()
 	return aux;
 }
 
-void GameCharacter::Move(Point2D& pos, Vector2D dir)
+void GameCharacter::Move(Point2D& pos, Vector2D dir,SDL_Rect mapRect)
 {
-	pos.Suma(dir.GetX() * 6, dir.GetY() * 6);
+	pos.Suma(dir.GetX(), dir.GetY());
+
+	// Comprobamos direccion y averiguamos si nos salimos del mapa
+	// Derecha
+	if (dir.GetX() > 0 && (pos.getX() + w) >= mapRect.x + mapRect.w)
+		pos.SetPos(0, pos.getY());
+
+	//Izquierda
+	else if (dir.GetX() < 0 && (pos.getX()) <= 1)
+		pos.SetPos(mapRect.w - getDestRect().x - getDestRect().w, pos.getY());
+
+	// Arriba
+	else if (dir.GetY() < 0 && (pos.getY()) <= 0)
+		pos.SetPos(pos.getX(), mapRect.h - getDestRect().y - getDestRect().h);
+
+	// Abajo
+	else if (dir.GetY() > 0 && (pos.getY() + h) >= mapRect.y + mapRect.h)
+		pos.SetPos(pos.getX(), 0);
 }

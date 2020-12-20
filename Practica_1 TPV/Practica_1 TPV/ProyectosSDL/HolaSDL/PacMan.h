@@ -20,7 +20,7 @@ private:
 
 public:
 	
-	PacMan(int x, int y, Game* g, Vector2D dir);
+	PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
 	
 
 	int returnLives() { return vidas; }

@@ -13,15 +13,16 @@ protected:
 	Texture* textura;
 	// Coord del frame de la textura
 	// Iterador a la posicion del objeto dentro de la lista de GameObject
-	list<GameCharacter*>::iterator it; 
+	list<GameCharacter*>::iterator it;
+
+	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g, int largo, int ancho) : GameObject(inipos, ancho, largo, g), iniPoint(inipos), dir_actual(d), textura(t) {}
 
 public:
 
-	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g) : GameObject(inipos, 27, 21, g), iniPoint(inipos), dir_actual(d), textura(t) {}
 
 	void setItList(list<GameCharacter*>::iterator i) { it = i; }
 	virtual void saveToFil(ofstream& fil) = 0;
-	void Move(Point2D& pos, Vector2D dir);
+	void Move(Point2D& pos, Vector2D dir, SDL_Rect mapRect);
 	virtual void render();
 	virtual void update() = 0;
 	virtual SDL_Rect getDestRect();
