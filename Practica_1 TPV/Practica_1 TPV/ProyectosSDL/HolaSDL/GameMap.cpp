@@ -64,7 +64,7 @@ bool GameMap::intersectsWall(const SDL_Rect& rect)
 	{
 		for (int r = topLeft.getY();r <= botRight.getY(); r++)
 		{
-			if (readCell(c,r) == Wall)
+			if (readCell(r,c) == Wall)
 				return true;
 		}
 	}	

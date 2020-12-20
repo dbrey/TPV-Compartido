@@ -230,19 +230,19 @@ bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
 	// Derecha
 	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
-		newPos.SetPos(mapRect.x, newPos.getY());
+		newPos.SetPos(mapRect.x + rect.x, newPos.getY());
 
 	//Izquierda
-	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) <= 0)
+	else if (dir.GetX() < 0 && (newPos.getX()) <= 0)
 		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY()); //10 = rect.w del pacman
 
 	// Arriba
-	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) <= 0)
+	else if (dir.GetY() < 0 && (newPos.getY()) <= 0)
 		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
 
 	// Abajo
 	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
-		newPos.SetPos(newPos.getX(), mapRect.y);
+		newPos.SetPos(newPos.getX(), mapRect.y + rect.y);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
 	return !(mapa->intersectsWall(newRect));
