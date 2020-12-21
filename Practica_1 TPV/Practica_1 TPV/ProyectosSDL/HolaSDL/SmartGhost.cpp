@@ -4,8 +4,23 @@
 // Llama al update de Ghost o al de SmartGhost
 void SmartGhost::update()
 {
-	CheckMov(); //Comprobamos las direcciones a las que puede ir
-	Mueve();
+	if (cuarentena == 0)
+	{
+		cuarentena = 1000;;
+	}
+	Movimiento();
+	if (cuarentena == 1000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
+	{
+		cuarentena--;
+	}
+	if (cuarentena < 1000)
+	{
+		cuarentena--;
+	}
+	if (edad == edadout) //Llamar  metodo para borarr el fantasma
+	{
+		game->ripFantasma(this);
+	}
 	edad++;
 }
 
@@ -80,8 +95,8 @@ void SmartGhost::Mueve()
 void SmartGhost::Movimiento()
 {
 	Point2D pac = game->getPac()->getPoint();
-	if (edad < 50 || point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 ||
-		point.getY() > pac.getY() + 100 || point.getY() < pac.getY() + 100)
+	if (edad < 3000 && ((edad < 1000) || (point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 || //Condiciones de cercania
+		point.getY() > pac.getY() + 100 || point.getY() < pac.getY() + 100)))
 	{
 		// Movimiento random
 		if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point))
@@ -99,8 +114,9 @@ void SmartGhost::Movimiento()
 
 		CambMove++;
 	}
-	else
+	else if(edad<edadrip)//Movimiento inteligente
 	{
+		CheckMov(); //Comprobamos las direcciones a las que puede ir
 		Mueve();
 	}
 }

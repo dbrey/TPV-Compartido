@@ -100,6 +100,10 @@ bool Game::LeeArchivo(string archivo) {
 			fantasmas.push_back(new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), this,dir, tamCellX, tamCellY));
 			objects.push_back(fantasmas.back());
 		}
+		else //Ya solo puede sel el numero del mapa
+		{
+			cin >> nMapa;
+		}
 	}
 
 	input.close();
@@ -130,7 +134,7 @@ Point2D Game::SDLPointToMapCoords(int x, int y)
 	return aux;
 }
 
-/*bool Game::Hijo(SmartGhost* Sg)
+bool Game::Hijo(SmartGhost* Sg)
 {
 	list<Ghost*>::iterator it = fantasmas.begin();
 
@@ -141,27 +145,12 @@ Point2D Game::SDLPointToMapCoords(int x, int y)
 		{
 			fantasmas.push_back(new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1,0), tamCellX, tamCellY, false));
 			objects.push_back(fantasmas.back());
+			return true;
 		}
 		it++;
 	}
-	
-	/*list<Ghost*>::iterator it2 = fantasmas.begin();
-	list<Ghost*>::iterator it = fantasmas.begin();
-	while (it != fantasmas.end())
-	{
-		while (it2 != fantasmas.end())
-		{
-			if(it2 != it) //Y condicion de mismo punto acceder desde el it a los metodos del fantasma?
-			{
-				fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY)); //j i accediendo a la pos llamar al fantasma desde it
-				objects.push_back(fantasmas.back());
-			}
-
-			++it2;
-		}
-		++it;
-	}
-}*/
+	return false;
+}
 
 bool Game::Chocar(SDL_Rect Sg1, SDL_Rect Sg2)
 {
@@ -240,6 +229,21 @@ void Game::update() {
 	}
 	
 	SDL_Delay(10);
+}
+
+void Game::ripFantasma(SmartGhost* sg)
+{
+	bool aux = false; //Para salir del bucle
+	list<Ghost*>::iterator it = fantasmas.begin();
+	while (it != fantasmas.end() && !aux) //Busca el fantasma y lo borra
+	{
+		if (sg == *it)
+		{
+			delete* it;
+			aux = true;
+		}
+		++it;
+	}
 }
 
 void Game::CambioMapa()
@@ -332,9 +336,9 @@ void Game::SaveToFile()
 	ofstream fil;
 	fil.open("../mapas/partida.txt");
 
-	for (int i = 0; i < mapa->fils; i++)
+	for (int j = 0; j < mapa->cols; j++)
 	{
-		for (int j = 0; j<mapa->cols;j++)
+		for (int i = 0; i<mapa->fils;i++)
 		{
 			if (mapa->readCell(i, j) == Wall)
 			{
@@ -361,6 +365,11 @@ void Game::SaveToFile()
 		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
 		if (c != nullptr) c->saveToFil(fil);
 	}
+
+	fil << endl;
+	fil << nMapa;
+
+	exit = true; //Cerrar el bucle del juego
 
 	fil.close();
 }

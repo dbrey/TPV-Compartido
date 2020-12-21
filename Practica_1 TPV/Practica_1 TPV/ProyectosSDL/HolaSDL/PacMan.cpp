@@ -52,6 +52,10 @@ void PacMan::handleEvent(SDL_Event& tecla)
 				dir_sel.setdir(0, 1);
 				break;
 			}
+			case SDLK_s:
+			{
+				game->SaveToFile();
+			}
 		}
 	}
 }

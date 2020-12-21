@@ -6,6 +6,8 @@ class SmartGhost : public Ghost
 {
 private:
 	int edad = 1000;
+	int edadrip = 3000;
+	int edadout = 3500;
 	int cuarentena = 1000;
 
 public:

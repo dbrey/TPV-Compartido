@@ -31,7 +31,7 @@ private:
 	int VentX, VentY, tamCellX, tamCellY;
 	int comida = 0;
 	bool exit = false;
-	int nMapa = 1;
+	int nMapa = 0;
 
 	PacMan* pac;
 	GameMap* mapa;
@@ -81,9 +81,11 @@ public:
 
 	void CambioMapa();
 
+	void ripFantasma(SmartGhost* Sg);
+
 	string nombreNivel(int nMapa);
 
-	//bool Hijo(SmartGhost* Sg);
+	bool Hijo(SmartGhost* Sg);
 
 	void restaComida() { comida--; }
 
