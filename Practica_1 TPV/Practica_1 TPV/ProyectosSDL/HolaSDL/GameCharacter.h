@@ -9,7 +9,7 @@ class GameCharacter : public GameObject
 {
 protected:
 	Point2D iniPoint;
-	Vector2D dir_actual;
+	Vector2D dir_actual = Vector2D(1,0);
 	Texture* textura;
 	// Coord del frame de la textura
 	// Iterador a la posicion del objeto dentro de la lista de GameObject

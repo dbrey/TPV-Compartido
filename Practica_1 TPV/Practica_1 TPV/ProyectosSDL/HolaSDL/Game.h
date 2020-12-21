@@ -5,6 +5,7 @@
 #include "PacMan.h"
 #include "Ghost.h"
 #include "GameObject.h"
+#include "SmartGhost.h"
 #include <array>
 #include <list>
 using namespace std;
@@ -82,15 +83,13 @@ public:
 
 	string nombreNivel(int nMapa);
 
-	void Hijo();
-
-	//bool tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos);
-
-	/*bool nextCell(Vector2D dir, Point2D pos);*/
+	//bool Hijo(SmartGhost* Sg);
 
 	void restaComida() { comida--; }
 
 	void SaveToFile();
+	bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
+
 
 	~Game();
 };

@@ -5,16 +5,22 @@
 class SmartGhost : public Ghost
 {
 private:
-	int edad = 0;
+	int edad = 1000;
 	int cuarentena = 1000;
 
 public:
-	SmartGhost(int x, int y, Game* g, Vector2D dir,int ancho ,int largo) : Ghost(x,y,g,dir,ancho,largo) {
-
+	SmartGhost(int x, int y, Game* g, Vector2D dir,int ancho ,int largo, bool bebe) : Ghost(x,y,g,dir,ancho,largo) {
+		if (bebe)
+		{
+			edad = 0;
+		}
 	}
 
 	void update();
-
+	void render();
 	void Mueve();
+
+	void Movimiento();
+
 };
 

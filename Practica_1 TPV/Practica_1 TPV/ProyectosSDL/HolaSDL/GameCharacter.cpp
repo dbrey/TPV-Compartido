@@ -43,3 +43,5 @@ void GameCharacter::Move(Point2D& pos, Vector2D dir,SDL_Rect mapRect)
 	else if (dir.GetY() > 0 && (pos.getY() + h) >= mapRect.y + mapRect.h)
 		pos.SetPos(pos.getX(), 0);
 }
+
+

@@ -22,7 +22,8 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
     mov[2] = game->trymove(getDestRect(),arriba, point);
     mov[3] = game->trymove(getDestRect(),abajo, point);
 
-    if (game->trymove(getDestRect(),dir_actual, point)) {
+    if (game->trymove(getDestRect(),dir_actual, point)) 
+    {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
         else if (dir_actual == abajo) { mov[2] = false; }
@@ -78,12 +79,20 @@ void Ghost::SelecMov()
 // Selecciona la direccion y se mueve
 void Ghost::update()
 {
-    SelecMov();
+    if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point))
+    {
+        SelecMov();
+        CambMove = 0;
+    }
+    
     if (game->trymove(getDestRect(), dir_actual, point))
     {
 		SDL_Rect mapRect = game->map();
 		Move(point, dir_actual, mapRect);
+        
     }
+
+    CambMove++;
 }
 
 // Mueve al fantasma a su posicion inicial

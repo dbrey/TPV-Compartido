@@ -130,9 +130,22 @@ Point2D Game::SDLPointToMapCoords(int x, int y)
 	return aux;
 }
 
-void Game::Hijo()
+/*bool Game::Hijo(SmartGhost* Sg)
 {
-	list<Ghost*>::iterator it2 = fantasmas.begin();
+	list<Ghost*>::iterator it = fantasmas.begin();
+
+
+	while (it != fantasmas.end())
+	{
+		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()))
+		{
+			fantasmas.push_back(new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1,0), tamCellX, tamCellY, false));
+			objects.push_back(fantasmas.back());
+		}
+		it++;
+	}
+	
+	/*list<Ghost*>::iterator it2 = fantasmas.begin();
 	list<Ghost*>::iterator it = fantasmas.begin();
 	while (it != fantasmas.end())
 	{
@@ -148,8 +161,34 @@ void Game::Hijo()
 		}
 		++it;
 	}
-	
+}*/
 
+bool Game::Chocar(SDL_Rect Sg1, SDL_Rect Sg2)
+{
+	Point2D topLeft1 = SDLPointToMapCoords(Sg1.x, Sg1.y);
+	Point2D botRight1 = SDLPointToMapCoords((Sg1.x + Sg1.w - 1), (Sg1.y + Sg1.h - 1));
+
+	Point2D topLeft2 = SDLPointToMapCoords(Sg2.x, Sg2.y);
+	Point2D botRight2 = SDLPointToMapCoords((Sg2.x + Sg2.w - 1), (Sg2.y + Sg2.h - 1));
+
+	// Comprobamos colision entre 2 personajes
+	for (int c = topLeft1.getX(); c <= botRight1.getX(); c++)
+	{
+		for (int r = topLeft1.getY(); r <= botRight1.getY(); r++)
+		{
+			for (int x = topLeft2.getX(); x <= botRight2.getX(); x++)
+			{
+				for (int y = topLeft2.getY(); y <= botRight2.getY(); y++)
+				{
+					if (c == x || r == y)
+					{
+						return true;
+					}
+				}
+			}
+		}
+	}	
+	return false;
 }
 
 Ghost* Game::getGhost(int i)
