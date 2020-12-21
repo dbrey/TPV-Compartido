@@ -4,32 +4,50 @@
 void SmartGhost::update()
 {
 	CheckMov(); //Comprobamos las direcciones a las que puede ir
-
-	//Mueve();
-	
+	Mueve();
 }
 
-/*void SmartGhost::Mueve()
+void SmartGhost::Mueve()
 {
-	if (mov[0] && point.getX() > game->getPac()->getPoint().getX()) // left
+	if (mov[0] && point.getX() > game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // left
 	{
 		dir_actual = Vector2D(-1, 0);
-		Move(point, dir_actual);
+		Move(point, dir_actual, game->map());;
+	}
+	else if (mov[1] && point.getX() > game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // up
+	{
+		dir_actual = Vector2D(0, -1);
+		Move(point, dir_actual, game->map());
+	}
+	else if (mov[2] && point.getX() < game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // right
+	{
+		dir_actual = Vector2D(1, 0);
+		Move(point, dir_actual, game->map());
+	}
+	else if (mov[3] && point.getX() < game->getPac()->getPoint().getX()&& !game->getPac()->invencible())// down
+	{
+		dir_actual = Vector2D(0, 1);
+		Move(point, dir_actual,game->map());
+	}
+	else if (mov[0] && point.getX() < game->getPac()->getPoint().getX()) // left
+	{
+		dir_actual = Vector2D(-1, 0);
+		Move(point, dir_actual, game->map());;
 	}
 	else if (mov[1] && point.getX() > game->getPac()->getPoint().getX()) // up
 	{
 		dir_actual = Vector2D(0, -1);
-		Move(point, dir_actual);
+		Move(point, dir_actual, game->map());
 	}
 	else if (mov[2] && point.getX() < game->getPac()->getPoint().getX()) // right
 	{
 		dir_actual = Vector2D(1, 0);
-		Move(point, dir_actual);
+		Move(point, dir_actual, game->map());
 	}
-	else if (mov[1] && point.getX() < game->getPac()->getPoint().getX())// down
+	else if (mov[3] && point.getX() > game->getPac()->getPoint().getX())// down
 	{
 		dir_actual = Vector2D(0, 1);
-		Move(point, dir_actual);
+		Move(point, dir_actual, game->map());
 	}
 	else//random
 	{
@@ -73,4 +91,4 @@ void SmartGhost::update()
 			}
 		}
 	}
-}*/
+}

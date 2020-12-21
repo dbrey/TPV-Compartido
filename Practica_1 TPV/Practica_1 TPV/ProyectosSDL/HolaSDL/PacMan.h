@@ -9,7 +9,7 @@ class Game;
 class PacMan : public GameCharacter
 {
 private:
-	const uint32_t  duracion = 40;
+	const uint32_t  duracion = 1000;
 
 	uint32_t  tiempoforce = 0;
 
@@ -22,7 +22,7 @@ public:
 	
 	PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
 	
-
+	bool invencible() { return tiempoforce>0; }
 	int returnLives() { return vidas; }
 	void comida();
 	void handleEvent(SDL_Event& tecla);

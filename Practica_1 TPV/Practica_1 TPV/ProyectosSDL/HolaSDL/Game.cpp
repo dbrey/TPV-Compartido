@@ -130,6 +130,28 @@ Point2D Game::SDLPointToMapCoords(int x, int y)
 	return aux;
 }
 
+void Game::Hijo()
+{
+	list<Ghost*>::iterator it2 = fantasmas.begin();
+	list<Ghost*>::iterator it = fantasmas.begin();
+	while (it != fantasmas.end())
+	{
+		while (it2 != fantasmas.end())
+		{
+			if(it2 != it) //Y condicion de mismo punto acceder desde el it a los metodos del fantasma?
+			{
+				fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY)); //j i accediendo a la pos llamar al fantasma desde it
+				objects.push_back(fantasmas.back());
+			}
+
+			++it2;
+		}
+		++it;
+	}
+	
+
+}
+
 Ghost* Game::getGhost(int i)
 {
 	int aux = 0;
