@@ -15,7 +15,7 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 
 string Game::nombreNivel(int nMapa)
 {
-	cout << "Cargar nivel o empezar partida nueva? (0 o 1)";
+	cout << "Cargar nivel o empezar partida nueva? (0 o 1) ";
 	int opcion;
 	cin >> opcion;
 	if (opcion == 1)
