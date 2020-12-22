@@ -218,6 +218,13 @@ void Game::update() {
 		if (c != nullptr) { c->update(); }
 	}
 
+	/*for (auto it : objectstoErase)
+	{
+		delete* it;
+		objects.erase(it);
+	}
+	objectstoErase.clear();*/
+
 	if (comida == 0)
 	{
 		nMapa++;
@@ -365,6 +372,18 @@ void Game::check() {
 	}
 }
 
+void Game::eraseGhost(list<GameObject*>::iterator it)
+{
+	GameObject* go = *it;
+	Ghost* g = dynamic_cast<Ghost*>(go);
+	fantasmas.remove(g);
+	eraseObject(it);
+}
+
+void Game::eraseObject(list<GameObject*>::iterator it)
+{
+	objectstoErase.push_back(it);
+}
 Game::~Game()
 {
 	list<GameObject*>::iterator it = objects.begin();

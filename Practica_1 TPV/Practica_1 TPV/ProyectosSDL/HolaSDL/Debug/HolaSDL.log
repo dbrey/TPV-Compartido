@@ -1,7 +1,11 @@
-﻿  Game.cpp
+﻿  FileFormatError.cpp
+  FileNotFoundError.cpp
+  Game.cpp
   GameMap.cpp
   Ghost.cpp
   PacMan.cpp
+  PacManError.cpp
+  SDLError.cpp
   SmartGhost.cpp
   main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro

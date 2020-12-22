@@ -41,6 +41,7 @@ private:
 
 	list<Ghost*> fantasmas;
 	list<GameObject*> objects;
+	list<list<GameObject*>::iterator> objectstoErase;
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 
@@ -97,6 +98,8 @@ public:
 	void SaveToFile();
 	bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
 
+	void eraseGhost(list<GameObject*>::iterator it);
+	void eraseObject(list<GameObject*>::iterator it);
 
 	~Game();
 };

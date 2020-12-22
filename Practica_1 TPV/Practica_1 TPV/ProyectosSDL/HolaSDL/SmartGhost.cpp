@@ -12,10 +12,10 @@ void SmartGhost::update()
 	{
 		Movimiento();
 	}
-	/*if (cuarentena == 2000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
+	if (cuarentena == 2000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
 	{
 		cuarentena--;
-	}*/
+	}
 	if (cuarentena < 2000)
 	{
 		cuarentena--;
