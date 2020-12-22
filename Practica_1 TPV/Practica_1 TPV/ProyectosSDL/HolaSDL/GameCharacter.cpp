@@ -40,7 +40,7 @@ void GameCharacter::Move(Point2D& pos, Vector2D dir,SDL_Rect mapRect)
 		pos.SetPos(pos.getX(), mapRect.h - getDestRect().y - getDestRect().h);
 
 	// Abajo
-	else if (dir.GetY() > 0 && (pos.getY() + h) >= mapRect.y + mapRect.h)
+	else if (dir.GetY() > 0 && (pos.getY() + h) > mapRect.y + mapRect.h)
 		pos.SetPos(pos.getX(), 0);
 }
 

@@ -13,8 +13,7 @@ private:
 
 	uint32_t  tiempoforce = 0;
 
-	int vidas = 90;
-	int puntuacion = 0;
+	
 
 	Vector2D dir_sel;
 
@@ -23,7 +22,6 @@ public:
 	PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
 	
 	bool invencible() { return tiempoforce>0; }
-	int returnLives() { return vidas; }
 	void comida();
 	void handleEvent(SDL_Event& tecla);
 	void render();
@@ -32,6 +30,5 @@ public:
 	void saveToFil(ofstream& fil);
 	uint32_t tiempo() { return tiempoforce; }
 
-	int puntos() { return puntuacion; }
 	~PacMan();
 };

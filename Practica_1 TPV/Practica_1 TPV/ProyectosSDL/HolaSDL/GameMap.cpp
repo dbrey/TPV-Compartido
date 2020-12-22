@@ -12,6 +12,7 @@ GameMap::GameMap(int c, int f, Game* g) : GameObject(Point2D (0,0), g->CellX() ,
 	{
 		Mapa[i] = new MapCell [fils];
 	}
+
 }
 
 // Renderiza todo el mapa y sus elementos del juego
@@ -54,21 +55,28 @@ void GameMap::render() {
 
 void GameMap::update() {}
 
-bool GameMap::intersectsWall(const SDL_Rect& rect)
+bool GameMap::intersectsWall(const SDL_Rect& rect, bool g)
 {
 	Point2D topLeft = game->SDLPointToMapCoords(rect.x, rect.y);
-	Point2D botRight = game->SDLPointToMapCoords((rect.x + rect.w-2), (rect.y+rect.h-2));
+	Point2D botRight = Point2D(0,0);
+	if (g)
+	{
+		botRight = game->SDLPointToMapCoords((rect.x + rect.h - 1), (rect.y + rect.w - 1));
+	}
+	else
+	{
+		botRight = game->SDLPointToMapCoords((rect.x + rect.w - 1), (rect.y + rect.h - 1));
+	}
 
 	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un
 	for (int c = topLeft.getX(); c <= botRight.getX(); c++)
 	{
 		for (int r = topLeft.getY();r <= botRight.getY(); r++)
 		{
-			if (readCell(c,r) == Wall)
+			if (c<fils && r<cols && readCell(c,r) == Wall)
 				return true;
 		}
 	}	
-
 	return false;
 }
 

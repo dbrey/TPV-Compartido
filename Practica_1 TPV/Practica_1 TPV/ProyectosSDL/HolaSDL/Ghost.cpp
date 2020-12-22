@@ -17,12 +17,12 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
-    mov[0] = game->trymove(getDestRect(),derecha, point);
-    mov[1] = game->trymove(getDestRect(),izquierda, point);
-    mov[2] = game->trymove(getDestRect(),arriba, point);
-    mov[3] = game->trymove(getDestRect(),abajo, point);
+    mov[0] = game->trymove(getDestRect(),derecha, point, true);
+    mov[1] = game->trymove(getDestRect(),izquierda, point, true);
+    mov[2] = game->trymove(getDestRect(),arriba, point, true);
+    mov[3] = game->trymove(getDestRect(),abajo, point, true);
 
-    if (game->trymove(getDestRect(),dir_actual, point)) 
+    if (game->trymove(getDestRect(),dir_actual, point, true)) 
     {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
@@ -79,20 +79,19 @@ void Ghost::SelecMov()
 // Selecciona la direccion y se mueve
 void Ghost::update()
 {
-    if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point))
+    /*if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point, true))
     {
         SelecMov();
         CambMove = 0;
     }
     
-    if (game->trymove(getDestRect(), dir_actual, point))
+    if (game->trymove(getDestRect(), dir_actual, point, true))
     {
 		SDL_Rect mapRect = game->map();
 		Move(point, dir_actual, mapRect);
-        
     }
 
-    CambMove++;
+    CambMove++;*/
 }
 
 // Mueve al fantasma a su posicion inicial

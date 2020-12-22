@@ -18,7 +18,7 @@ public:
 
 	void CheckMov();
 	void SelecMov();
-	void update();
+	virtual void update() = 0;
 	void morir();
 	void render();
 	void saveToFil(ofstream& fil);

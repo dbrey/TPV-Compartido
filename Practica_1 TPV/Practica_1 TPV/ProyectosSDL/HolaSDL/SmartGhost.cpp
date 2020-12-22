@@ -6,14 +6,17 @@ void SmartGhost::update()
 {
 	if (cuarentena == 0)
 	{
-		cuarentena = 1000;;
+		cuarentena = 2000;
 	}
-	Movimiento();
-	if (cuarentena == 1000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
+	if (edad < edadrip)
+	{
+		Movimiento();
+	}
+	/*if (cuarentena == 2000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
 	{
 		cuarentena--;
-	}
-	if (cuarentena < 1000)
+	}*/
+	if (cuarentena < 2000)
 	{
 		cuarentena--;
 	}
@@ -89,23 +92,22 @@ void SmartGhost::Mueve()
 			}
 		}
 	}
-
 }
 
 void SmartGhost::Movimiento()
 {
 	Point2D pac = game->getPac()->getPoint();
-	if (edad < 3000 && ((edad < 1000) || (point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 || //Condiciones de cercania
+	if (((edad < 1000) || (point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 || //Condiciones de cercania
 		point.getY() > pac.getY() + 100 || point.getY() < pac.getY() + 100)))
 	{
 		// Movimiento random
-		if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point))
+		if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point,true))
 		{
 			SelecMov();
 			CambMove = 0;
 		}
 
-		if (game->trymove(getDestRect(), dir_actual, point))
+		if (game->trymove(getDestRect(), dir_actual, point,true))
 		{
 			SDL_Rect mapRect = game->map();
 			Move(point, dir_actual, mapRect);
@@ -141,5 +143,14 @@ void SmartGhost::render()
 	{
 		throw"Los fantasmas no tienen texturas";
 	}
-	textura->renderFrame(rect, 0, 8);
+
+	if (edad > edadrip)
+	{
+		textura->renderFrame(rect, 0, 7);
+	}
+	else
+	{
+		textura->renderFrame(rect, 0, 8);
+	}
+
 }

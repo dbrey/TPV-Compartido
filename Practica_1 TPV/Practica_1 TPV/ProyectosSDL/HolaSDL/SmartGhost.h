@@ -8,7 +8,7 @@ private:
 	int edad = 1000;
 	int edadrip = 3000;
 	int edadout = 3500;
-	int cuarentena = 1000;
+	int cuarentena = 1999;
 
 public:
 	SmartGhost(int x, int y, Game* g, Vector2D dir,int ancho ,int largo, bool bebe) : Ghost(x,y,g,dir,ancho,largo) {

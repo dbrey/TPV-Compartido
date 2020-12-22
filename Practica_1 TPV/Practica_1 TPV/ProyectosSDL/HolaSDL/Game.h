@@ -31,7 +31,10 @@ private:
 	int VentX, VentY, tamCellX, tamCellY;
 	int comida = 0;
 	bool exit = false;
-	int nMapa = 0;
+	int nMapa = 4;
+
+	int vidas = 3;
+	int puntuacion = 0;
 
 	PacMan* pac;
 	GameMap* mapa;
@@ -55,6 +58,9 @@ public:
 	bool LeeArchivo(string archivo);
 
 	void render();
+	
+	void restaVida() { vidas--; }
+	void sumaPuntos() { puntuacion += 10; }
 
 	bool fin() { return exit; }
 
@@ -62,7 +68,6 @@ public:
 
 	GameMap* getMapa() { return mapa; }
 	PacMan* getPac() {return pac; }
-	Ghost* getGhost(int i);
 
 	SDL_Rect map(){ return mapa->getDestRect(); }
 
@@ -73,7 +78,7 @@ public:
 
 	void handleEvent(SDL_Event& tecla);
 
-	bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos);
+	bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g);
 
 	void check();
 

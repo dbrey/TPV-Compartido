@@ -16,7 +16,7 @@ void PacMan::comida() {
 	{
 		game->getMapa()->writeCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
 		game->restaComida();
-		puntuacion += 10;
+		game->sumaPuntos();
 	}
 	else if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Vitamins)
 	{
@@ -65,14 +65,14 @@ void PacMan::update() {
 	comida();
 
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (game->trymove(getDestRect(),dir_sel, point)) //Me puedo mover en la direccion seleccionada
+	if (game->trymove(getDestRect(),dir_sel, point,false)) //Me puedo mover en la direccion seleccionada
 	{ 
 		dir_actual = dir_sel;
 
 		SDL_Rect mapRect = game->map();
 		Move(point, dir_actual,mapRect);
 	}
-	else if (game->trymove(getDestRect(), dir_actual, point)) //Me puedo mover en la direccion actual
+	else if (game->trymove(getDestRect(), dir_actual, point,false)) //Me puedo mover en la direccion actual
 	{
 		SDL_Rect mapRect = game->map();
 		Move(point, dir_actual, mapRect);
@@ -87,7 +87,7 @@ void PacMan::update() {
 // Lleva a Pacman al punto de spawn y le quita una vida
 void PacMan::morir()
 {
-	vidas--;
+	game->restaVida();
 	point = iniPoint;
 }
 

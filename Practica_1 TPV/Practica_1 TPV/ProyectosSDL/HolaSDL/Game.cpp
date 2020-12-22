@@ -69,7 +69,7 @@ bool Game::LeeArchivo(string archivo) {
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 						
-						fantasmas.push_back(new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY));
+						fantasmas.push_back(new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true));
 						objects.push_back(fantasmas.back());
 					}
 				}
@@ -81,30 +81,39 @@ bool Game::LeeArchivo(string archivo) {
 
 	if (archivo == "../mapas/partida.txt")
 	{
-		string aux;
+		int aux;
 
+		input >> vidas >> puntuacion;
 
-		if (aux == "p") {
-			int x, y, dirx, diry;
-			cin >> x >> y >> dirx >> diry;
+		input >> aux;
 
-			Vector2D dir(dirx, diry);
-			pac = new PacMan(Point2D(x,y).getX(), Point2D(x,y).getY(), this, dir, tamCellX, tamCellY);
-			objects.push_back(pac);
-		}
-		else if (aux == "f") {
-			int x, y, dirx, diry;
-			cin >> x >> y >> dirx >> diry;
-
-			Vector2D dir(dirx, diry);
-			fantasmas.push_back(new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), this,dir, tamCellX, tamCellY));
-			objects.push_back(fantasmas.back());
-		}
-		else //Ya solo puede sel el numero del mapa
+		for (int i = 0; i < aux; i++)
 		{
-			cin >> nMapa;
+			string aux;
+			input >> aux;
+			if (aux == "p") {
+				int x, y, dirx, diry;
+				input >> x >> y >> dirx >> diry;
+
+				Vector2D dir(dirx, diry);
+				pac = new PacMan(Point2D(x, y).getX(), Point2D(x, y).getY(), this, dir, tamCellX, tamCellY);
+				objects.push_back(pac);
+			}
+			else if (aux == "f") {
+				int x, y, dirx, diry;
+				input >> x >> y >> dirx >> diry;
+
+				Vector2D dir(dirx, diry);
+				fantasmas.push_back(new SmartGhost(Point2D(x, y).getX(), Point2D(x, y).getY(), this, dir, tamCellX, tamCellY, true));
+				objects.push_back(fantasmas.back());
+			}
+			else //Ya solo puede sel el numero del mapa
+			{
+				input >> nMapa;
+			}
 		}
-	}
+		}
+		
 
 	input.close();
 	return read;
@@ -138,12 +147,11 @@ bool Game::Hijo(SmartGhost* Sg)
 {
 	list<Ghost*>::iterator it = fantasmas.begin();
 
-
 	while (it != fantasmas.end())
 	{
 		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()))
 		{
-			fantasmas.push_back(new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1,0), tamCellX, tamCellY, false));
+			fantasmas.push_back(new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1,0), tamCellX, tamCellY, true));
 			objects.push_back(fantasmas.back());
 			return true;
 		}
@@ -180,18 +188,6 @@ bool Game::Chocar(SDL_Rect Sg1, SDL_Rect Sg2)
 	return false;
 }
 
-Ghost* Game::getGhost(int i)
-{
-	int aux = 0;
-	list<Ghost*>::iterator it = fantasmas.begin();
-	while (it != fantasmas.end() && aux != i)
-	{
-		aux++;
-		++it;
-	}
-
-	return *it;
-}
 
 // Renderiza todos los elementos del juego
 void Game::render() {
@@ -260,41 +256,18 @@ void Game::CambioMapa()
 	LeeArchivo(nombreNivel(nMapa));
 }
 
-/*bool Game::tryMove(const SDL_Rect rect, Vector2D dir, Point2D& newPos)
+bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g)
 {
-	SDL_Rect mapRect = mapa->getDestRect();
-	newPos.Suma(dir.GetX()*6, dir.GetY()*6);
+	if (newPos.getX() + rect.w == 760)
+	{
+		int x = 0;
+	}
 
-	// Comprobamos direccion y averiguamos si nos salimos del mapa
-	// Derecha
-	if (dir.GetX() > 0 && (newPos.getX() + rect.w) > mapRect.x + mapRect.w)
-		newPos.SetPos(mapRect.x, newPos.getY());
-
-	//Izquierda
-	else if (dir.GetX() < 0 && (newPos.getX() + rect.w) <= 0)
-		newPos.SetPos(mapRect.x + mapRect.w - rect.x, newPos.getY());
-
-	// Arriba
-	else if (dir.GetY() < 0 && (newPos.getY() + rect.h) <= 0)
-		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
-
-	// Abajo
-	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.y)
-		newPos.SetPos(newPos.getX(), mapRect.y);
-
-	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
-	return (mapa->intersectsWall(newRect));
-
-}*/
-
-bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
-{
 	SDL_Rect mapRect = mapa->getDestRect();
 	newPos.Suma(dir.GetX(), dir.GetY());
 	// Comprobamos direccion y averiguamos si nos salimos del mapa
-
 	// Derecha
-	if (dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w)
+	if ((dir.GetX() > 0 && (newPos.getX() + rect.w) >= mapRect.x + mapRect.w))
 		newPos.SetPos(0, newPos.getY());
 
 	//Izquierda
@@ -306,35 +279,20 @@ bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos)
 		newPos.SetPos(newPos.getX(), mapRect.y + mapRect.h - rect.y);
 
 	// Abajo
-	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) >= mapRect.y + mapRect.h)
+	else if (dir.GetY() > 0 && (newPos.getY() + rect.h) > mapRect.y + mapRect.h)
 		newPos.SetPos(newPos.getX(), 0);
 
 	SDL_Rect newRect = { newPos.getX(), newPos.getY(), rect.w, rect.h };
-	return !(mapa->intersectsWall(newRect));
+	return !(mapa->intersectsWall(newRect, g));
 
 }
-// Comprueba la siguiente posicion de la celda teniendo en cuenta su posicion y su direccion
-//  bool Game::nextCell(Vector2D dir, Point2D pos)
-//{
-//	if (dir.GetX() == -1) {
-//		return	(getMapa()->readCell(pos.getX() - 1, pos.getY()) != Wall);
-//	}
-//	else if (dir.GetX() == 1) {
-//		return (getMapa()->readCell(pos.getX() + 1, pos.getY()) != Wall);
-//	}
-//	else if (dir.GetY() == -1) {
-//		return getMapa()->readCell(pos.getX(), pos.getY() - 1) != Wall;
-//	}
-//	else if (dir.GetY() == 1) {
-//		return (getMapa()->readCell(pos.getX(), pos.getY() + 1) != Wall);
-//	}
-//
-//}
 
 void Game::SaveToFile()
 {
 	ofstream fil;
 	fil.open("../mapas/partida.txt");
+
+	fil << mapa->cols << " " << mapa->fils << endl;
 
 	for (int j = 0; j < mapa->cols; j++)
 	{
@@ -360,6 +318,9 @@ void Game::SaveToFile()
 		fil << endl;
 	}
 
+	fil << vidas << " " << puntuacion << endl;
+	fil << objects.size() << endl;
+
 	for (GameObject* o : objects)
 	{
 		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
@@ -379,7 +340,7 @@ void Game::run() {
 	IniTextures();
 	LeeArchivo(nombreNivel(nMapa));
 	SDL_Event event;
-	while (!fin() && pac->returnLives() > 0 && nMapa <= 5)
+	while (!fin() && vidas > 0 && nMapa <= 5)
 	{
 		render();
 		handleEvent(event);
