@@ -5,6 +5,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "checkML.h"
+#include "PacManError.h"
 #include <iostream>
 #include "Game.h"
 
@@ -39,9 +40,9 @@ int main(int argc, char* argv[]){
 			Game game = Game(window, renderer, 200, 200, 10, 10);
 			game.run();
 		}
-		catch(string& e)
+		catch(PacManError& e)
 		{
-			cout << e;
+			cout << e.what();
 		}
 	}
 

@@ -21,8 +21,9 @@ public:
 	void update();
 	void render();
 	void Mueve();
-
+	bool EsHijo(){	return (edad < 1000);}
 	void Movimiento();
 
+	virtual ~SmartGhost() {};
 };
 

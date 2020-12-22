@@ -22,5 +22,5 @@ public:
 	void morir();
 	void render();
 	void saveToFil(ofstream& fil);
-	~Ghost();
+	virtual ~Ghost() {};
 };

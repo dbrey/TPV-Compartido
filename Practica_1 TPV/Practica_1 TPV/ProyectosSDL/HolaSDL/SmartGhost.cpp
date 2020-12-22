@@ -12,7 +12,7 @@ void SmartGhost::update()
 	{
 		Movimiento();
 	}
-	if (cuarentena == 2000 && game->Hijo(this)) //Comprobamos si esta en cuarentena o no
+	if (cuarentena == 2000 && game->Hijo(this) && !EsHijo()) //Comprobamos si esta en cuarentena o no
 	{
 		cuarentena--;
 	}
@@ -22,12 +22,14 @@ void SmartGhost::update()
 	}
 	if (edad == edadout) //Llamar  metodo para borarr el fantasma
 	{
-		game->ripFantasma(this);
+		game->eraseGhost(it);
 	}
 	edad++;
 }
 
 
+
+// Se mueve de forma especial para el SmartGhost
 void SmartGhost::Mueve()
 {
 	if (mov[0] && point.getX() > game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // left

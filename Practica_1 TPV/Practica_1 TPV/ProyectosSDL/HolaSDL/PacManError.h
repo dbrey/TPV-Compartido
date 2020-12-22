@@ -4,10 +4,10 @@
 using namespace std;
 
 
-class PacManError //: public logic_error
+class PacManError : public logic_error
 {
 public:
-	//void error(const string& m, const char* what()) : logic_error(m) {};
+	PacManError(const string& m) : logic_error(m) {};
 
 };
 

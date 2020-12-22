@@ -122,9 +122,3 @@ void Ghost::saveToFil(ofstream& fil)
     fil << "f " << point.getX() << " " << point.getY() << " " 
         << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
 }
-
-Ghost::~Ghost()
-{
-    delete game;
-    delete textura;
-}

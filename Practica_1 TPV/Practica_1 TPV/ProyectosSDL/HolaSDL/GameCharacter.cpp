@@ -10,7 +10,7 @@ void GameCharacter::render() {
 	textura->render(rect);
 }
 
-
+//Cogemos el rect del personaje
 SDL_Rect GameCharacter::getDestRect()
 { 
 	SDL_Rect aux;
@@ -22,6 +22,7 @@ SDL_Rect GameCharacter::getDestRect()
 	return aux;
 }
 
+// Movemos al personaje
 void GameCharacter::Move(Point2D& pos, Vector2D dir,SDL_Rect mapRect)
 {
 	pos.Suma(dir.GetX(), dir.GetY());

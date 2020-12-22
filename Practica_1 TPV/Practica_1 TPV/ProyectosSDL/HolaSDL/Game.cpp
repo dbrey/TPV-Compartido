@@ -68,9 +68,11 @@ bool Game::LeeArchivo(string archivo) {
 						objects.push_back(pac);
 					}
 					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
-						
-						fantasmas.push_back(new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true));
-						objects.push_back(fantasmas.back());
+						SmartGhost* g = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+						fantasmas.push_back(g);
+						list<GameObject*>::iterator it = objects.insert(objects.end(), g);
+						g->setItList(it);
+
 					}
 				}
 			}
@@ -79,6 +81,7 @@ bool Game::LeeArchivo(string archivo) {
 		objects.push_back(mapa);
 	}
 
+	// Si cargamos un mapa, miramos la posicion de los fantasmas y pacman
 	if (archivo == "../mapas/partida.txt")
 	{
 		int aux;
@@ -92,6 +95,7 @@ bool Game::LeeArchivo(string archivo) {
 			string aux;
 			input >> aux;
 			if (aux == "p") {
+				// Crear una nueva consrtuctora
 				int x, y, dirx, diry;
 				input >> x >> y >> dirx >> diry;
 
@@ -104,8 +108,10 @@ bool Game::LeeArchivo(string archivo) {
 				input >> x >> y >> dirx >> diry;
 
 				Vector2D dir(dirx, diry);
-				fantasmas.push_back(new SmartGhost(Point2D(x, y).getX(), Point2D(x, y).getY(), this, dir, tamCellX, tamCellY, true));
-				objects.push_back(fantasmas.back());
+				SmartGhost* g = new SmartGhost(mapCoordsToSDLPoint(Point2D(x,y)).x, mapCoordsToSDLPoint(Point2D(x, y)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+				fantasmas.push_back(g);
+				list<GameObject*>::iterator it = objects.insert(objects.end(), g);
+				g->setItList(it);
 			}
 			else //Ya solo puede sel el numero del mapa
 			{
@@ -145,14 +151,16 @@ Point2D Game::SDLPointToMapCoords(int x, int y)
 
 bool Game::Hijo(SmartGhost* Sg)
 {
-	list<Ghost*>::iterator it = fantasmas.begin();
+	list<SmartGhost*>::iterator it = fantasmas.begin();
 
 	while (it != fantasmas.end())
 	{
-		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()))
+		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()) && !((*it)->EsHijo())) 
 		{
-			fantasmas.push_back(new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1,0), tamCellX, tamCellY, true));
-			objects.push_back(fantasmas.back());
+			SmartGhost* g = new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1, 0), tamCellX, tamCellY, true);
+			fantasmas.push_back(g);
+			list<GameObject*>::iterator it = objects.insert(objects.end(), g);
+			g->setItList(it);
 			return true;
 		}
 		it++;
@@ -160,6 +168,7 @@ bool Game::Hijo(SmartGhost* Sg)
 	return false;
 }
 
+// Comprueba la colision entre 2 personajes
 bool Game::Chocar(SDL_Rect Sg1, SDL_Rect Sg2)
 {
 	Point2D topLeft1 = SDLPointToMapCoords(Sg1.x, Sg1.y);
@@ -218,26 +227,28 @@ void Game::update() {
 		if (c != nullptr) { c->update(); }
 	}
 
-	/*for (auto it : objectstoErase)
+	for (auto it : objectstoErase)
 	{
-		delete* it;
+		delete *it;
 		objects.erase(it);
 	}
-	objectstoErase.clear();*/
+	objectstoErase.clear();
 
 	if (comida == 0)
 	{
 		nMapa++;
 		CambioMapa();
+		
 	}
 	
 	SDL_Delay(10);
 }
 
+// Borra al SmartGhost
 void Game::ripFantasma(SmartGhost* sg)
 {
 	bool aux = false; //Para salir del bucle
-	list<Ghost*>::iterator it = fantasmas.begin();
+	list<SmartGhost*>::iterator it = fantasmas.begin();
 	while (it != fantasmas.end() && !aux) //Busca el fantasma y lo borra
 	{
 		if (sg == *it)
@@ -249,20 +260,23 @@ void Game::ripFantasma(SmartGhost* sg)
 	}
 }
 
+// Cambia al siguiente mapa
 void Game::CambioMapa()
 {
-	delete pac;
-	list<Ghost*>::iterator it = fantasmas.begin();
-	while (it != fantasmas.end())
+	list<GameObject*>::iterator it = objects.begin();
+	while (it != objects.end())
 	{
 		delete* it;
 		++it;
 	}
-	delete mapa;
 
+	objectstoErase.clear();
+	fantasmas.clear();
+	objects.clear();
 	LeeArchivo(nombreNivel(nMapa));
 }
 
+// Comprueba si puede moverse al siguiente pixel teniendo en cuenta su direccion y posicion
 bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g)
 {
 	if (newPos.getX() + rect.w == 760)
@@ -375,7 +389,7 @@ void Game::check() {
 void Game::eraseGhost(list<GameObject*>::iterator it)
 {
 	GameObject* go = *it;
-	Ghost* g = dynamic_cast<Ghost*>(go);
+	SmartGhost* g = dynamic_cast<SmartGhost*>(go);
 	fantasmas.remove(g);
 	eraseObject(it);
 }
@@ -392,6 +406,10 @@ Game::~Game()
 		delete *it;
 		++it;
 	}
+
+	objectstoErase.clear();
+	fantasmas.clear();
+	objects.clear();
 
 	for (int i = 0; i < NUM_TEXTURES; ++i)
 	{

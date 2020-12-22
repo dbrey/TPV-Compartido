@@ -96,6 +96,5 @@ SDL_Rect GameMap::getDestRect()
 
 GameMap::~GameMap()
 {
-	delete Mapa;
-	delete game;
+	
 }

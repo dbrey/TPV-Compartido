@@ -31,7 +31,7 @@ private:
 	int VentX, VentY, tamCellX, tamCellY;
 	int comida = 0;
 	bool exit = false;
-	int nMapa = 4;
+	int nMapa = 1;
 
 	int vidas = 3;
 	int puntuacion = 0;
@@ -39,7 +39,7 @@ private:
 	PacMan* pac;
 	GameMap* mapa;
 
-	list<Ghost*> fantasmas;
+	list<SmartGhost*> fantasmas;
 	list<GameObject*> objects;
 	list<list<GameObject*>::iterator> objectstoErase;
 	SDL_Window* window_;
