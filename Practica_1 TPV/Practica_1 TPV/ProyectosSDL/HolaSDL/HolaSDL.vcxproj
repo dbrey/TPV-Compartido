@@ -68,8 +68,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileFormatError.cpp" />
-    <ClCompile Include="FileNotFoundError.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="GameMap.cpp" />
@@ -77,8 +75,6 @@
     <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PacMan.cpp" />
-    <ClCompile Include="PacManError.cpp" />
-    <ClCompile Include="SDLError.cpp" />
     <ClCompile Include="SmartGhost.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Vector2D.cpp" />

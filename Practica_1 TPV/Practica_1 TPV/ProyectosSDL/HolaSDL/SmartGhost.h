@@ -17,6 +17,7 @@ public:
 			edad = 0;
 		}
 	}
+	//bool operator =(SmartGhost* Sg1, SmartGhost* Sg2) const { return Sg1 == Sg2; }
 
 	void update();
 	void render();

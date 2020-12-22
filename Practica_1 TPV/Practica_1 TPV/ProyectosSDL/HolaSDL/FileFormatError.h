@@ -4,9 +4,7 @@
 class FileFormatError : public PacManError
 {
 public:
-	//FileFormatError(string& m) : PacManError(m) {};
-
-	// Escribir si recibe numero negativo o una letra
-	void FormatError();
+	FileFormatError(const string& m,const int& n) : PacManError("Se ha introducido un " + n + m) {};
+	FileFormatError(const string& m, const string& x) : PacManError("Se ha introducido un string" + x) {};
 };
 

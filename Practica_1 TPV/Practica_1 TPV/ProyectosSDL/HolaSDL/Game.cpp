@@ -153,7 +153,7 @@ bool Game::Hijo(SmartGhost* Sg)
 {
 	list<SmartGhost*>::iterator it = fantasmas.begin();
 
-	while (it != fantasmas.end())
+	while (it != fantasmas.end()) 
 	{
 		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()) && !((*it)->EsHijo())) 
 		{
