@@ -4,9 +4,10 @@
 #include "Texture.h"
 #include "GameMap.h"
 #include "GameCharacter.h"
+#include "EventHandler.h"
 class Game;
 
-class PacMan : public GameCharacter
+class PacMan : public GameCharacter, public EventHandler
 {
 private:
 	const uint32_t  duracion = 1000;

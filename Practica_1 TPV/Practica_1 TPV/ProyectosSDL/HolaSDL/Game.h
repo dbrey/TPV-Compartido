@@ -8,6 +8,7 @@
 #include "FileFormatError.h"
 #include "GameObject.h"
 #include "SmartGhost.h"
+#include "GameStateMachine.h"
 
 #include <array>
 #include <list>
@@ -43,7 +44,7 @@ private:
 	GameMap* mapa;
 
 	list<SmartGhost*> fantasmas;
-	list<GameObject*> objects;
+	GameStateMachine* stateMachine;
 	list<list<GameObject*>::iterator> objectstoErase;
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;

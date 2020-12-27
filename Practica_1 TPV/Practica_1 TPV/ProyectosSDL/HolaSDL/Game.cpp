@@ -12,6 +12,9 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 	window_ = window;
 	renderer_ = renderer;
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
+
+	stateMachine = new GameStateMachine();
+	//stateMachine->pushState(new MainMenuState);
 }
 
 // Dependiendo del nivel seleccionado se juega un nivel predeterminado o la partida guardada
@@ -69,7 +72,7 @@ bool Game::LeeArchivo(string archivo) {
 						mapa->writeCell(j, i, Empty);
 						if (aux == 9) {
 							pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY);
-							objects.push_back(pac);
+							stateMachine->currentState()-> objects.push_back(pac);
 						}
 						else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 							SmartGhost* g = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true);
@@ -111,7 +114,7 @@ bool Game::LeeArchivo(string archivo) {
 
 				Vector2D dir(dirx, diry);
 				pac = new PacMan(Point2D(x, y).getX(), Point2D(x, y).getY(), this, dir, tamCellX, tamCellY);
-				objects.push_back(pac);
+				stateMachine.currentState() objects.push_back(pac);
 			}
 			else if (aux == "f") {
 				int x, y, dirx, diry;
@@ -239,18 +242,23 @@ void Game::render() {
 	SDL_RenderClear(renderer_);
 	mapa->render();
 	
-	for (auto i : objects) {
-		i->render();
-	}
+	//stateMachine->currentState()->render();
 
 	SDL_RenderPresent(renderer_);
 }
 
 // Maneja los eventos
 void Game::handleEvent(SDL_Event& tecla){
-	if (SDL_PollEvent(&tecla) != 0)
+	if (SDL_PollEvent(&tecla) != 0 && !exit)
 	{
-		pac->handleEvent(tecla);
+		// Por alguna razon, no puede compararlo
+		if (tecla.type == SDL_Quit) { exit = true; }
+		else
+		{
+			stateMachine->currentState()->handleEvent(tecla);
+		}
+		
+		//pac->handleEvent(tecla);
 
 	}
 }
@@ -412,7 +420,7 @@ void Game::run() {
 	{
 		render();
 		handleEvent(event);
-		update();
+		stateMachine->currentState()->update();
 	}
 }
 
@@ -450,13 +458,7 @@ void Game::eraseObject(list<GameObject*>::iterator it)
 
 Game::~Game()
 {
-	list<GameObject*>::iterator it = objects.begin();
-	while (it != objects.end())
-	{
-		delete *it;
-		++it;
-	}
-
+	delete stateMachine;
 	objectstoErase.clear();
 	fantasmas.clear();
 	objects.clear();
