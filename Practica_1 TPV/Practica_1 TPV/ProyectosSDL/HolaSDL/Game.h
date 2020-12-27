@@ -4,8 +4,11 @@
 #include "GameMap.h"
 #include "PacMan.h"
 #include "Ghost.h"
+#include "FileNotFoundError.h"
+#include "FileFormatError.h"
 #include "GameObject.h"
 #include "SmartGhost.h"
+
 #include <array>
 #include <list>
 using namespace std;
@@ -92,6 +95,7 @@ public:
 	string nombreNivel(int nMapa);
 
 	bool Hijo(SmartGhost* Sg);
+	bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
 
 	void restaComida() { comida--; }
 

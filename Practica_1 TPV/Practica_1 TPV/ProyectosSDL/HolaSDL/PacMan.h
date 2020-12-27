@@ -20,6 +20,7 @@ private:
 public:
 	
 	PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
+	PacMan(int ancho, int largo, Game* g,  ifstream& input);
 	
 	bool invencible() { return tiempoforce>0; }
 	void comida();

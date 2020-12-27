@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 
+
 using namespace std;
 
 Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx, int cty) {
@@ -13,6 +14,7 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx
 	VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty;
 }
 
+// Dependiendo del nivel seleccionado se juega un nivel predeterminado o la partida guardada
 string Game::nombreNivel(int nMapa)
 {
 	cout << "Cargar nivel o empezar partida nueva? (0 o 1) ";
@@ -38,47 +40,55 @@ bool Game::LeeArchivo(string archivo) {
     input.open(archivo);
 
 	if (!input.is_open()) {
-		cout << "Fichero no encontrado\n";
+		throw FileNotFoundError(archivo);
 		read = false;
 	}
 	else {
-		int x, y;
-		input >> x >> y;
+		try
+		{
+			int x, y;
+			input >> x >> y;
 
-		tamCellY = 600 /x;
-		tamCellX = 800 /y;
-		mapa = new GameMap(x, y, this);
-		
-		int aux;
-		for (int i = 0; i < x; i++) {
-			for (int j = 0; j < y; j++) {
-				input >> aux;
-				if (aux == 1)
-					mapa->writeCell(j, i, Wall);
-				else if (aux == 2) {
-					mapa->writeCell(j, i, Food);
-					comida++;
-				}
-				else if (aux == 3)
-					mapa->writeCell(j, i, Vitamins);
-				else {
-					mapa->writeCell(j, i, Empty);
-					if (aux == 9) {
-						pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0),tamCellX,tamCellY);
-						objects.push_back(pac);
+			tamCellY = 600 / x;
+			tamCellX = 800 / y;
+			mapa = new GameMap(x, y, this);
+
+			int aux;
+			for (int i = 0; i < x; i++) {
+				for (int j = 0; j < y; j++) {
+					input >> aux;
+					if (aux == 1)
+						mapa->writeCell(j, i, Wall);
+					else if (aux == 2) {
+						mapa->writeCell(j, i, Food);
+						comida++;
 					}
-					else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
-						SmartGhost* g = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true);
-						fantasmas.push_back(g);
-						list<GameObject*>::iterator it = objects.insert(objects.end(), g);
-						g->setItList(it);
+					else if (aux == 3)
+						mapa->writeCell(j, i, Vitamins);
+					else {
+						mapa->writeCell(j, i, Empty);
+						if (aux == 9) {
+							pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY);
+							objects.push_back(pac);
+						}
+						else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
+							SmartGhost* g = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+							fantasmas.push_back(g);
+							list<GameObject*>::iterator it = objects.insert(objects.end(), g);
+							g->setItList(it);
 
+						}
 					}
 				}
 			}
+
+			objects.push_back(mapa);
+		}
+		catch(string& e)
+		{
+			throw FileFormatError(e);
 		}
 		
-		objects.push_back(mapa);
 	}
 
 	// Si cargamos un mapa, miramos la posicion de los fantasmas y pacman
@@ -128,12 +138,21 @@ bool Game::LeeArchivo(string archivo) {
 // Inicializa las texturas del juego
 void Game::IniTextures()
 {
-	for (int i = 0; i < NUM_TEXTURES; ++i)
+	try
 	{
-		textures[i] = new Texture( renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
+		for (int i = 0; i < NUM_TEXTURES; ++i)
+		{
+			textures[i] = new Texture(renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
+		}
 	}
+	catch(string& e)
+	{
+		throw FileNotFoundError(e);
+	}
+	
 }
 
+// Hace conversion de Coordenadas a SDL Point
 SDL_Point Game::mapCoordsToSDLPoint(Point2D& coords)
 {
 	SDL_Point aux;
@@ -143,29 +162,47 @@ SDL_Point Game::mapCoordsToSDLPoint(Point2D& coords)
 	return aux;
 }
 
+// Hace conversion de SDL Point a coordenadas
 Point2D Game::SDLPointToMapCoords(int x, int y)
 {
 	Point2D aux = Point2D((x / tamCellX), (y / tamCellY));
 	return aux;
 }
 
+// Crea el hijo del fantasma si 2 fantasmas entran en colision
 bool Game::Hijo(SmartGhost* Sg)
 {
 	list<SmartGhost*>::iterator it = fantasmas.begin();
 
 	while (it != fantasmas.end()) 
 	{
-		if (Sg != *it && Chocar(Sg->getDestRect(), (*it)->getDestRect()) && !((*it)->EsHijo())) 
+		if (Sg != *it && !((*it)->EsHijo()) && ComprobarDistancia(Sg, it))
 		{
-			SmartGhost* g = new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1, 0), tamCellX, tamCellY, true);
-			fantasmas.push_back(g);
-			list<GameObject*>::iterator it = objects.insert(objects.end(), g);
-			g->setItList(it);
-			return true;
+			
+				SmartGhost* g = new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), this, Vector2D(1, 0), tamCellX, tamCellY, true);
+				fantasmas.push_back(g);
+				list<GameObject*>::iterator it = objects.insert(objects.end(), g);
+				g->setItList(it);
+				return true;
+
 		}
 		it++;
 	}
 	return false;
+}
+
+// Comprueba la distancia entre 2 fantasmas
+bool Game::ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it)
+{
+	return ((Sg->getDestRect().y == (*it)->getDestRect().y &&
+		Sg->getDestRect().x - (*it)->getDestRect().x < 10 &&
+		Sg->getDestRect().x - (*it)->getDestRect().x > -10) &&
+
+		(Sg->getDestRect().x == (*it)->getDestRect().x &&
+			Sg->getDestRect().y - (*it)->getDestRect().y < 10 &&
+			Sg->getDestRect().y - (*it)->getDestRect().y > -10) &&
+
+		Chocar(Sg->getDestRect(), (*it)->getDestRect()));
 }
 
 // Comprueba la colision entre 2 personajes
@@ -196,7 +233,6 @@ bool Game::Chocar(SDL_Rect Sg1, SDL_Rect Sg2)
 	}	
 	return false;
 }
-
 
 // Renderiza todos los elementos del juego
 void Game::render() {
@@ -308,52 +344,63 @@ bool Game::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g)
 
 }
 
+// Guarda la partida
 void Game::SaveToFile()
 {
 	ofstream fil;
 	fil.open("../mapas/partida.txt");
 
-	fil << mapa->cols << " " << mapa->fils << endl;
-
-	for (int j = 0; j < mapa->cols; j++)
+	if (!fil.is_open())
 	{
-		for (int i = 0; i<mapa->fils;i++)
+		string aux = "../mapas/partida.txt";
+		throw FileNotFoundError(aux);
+	}
+	else
+	{
+		fil << mapa->cols << " " << mapa->fils << endl;
+
+		for (int j = 0; j < mapa->cols; j++)
 		{
-			if (mapa->readCell(i, j) == Wall)
+			for (int i = 0; i < mapa->fils; i++)
 			{
-				fil << "1 ";
+				if (mapa->readCell(i, j) == Wall)
+				{
+					fil << "1 ";
+				}
+				else if (mapa->readCell(i, j) == Food)
+				{
+					fil << "2 ";
+				}
+				else if (mapa->readCell(i, j) == Vitamins)
+				{
+					fil << "3 ";
+				}
+				else if (mapa->readCell(i, j) == Empty)
+				{
+					fil << "0 ";
+				}
 			}
-			else if (mapa->readCell(i, j) == Food)
-			{
-				fil << "2 ";
-			}
-			else if (mapa->readCell(i, j) == Vitamins)
-			{
-				fil << "3 ";
-			}
-			else if (mapa->readCell(i, j) == Empty)
-			{
-				fil << "0 ";
-			}
+			fil << endl;
 		}
+
+		fil << vidas << " " << puntuacion << endl;
+		fil << objects.size() << endl;
+
+		for (GameObject* o : objects)
+		{
+			GameCharacter* c = dynamic_cast<GameCharacter*>(o);
+			if (c != nullptr) c->saveToFil(fil);
+		}
+
 		fil << endl;
+		fil << nMapa;
+
+		exit = true; //Cerrar el bucle del juego
+
+		fil.close();
 	}
 
-	fil << vidas << " " << puntuacion << endl;
-	fil << objects.size() << endl;
-
-	for (GameObject* o : objects)
-	{
-		GameCharacter* c = dynamic_cast<GameCharacter*>(o);
-		if (c != nullptr) c->saveToFil(fil);
-	}
-
-	fil << endl;
-	fil << nMapa;
-
-	exit = true; //Cerrar el bucle del juego
-
-	fil.close();
+	
 }
 
 // Maneja el juego
@@ -386,6 +433,7 @@ void Game::check() {
 	}
 }
 
+// Se deshace del fantasma y lo deja pendiente para borrar completamente
 void Game::eraseGhost(list<GameObject*>::iterator it)
 {
 	GameObject* go = *it;
@@ -394,10 +442,12 @@ void Game::eraseGhost(list<GameObject*>::iterator it)
 	eraseObject(it);
 }
 
+//Se deshace del objeto y lo deja pendiente para borrar completamente
 void Game::eraseObject(list<GameObject*>::iterator it)
 {
 	objectstoErase.push_back(it);
 }
+
 Game::~Game()
 {
 	list<GameObject*>::iterator it = objects.begin();

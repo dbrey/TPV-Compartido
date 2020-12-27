@@ -13,7 +13,7 @@ Ghost::Ghost(int x, int y, Game* g, Vector2D dir,int ancho,int largo) : GameChar
 }
 
 // Comprobamos las direcciones a las que se puede mover el fantasma
-void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
+void Ghost::CheckMov() 
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
@@ -31,6 +31,7 @@ void Ghost::CheckMov() //Comprobar que se puede mover en x direccion
     }
 }
 
+// Seleccionamos una direccion random
 void Ghost::SelecMov()
 {
     CheckMov();
@@ -110,13 +111,15 @@ void Ghost::render() {
     
     if (textura == NULL)
     {
-        throw"Los fantasmas no tienen texturas";
+        string aux = "textura fantasmas";
+        throw FileNotFoundError(aux);
     }
 	textura->renderFrame(rect, 0, 8);
     
 
 }
 
+// Guarda al fantasma en el fichero
 void Ghost::saveToFil(ofstream& fil)
 {
     fil << "f " << point.getX() << " " << point.getY() << " " 

@@ -29,7 +29,8 @@ void GameMap::render() {
 			{
 				if (game->getTexture(wall) == NULL)
 				{
-					throw "No hay textura de muro";
+					string aux = "muro";
+					throw FileNotFoundError(aux);
 				}
 				else game->getTexture(wall)->render(destRect);
 			}
@@ -37,7 +38,9 @@ void GameMap::render() {
 			{
 				if (game->getTexture(burguer) == NULL)
 				{
-					throw "No hay textura de burger";
+					string aux = "burger";
+					throw FileNotFoundError(aux);
+
 				}
 				else game->getTexture(burguer)->render(destRect);
 			}
@@ -45,7 +48,8 @@ void GameMap::render() {
 			{
 				if (game->getTexture(food) == NULL)
 				{
-					throw "No hay textura food";
+					string aux = "food";
+					throw FileNotFoundError(aux);
 				}
 				else game->getTexture(food)->render(destRect);
 			}	
@@ -55,6 +59,7 @@ void GameMap::render() {
 
 void GameMap::update() {}
 
+// Comprobamos si intersecta el personaje con alguna pared
 bool GameMap::intersectsWall(const SDL_Rect& rect, bool g)
 {
 	Point2D topLeft = game->SDLPointToMapCoords(rect.x, rect.y);
@@ -80,8 +85,7 @@ bool GameMap::intersectsWall(const SDL_Rect& rect, bool g)
 	return false;
 }
 
-
-
+// Cogemos el tamaño del mapa
 SDL_Rect GameMap::getDestRect()
 {
 	SDL_Rect aux;

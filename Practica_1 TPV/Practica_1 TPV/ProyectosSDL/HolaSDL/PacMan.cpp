@@ -10,6 +10,7 @@ PacMan::PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo) : Game
 
 }
 
+
 // Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio
 void PacMan::comida() {
 	if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Food)
@@ -59,6 +60,7 @@ void PacMan::handleEvent(SDL_Event& tecla)
 		}
 	}
 }
+
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
 	game->check();
@@ -102,7 +104,8 @@ void PacMan::render() {
 	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
 	if (textura == NULL)
 	{
-		throw "PacMan no tiene textura";
+		string aux = "textura pacman";
+		throw FileNotFoundError(aux);
 	}
 	if (tiempoforce == 0)
 		textura->renderFrame(rect, 0, 10);
@@ -111,6 +114,7 @@ void PacMan::render() {
 	
 }
 
+// Guardamos a pacman en el fichero
 void PacMan::saveToFil(ofstream& fil)
 {
 	fil << "p " << point.getX() << " " << point.getY() << " "

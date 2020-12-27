@@ -27,8 +27,6 @@ void SmartGhost::update()
 	edad++;
 }
 
-
-
 // Se mueve de forma especial para el SmartGhost
 void SmartGhost::Mueve()
 {
@@ -96,6 +94,7 @@ void SmartGhost::Mueve()
 	}
 }
 
+// Movemos al fantasma de forma random o con una direccion preferente
 void SmartGhost::Movimiento()
 {
 	Point2D pac = game->getPac()->getPoint();
@@ -125,6 +124,7 @@ void SmartGhost::Movimiento()
 	}
 }
 
+// Renderiza al fantasma
 void SmartGhost::render()
 {
 	SDL_Rect rect;
@@ -143,7 +143,8 @@ void SmartGhost::render()
 
 	if (textura == NULL)
 	{
-		throw"Los fantasmas no tienen texturas";
+		string aux = "textura SmartGhost";
+		throw FileNotFoundError(aux);
 	}
 
 	if (edad > edadrip)

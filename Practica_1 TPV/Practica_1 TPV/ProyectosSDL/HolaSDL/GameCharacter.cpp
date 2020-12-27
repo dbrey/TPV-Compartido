@@ -1,5 +1,6 @@
 #include "GameCharacter.h"
 
+// Renderiza al personaje
 void GameCharacter::render() {
 	SDL_Rect rect;
 	rect.x = point.getX();
