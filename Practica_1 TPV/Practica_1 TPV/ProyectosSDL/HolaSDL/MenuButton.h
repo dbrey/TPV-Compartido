@@ -1,12 +1,10 @@
 #pragma once
-
-
 #include "GameObject.h"
 #include "Game.h"
 
 class Game;
 
-class MenuButton: 
+class MenuButton: public SDLGameObjects
 {
 private:
 	enum button_state

@@ -8,7 +8,7 @@ MenuButton::MenuButton(const LoaderParams* pParams) :
 
 	SDLGameObject(pParams)
 {
-	m_currentFrame = MOUSE_OUT; // start at frame 0
+	m_currentFrame = MOUSE_OUT; // Empezamos desde el primer frame
 }
 
 void MenuButton::draw()
@@ -32,13 +32,20 @@ void MenuButton::update()
 		&& pMousePos.GetX() > m_position.getY())
 	{
 		m_currentFrame = MOUSE_OVER;
-		if () //COMPROBAR SI ES CLICK IZQUIERDO
+		if () // (TheInputHandler::Instance()->getMouseButtonState(LEFT) //COMPROBAR SI ES CLICK IZQUIERDO
 		{
 			m_currentFrame = CLICKED;
+
+			// Cambiamos de estado de juego a PlayState
 		}
 	}
 	else
 	{
 		m_currentFrame = MOUSE_OUT;
 	}
+}
+
+void MenuButton::clean()
+{
+	SDLGameObject::clean();
 }
