@@ -20,12 +20,12 @@ private:
 
 public:
 	
-	PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo);
-	PacMan(int ancho, int largo, Game* g,  ifstream& input);
+	PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo);
+	PacMan(int ancho, int largo, Game* g, PlayState* pl,  ifstream& input);
 	
 	bool invencible() { return tiempoforce>0; }
 	void comida();
-	void handleEvent(SDL_Event& tecla);
+	bool handleEvent(SDL_Event& tecla);
 	void render();
 	void update();
 	void morir();

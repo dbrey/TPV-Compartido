@@ -6,28 +6,28 @@
 #include "GameMap.h"
 #include <fstream>
 
-PacMan::PacMan(int x, int y, Game* g, Vector2D dir, int ancho, int largo) : GameCharacter(Point2D(x, y),dir, g->getTexture(characters), g, largo, ancho) {
+PacMan::PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo) : GameCharacter(Point2D(x, y),dir, g->getTexture(characters), g, pl, largo, ancho) {
 
 }
 
 
 // Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio
 void PacMan::comida() {
-	if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Food)
+	if (play->getMapa()->readCell(play->SDLPointToMapCoords(point.getX(), point.getY()).getX(), play->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Food)
 	{
-		game->getMapa()->writeCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
-		game->restaComida();
-		game->sumaPuntos();
+		play->getMapa()->writeCell(play->SDLPointToMapCoords(point.getX(), point.getY()).getX(), play->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
+		play->restaComida();
+		play->sumaPuntos();
 	}
-	else if (game->getMapa()->readCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Vitamins)
+	else if (play->getMapa()->readCell(play->SDLPointToMapCoords(point.getX(), point.getY()).getX(), play->SDLPointToMapCoords(point.getX(), point.getY()).getY()) == Vitamins)
 	{
-		game->getMapa()->writeCell(game->SDLPointToMapCoords(point.getX(), point.getY()).getX(), game->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
+		play->getMapa()->writeCell(play->SDLPointToMapCoords(point.getX(), point.getY()).getX(), play->SDLPointToMapCoords(point.getX(), point.getY()).getY(), Empty);
 		tiempoforce = duracion;
 	}
 }
 
 // Recoge el input y establece la direccion a tomar
-void PacMan::handleEvent(SDL_Event& tecla)
+bool PacMan::handleEvent(SDL_Event& tecla)
 {
 	if (tecla.type == SDL_KEYDOWN)
 	{
@@ -36,26 +36,30 @@ void PacMan::handleEvent(SDL_Event& tecla)
 			case SDLK_LEFT:
 			{
 				dir_sel.setdir(-1, 0);
-				break;
+				return true;
 			}
 			case SDLK_RIGHT:
 			{
 				dir_sel.setdir(1, 0);
-				break;
+				return true;
 			}
 			case SDLK_UP:
 			{
 				dir_sel.setdir(0, -1);
-				break;
+				return true;
 			}
 			case SDLK_DOWN:
 			{
 				dir_sel.setdir(0, 1);
-				break;
+				return true;
 			}
 			case SDLK_s:
 			{
-				game->SaveToFile();
+				play->SaveToFile();
+			}
+			default:
+			{
+				return false;
 			}
 		}
 	}
@@ -63,20 +67,20 @@ void PacMan::handleEvent(SDL_Event& tecla)
 
 // Chequeamos la posicion del pacman y ejecutamos las acciones necesarias
 void PacMan::update() {
-	game->check();
+	play->check();
 	comida();
 
 	// En el momento que aparezca otro camino y la direccion seleccionada sea uno de esos caminos, cambiamos la direccion
-	if (game->trymove(getDestRect(),dir_sel, point,false)) //Me puedo mover en la direccion seleccionada
+	if (play->trymove(getDestRect(),dir_sel, point,false)) //Me puedo mover en la direccion seleccionada
 	{ 
 		dir_actual = dir_sel;
 
-		SDL_Rect mapRect = game->map();
+		SDL_Rect mapRect = play->map();
 		Move(point, dir_actual,mapRect);
 	}
-	else if (game->trymove(getDestRect(), dir_actual, point,false)) //Me puedo mover en la direccion actual
+	else if (play->trymove(getDestRect(), dir_actual, point,false)) //Me puedo mover en la direccion actual
 	{
-		SDL_Rect mapRect = game->map();
+		SDL_Rect mapRect = play->map();
 		Move(point, dir_actual, mapRect);
 	}
 
@@ -89,7 +93,7 @@ void PacMan::update() {
 // Lleva a Pacman al punto de spawn y le quita una vida
 void PacMan::morir()
 {
-	game->restaVida();
+	play->restaVida();
 	point = iniPoint;
 }
 
@@ -98,8 +102,8 @@ void PacMan::render() {
 	SDL_Rect rect;
 	rect.x = point.getX();
 	rect.y = point.getY();
-	rect.w = game->CellX();
-	rect.h = game->CellY();
+	rect.w = play->CellX();
+	rect.h = play->CellY();
 	
 	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
 	if (textura == NULL)

@@ -23,6 +23,9 @@ public:
 
 	MapCell readCell(int fil, int col)const { return Mapa[fil][col]; };
 	void writeCell(int fil, int col, MapCell estado) { Mapa[fil][col] = estado; };
+	int c() { return cols; }
+	int fil() { return fils; }
+
 	bool intersectsWall(const SDL_Rect& rect, bool g);
 	void render();
 	void update(); // Metodo para que no de error

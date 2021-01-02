@@ -31,80 +31,61 @@ const TextureAtribs TEXTURE_ATRIBS[NUM_TEXTURES] =
 class Game
 {
 private:
-
-	int VentX, VentY, tamCellX, tamCellY;
-	int comida = 0;
 	bool exit = false;
-	int nMapa = 1;
 
-	int vidas = 3;
-	int puntuacion = 0;
-
-	PacMan* pac;
-	GameMap* mapa;
-
-	list<SmartGhost*> fantasmas;
 	GameStateMachine* stateMachine;
-	list<list<GameObject*>::iterator> objectstoErase;
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
-
 	array<Texture*,NUM_TEXTURES> textures;	
 
 public:
 
-	Game(SDL_Window* window, SDL_Renderer* renderer, int vx, int  vy, int  ctx, int cty);
+	Game(SDL_Window* window, SDL_Renderer* renderer);
 
 	Texture* getTexture(int i) { return textures[i]; }
 
-	int CellX() { return tamCellX; }
-	int CellY() { return tamCellY; }
-
-	bool LeeArchivo(string archivo);
-
 	void render();
 	
-	void restaVida() { vidas--; }
-	void sumaPuntos() { puntuacion += 10; }
-
 	bool fin() { return exit; }
 
 	void IniTextures();
-
-	GameMap* getMapa() { return mapa; }
-	PacMan* getPac() {return pac; }
-
-	SDL_Rect map(){ return mapa->getDestRect(); }
-
-	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
-	Point2D SDLPointToMapCoords(int x, int y);
 
 	void run();
 
 	void handleEvent(SDL_Event& tecla);
 
-	bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g);
+	GameStateMachine* stMachine() { return stateMachine; }
+	bool ex(bool e) { exit = e; }
 
-	void check();
 
-	void update();
+	//SDL_Point mapCoordsToSDLPoint(Point2D& coords);
+	//Point2D SDLPointToMapCoords(int x, int y);
 
-	void CambioMapa();
+	//bool LeeArchivo(string archivo);
 
-	void ripFantasma(SmartGhost* Sg);
 
-	string nombreNivel(int nMapa);
+	//bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g);
 
-	bool Hijo(SmartGhost* Sg);
-	bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
+	//void check();
 
-	void restaComida() { comida--; }
+	//void update();
 
-	void SaveToFile();
-	bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
+	//void CambioMapa();
 
-	void eraseGhost(list<GameObject*>::iterator it);
-	void eraseObject(list<GameObject*>::iterator it);
+	//void ripFantasma(SmartGhost* Sg);
+
+	//string nombreNivel(int nMapa);
+
+	//bool Hijo(SmartGhost* Sg);
+	//bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
+
+
+
+	//void SaveToFile();
+	//bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
+
+	//void eraseGhost(list<GameObject*>::iterator it);
+	//void eraseObject(list<GameObject*>::iterator it);
 
 	~Game();
 };

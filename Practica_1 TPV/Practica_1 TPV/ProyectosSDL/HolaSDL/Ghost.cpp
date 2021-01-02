@@ -8,7 +8,7 @@
 #include <cstdlib>
 
 
-Ghost::Ghost(int x, int y, Game* g, Vector2D dir,int ancho,int largo) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g,ancho,largo) {
+Ghost::Ghost(int x, int y, Game* g, PlayState* pl,Vector2D dir,int ancho,int largo) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g,pl,ancho,largo) {
 
 }
 
@@ -17,12 +17,12 @@ void Ghost::CheckMov()
 {
     Vector2D derecha(1, 0), izquierda(-1, 0), arriba(0, -1), abajo(0, 1);
 
-    mov[0] = game->trymove(getDestRect(),derecha, point, true);
-    mov[1] = game->trymove(getDestRect(),izquierda, point, true);
-    mov[2] = game->trymove(getDestRect(),arriba, point, true);
-    mov[3] = game->trymove(getDestRect(),abajo, point, true);
+    mov[0] = play->trymove(getDestRect(),derecha, point, true);
+    mov[1] = play->trymove(getDestRect(),izquierda, point, true);
+    mov[2] = play->trymove(getDestRect(),arriba, point, true);
+    mov[3] = play->trymove(getDestRect(),abajo, point, true);
 
-    if (game->trymove(getDestRect(),dir_actual, point, true)) 
+    if (play->trymove(getDestRect(),dir_actual, point, true))
     {
         if (dir_actual == izquierda) { mov[0] = false; }
         else if (dir_actual == derecha) { mov[1] = false; }
@@ -106,8 +106,8 @@ void Ghost::render() {
     SDL_Rect rect;
     rect.x = point.getX();
     rect.y = point.getY();
-	rect.w = game->CellX();
-	rect.h = game->CellY();
+	rect.w = play->CellX();
+	rect.h = play->CellY();
     
     if (textura == NULL)
     {
