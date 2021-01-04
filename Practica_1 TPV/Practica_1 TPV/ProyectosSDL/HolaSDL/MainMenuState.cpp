@@ -2,11 +2,15 @@
 
 void MainMenuState::update()
 {
-	list<GameObject*>::iterator it = m_gameObjects.begin();
+	list<MenuButton*>::iterator it = m_gameObjects.begin();
 
 	while (it != m_gameObjects.end())
 	{
-		(*it)->update();
+		if ((*it)->update()) //click en el botton
+		{
+			s_menuToPlay();
+			break;
+		}
 		it++;
 	}
 	
@@ -14,11 +18,16 @@ void MainMenuState::update()
 
 void MainMenuState::render()
 {
-	list<GameObject*>::iterator it = m_gameObjects.begin();
+	list<MenuButton*>::iterator it = m_gameObjects.begin();
 
 	while (it != m_gameObjects.end())
 	{
 		(*it)->render();
 		it++;
 	}
+}
+
+void MainMenuState::s_menuToPlay()
+{
+	
 }

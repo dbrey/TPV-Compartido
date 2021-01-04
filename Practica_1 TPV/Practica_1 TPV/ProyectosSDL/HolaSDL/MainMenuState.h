@@ -7,7 +7,7 @@
 class MainMenuState: public GameState
 {
 private:
-	list<GameObject*> m_gameObjects; // Guardamos nuestros objetos del menu
+	list<MenuButton*> m_gameObjects; // Guardamos nuestros objetos del menu
 public:
 
 	virtual void update();

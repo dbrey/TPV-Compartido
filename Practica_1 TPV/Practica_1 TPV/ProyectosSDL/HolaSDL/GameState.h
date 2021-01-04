@@ -7,9 +7,10 @@ protected:
 	list<GameObject*> stage;
 	list<EventHandler*> eventos;
 	Game* g;
-	GameState(Game* g);
 
 public:
+
+	GameState(Game* g);
 
 	~GameState() 
 	{

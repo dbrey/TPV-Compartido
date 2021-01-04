@@ -1,1 +1,968 @@
-﻿
+﻿  EndState.cpp
+  EventHandler.cpp
+  Game.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\EventHandler.h(6,36): error C2061: error de sintaxis: identificador 'SDL_Event'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,25): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,6): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,9): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(15,20): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,8): error C2065: 'EventHandler': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,22): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,24): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,26): error C2065: 'eventos': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,33): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,40): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(22,2): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(34,29): error C2446: ==': no hay conversión de 'void (__cdecl *)(void)' en 'Uint32'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(34,21): message : No existe un contexto en el que sea posible realizar esta conversión
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(47,25): error C2065: 'nMapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(47,13): error C3861: 'nombreNivel': no se encontró el identificador
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(47,2): error C3861: 'LeeArchivo': no se encontró el identificador
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(49,19): error C2065: 'vidas': identificador no declarado
+  GameCharacter.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.cpp(49,32): error C2065: 'nMapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(11,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(11,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,25): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,26): error C2065: 'eventos': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'begin': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::begin(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1041): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(53): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'end': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::end(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1051): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(59): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<begin>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<end>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2100: direccionamiento indirecto no válido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2440: 'inicializando': no se puede realizar la conversión de 'int' a 'EventHandler *'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+  GameMap.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(9,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C2838: 'iterator': nombre completo no válido en la declaración de miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,102): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,22): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,33): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,45): error C2146: error de sintaxis: falta ')' delante del identificador 'i'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C3646: 'i': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,123): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,130): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,137): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,140): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,104): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,50): error C2065: 'it': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,55): error C2065: 'i': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(5,77): error C2039: 'CellX': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(5,90): error C2039: 'CellY': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(5,53): error C2661: 'GameObject::GameObject': ninguna función sobrecargada acepta 2 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(23,30): error C2039: 'CellX': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(24,30): error C2039: 'CellY': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(25,28): error C2039: 'CellX': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(26,28): error C2039: 'CellY': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(65,45): error C2039: 'SDLPointToMapCoords': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(65,18): error C2512: 'Point2D': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Vector2D.h(5,7): message : vea la declaración de 'Point2D'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(69,39): error C2039: 'SDLPointToMapCoords': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.cpp(73,39): error C2039: 'SDLPointToMapCoords': no es un miembro de 'Game'
+  GameObject.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(11,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(9,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C2838: 'iterator': nombre completo no válido en la declaración de miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,102): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,22): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,33): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,45): error C2146: error de sintaxis: falta ')' delante del identificador 'i'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C3646: 'i': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,123): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,130): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,140): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,104): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,50): error C2065: 'it': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,55): error C2065: 'i': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+  GameState.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(6,1): error C2504: 'GameState': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,58): error C2614: 'PlayState': inicialización de miembro no válida: 'GameState' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,8): error C2065: 'GameState': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,28): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,26): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,28): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,49): error C2065: 'state': identificador no declarado
+  GameStateMachine.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,61): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(6,1): error C2504: 'GameState': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,58): error C2614: 'PlayState': inicialización de miembro no válida: 'GameState' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(36,18): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(36,18): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(36,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(57,18): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(57,18): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(57,32): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.cpp(5,1): error C2084: la función 'void GameStateMachine::changeState(GameState *)' ya tiene un cuerpo
+  Ghost.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19): message : vea la definición anterior de 'changeState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(11,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(6,1): error C2504: 'Ghost': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,99): error C2614: 'SmartGhost': inicialización de miembro no válida: 'Ghost' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,25): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,26): error C2065: 'eventos': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'begin': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::begin(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1041): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(53): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'end': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::end(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1051): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(59): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<begin>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<end>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2100: direccionamiento indirecto no válido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2440: 'inicializando': no se puede realizar la conversión de 'int' a 'EventHandler *'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+  main.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,25): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,6): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(9,9): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(15,20): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,8): error C2065: 'EventHandler': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,22): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,24): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,26): error C2065: 'eventos': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,33): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,40): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\main.cpp(40,55): error C2440: '<function-style-cast>': no se puede realizar la conversión de 'initializer list' a 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\main.cpp(40,55): message : Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\main.cpp(40,14): error C2512: 'Game': no hay disponible un constructor predeterminado adecuado
+  MainMenuState.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(31,7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(6,1): error C2504: 'GameState': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,58): error C2614: 'PlayState': inicialización de miembro no válida: 'GameState' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,8): error C2065: 'GameState': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,28): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,26): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,28): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,49): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,61): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.h(21,15): error C2555: 'MenuButton::update': el tipo de valor devuelto de la función virtual de invalidación es distinto y no es covariante de 'GameObject::update'
+  MenuButton.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18): message : vea la declaración de 'GameObject::update'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(11,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(9,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C2838: 'iterator': nombre completo no válido en la declaración de miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,102): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,22): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,33): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,45): error C2146: error de sintaxis: falta ')' delante del identificador 'i'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C3646: 'i': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,123): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,130): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,140): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,104): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,50): error C2065: 'it': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,55): error C2065: 'i': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.h(21,15): error C2555: 'MenuButton::update': el tipo de valor devuelto de la función virtual de invalidación es distinto y no es covariante de 'GameObject::update'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18): message : vea la declaración de 'GameObject::update'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(11,21): error C2653: 'SDLGameObject': no es un nombre de clase o espacio de nombres
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(30,7): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(31,3): error C2143: error de sintaxis: falta ';' delante de '{'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(41,3): error C2065: 'retuen': identificador no declarado
+  PacMan.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(41,10): error C2143: error de sintaxis: falta ';' delante de 'constante'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(9,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(16,32): error C2838: 'iterator': nombre completo no válido en la declaración de miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,102): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,22): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,33): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,45): error C2146: error de sintaxis: falta ')' delante del identificador 'i'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C3646: 'i': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,46): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,123): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,130): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,137): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,140): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,104): error C2614: 'GameCharacter': inicialización de miembro no válida: 'GameObject' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,50): error C2065: 'it': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(23,55): error C2065: 'i': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,7): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,7): error C2065: 'EventHandler': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,20): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,8): error C2065: 'EventHandler': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,22): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,24): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,33): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,40): error C2065: 'e': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(9,173): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 7 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,6): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,32): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,58): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,72): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,94): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,120): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(16,134): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,3): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,30): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,56): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,70): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,92): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,118): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(18,132): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(19,3): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(20,3): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,11): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,37): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,63): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,77): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,99): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,125): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(22,139): error C2065: 'point': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(24,3): error C2065: 'play': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(24,30): error C2065: 'play': identificador no declarado
+  PauseState.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(24,34): fatal error C1003: el recuento de errores supera 100; se detiene la compilación
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(6,1): error C2504: 'GameState': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(17,15): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,50): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,57): error C2061: error de sintaxis: identificador 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,9): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(57,21): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(58,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,22): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,23): error C2061: error de sintaxis: identificador 'list'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,68): error C2065: 'g': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,58): error C2614: 'PlayState': inicialización de miembro no válida: 'GameState' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(60,26): error C2065: 'mapa': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,8): error C2065: 'GameState': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(11,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,11): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(15,28): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,26): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,28): error C2061: error de sintaxis: identificador 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18,49): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(19,61): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.h(21,15): error C2555: 'MenuButton::update': el tipo de valor devuelto de la función virtual de invalidación es distinto y no es covariante de 'GameObject::update'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(18): message : vea la declaración de 'GameObject::update'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(5,1): error C2512: 'GameState': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(4,7): message : vea la declaración de 'GameState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6): error C2259: 'MenuButton': no se puede crear una instancia de una clase abstract
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6): message : debido a los siguientes miembros:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6): message : 'void GameObject::render(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(19): message : vea la declaración de 'GameObject::render'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6): message : 'SDL_Rect GameObject::getDestRect(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(21): message : vea la declaración de 'GameObject::getDestRect'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6): message : 'bool EventHandler::handleEvent(SDL_Event &)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\EventHandler.h(6): message : vea la declaración de 'EventHandler::handleEvent'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6,33): error C2143: error de sintaxis: falta ')' delante de '...'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6,32): error C2512: 'MenuButton::MenuButton': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6,33): error C3546: '...': no hay paquetes de parámetros disponibles para expandir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(6,37): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7,2): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7): error C2259: 'MenuButton': no se puede crear una instancia de una clase abstract
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7): message : debido a los siguientes miembros:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7): message : 'void GameObject::render(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(19): message : vea la declaración de 'GameObject::render'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7): message : 'SDL_Rect GameObject::getDestRect(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(21): message : vea la declaración de 'GameObject::getDestRect'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7): message : 'bool EventHandler::handleEvent(SDL_Event &)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\EventHandler.h(6): message : vea la declaración de 'EventHandler::handleEvent'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7,33): error C2143: error de sintaxis: falta ')' delante de '...'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7,32): error C2512: 'MenuButton::MenuButton': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(7,33): error C3546: '...': no hay paquetes de parámetros disponibles para expandir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8,2): error C2065: 'state': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8): error C2259: 'MenuButton': no se puede crear una instancia de una clase abstract
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8): message : debido a los siguientes miembros:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8): message : 'void GameObject::render(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(19): message : vea la declaración de 'GameObject::render'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8): message : 'SDL_Rect GameObject::getDestRect(void)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(21): message : vea la declaración de 'GameObject::getDestRect'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8): message : 'bool EventHandler::handleEvent(SDL_Event &)': es abstracto
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\EventHandler.h(6): message : vea la declaración de 'EventHandler::handleEvent'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8,33): error C2143: error de sintaxis: falta ')' delante de '...'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8,32): error C2512: 'MenuButton::MenuButton': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(8,33): error C3546: '...': no hay paquetes de parámetros disponibles para expandir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(13,6): error C2059: error de sintaxis: ')'
+  PlayState.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PauseState.cpp(14,2): error C2143: error de sintaxis: falta ';' delante de '{'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(13,11): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(13,11): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(13,17): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(16,64): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(16,104): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(16,99): error C2614: 'GameObject': inicialización de miembro no válida: 'play' no es una base o miembro
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,102): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,123): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,130): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,140): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(17,81): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,97): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,111): error C2065: 'pl': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,114): error C2065: 'dir': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,118): error C2065: 'ancho': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(14,124): error C2065: 'largo': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,7): error C2065: 'bebe': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(81,145): error C2661: 'PacMan::PacMan': ninguna función sobrecargada acepta 7 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(85,166): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(123,99): error C2661: 'PacMan::PacMan': ninguna función sobrecargada acepta 7 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(132,163): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
+  SmartGhost.cpp
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(322,132): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameMap.h(11,1): error C2504: 'GameObject': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(10,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23,82): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(24,72): error C2535: 'PacMan::PacMan(int,int,Game *)': función miembro ya definida o declarada
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(23): message : vea la declaración de 'PacMan::PacMan'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(7,25): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C2143: error de sintaxis: falta ';' delante de '<'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,6): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(8,29): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,40): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(19,1): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(24,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,8): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,20): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,22): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,24): error C2065: 'stage': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,29): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(29,33): error C2065: 'o': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,26): error C2065: 'eventos': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'begin': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::begin(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1041): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(53): message : vea la declaración de 'std::begin'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2672: 'end': no se encontró una función sobrecargada que coincida
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2893: No se pudo especializar la plantilla de función "unknown-type std::end(_Container &)"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(1051): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : Con los siguientes argumentos de plantilla:
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : '_Container=unknown-type'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': no se pudo deducir el argumento de plantilla para 'std::initializer_list<_Elem>' desde 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\initializer_list(59): message : vea la declaración de 'std::end'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<begin>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C3536: '<end>$L0': no se puede usar antes de inicializarse
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2100: direccionamiento indirecto no válido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): error C2440: 'inicializando': no se puede realizar la conversión de 'int' a 'EventHandler *'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameState.h(34,1): message : La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,7): error C2065: 'SmartGhost': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(20,18): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,12): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,23): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(21,26): error C2059: error de sintaxis: 'std::iterator'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(46,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(47,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(48,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,23): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,34): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,46): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(63,48): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,24): error C2065: 'GameObject': identificador no declarado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,35): error C2059: error de sintaxis: '>'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2751: 'std::iterator': no se puede calificar el nombre de un parámetro de función
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,47): error C2146: error de sintaxis: falta ')' delante del identificador 'it'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C3646: 'it': especificador de invalidación desconocido
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,49): error C2059: error de sintaxis: ')'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(15,5): error C2039: 'Hijo': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(25,19): error C2039: 'eraseGhost': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(33,5): error C2039: 'getPac': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(36,36): error C2039: 'map': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(36,38): error C2660: 'GameCharacter::Move': la función no acepta 2 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(25,7): message : vea la declaración de 'GameCharacter::Move'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(38,10): error C2039: 'getPac': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(41,36): error C2039: 'map': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(41,38): error C2660: 'GameCharacter::Move': la función no acepta 2 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(25,7): message : vea la declaración de 'GameCharacter::Move'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(43,10): error C2039: 'getPac': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(46,36): error C2039: 'map': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(46,38): error C2660: 'GameCharacter::Move': la función no acepta 2 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(25,7): message : vea la declaración de 'GameCharacter::Move'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(48,10): error C2039: 'getPac': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(51,35): error C2039: 'map': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(51,37): error C2660: 'GameCharacter::Move': la función no acepta 2 argumentos
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(25,7): message : vea la declaración de 'GameCharacter::Move'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(100,28): error C2039: 'getPac': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(100,14): error C2512: 'Point2D': no hay disponible un constructor predeterminado adecuado
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Vector2D.h(5,7): message : vea la declaración de 'Point2D'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(105,6): error C2039: 'trymove': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(111,6): error C2039: 'trymove': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(113,32): error C2039: 'map': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(135,23): error C2039: 'CellX': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(136,23): error C2039: 'CellY': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(140,23): error C2039: 'CellX': no es un miembro de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(141,23): error C2039: 'CellY': no es un miembro de 'Game'
+  Texture.cpp
+  Vector2D.cpp
+  Generando código...
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7): message : vea la declaración de 'Game'

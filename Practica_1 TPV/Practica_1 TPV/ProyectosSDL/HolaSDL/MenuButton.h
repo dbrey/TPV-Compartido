@@ -1,10 +1,11 @@
 #pragma once
 #include "GameObject.h"
+#include "EventHandler.h"
 #include "Game.h"
 
-class Game;
 
-class MenuButton: public SDLGameObjects
+
+class MenuButton: public GameObject,public EventHandler
 {
 private:
 	enum button_state
@@ -15,9 +16,9 @@ private:
 	};
 	button_state m_currentFrame = MOUSE_OUT;
 public:
-	MenuButton(const LoaderParams* pParams);
+	MenuButton(Point2D p, int w1, int h1, Game* g, PlayState* pl): GameObject( p,  w1,  h1,  g,  pl){}
 	virtual void draw();
-	virtual void update();
+	virtual bool update();
 	virtual void clean();
 };
 
