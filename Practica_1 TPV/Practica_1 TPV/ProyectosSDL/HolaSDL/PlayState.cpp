@@ -231,6 +231,22 @@ void PlayState::run() {
 	}
 }
 
+// Maneja los eventos
+void PlayState::handleEvent(SDL_Event& tecla) {
+	if (SDL_PollEvent(&tecla) != 0 && !exit)
+	{
+		// Por alguna razon, no puede compararlo
+		if (tecla.type == SDL_Quit) 
+		{
+			g->terminar(true);
+		}
+		else
+		{
+			handleEventos();
+		}
+	}
+}
+
 
 SDL_Point PlayState::mapCoordsToSDLPoint(Point2D& coords)
 {

@@ -2,7 +2,7 @@
 #include "GameState.h"
 #include "MenuButton.h"
 
-class PauseState: public GameState
+class PauseState: public GameState, public EventHandler
 {
 public:
 	PauseState();

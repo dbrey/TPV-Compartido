@@ -10,6 +10,7 @@ private:
 	list<MenuButton*> m_gameObjects; // Guardamos nuestros objetos del menu
 public:
 
+	MainMenuState(Game* game) : GameState(game) {};
 	virtual void update();
 	virtual void render();
 	void s_menuToPlay(); // Pasa al PlayState (en cuanto reciba un click)

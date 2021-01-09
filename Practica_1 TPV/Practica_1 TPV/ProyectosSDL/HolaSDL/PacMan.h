@@ -26,6 +26,7 @@ public:
 	bool invencible() { return tiempoforce>0; }
 	void comida();
 	bool handleEvent(SDL_Event& tecla);
+	bool handleEvent();
 	void render();
 	void update();
 	void morir();

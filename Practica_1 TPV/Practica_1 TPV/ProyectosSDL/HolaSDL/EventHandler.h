@@ -3,6 +3,7 @@
 class EventHandler
 {
 public:
-	virtual bool handleEvent(SDL_Event& event) = 0;
+	EventHandler() {};
+	virtual bool handleEvent() = 0;
 };
 

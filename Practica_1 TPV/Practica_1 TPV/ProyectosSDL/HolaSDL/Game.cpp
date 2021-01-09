@@ -26,22 +26,6 @@ void Game::render() {
 	SDL_RenderPresent(renderer_);
 }
 
-// Maneja los eventos
-void Game::handleEvent(SDL_Event& tecla) {
-	if (SDL_PollEvent(&tecla) != 0 && !exit)
-	{
-		// Por alguna razon, no puede compararlo
-		if (tecla.type == SDL_Quit) { exit = true; }
-		else
-		{
-			stateMachine->currentState()->handleEvent(tecla);
-		}
-
-		//pac->handleEvent(tecla);
-
-	}
-}
-
 void Game::run() {
 	IniTextures();
 	LeeArchivo(nombreNivel(nMapa));
@@ -49,7 +33,7 @@ void Game::run() {
 	while (!fin() && vidas > 0 && nMapa <= 5)
 	{
 		render();
-		handleEvent(event);
+		// PlayState->handleEvent(event);
 		stateMachine->currentState()->update();
 	}
 }

@@ -10,7 +10,11 @@ protected:
 
 public:
 
-	GameState(Game* g);
+	GameState(Game* game)
+	{
+		g = game;
+		// Asignar numero de objetos con eventos al event handler
+	}
 
 	~GameState() 
 	{
@@ -27,10 +31,12 @@ public:
 		for (GameObject* o : stage)	{ o->render(); }
 	}
 	
-	void handleEvent(SDL_Event event)
+	void handleEventos()
 	{
-		for (EventHandler* e : eventos) { if(e->handleEvent(event)) return; }
+		for (EventHandler* e : eventos) { if(e->handleEvent()) return; }
 	}
 
+	virtual void OnEnter() = 0;
+	virtual void OnExit() = 0;
 };
 

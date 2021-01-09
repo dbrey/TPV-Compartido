@@ -6,9 +6,7 @@
 #include "GameMap.h"
 #include <fstream>
 
-PacMan::PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo) : GameCharacter(Point2D(x, y),dir, g->getTexture(characters), g, pl, largo, ancho) {
-
-}
+PacMan::PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo) : GameCharacter(Point2D(x, y),dir, g->getTexture(characters), g, pl, largo, ancho) {}
 
 
 // Lee la celda en la que se encuentra PacMan y si hay algo comestible, lo come y lo deja vacio

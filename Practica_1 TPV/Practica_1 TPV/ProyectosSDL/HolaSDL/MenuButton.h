@@ -2,8 +2,8 @@
 #include "GameObject.h"
 #include "EventHandler.h"
 #include "Game.h"
-
-
+#include "PlayState.h"
+#include "GameStateMachine.h"
 
 class MenuButton: public GameObject,public EventHandler
 {
@@ -15,10 +15,13 @@ private:
 		CLICKED = 2
 	};
 	button_state m_currentFrame = MOUSE_OUT;
+	GameStateMachine* stMachine;
+	EventHandler* eHandler;
+
 public:
-	MenuButton(Point2D p, int w1, int h1, Game* g, PlayState* pl): GameObject( p,  w1,  h1,  g,  pl){}
+	MenuButton(Point2D p, int w1, int h1, Game* g, PlayState* pl, EventHandler* e, GameStateMachine* stMach) : GameObject(p, w1, h1, g, pl) { eHandler = e, stMachine = stMach; }
 	virtual void draw();
-	virtual bool update();
 	virtual void clean();
+	bool handleEvent();
 };
 

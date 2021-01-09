@@ -27,6 +27,25 @@ void MainMenuState::render()
 	}
 }
 
+bool MainMenuState::onEnter()
+{
+	if (::Instance()->load("assets/button.png", 2,2) || !::Instance()->load("assets/exit.png", 2, 2))
+	{
+		return false;
+	}
+	
+	MenuButton* playButton(Point2D p, int w1, int h1, g, pl, EventHandler * e);
+	MenuButton* exitButton(Point2D p, int w1, int h1, g, PlayState * pl, EventHandler * e);
+
+	
+	m_gameObjects.push_back(playButton);
+	m_gameObjects.push_back(exitButton);
+
+	std::cout << "entering MenuState\n";
+	return true;
+
+}
+
 void MainMenuState::s_menuToPlay()
 {
 	

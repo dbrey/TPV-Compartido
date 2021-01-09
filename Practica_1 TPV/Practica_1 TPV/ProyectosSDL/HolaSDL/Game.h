@@ -34,6 +34,11 @@ private:
 	bool exit = false;
 
 	GameStateMachine* stateMachine;
+	
+	
+	//PlayState* play;
+	
+	
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 	array<Texture*,NUM_TEXTURES> textures;	
@@ -52,7 +57,11 @@ public:
 
 	void run();
 
-	void handleEvent(SDL_Event& tecla);
+	GameStateMachine* stMachine() { return stateMachine; }
+
+	void terminar(bool ex) { exit = ex; }
+
+	SDL_Renderer* getRenderer() { return renderer_; }
 
 	GameStateMachine* stMachine() { return stateMachine; }
 	bool ex(bool e) { exit = e; }

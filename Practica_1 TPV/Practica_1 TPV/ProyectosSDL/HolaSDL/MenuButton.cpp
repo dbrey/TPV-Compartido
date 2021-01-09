@@ -3,16 +3,12 @@
 #include <Windows.h>
 #include <WinUser.h>
 
-
-
-
 void MenuButton::draw()
 {
-	SDLGameObject::draw(); // use the base class drawing
+	//SDLGameObject::draw(); // use the base class drawing
 }
 
-
-bool MenuButton::update()
+bool MenuButton::handleEvent()
 {
 	POINT cursor; //Obtener posicion del raton
 
@@ -27,18 +23,18 @@ bool MenuButton::update()
 		&& pMousePos.GetX() > point.getY())
 	{
 		m_currentFrame = MOUSE_OVER;
-		if () // (TheInputHandler::Instance()->getMouseButtonState(LEFT) //COMPROBAR SI ES CLICK IZQUIERDO
+
+		/*if (TheInputHandler::Instance()->getMouseButtonState(LEFT))  //COMPROBAR SI ES CLICK IZQUIERDO
 		{
 			m_currentFrame = CLICKED;
-
+			stMachine->changeState(play);  // Cambiamos de estado de juego a PlayState
 			return true;
-			// Cambiamos de estado de juego a PlayState
-		}
+		}*/
 	}
 	else
 	{
 		m_currentFrame = MOUSE_OUT;
-		retuen false;
+		return false;
 	}
 }
 
@@ -46,3 +42,4 @@ void MenuButton::clean()
 {
 	
 }
+

@@ -18,7 +18,7 @@ private:
 
 public:
 
-	GameMap(int c, int f, Game* g);
+	GameMap(int c, int f, Game* g, PlayState* pl);
 
 
 	MapCell readCell(int fil, int col)const { return Mapa[fil][col]; };

@@ -6,7 +6,7 @@ class PlayState : public GameState
 {
 private:
 
-	int VentX, VentY, tamCellX, tamCellY;
+	int tamCellX, tamCellY;
 	int comida = 0;
 	int nMapa = 1;
 
@@ -24,7 +24,7 @@ private:
 
 public:
 
-	PlayState(int vx, int  vy, int  ctx, int cty, Game* g) :GameState(g) { VentX = vx, VentY = vy, tamCellX = ctx, tamCellY = cty; }
+	PlayState( Game* g) :GameState(g) {};
 
 
 	void update();
@@ -42,6 +42,7 @@ public:
 	Point2D SDLPointToMapCoords(int x, int y);
 	bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g);
 	void check();
+
 
 	void ripFantasma(SmartGhost* Sg);
 	bool Hijo(SmartGhost* Sg);

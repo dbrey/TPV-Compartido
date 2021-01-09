@@ -12,7 +12,7 @@ void SmartGhost::update()
 	{
 		Movimiento();
 	}
-	if (cuarentena == 2000 && game->Hijo(this) && !EsHijo()) //Comprobamos si esta en cuarentena o no
+	if (cuarentena == 2000 && play->Hijo(this) && !EsHijo()) //Comprobamos si esta en cuarentena o no
 	{
 		cuarentena--;
 	}
@@ -22,7 +22,7 @@ void SmartGhost::update()
 	}
 	if (edad == edadout) //Llamar  metodo para borarr el fantasma
 	{
-		game->eraseGhost(it);
+		play->eraseGhost(it);
 	}
 	edad++;
 }
@@ -30,25 +30,25 @@ void SmartGhost::update()
 // Se mueve de forma especial para el SmartGhost
 void SmartGhost::Mueve()
 {
-	if (mov[0] && point.getX() > game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // left
+	if (mov[0] && point.getX() > play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // left
 	{
 		dir_actual = Vector2D(-1, 0);
-		Move(point, dir_actual, game->map());;
+		Move(point, dir_actual, play->map());;
 	}
-	else if (mov[1] && point.getX() > game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // up
+	else if (mov[1] && point.getX() > play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // up
 	{
 		dir_actual = Vector2D(0, -1);
-		Move(point, dir_actual, game->map());
+		Move(point, dir_actual, play->map());
 	}
-	else if (mov[2] && point.getX() < game->getPac()->getPoint().getX() && !game->getPac()->invencible()) // right
+	else if (mov[2] && point.getX() < play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // right
 	{
 		dir_actual = Vector2D(1, 0);
-		Move(point, dir_actual, game->map());
+		Move(point, dir_actual, play->map());
 	}
-	else if (mov[3] && point.getX() < game->getPac()->getPoint().getX()&& !game->getPac()->invencible())// down
+	else if (mov[3] && point.getX() < play->getPac()->getPoint().getX()&& !play->getPac()->invencible())// down
 	{
 		dir_actual = Vector2D(0, 1);
-		Move(point, dir_actual,game->map());
+		Move(point, dir_actual, play->map());
 	}
 	else//random
 	{
@@ -97,20 +97,20 @@ void SmartGhost::Mueve()
 // Movemos al fantasma de forma random o con una direccion preferente
 void SmartGhost::Movimiento()
 {
-	Point2D pac = game->getPac()->getPoint();
+	Point2D pac = play->getPac()->getPoint();
 	if (((edad < 1000) || (point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 || //Condiciones de cercania
 		point.getY() > pac.getY() + 100 || point.getY() < pac.getY() + 100)))
 	{
 		// Movimiento random
-		if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point,true))
+		if (CambMove >= 70 || !play->trymove(getDestRect(), dir_actual, point,true))
 		{
 			SelecMov();
 			CambMove = 0;
 		}
 
-		if (game->trymove(getDestRect(), dir_actual, point,true))
+		if (play->trymove(getDestRect(), dir_actual, point,true))
 		{
-			SDL_Rect mapRect = game->map();
+			SDL_Rect mapRect = play->map();
 			Move(point, dir_actual, mapRect);
 
 		}
@@ -132,13 +132,13 @@ void SmartGhost::render()
 	rect.y = point.getY();
 	if (edad < 1000)
 	{
-		rect.w = game->CellX() / 2;
-		rect.h = game->CellY() / 2;
+		rect.w = play->CellX() / 2;
+		rect.h = play->CellY() / 2;
 	}
 	else
 	{
-		rect.w = game->CellX();
-		rect.h = game->CellY();
+		rect.w = play->CellX();
+		rect.h = play->CellY();
 	}
 
 	if (textura == NULL)
