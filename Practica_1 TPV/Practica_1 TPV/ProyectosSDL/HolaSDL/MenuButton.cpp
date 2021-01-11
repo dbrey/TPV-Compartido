@@ -10,11 +10,12 @@ void MenuButton::draw()
 
 bool MenuButton::handleEvent(SDL_Event event)
 {
-
-	if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
-	{
-		//Crear p y r
+	//Crear p y r
 		SDL_Point p;
+	
+	if (SDL_GetMouseState(NULL, NULL) && event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
+	{
+		
 
 		SDL_Rect r;
 
