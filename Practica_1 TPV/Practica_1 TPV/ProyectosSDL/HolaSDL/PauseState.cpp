@@ -1,18 +1,14 @@
 #include "PauseState.h"
 
-/*PauseState::PauseState()
+PauseState::PauseState()
 {
-	stage.push_back(MenuButton(...));
-	state.push_back(MenuButton(...);
-	state.push_back(MenuButton(...);
+	stage.push_back(new MenuButton(..., resume);
+	stage.push_back(new MenuButton(...);
+	stage.push_back(new MenuButton(...);
 }
 
-bool PauseState::handleEvent(SDL_Event event)
+
+void PauseState::resume(Game* game)
 {
-	if () // Pulsa el raton
-	{
-		g->stMachine()->changeState()
-		return true;
-	}
-	return false;
-}*/
+	game->stMachine()->popState();
+}

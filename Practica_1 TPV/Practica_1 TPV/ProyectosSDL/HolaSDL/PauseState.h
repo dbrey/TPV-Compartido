@@ -6,6 +6,7 @@ class PauseState: public GameState, public EventHandler
 {
 public:
 	PauseState();
-	bool handleEvent(SDL_Event event);
+
+	static void resume(Game* game);
 };
 
