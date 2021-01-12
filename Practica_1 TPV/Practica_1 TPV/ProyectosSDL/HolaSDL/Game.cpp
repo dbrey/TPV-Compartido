@@ -14,14 +14,13 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
 
 
 	stateMachine = new GameStateMachine();
-	//stateMachine->pushState(new MainMenuState);
+	stateMachine->pushState(new MainMenuState());
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer_);
-	mapa->render();
-
-	//stateMachine->currentState()->render();
+	
+	stateMachine->currentState()->render();
 
 	SDL_RenderPresent(renderer_);
 }
@@ -33,7 +32,8 @@ void Game::run() {
 	while (!fin() && vidas > 0 && nMapa <= 5)
 	{
 		render();
-		// PlayState->handleEvent(event);
+
+		stateMachine->currentState()->handleEvent(event);
 		stateMachine->currentState()->update();
 	}
 }

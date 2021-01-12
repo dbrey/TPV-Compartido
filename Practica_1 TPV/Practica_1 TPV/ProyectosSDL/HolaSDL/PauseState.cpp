@@ -1,10 +1,14 @@
 #include "PauseState.h"
+#include "checkML.h"
 
 PauseState::PauseState()
 {
-	stage.push_back(new MenuButton(..., resume);
+	new MenuButton boton1();
+	stage.push_back(boton1);
 	stage.push_back(new MenuButton(...);
 	stage.push_back(new MenuButton(...);
+
+	manejadores.push_back(boton1);
 }
 
 

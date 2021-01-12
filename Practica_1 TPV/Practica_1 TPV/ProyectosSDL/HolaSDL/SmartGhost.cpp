@@ -1,5 +1,7 @@
 #include "SmartGhost.h"
 #include "Game.h"
+#include "checkML.h"
+
 
 // Llama al update de Ghost o al de SmartGhost
 void SmartGhost::update()
@@ -16,7 +18,7 @@ void SmartGhost::update()
 	{
 		cuarentena--;
 	}
-	if (cuarentena < 2000)
+	else if (cuarentena < 2000)
 	{
 		cuarentena--;
 	}

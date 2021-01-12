@@ -1,4 +1,5 @@
 #include "PlayState.h"
+#include "checkML.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -218,35 +219,6 @@ void PlayState::SaveToFile()
 
 
 }
-
-void PlayState::run() {
-	g->IniTextures();
-	LeeArchivo(nombreNivel(nMapa));
-	SDL_Event event;
-	while (!g->fin() && vidas > 0 && nMapa <= 5)
-	{
-		render();
-		handleEvent(event);
-		g->stMachine()->currentState()->update();
-	}
-}
-
-// Maneja los eventos
-void PlayState::handleEvent(SDL_Event& tecla) {
-	if (SDL_PollEvent(&tecla) != 0 && !exit)
-	{
-		// Por alguna razon, no puede compararlo
-		if (tecla.type == SDL_Quit) 
-		{
-			g->terminar(true);
-		}
-		else
-		{
-			handleEventos();
-		}
-	}
-}
-
 
 SDL_Point PlayState::mapCoordsToSDLPoint(Point2D& coords)
 {

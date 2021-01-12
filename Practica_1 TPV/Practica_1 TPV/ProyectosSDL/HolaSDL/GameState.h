@@ -1,11 +1,12 @@
 #pragma once
 #include "Game.h"
+#include "checkML.h"
 
 class GameState
 {
 protected:
 	list<GameObject*> stage;
-	list<EventHandler*> eventos;
+	list<EventHandler*> manejadores;
 	Game* g;
 
 public:
@@ -31,9 +32,9 @@ public:
 		for (GameObject* o : stage)	{ o->render(); }
 	}
 	
-	void handleEventos()
+	void handleEventos(SDL_Event event)
 	{
-		for (EventHandler* e : eventos) { if(e->handleEvent()) return; }
+		for (EventHandler* e : manejadores) { if(e->handleEvent(event)) return; }
 	}
 
 	virtual void OnEnter() = 0;

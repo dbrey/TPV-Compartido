@@ -4,7 +4,7 @@
 #include "Game.h"
 #include "PlayState.h"
 #include "GameStateMachine.h"
-
+#include "checkML.h"
 
 using CallBackOnClick = void(Game* game);
 
@@ -26,6 +26,7 @@ public:
 	MenuButton(Point2D p, int w1, int h1, Game* g, PlayState* pl, EventHandler* e, GameStateMachine* stMach) : GameObject(p, w1, h1, g, pl) { eHandler = e, stMachine = stMach; }
 	virtual void draw();
 	virtual void clean();
+	void 
 	bool handleEvent(SDL_Event event);
 };
 

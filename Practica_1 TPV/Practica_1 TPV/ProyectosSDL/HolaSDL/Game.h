@@ -9,13 +9,14 @@
 #include "GameObject.h"
 #include "SmartGhost.h"
 #include "GameStateMachine.h"
+#include "checkML.h"
 
 #include <array>
 #include <list>
 using namespace std;
-const int NUM_TEXTURES = 4;
+const int NUM_TEXTURES = 9;
 
-const enum textureName { burguer, characters, food, wall};
+const enum textureName { burguer, characters, food, wall, ex, p, man, restart, resume};
 
 struct TextureAtribs
 {
@@ -24,8 +25,10 @@ struct TextureAtribs
 	uint numRows, numCols;
 };
 
+
 const TextureAtribs TEXTURE_ATRIBS[NUM_TEXTURES] =
-{ { burguer, "..\\images\\burguer1.png",1,1 }, { characters, "..\\images\\characters1.png", 4, 14 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 } };
+{ { burguer, "..\\images\\burguer1.png",1,1 }, { characters, "..\\images\\characters1.png", 4, 14 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 }, { ex, "..\\images\\exit.png",1,3 },
+	{ p, "..\\images\\play.png",1,3 }, { man, "..\\images\\main.png",1,3 }, { restart, "..\\images\\restart.png",1,3 }, { resume, "..\\images\\resume.png",1,3 } };
 
 
 class Game

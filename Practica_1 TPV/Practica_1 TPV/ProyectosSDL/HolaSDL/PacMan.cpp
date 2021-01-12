@@ -2,6 +2,7 @@
 #include "PacMan.h"
 #include "Vector2D.h"
 #include "Texture.h"
+#include "checkML.h"
 #include "Game.h"
 #include "GameMap.h"
 #include <fstream>

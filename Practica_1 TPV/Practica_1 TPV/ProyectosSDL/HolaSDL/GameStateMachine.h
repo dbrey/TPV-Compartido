@@ -2,6 +2,7 @@
 #include <stack>
 #include "GameState.h"
 #include "Game.h"
+#include "checkML.h"
 using namespace std;
 
 class GameStateMachine

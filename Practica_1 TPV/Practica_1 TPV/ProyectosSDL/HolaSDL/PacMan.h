@@ -5,6 +5,7 @@
 #include "GameMap.h"
 #include "GameCharacter.h"
 #include "EventHandler.h"
+#include "checkML.h"
 class Game;
 
 class PacMan : public GameCharacter, public EventHandler
@@ -26,7 +27,6 @@ public:
 	bool invencible() { return tiempoforce>0; }
 	void comida();
 	bool handleEvent(SDL_Event& tecla);
-	bool handleEvent();
 	void render();
 	void update();
 	void morir();

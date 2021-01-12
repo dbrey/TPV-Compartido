@@ -1,6 +1,7 @@
 #include "GameStateMachine.h"
 
 
+
 void GameStateMachine::changeState(GameState* state)
 {
 	popState();
