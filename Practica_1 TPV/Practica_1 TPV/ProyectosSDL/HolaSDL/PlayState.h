@@ -28,13 +28,12 @@ public:
 	PlayState( Game* g) :GameState(g) {};
 
 
-	void update();
+	void update2();
 
 	string nombreNivel(int nMapa);
 	bool LeeArchivo(string archivo);
 	void CambioMapa();
 	void SaveToFile();
-	void run();
 
 	void handleEvent(SDL_Event& tecla);
 	void render();
@@ -50,7 +49,7 @@ public:
 	bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
 	bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
 
-
+	void OnEnter(){ LeeArchivo(nombreNivel(nMapa)); }
 
 	int CellX() { return tamCellX; }
 	int CellY() { return tamCellY; }

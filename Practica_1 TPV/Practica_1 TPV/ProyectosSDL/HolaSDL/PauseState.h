@@ -7,7 +7,7 @@ class PauseState: public GameState, public EventHandler
 {
 public:
 	PauseState();
-
+	void update2();
 	static void resume(Game* game);
 };
 

@@ -11,6 +11,16 @@ PauseState::PauseState()
 	manejadores.push_back(boton1);
 }
 
+void PauseState::update2()
+{
+	update(); // Hacemos update de todos los objetos con update
+
+	SDL_Event event;
+	if (SDL_PollEvent(&event) != 0)
+	{
+		handleEventos(event);
+	}
+}
 
 void PauseState::resume(Game* game)
 {

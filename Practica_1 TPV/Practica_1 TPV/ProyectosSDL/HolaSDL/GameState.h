@@ -14,7 +14,7 @@ public:
 	GameState(Game* game)
 	{
 		g = game;
-		// Asignar numero de objetos con eventos al event handler
+		// Cada estado tiene que manejar sus eventos correspondientes, los cuales mete en manejadores
 	}
 
 	~GameState() 

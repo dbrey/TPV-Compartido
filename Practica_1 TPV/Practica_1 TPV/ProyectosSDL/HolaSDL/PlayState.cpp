@@ -6,9 +6,16 @@
 #include <sstream>
 
 
-void PlayState::update()
+void PlayState::update2()
 {
 	// Adaptar el metodo CambioMapa para que lo haga el update de PlayState
+	SDL_Event event;
+	if (SDL_PollEvent(&event) != 0)
+	{
+		handleEventos(event);
+	}
+
+	update(); // Hacemos update de todos los objetos con update
 
 	for (auto it : objectstoErase)
 	{
@@ -21,9 +28,12 @@ void PlayState::update()
 	{
 		nMapa++;
 		CambioMapa();
-
 	}
 
+	if (nMapa > 5 || vidas == 0)
+	{
+		g->stMachine()->popState();//Borrar el estado game y volver al anterior estado que seria menu
+	}
 	SDL_Delay(10);
 }
 
@@ -62,7 +72,7 @@ bool PlayState::LeeArchivo(string archivo) {
 
 			tamCellY = 600 / x;
 			tamCellX = 800 / y;
-			mapa = new GameMap(x, y, g);
+			mapa = new GameMap(x, y, g ,this);
 
 			int aux;
 			for (int i = 0; i < x; i++) {

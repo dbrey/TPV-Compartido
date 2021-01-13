@@ -10,7 +10,7 @@
 #include "SmartGhost.h"
 #include "GameStateMachine.h"
 #include "checkML.h"
-
+#include "MainMenuState.h"
 #include <array>
 #include <list>
 using namespace std;
@@ -38,10 +38,6 @@ private:
 
 	GameStateMachine* stateMachine;
 	
-	
-	//PlayState* play;
-	
-	
 	SDL_Window* window_;
 	SDL_Renderer* renderer_;
 	array<Texture*,NUM_TEXTURES> textures;	
@@ -68,36 +64,6 @@ public:
 
 	GameStateMachine* stMachine() { return stateMachine; }
 	bool ex(bool e) { exit = e; }
-
-
-	//SDL_Point mapCoordsToSDLPoint(Point2D& coords);
-	//Point2D SDLPointToMapCoords(int x, int y);
-
-	//bool LeeArchivo(string archivo);
-
-
-	//bool trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool g);
-
-	//void check();
-
-	//void update();
-
-	//void CambioMapa();
-
-	//void ripFantasma(SmartGhost* Sg);
-
-	//string nombreNivel(int nMapa);
-
-	//bool Hijo(SmartGhost* Sg);
-	//bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
-
-
-
-	//void SaveToFile();
-	//bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
-
-	//void eraseGhost(list<GameObject*>::iterator it);
-	//void eraseObject(list<GameObject*>::iterator it);
 
 	~Game();
 };

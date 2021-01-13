@@ -1,20 +1,14 @@
 #include "MainMenuState.h"
 #include "checkML.h"
 
-void MainMenuState::update()
+void MainMenuState::update2()
 {
-	list<MenuButton*>::iterator it = m_gameObjects.begin();
-
-	while (it != m_gameObjects.end())
+	update(); // Hacemos update de todos los objetos con update
+	SDL_Event event;
+	if (SDL_PollEvent(&event) != 0)
 	{
-		if ((*it)->update()) //click en el botton
-		{
-			s_menuToPlay();
-			break;
-		}
-		it++;
+		handleEventos(event);
 	}
-	
 }
 
 void MainMenuState::render()
@@ -28,26 +22,19 @@ void MainMenuState::render()
 	}
 }
 
-bool MainMenuState::onEnter()
+void MainMenuState::OnEnter()
 {
-	if (::Instance()->load("assets/button.png", 2,2) || !::Instance()->load("assets/exit.png", 2, 2))
-	{
-		return false;
-	}
-	
-	MenuButton* playButton(Point2D p, int w1, int h1, g, pl, EventHandler * e);
-	MenuButton* exitButton(Point2D p, int w1, int h1, g, PlayState * pl, EventHandler * e);
+	Point2D p1 = Point2D(300, 200);
+	Point2D p2 = Point2D(300, 600);
+
+	int w1 = 200;
+	int h1 = 100;
+
+	//de aqui quitar playstate y eventhandler¿?
+	MenuButton* playButton = new MenuButton( p1, w1, h1, g, pl, EventHandler * e);
+	MenuButton* exitButton = new MenuButton( p2, w1, h1, g, pl, EventHandler * e);
 
 	
 	m_gameObjects.push_back(playButton);
 	m_gameObjects.push_back(exitButton);
-
-	std::cout << "entering MenuState\n";
-	return true;
-
-}
-
-void MainMenuState::s_menuToPlay()
-{
-	
 }

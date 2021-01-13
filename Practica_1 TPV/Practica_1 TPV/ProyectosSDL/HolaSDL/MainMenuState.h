@@ -12,9 +12,11 @@ private:
 public:
 
 	MainMenuState(Game* game) : GameState(game) {};
-	virtual void update();
+	void update2(); // Cambiar nombre
 	virtual void render();
-	void s_menuToPlay(); // Pasa al PlayState (en cuanto reciba un click)
 
+
+	void OnEnter();
+	void OnExit();
 };
 

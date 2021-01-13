@@ -14,15 +14,11 @@ private:
 	const uint32_t  duracion = 1000;
 
 	uint32_t  tiempoforce = 0;
-
-	
-
 	Vector2D dir_sel;
 
 public:
 	
 	PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo);
-	PacMan(int ancho, int largo, Game* g, PlayState* pl,  ifstream& input);
 	
 	bool invencible() { return tiempoforce>0; }
 	void comida();
