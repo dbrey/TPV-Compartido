@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
 		// Coge cualquier error aparte de otro tipo de errores (Ej: carga de texturas)
 		try 
 		{
-			Game game = Game(window, renderer, 200, 200, 10, 10);
+			Game game = Game(window, renderer);
 			game.run();
 		}
 		catch(PacManError& e)

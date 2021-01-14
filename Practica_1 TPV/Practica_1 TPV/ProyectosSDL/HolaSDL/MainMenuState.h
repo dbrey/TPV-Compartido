@@ -9,10 +9,14 @@ class MainMenuState: public GameState
 {
 private:
 	list<MenuButton*> m_gameObjects; // Guardamos nuestros objetos del menu
+
+	MenuButton* jugar;
+	MenuButton* salir;
+	MenuButton* cargar;
 public:
 
-	MainMenuState(Game* game) : GameState(game) {};
-	void update2(); // Cambiar nombre
+	MainMenuState(Game* game);
+	void update(); // Cambiar nombre
 	virtual void render();
 
 

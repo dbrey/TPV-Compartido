@@ -6,16 +6,16 @@
 #include <sstream>
 
 
-void PlayState::update2()
+void PlayState::update()
 {
 	// Adaptar el metodo CambioMapa para que lo haga el update de PlayState
+	// Revisamos los handleEvent de todos los posibles eventos
 	SDL_Event event;
 	if (SDL_PollEvent(&event) != 0)
 	{
 		handleEventos(event);
 	}
 
-	update(); // Hacemos update de todos los objetos con update
 
 	for (auto it : objectstoErase)
 	{
@@ -91,6 +91,7 @@ bool PlayState::LeeArchivo(string archivo) {
 						if (aux == 9) {
 							pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY);
 							stage.push_back(pac);
+							manejadores.push_back(pac);
 						}
 						else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
 							SmartGhost* gh = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY, true);

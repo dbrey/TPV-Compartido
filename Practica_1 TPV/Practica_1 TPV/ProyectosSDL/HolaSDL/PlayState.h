@@ -17,25 +17,20 @@ private:
 	PacMan* pac;
 	GameMap* mapa;
 	
-
 	list<SmartGhost*> fantasmas;
 	list<list<GameObject*>::iterator> objectstoErase;
-
-
-
 public:
 
-	PlayState( Game* g) :GameState(g) {};
+	PlayState( Game* g) :GameState(g) {	g->stMachine()->pushState(this);};
 
 
-	void update2();
+	void update();
 
 	string nombreNivel(int nMapa);
 	bool LeeArchivo(string archivo);
 	void CambioMapa();
 	void SaveToFile();
 
-	void handleEvent(SDL_Event& tecla);
 	void render();
 
 	SDL_Point mapCoordsToSDLPoint(Point2D& coords);

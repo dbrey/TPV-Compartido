@@ -3,11 +3,15 @@
 #include "MenuButton.h"
 #include "checkML.h"
 
-class PauseState: public GameState, public EventHandler
+class PauseState: public GameState
 {
+private:
+	MenuButton* restart;
+	MenuButton* salir;
+	MenuButton* volver;
 public:
-	PauseState();
-	void update2();
+	PauseState(Game* game);
+	void update();
 	static void resume(Game* game);
 };
 

@@ -14,6 +14,7 @@ public:
 	GameState(Game* game)
 	{
 		g = game;
+
 		// Cada estado tiene que manejar sus eventos correspondientes, los cuales mete en manejadores
 	}
 
@@ -22,7 +23,7 @@ public:
 		for (GameObject* o : stage) { delete o; }
 	}
 
-	void update() 
+	virtual void update() 
 	{ 
 		for (GameObject* o : stage) { o->update(); }
 	}
