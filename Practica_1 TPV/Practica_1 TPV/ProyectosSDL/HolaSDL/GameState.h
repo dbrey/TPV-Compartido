@@ -1,6 +1,10 @@
 #pragma once
-#include "Game.h"
+
 #include "checkML.h"
+#include "EventHandler.h"
+#include "GameObject.h"
+
+class Game;
 
 class GameState
 {
@@ -33,7 +37,7 @@ public:
 		for (GameObject* o : stage)	{ o->render(); }
 	}
 	
-	void handleEventos(SDL_Event event)
+	void handleEventos(SDL_Event& event)
 	{
 		for (EventHandler* e : manejadores) { if(e->handleEvent(event)) return; }
 	}

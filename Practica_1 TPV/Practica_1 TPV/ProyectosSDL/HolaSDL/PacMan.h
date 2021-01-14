@@ -2,7 +2,6 @@
 
 #include "Vector2D.h"
 #include "Texture.h"
-#include "GameMap.h"
 #include "GameCharacter.h"
 #include "EventHandler.h"
 #include "checkML.h"
