@@ -72,7 +72,7 @@ bool PlayState::LeeArchivo(string archivo) {
 
 			tamCellY = 600 / x;
 			tamCellX = 800 / y;
-			mapa = new GameMap(x, y, g ,this);
+			mapa = new GameMap(x, y, g , tamCellX,tamCellY);
 
 			int aux;
 			for (int i = 0; i < x; i++) {

@@ -2,8 +2,8 @@
 #include "GameObject.h"
 #include "EventHandler.h"
 #include "Game.h"
-#include "PlayState.h"
 #include "GameStateMachine.h"
+#include "Texture.h"
 #include "checkML.h"
 
 using CallBackOnClick = void(Game* game);
@@ -16,7 +16,7 @@ private:
 protected:
 	CallBackOnClick* cboq;
 public:
-	MenuButton(Point2D p, int w1, int h1, Game* g, PlayState* pl, Texture* t) : GameObject(p, w1, h1, g, pl) { textura = t; };
+	MenuButton(Point2D p, int w1, int h1, Game* g, Texture* t) : GameObject(p, w1, h1, g) { textura = t; };
 	virtual void clean();
 	void update();
 	void render();

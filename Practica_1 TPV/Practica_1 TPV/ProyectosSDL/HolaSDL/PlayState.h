@@ -1,6 +1,11 @@
 #pragma once
 #include "Game.h"
 #include "GameState.h"
+#include "GameObject.h"
+#include "Ghost.h"
+#include "SmartGhost.h"
+#include "PacMan.h"
+#include "GameMap.h"
 #include "checkML.h"
 
 class PlayState : public GameState

@@ -16,7 +16,9 @@ protected:
 	// Iterador a la posicion del objeto dentro de la lista de GameObject
 	list<GameObject*>::iterator it;
 
-	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g, PlayState* pl, int largo, int ancho) : GameObject(inipos, ancho, largo, g, pl), iniPoint(inipos), dir_actual(d), textura(t) {}
+	PlayState* play;
+
+	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g, PlayState* pl, int largo, int ancho) : GameObject(inipos, ancho, largo, g), iniPoint(inipos), dir_actual(d), textura(t),play(pl){}
 
 public:
 

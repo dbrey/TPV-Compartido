@@ -2,7 +2,7 @@
 #include "Game.h"
 
 // Constructora
-GameMap::GameMap(int c, int f, Game* g, PlayState* pl) : GameObject(Point2D (0,0), play->CellX() , play->CellY(), g, pl)
+GameMap::GameMap(int c, int f, Game* g,int x,int y) : GameObject(Point2D (0,0), x , y, g)
 {
 	cols = c;
 	fils = f;
@@ -20,10 +20,10 @@ void GameMap::render() {
 	for (int i = 0; i < fils; i++) {
 		for (int j = 0; j < cols; j++) {
 			SDL_Rect destRect;
-			destRect.x = i* play->CellX();
-			destRect.y = j* play->CellY();
-			destRect.w = play->CellX();
-			destRect.h = play->CellY();
+			destRect.x = i* w;
+			destRect.y = j* h;
+			destRect.w = w;
+			destRect.h = h;
 
 			if (Mapa[i][j] == Wall)
 			{
@@ -59,18 +59,24 @@ void GameMap::render() {
 
 void GameMap::update() {}
 
+Point2D GameMap::SDLPointToMapCoords(int x, int y)
+{
+	Point2D aux = Point2D((x / w), (y / h));
+	return aux;
+}
+
 // Comprobamos si intersecta el personaje con alguna pared
 bool GameMap::intersectsWall(const SDL_Rect& rect, bool g)
 {
-	Point2D topLeft = play->SDLPointToMapCoords(rect.x, rect.y);
+	Point2D topLeft = SDLPointToMapCoords(rect.x, rect.y);
 	Point2D botRight = Point2D(0,0);
 	if (g)
 	{
-		botRight = play->SDLPointToMapCoords((rect.x + rect.h - 1), (rect.y + rect.w - 1));
+		botRight = SDLPointToMapCoords((rect.x + rect.h - 1), (rect.y + rect.w - 1));
 	}
 	else
 	{
-		botRight = play->SDLPointToMapCoords((rect.x + rect.w - 1), (rect.y + rect.h - 1));
+		botRight = SDLPointToMapCoords((rect.x + rect.w - 1), (rect.y + rect.h - 1));
 	}
 
 	// Teniendo en cuenta que se forma un rectangulo que conforma al personaje, miramos si dentro de dicho rectangulo intersecciona con un

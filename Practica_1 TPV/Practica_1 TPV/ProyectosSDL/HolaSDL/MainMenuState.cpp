@@ -8,9 +8,9 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	jugar = new MenuButton(p1, w1, h1, g, play, game->getTexture(5));
-	salir = new MenuButton(p1, w1, h1, g, play, game->getTexture(4));
-	cargar = new MenuButton(p1, w1, h1, g, play, game->getTexture(7));
+	jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5));
+	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4));
+	cargar = new MenuButton(p1, w1, h1, g, game->getTexture(7));
 
 	stage.push_back(jugar);
 	stage.push_back(salir);

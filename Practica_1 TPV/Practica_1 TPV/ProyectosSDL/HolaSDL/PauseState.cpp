@@ -8,9 +8,9 @@ PauseState::PauseState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	restart = new MenuButton(p1, w1, h1, g, play, game->getTexture(7));
-	salir = new MenuButton(p1, w1, h1, g, play, game->getTexture(4));
-	volver = new MenuButton(p1, w1, h1, g, play, game->getTexture(8));
+	restart = new MenuButton(p1, w1, h1, g, game->getTexture(7));
+	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4));
+	volver = new MenuButton(p1, w1, h1, g, game->getTexture(8));
 
 	stage.push_back(restart);
 	stage.push_back(salir);
