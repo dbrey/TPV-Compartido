@@ -1,9 +1,6 @@
 #pragma once
 #include "GameObject.h"
 #include "EventHandler.h"
-#include "Game.h"
-#include "GameStateMachine.h"
-#include "Texture.h"
 #include "checkML.h"
 
 using CallBackOnClick = void(Game* game);

@@ -2,11 +2,9 @@
 
 #include "checkML.h"
 #include "EventHandler.h"
-#include <list>
+#include <list> // Necesario? Al tener GameObject-->class Game --> list no deberia serlo, pero quitarlo da muchos errores
 #include "GameObject.h"
 
-class Game;
-class GameObject;
 
 class GameState
 {

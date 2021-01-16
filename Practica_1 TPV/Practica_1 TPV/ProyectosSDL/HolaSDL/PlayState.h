@@ -1,13 +1,14 @@
 #pragma once
-#include "Game.h"
+#include "Game.h" // Necesario? Game ya lo tiene GameObject, pero quitarlo da mas errores
 #include "GameState.h"
-#include "GameObject.h"
-#include "Ghost.h"
+#include "GameObject.h" // Necesario? GameObject ya lo tiene GameState pero quitarlo da mas errores
 #include "SmartGhost.h"
 #include "PacMan.h"
 #include "GameMap.h"
 #include "checkML.h"
-#include <list>
+
+
+
 #include <iostream>
 #include <fstream>
 #include <string>

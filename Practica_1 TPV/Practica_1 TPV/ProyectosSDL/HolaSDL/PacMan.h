@@ -1,12 +1,8 @@
 #pragma once
 
-#include "Vector2D.h"
-#include "Texture.h"
 #include "GameCharacter.h"
 #include "EventHandler.h"
 #include "checkML.h"
-#include "PlayState.h"
-class Game;
 
 class PacMan : public GameCharacter, public EventHandler
 {

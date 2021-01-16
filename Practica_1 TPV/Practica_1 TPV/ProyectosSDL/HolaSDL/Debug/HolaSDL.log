@@ -1,245 +1,122 @@
 ﻿  Game.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
   GameCharacter.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11,36): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(21,82): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(14,7): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,12): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,111): error C2065: 'pl': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,114): error C2065: 'dir': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,118): error C2065: 'ancho': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,124): error C2065: 'largo': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(16,7): error C2065: 'bebe': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(17,8): error C2061: error de sintaxis: identificador 'PlayState'
   GameMap.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+  GameState.cpp
   GameStateMachine.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,18): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(39,32): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59,18): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59,18): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59,32): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,18): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,18): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.cpp(6,1): error C2084: la función 'void GameStateMachine::changeState(GameState *)' ya tiene un cuerpo
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.cpp(6,1): error C2084: la función 'void GameStateMachine::changeState(GameState *)' ya tiene un cuerpo
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(18): message : vea la definición anterior de 'changeState'
   Ghost.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameStateMachine.h(20): message : vea la definición anterior de 'changeState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11,36): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(21,82): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(9,1): error C2504: 'Ghost': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,99): error C2614: 'SmartGhost': inicialización de miembro no válida: 'Ghost' no es una base o miembro
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(7,1): error C2504: 'Ghost': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,12): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,111): error C2065: 'pl': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,114): error C2065: 'dir': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,118): error C2065: 'ancho': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,124): error C2065: 'largo': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,99): error C2614: 'SmartGhost': inicialización de miembro no válida: 'Ghost' no es una base o miembro
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(16,7): error C2065: 'bebe': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(17,8): error C2061: error de sintaxis: identificador 'PlayState'
   main.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
   MainMenuState.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
-  MenuButton.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(11,7): error C2065: 'MenuButton': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(11,18): error C2059: error de sintaxis: '>'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,19): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,19): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,20): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(11,44): error C2027: uso del tipo 'Game' sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(5): message : vea la declaración de 'Game'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(11,59): error C2661: 'MenuButton::MenuButton': ninguna función sobrecargada acepta 4 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(12,44): error C2027: uso del tipo 'Game' sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(5): message : vea la declaración de 'Game'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(12,59): error C2661: 'MenuButton::MenuButton': ninguna función sobrecargada acepta 4 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(13,45): error C2027: uso del tipo 'Game' sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(5): message : vea la declaración de 'Game'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(13,60): error C2661: 'MenuButton::MenuButton': ninguna función sobrecargada acepta 4 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.cpp(23,3): error C2027: uso del tipo 'Game' sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameObject.h(5): message : vea la declaración de 'Game'
   PacMan.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8,1): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(14,7): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,12): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,111): error C2065: 'pl': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,114): error C2065: 'dir': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,118): error C2065: 'ancho': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,124): error C2065: 'largo': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(16,7): error C2065: 'bebe': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(29,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(29,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(29,13): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(66,8): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(66,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(66,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
   PauseState.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(12,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(18,81): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,97): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,111): error C2065: 'pl': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,114): error C2065: 'dir': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,118): error C2065: 'ancho': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(17,124): error C2065: 'largo': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(18,7): error C2065: 'bebe': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(27,13): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(64,19): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(34,22): error C2027: uso del tipo 'Game' sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(8): message : vea la declaración de 'Game'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(11,7): error C2065: 'MenuButton': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(11,18): error C2059: error de sintaxis: '>'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(13,19): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(14,19): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,12): error C2143: error de sintaxis: falta ';' delante de '*'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MainMenuState.h(15,20): error C2238: símbolos (token) inesperados delante de ';'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
   PlayState.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,11): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,11): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(18,17): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(19,15): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(19,123): error C2065: 'ancho': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(19,130): error C2065: 'largo': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(19,190): error C2065: 'pl': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\GameCharacter.h(19,185): error C2614: 'GameCharacter': inicialización de miembro no válida: 'play' no es una base o miembro
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(14,7): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,12): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,111): error C2065: 'pl': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,114): error C2065: 'dir': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,118): error C2065: 'ancho': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(15,124): error C2065: 'largo': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(16,7): error C2065: 'bebe': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(17,8): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(88,144): error C2661: 'PacMan::PacMan': ninguna función sobrecargada acepta 7 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(93,165): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(131,98): error C2661: 'PacMan::PacMan': ninguna función sobrecargada acepta 7 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(140,162): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.cpp(317,131): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 8 argumentos
   SmartGhost.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11,36): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(21,82): error C2061: error de sintaxis: identificador 'PlayState'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(65,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(59): message : vea la declaración de 'Game::stMachine'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(30,7): error C2065: 'SmartGhost': identificador no declarado
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(30,18): error C2059: error de sintaxis: '>'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(52,29): error C2061: error de sintaxis: identificador 'SmartGhost'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(53,22): error C2061: error de sintaxis: identificador 'SmartGhost'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(54,36): error C2061: error de sintaxis: identificador 'SmartGhost'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(17,5): error C2660: 'PlayState::Hijo': la función no acepta 1 argumentos
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(53,7): message : vea la declaración de 'PlayState::Hijo'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(35,5): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(40,10): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(45,10): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(50,10): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(102,40): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(11): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(102,14): error C2512: 'Point2D': no hay disponible un constructor predeterminado adecuado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(61,32): error C2535: 'GameStateMachine *Game::stMachine(void)': función miembro ya definida o declarada
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Game.h(55): message : vea la declaración de 'Game::stMachine'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7,36): error C2504: 'GameCharacter': clase base sin definir
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(17,8): error C2061: error de sintaxis: identificador 'PlayState'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(32,7): error C2065: 'SmartGhost': identificador no declarado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(32,18): error C2059: error de sintaxis: '>'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(54,29): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(55,22): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(56,36): error C2061: error de sintaxis: identificador 'SmartGhost'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(17,5): error C2660: 'PlayState::Hijo': la función no acepta 1 argumentos
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(55,7): message : vea la declaración de 'PlayState::Hijo'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(35,47): error C2039: "getPoint": no es un miembro de "PacMan"
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(40,52): error C2039: "getPoint": no es un miembro de "PacMan"
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(45,52): error C2039: "getPoint": no es un miembro de "PacMan"
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(50,52): error C2039: "getPoint": no es un miembro de "PacMan"
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(102,32): error C2039: "getPoint": no es un miembro de "PacMan"
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(7): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(102,14): error C2512: 'Point2D': no hay disponible un constructor predeterminado adecuado
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Vector2D.h(5,7): message : vea la declaración de 'Point2D'
   Generando código...
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Vector2D.h(5,7): message : vea la declaración de 'Point2D'

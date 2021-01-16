@@ -1,12 +1,9 @@
 #pragma once
 #include "PlayState.h"
 #include "GameObject.h"
-#include "Texture.h"
 #include "checkML.h"
-#include <list>
-using namespace std;
 
-//class PlayState;
+using namespace std;
 
 class GameCharacter : public GameObject
 {
@@ -19,7 +16,6 @@ protected:
 	list<GameObject*>::iterator it;
 
 	PlayState* play;
-
 	GameCharacter(Point2D inipos, Vector2D d, Texture* t, Game* g, PlayState* pl, int largo, int ancho) : GameObject(inipos, ancho, largo, g), iniPoint(inipos), dir_actual(d), textura(t),play(pl){}
 
 public:

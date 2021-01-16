@@ -1,16 +1,12 @@
 #pragma once
 
-#include "Texture.h"
-#include "GameMap.h"
-#include "PacMan.h"
-#include "Ghost.h"
 #include "FileNotFoundError.h"
 #include "FileFormatError.h"
-#include "GameObject.h"
-#include "SmartGhost.h"
 #include "GameStateMachine.h"
 #include "checkML.h"
 #include "MainMenuState.h"
+
+
 #include <array>
 #include <list>
 using namespace std;

@@ -1,9 +1,7 @@
 #pragma once
 #include "GameState.h"
 #include "MenuButton.h"
-#include "GameObject.h"
 #include "checkML.h"
-#include <list>
 
 class MainMenuState: public GameState
 {

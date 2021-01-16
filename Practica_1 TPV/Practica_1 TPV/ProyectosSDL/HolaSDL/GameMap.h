@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Texture.h"
-#include "Vector2D.h"
 #include "GameObject.h"
 #include "checkML.h"
 
