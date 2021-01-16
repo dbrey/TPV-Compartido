@@ -7,6 +7,7 @@
 #include "PacMan.h"
 #include "GameMap.h"
 #include "checkML.h"
+#include <list>
 
 class PlayState : public GameState
 {

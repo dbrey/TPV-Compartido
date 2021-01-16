@@ -2,9 +2,9 @@
 
 #include "checkML.h"
 #include "EventHandler.h"
-#include "GameObject.h"
-
+#include <list>
 class Game;
+class GameObject; // Es legal? Esta bien?
 
 class GameState
 {
