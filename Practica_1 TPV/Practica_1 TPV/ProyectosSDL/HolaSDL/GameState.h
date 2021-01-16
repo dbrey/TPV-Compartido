@@ -3,7 +3,7 @@
 #include "checkML.h"
 #include "EventHandler.h"
 #include <list>
-//#include "GameObject.h"
+#include "GameObject.h"
 
 class Game;
 class GameObject;
