@@ -1,9 +1,5 @@
 #include "PlayState.h"
 #include "checkML.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
 
 
 void PlayState::update()

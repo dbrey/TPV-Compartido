@@ -1,10 +1,12 @@
 #pragma once
-
+#include "PlayState.h"
 #include "GameObject.h"
 #include "Texture.h"
 #include "checkML.h"
 #include <list>
 using namespace std;
+
+//class PlayState;
 
 class GameCharacter : public GameObject
 {

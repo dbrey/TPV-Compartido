@@ -8,6 +8,10 @@
 #include "GameMap.h"
 #include "checkML.h"
 #include <list>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 class PlayState : public GameState
 {

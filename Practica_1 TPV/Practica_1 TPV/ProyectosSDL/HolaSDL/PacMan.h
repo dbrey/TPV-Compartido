@@ -5,6 +5,7 @@
 #include "GameCharacter.h"
 #include "EventHandler.h"
 #include "checkML.h"
+#include "PlayState.h"
 class Game;
 
 class PacMan : public GameCharacter, public EventHandler

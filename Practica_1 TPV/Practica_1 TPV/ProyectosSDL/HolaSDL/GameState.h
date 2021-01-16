@@ -3,8 +3,10 @@
 #include "checkML.h"
 #include "EventHandler.h"
 #include <list>
+//#include "GameObject.h"
+
 class Game;
-class GameObject; // Es legal? Esta bien?
+class GameObject;
 
 class GameState
 {
