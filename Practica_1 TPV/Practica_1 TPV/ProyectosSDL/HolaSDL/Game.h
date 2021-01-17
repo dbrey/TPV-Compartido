@@ -3,7 +3,6 @@
 #include "FileNotFoundError.h"
 #include "FileFormatError.h"
 #include "GameStateMachine.h"
-#include "checkML.h"
 #include "MainMenuState.h"
 
 
@@ -58,7 +57,6 @@ public:
 
 	SDL_Renderer* getRenderer() { return renderer_; }
 
-	GameStateMachine* stMachine() { return stateMachine; }
 	bool ex(bool e) { exit = e; }
 
 	~Game();

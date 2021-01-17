@@ -1,13 +1,6 @@
 #include "GameStateMachine.h"
 
 
-
-void GameStateMachine::changeState(GameState* state)
-{
-	popState();
-	pushState(state);
-}
-
 void GameStateMachine::popState()
 {
 	if (!states.empty())

@@ -1,6 +1,4 @@
 #include "SmartGhost.h"
-#include "Game.h"
-#include "checkML.h"
 
 
 // Llama al update de Ghost o al de SmartGhost

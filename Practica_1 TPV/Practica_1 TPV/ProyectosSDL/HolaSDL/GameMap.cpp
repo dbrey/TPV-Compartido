@@ -1,5 +1,5 @@
 #include "GameMap.h"
-#include "Game.h"
+#include "Game.h" // Necesario? Tenemos Game en GameObject, pero quitarlo da errores
 
 // Constructora
 GameMap::GameMap(int c, int f, Game* g,int x,int y) : GameObject(Point2D (0,0), x , y, g)

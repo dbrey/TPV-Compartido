@@ -1,6 +1,5 @@
 #pragma once
 #include "Ghost.h"
-#include "checkML.h"
 #include <vector>
 
 class SmartGhost : public Ghost

@@ -8,9 +8,8 @@
 #define TextureH
 
 #include "SDL.h" // Windows
-#include "checkML.h"
 #include "SDL_image.h" // Windows
-
+#include <iostream>
 #include <string>
 
 using namespace std;
