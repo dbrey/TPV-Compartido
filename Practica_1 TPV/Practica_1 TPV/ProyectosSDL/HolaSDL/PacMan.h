@@ -3,6 +3,8 @@
 #include "GameCharacter.h"
 #include "EventHandler.h"
 
+class PlayState; //?
+
 class PacMan : public GameCharacter, public EventHandler
 {
 private:

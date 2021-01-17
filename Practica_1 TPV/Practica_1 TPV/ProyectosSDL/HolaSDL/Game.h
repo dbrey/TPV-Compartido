@@ -57,7 +57,5 @@ public:
 
 	SDL_Renderer* getRenderer() { return renderer_; }
 
-	bool ex(bool e) { exit = e; }
-
 	~Game();
 };

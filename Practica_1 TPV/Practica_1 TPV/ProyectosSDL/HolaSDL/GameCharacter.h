@@ -2,6 +2,8 @@
 #include "PlayState.h"
 #include "GameObject.h"
 
+class PlayState; //?
+
 using namespace std;
 
 class GameCharacter : public GameObject

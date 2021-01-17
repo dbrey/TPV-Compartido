@@ -2,6 +2,9 @@
 #include "Ghost.h"
 #include <vector>
 
+
+class PlayState; //?
+
 class SmartGhost : public Ghost
 {
 private:

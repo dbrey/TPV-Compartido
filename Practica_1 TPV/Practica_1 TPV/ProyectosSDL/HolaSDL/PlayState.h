@@ -3,16 +3,17 @@
 #include "GameState.h"
 #include "GameObject.h" // Necesario? GameObject ya lo tiene GameState pero quitarlo da mas errores
 #include "SmartGhost.h"
+#include "Ghost.h"
 #include "PacMan.h"
 #include "GameMap.h"
-
-
-
 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
+
+class SmartGhost; //?
+class PacMan; //?
 
 class PlayState : public GameState
 {

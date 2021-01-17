@@ -1,7 +1,7 @@
 #pragma once
-
 #include "GameCharacter.h"
 
+class PlayState; //?
 
 class Ghost : public GameCharacter
 {
