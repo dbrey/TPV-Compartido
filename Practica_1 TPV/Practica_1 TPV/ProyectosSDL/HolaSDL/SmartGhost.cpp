@@ -1,6 +1,5 @@
 #include "SmartGhost.h"
 
-
 // Llama al update de Ghost o al de SmartGhost
 void SmartGhost::update()
 {
@@ -30,22 +29,24 @@ void SmartGhost::update()
 // Se mueve de forma especial para el SmartGhost
 void SmartGhost::Mueve()
 {
-	if (mov[0] && point.getX() > play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // left
+	Point2D pac(0, 0);
+	pac = play->getPac()->getPoint();
+	if (mov[0] && point.getX() > pac.getX() && !play->getPac()->invencible()) // left
 	{
 		dir_actual = Vector2D(-1, 0);
 		Move(point, dir_actual, play->map());;
 	}
-	else if (mov[1] && point.getX() > play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // up
+	else if (mov[1] && point.getX() > pac.getX() && !play->getPac()->invencible()) // up
 	{
 		dir_actual = Vector2D(0, -1);
 		Move(point, dir_actual, play->map());
 	}
-	else if (mov[2] && point.getX() < play->getPac()->getPoint().getX() && !play->getPac()->invencible()) // right
+	else if (mov[2] && point.getX() < pac.getX() && !play->getPac()->invencible()) // right
 	{
 		dir_actual = Vector2D(1, 0);
 		Move(point, dir_actual, play->map());
 	}
-	else if (mov[3] && point.getX() < play->getPac()->getPoint().getX()&& !play->getPac()->invencible())// down
+	else if (mov[3] && point.getX() < pac.getX()&& !play->getPac()->invencible())// down
 	{
 		dir_actual = Vector2D(0, 1);
 		Move(point, dir_actual, play->map());
@@ -97,7 +98,8 @@ void SmartGhost::Mueve()
 // Movemos al fantasma de forma random o con una direccion preferente
 void SmartGhost::Movimiento()
 {
-	Point2D pac = play->getPac()->getPoint();
+	Point2D pac(0,0);
+	pac = play->getPac()->getPoint();
 	if (((edad < 1000) || (point.getX() > pac.getX() + 100 || point.getX() < pac.getX() + 100 || //Condiciones de cercania
 		point.getY() > pac.getY() + 100 || point.getY() < pac.getY() + 100)))
 	{

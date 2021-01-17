@@ -15,6 +15,6 @@ public:
 	virtual ~GameObject() {}
 	virtual void update() = 0; // GameMap tiene que tener el update y el render preparados
 	virtual void render() = 0;
-	Point2D getPoint() { return point; }
+    Point2D getPoint() { return point; }
 	virtual SDL_Rect getDestRect() = 0;
 };
