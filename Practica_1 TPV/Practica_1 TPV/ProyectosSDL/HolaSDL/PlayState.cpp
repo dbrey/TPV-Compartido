@@ -1,5 +1,24 @@
 #include "PlayState.h"
 
+PlayState::PlayState(Game* g) : GameState(g)
+{
+	LeeArchivo(nombreNivel(nMapa));
+	g->stMachine()->pushState(this);
+};
+
+/*PlayState::PlayState(Game* g, stringstream name) : GameState(g)
+{
+	//LeeArchivo(name);
+
+
+}*/
+
+void PlayState::pausar()
+{
+	PauseState* pausa = new PauseState(g);
+	g->stMachine()->pushState(pausa);
+	SaveToFile();
+}
 
 void PlayState::update()
 {
@@ -8,8 +27,11 @@ void PlayState::update()
 	SDL_Event event;
 	if (SDL_PollEvent(&event) != 0)
 	{
-		handleEventos(event);
+		
+			handleEventos(event);
+		
 	}
+	
 
 
 	for (auto it : objectstoErase)
@@ -109,7 +131,7 @@ bool PlayState::LeeArchivo(string archivo) {
 	}
 
 	// Si cargamos un mapa, miramos la posicion de los fantasmas y pacman
-	if (archivo == "../mapas/partida.txt")
+	if (archivo == "../mapas/partida.txt" || archivo == "../mapas/partida2.txt" || archivo == "../mapas/partida3.txt")
 	{
 		int aux;
 

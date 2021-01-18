@@ -1,5 +1,5 @@
-
 #include "PacMan.h"
+#include "PlayState.h"
 
 
 PacMan::PacMan(int x, int y, Game* g, PlayState* pl, Vector2D dir, int ancho, int largo) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g, pl, largo, ancho) {}
@@ -49,7 +49,7 @@ bool PacMan::handleEvent(SDL_Event& tecla)
 			}
 			case SDLK_s:
 			{
-				play->SaveToFile();
+				play->pausar();
 			}
 			default:
 			{

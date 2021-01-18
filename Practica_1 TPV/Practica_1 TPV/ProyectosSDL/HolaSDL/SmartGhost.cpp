@@ -1,4 +1,5 @@
 #include "SmartGhost.h"
+#include "PlayState.h"
 
 // Llama al update de Ghost o al de SmartGhost
 void SmartGhost::update()

@@ -1,8 +1,8 @@
 #pragma once
-#include "PlayState.h"
 #include "GameObject.h"
+#include <list>
 
-class PlayState; //?
+class PlayState; 
 
 using namespace std;
 

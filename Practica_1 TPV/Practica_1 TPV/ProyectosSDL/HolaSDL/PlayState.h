@@ -1,6 +1,7 @@
 #pragma once
 #include "Game.h" // Necesario? Game ya lo tiene GameObject, pero quitarlo da mas errores
 #include "GameState.h"
+#include "PauseState.h"
 #include "GameObject.h" // Necesario? GameObject ya lo tiene GameState pero quitarlo da mas errores
 #include "SmartGhost.h"
 #include "Ghost.h"
@@ -33,7 +34,8 @@ private:
 	list<list<GameObject*>::iterator> objectstoErase;
 public:
 
-	PlayState( Game* g) :GameState(g) {	g->stMachine()->pushState(this);};
+	PlayState(Game* g);
+	//PlayState(Game* g, stringstream name);
 
 
 	void update();
@@ -43,7 +45,7 @@ public:
 	void CambioMapa();
 	void SaveToFile();
 
-	void render();
+	void pausar();
 
 	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
 	Point2D SDLPointToMapCoords(int x, int y);
@@ -56,7 +58,8 @@ public:
 	bool ComprobarDistancia(SmartGhost* Sg, list<SmartGhost*>::iterator it);
 	bool Chocar(SDL_Rect Sg1, SDL_Rect Sg2);
 
-	void OnEnter(){ LeeArchivo(nombreNivel(nMapa)); }
+	void OnEnter(){}
+	void OnExit() {}
 
 	int CellX() { return tamCellX; }
 	int CellY() { return tamCellY; }

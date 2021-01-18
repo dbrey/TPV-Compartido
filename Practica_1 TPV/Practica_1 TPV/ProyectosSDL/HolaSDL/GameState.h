@@ -38,8 +38,5 @@ public:
 	{
 		for (EventHandler* e : manejadores) { if(e->handleEvent(event)) return; }
 	}
-
-	virtual void OnEnter() = 0;
-	virtual void OnExit() = 0;
 };
 

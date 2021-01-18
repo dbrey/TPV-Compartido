@@ -1,7 +1,7 @@
 #pragma once
 #include "GameState.h"
 #include "MenuButton.h"
-
+#include "PlayState.h"
 
 class MainMenuState: public GameState
 {

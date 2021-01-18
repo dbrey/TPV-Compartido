@@ -22,7 +22,7 @@ EndState::EndState(Game* game) : GameState(game)
 }
 
 
-void EndState::update()
+/*void EndState::update()
 {
 	// Revisamos los handleEvent de todos los posibles eventos
 	SDL_Event event;
@@ -30,7 +30,7 @@ void EndState::update()
 	{
 		handleEventos(event);
 	}
-}
+}*/
 
 void EndState::regresarMenu(Game* game)
 {

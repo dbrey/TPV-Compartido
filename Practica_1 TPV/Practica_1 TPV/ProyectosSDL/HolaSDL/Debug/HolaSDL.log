@@ -1,25 +1,15 @@
 ﻿  EndState.cpp
   Game.cpp
   GameCharacter.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7,1): error C2504: 'GameCharacter': clase base sin definir
   GameMap.cpp
   Ghost.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(8,36): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(8,1): error C2504: 'Ghost': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.h(16,99): error C2614: 'SmartGhost': inicialización de miembro no válida: 'Ghost' no es una base o miembro
   main.cpp
   MainMenuState.cpp
+  MenuButton.cpp
   PacMan.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(8,36): error C2504: 'GameCharacter': clase base sin definir
   PauseState.cpp
   PlayState.cpp
   SmartGhost.cpp
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\Ghost.h(7,1): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.h(8,36): error C2504: 'GameCharacter': clase base sin definir
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(33,32): error C2039: 'getPoint': no es un miembro de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16): message : vea la declaración de 'PacMan'
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\SmartGhost.cpp(102,32): error C2039: 'getPoint': no es un miembro de 'PacMan'
-  Texture.cpp
-  Vector2D.cpp
   Generando código...
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PlayState.h(16): message : vea la declaración de 'PacMan'
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(60): warning C4715: 'PacMan::handleEvent': no todas las rutas de acceso de control devuelven un valor
+  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe

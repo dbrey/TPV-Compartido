@@ -1,4 +1,6 @@
 #include "GameCharacter.h"
+#include "PlayState.h"
+
 
 // Renderiza al personaje
 void GameCharacter::render() {

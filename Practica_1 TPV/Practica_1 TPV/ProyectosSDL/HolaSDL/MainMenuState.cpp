@@ -36,12 +36,39 @@ void MainMenuState::update()
 
 void MainMenuState::loadPartida(Game* game)
 {
+	int eleccion;
+
+	cout << "Quieres cargar la partida 1, 2 o 3? ";
+	cin >> eleccion;
+	/*string nombre;
+
+	if (eleccion == 1)
+	{
+		nombre << "../mapas/partida.txt";
+	}
+	else if (eleccion == 1)
+	{
+		nombre << "../mapas/partida2.txt";
+	}
+	else if (eleccion == 1)
+	{
+		nombre << "../mapas/partida3.txt";
+	}
+	else
+	{
+	//	throw FileFormatError();
+	}
+
+	nombre.str();
+
+	PlayState* cargarPartida = new PlayState(game, nombre);*/
+
 	// Llamar de alguna forma al LeeArchivo de PlayState y meterle el archivo a abrir como referencia
 }
 
 void MainMenuState::empezar(Game* game)
 {
-	// game->stMachine->changeState();
+	//PlayState* partidaNueva = new PlayState(game);
 
 	// Crear un estado PlayState, pushearlo en stMachine y cambiar a ese estado
 }
@@ -50,5 +77,3 @@ void MainMenuState::cerrar(Game* game)
 {
 	game->terminar();
 }
-
-void MainMenuState::OnEnter(){}

@@ -1,7 +1,6 @@
 #pragma once
 #include "GameCharacter.h"
-
-class PlayState; //?
+#include <array>
 
 class Ghost : public GameCharacter
 {

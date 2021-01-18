@@ -1,5 +1,7 @@
 
 #include "Ghost.h"
+#include "PlayState.h"
+
 #include <fstream>
 #include <cstdlib>
 
