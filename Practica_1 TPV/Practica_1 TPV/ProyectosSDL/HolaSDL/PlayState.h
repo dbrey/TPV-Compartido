@@ -35,7 +35,7 @@ private:
 public:
 
 	PlayState(Game* g);
-	//PlayState(Game* g, stringstream name);
+	PlayState(Game* g, string name);
 
 
 	void update();

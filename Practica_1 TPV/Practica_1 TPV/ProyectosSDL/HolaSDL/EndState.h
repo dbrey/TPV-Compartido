@@ -13,8 +13,5 @@ public:
 	EndState(Game* game);
 	static void regresarMenu(Game* game);
 	static void Exit(Game* game) { game->terminar(); };
-	/*
-	void OnEnter();
-	void OnExit();*/
 };
 

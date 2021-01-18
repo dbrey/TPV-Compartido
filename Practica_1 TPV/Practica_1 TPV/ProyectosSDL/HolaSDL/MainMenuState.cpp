@@ -1,11 +1,12 @@
 #include "MainMenuState.h"
 #include "Game.h"
+#include "GameStateMachine.h"
 
 MainMenuState::MainMenuState(Game* game) : GameState(game)
 {
-	Point2D p1 = Point2D(300, 200);
-	Point2D p2 = Point2D(300, 400);
-	Point2D p3 = Point2D(300, 600);
+	Point2D p1 = Point2D(300, 50);
+	Point2D p2 = Point2D(300, 250);
+	Point2D p3 = Point2D(300, 450);
 	int w1 = 200;
 	int h1 = 100;
 
@@ -40,17 +41,17 @@ void MainMenuState::loadPartida(Game* game)
 
 	cout << "Quieres cargar la partida 1, 2 o 3? ";
 	cin >> eleccion;
-	/*string nombre;
+	stringstream nombre;
 
 	if (eleccion == 1)
 	{
 		nombre << "../mapas/partida.txt";
 	}
-	else if (eleccion == 1)
+	else if (eleccion == 2)
 	{
 		nombre << "../mapas/partida2.txt";
 	}
-	else if (eleccion == 1)
+	else if (eleccion == 3)
 	{
 		nombre << "../mapas/partida3.txt";
 	}
@@ -59,18 +60,18 @@ void MainMenuState::loadPartida(Game* game)
 	//	throw FileFormatError();
 	}
 
-	nombre.str();
+	PlayState* cargarPartida = new PlayState(game, nombre.str());
 
-	PlayState* cargarPartida = new PlayState(game, nombre);*/
-
+	game->stMachine()->pushState(cargarPartida);
 	// Llamar de alguna forma al LeeArchivo de PlayState y meterle el archivo a abrir como referencia
 }
 
 void MainMenuState::empezar(Game* game)
 {
-	//PlayState* partidaNueva = new PlayState(game);
+	PlayState* partidaNueva = new PlayState(game);
 
-	// Crear un estado PlayState, pushearlo en stMachine y cambiar a ese estado
+	game->stMachine()->pushState(partidaNueva);
+	//Crear un estado PlayState, pushearlo en stMachine y cambiar a ese estado
 }
 
 void MainMenuState::cerrar(Game* game)

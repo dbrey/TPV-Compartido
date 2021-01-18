@@ -3,9 +3,9 @@
 
 PauseState::PauseState(Game* game) : GameState(game)
 {
-	Point2D p1 = Point2D(300, 200);
-	Point2D p2 = Point2D(300, 400);
-	Point2D p3 = Point2D(300, 600);
+	Point2D p1 = Point2D(300, 50);
+	Point2D p2 = Point2D(300, 250);
+	Point2D p3 = Point2D(300, 450);
 	int w1 = 200;
 	int h1 = 100;
 
@@ -20,8 +20,6 @@ PauseState::PauseState(Game* game) : GameState(game)
 	//manejadores.push_back(restart);
 	manejadores.push_back(salir);
 	manejadores.push_back(volver);
-
-	g->stMachine()->pushState(this);
 }
 
 void PauseState::update()
@@ -44,5 +42,7 @@ void PauseState::resume(Game* game)
 
 void PauseState::regresarMenu(Game* game)
 {
-	//game->stMachine()->changeState();
+	MainMenuState* menu = new MainMenuState(game);
+
+	game->stMachine()->changeState(menu);
 }

@@ -1,5 +1,5 @@
 #include "EndState.h"
-
+#include "GameStateMachine.h"
 
 EndState::EndState(Game* game) : GameState(game)
 {
@@ -17,22 +17,12 @@ EndState::EndState(Game* game) : GameState(game)
 
 	manejadores.push_back(menu);
 	manejadores.push_back(salir);
-
-	g->stMachine()->pushState(this);
 }
 
 
-/*void EndState::update()
-{
-	// Revisamos los handleEvent de todos los posibles eventos
-	SDL_Event event;
-	if (SDL_PollEvent(&event) != 0)
-	{
-		handleEventos(event);
-	}
-}*/
-
 void EndState::regresarMenu(Game* game)
 {
-	//game->stMachine()->changeState();
+	MainMenuState* menu = new MainMenuState(game);
+
+	game->stMachine()->changeState(menu);
 }

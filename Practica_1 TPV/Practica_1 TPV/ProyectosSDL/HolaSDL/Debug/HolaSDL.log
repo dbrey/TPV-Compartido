@@ -2,14 +2,15 @@
   Game.cpp
   GameCharacter.cpp
   GameMap.cpp
+  GameState.cpp
+  GameStateMachine.cpp
   Ghost.cpp
-  main.cpp
   MainMenuState.cpp
-  MenuButton.cpp
   PacMan.cpp
   PauseState.cpp
   PlayState.cpp
   SmartGhost.cpp
+  main.cpp
   Generando código...
-C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(60): warning C4715: 'PacMan::handleEvent': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(60): warning C4715: 'PacMan::handleEvent': no todas las rutas de acceso de control devuelven un valor
+  HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe

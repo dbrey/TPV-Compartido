@@ -3,15 +3,12 @@
 PlayState::PlayState(Game* g) : GameState(g)
 {
 	LeeArchivo(nombreNivel(nMapa));
-	g->stMachine()->pushState(this);
 };
 
-/*PlayState::PlayState(Game* g, stringstream name) : GameState(g)
+PlayState::PlayState(Game* g, string name) : GameState(g)
 {
-	//LeeArchivo(name);
-
-
-}*/
+	LeeArchivo(name);
+}
 
 void PlayState::pausar()
 {
