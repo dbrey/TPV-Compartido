@@ -11,6 +11,8 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
 	stateMachine = new GameStateMachine();
 	MainMenuState* menu = new MainMenuState(this);
 	stateMachine->pushState(menu);
+
+	IniTextures();
 }
 
 void Game::render() {
@@ -22,7 +24,6 @@ void Game::render() {
 }
 
 void Game::run() {
-	IniTextures();
 	SDL_Event event;
 	while (!fin())
 	{

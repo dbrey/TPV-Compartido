@@ -4,13 +4,14 @@
 PauseState::PauseState(Game* game) : GameState(game)
 {
 	Point2D p1 = Point2D(300, 200);
-	Point2D p2 = Point2D(300, 600);
+	Point2D p2 = Point2D(300, 400);
+	Point2D p3 = Point2D(300, 600);
 	int w1 = 200;
 	int h1 = 100;
 
 	restart = new MenuButton(p1, w1, h1, g, game->getTexture(7), reiniciar);
-	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4), regresarMenu);
-	volver = new MenuButton(p1, w1, h1, g, game->getTexture(8), resume);
+	salir = new MenuButton(p2, w1, h1, g, game->getTexture(4), regresarMenu);
+	volver = new MenuButton(p3, w1, h1, g, game->getTexture(8), resume);
 
 	stage.push_back(restart);
 	stage.push_back(salir);

@@ -53,7 +53,7 @@ public:
 
 	GameStateMachine* stMachine() { return stateMachine; }
 
-	void terminar(bool ex) { exit = ex; }
+	void terminar() { exit = true; }
 
 	SDL_Renderer* getRenderer() { return renderer_; }
 

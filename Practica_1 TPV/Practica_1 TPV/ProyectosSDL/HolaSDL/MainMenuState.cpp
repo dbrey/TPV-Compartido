@@ -4,13 +4,14 @@
 MainMenuState::MainMenuState(Game* game) : GameState(game)
 {
 	Point2D p1 = Point2D(300, 200);
-	Point2D p2 = Point2D(300, 600);
+	Point2D p2 = Point2D(300, 400);
+	Point2D p3 = Point2D(300, 600);
 	int w1 = 200;
 	int h1 = 100;
 
 	jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5), empezar);
-	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4), cerrar);
-	cargar = new MenuButton(p1, w1, h1, g, game->getTexture(7), loadPartida);
+	salir = new MenuButton(p2, w1, h1, g, game->getTexture(4), cerrar);
+	cargar = new MenuButton(p3, w1, h1, g, game->getTexture(7), loadPartida);
 
 	stage.push_back(jugar);
 	stage.push_back(salir);
@@ -47,7 +48,7 @@ void MainMenuState::empezar(Game* game)
 
 void MainMenuState::cerrar(Game* game)
 {
-	game->terminar(true);
+	game->terminar();
 }
 
 void MainMenuState::OnEnter(){}

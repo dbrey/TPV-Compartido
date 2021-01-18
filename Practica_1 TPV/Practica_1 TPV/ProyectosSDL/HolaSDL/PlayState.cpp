@@ -218,7 +218,7 @@ void PlayState::SaveToFile()
 		fil << endl;
 		fil << nMapa;
 
-		g->terminar(true); //Cerrar el bucle del juego
+		g->terminar(); //Cerrar el bucle del juego
 
 		fil.close();
 	}

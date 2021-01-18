@@ -16,5 +16,8 @@ public:
 	static void resume(Game* game);
 	static void regresarMenu(Game* game);
 	static void reiniciar(Game* game);
+
+	void OnEnter();
+	void OnExit();
 };
 
