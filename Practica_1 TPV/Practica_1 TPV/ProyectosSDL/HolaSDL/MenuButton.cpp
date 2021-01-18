@@ -7,6 +7,11 @@
 bool MenuButton::handleEvent(SDL_Event& event)
 {
 	//Crear p y r
+
+
+	// SDL_MOUSEBUTTONDOWN o SDL_MOUSEBUTTONUP? En el video de clase hace el segundo
+
+
 	if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
 	{
 		POINT raton;

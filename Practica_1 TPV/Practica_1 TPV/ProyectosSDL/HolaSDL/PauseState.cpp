@@ -8,9 +8,9 @@ PauseState::PauseState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	restart = new MenuButton(p1, w1, h1, g, game->getTexture(7));
-	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4));
-	volver = new MenuButton(p1, w1, h1, g, game->getTexture(8));
+	restart = new MenuButton(p1, w1, h1, g, game->getTexture(7), reiniciar);
+	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4), regresarMenu);
+	volver = new MenuButton(p1, w1, h1, g, game->getTexture(8), resume);
 
 	stage.push_back(restart);
 	stage.push_back(salir);
@@ -35,7 +35,20 @@ void PauseState::update()
 	}
 }
 
+
 void PauseState::resume(Game* game)
 {
 	game->stMachine()->popState();
+}
+
+void PauseState::regresarMenu(Game* game)
+{
+	//game->stMachine()->changeState();
+}
+
+void PauseState::reiniciar(Game* game)
+{
+	//game->stMachine()->
+	// Eliminar el playstate que tenemos si no es nulo, crear un PlayState nuevo, pushearlo a stMachine y finalmente 
+	//cambiar a ese estado
 }

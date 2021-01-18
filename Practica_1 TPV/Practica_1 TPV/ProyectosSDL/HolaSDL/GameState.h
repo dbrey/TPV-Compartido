@@ -17,8 +17,6 @@ public:
 	GameState(Game* game)
 	{
 		g = game;
-
-		// Cada estado tiene que manejar sus eventos correspondientes, los cuales mete en manejadores
 	}
 
 	~GameState() 

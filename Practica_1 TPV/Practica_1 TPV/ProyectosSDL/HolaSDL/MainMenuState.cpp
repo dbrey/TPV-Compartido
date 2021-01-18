@@ -8,9 +8,9 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5));
-	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4));
-	cargar = new MenuButton(p1, w1, h1, g, game->getTexture(7));
+	jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5), empezar);
+	salir = new MenuButton(p1, w1, h1, g, game->getTexture(4), cerrar);
+	cargar = new MenuButton(p1, w1, h1, g, game->getTexture(7), loadPartida);
 
 	stage.push_back(jugar);
 	stage.push_back(salir);
@@ -33,15 +33,21 @@ void MainMenuState::update()
 	}
 }
 
-void MainMenuState::render()
+void MainMenuState::loadPartida(Game* game)
 {
-	list<MenuButton*>::iterator it = m_gameObjects.begin();
+	// Llamar de alguna forma al LeeArchivo de PlayState y meterle el archivo a abrir como referencia
+}
 
-	while (it != m_gameObjects.end())
-	{
-		(*it)->render();
-		it++;
-	}
+void MainMenuState::empezar(Game* game)
+{
+	// game->stMachine->changeState();
+
+	// Crear un estado PlayState, pushearlo en stMachine y cambiar a ese estado
+}
+
+void MainMenuState::cerrar(Game* game)
+{
+	game->terminar(true);
 }
 
 void MainMenuState::OnEnter(){}

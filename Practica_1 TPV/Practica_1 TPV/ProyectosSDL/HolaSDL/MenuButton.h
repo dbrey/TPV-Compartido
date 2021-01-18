@@ -12,7 +12,7 @@ private:
 protected:
 	CallBackOnClick* cboq;
 public:
-	MenuButton(Point2D p, int w1, int h1, Game* g, Texture* t) : GameObject(p, w1, h1, g) { textura = t; };
+	MenuButton(Point2D p, int w1, int h1, Game* g, Texture* t, CallBackOnClick* call) : GameObject(p, w1, h1, g) { textura = t; cboq = call; };
 	virtual void clean();
 	void update();
 	void render();

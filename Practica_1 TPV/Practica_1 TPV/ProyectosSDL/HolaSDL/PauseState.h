@@ -14,5 +14,7 @@ public:
 	PauseState(Game* game);
 	void update();
 	static void resume(Game* game);
+	static void regresarMenu(Game* game);
+	static void reiniciar(Game* game);
 };
 
