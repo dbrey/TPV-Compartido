@@ -1,16 +1,3 @@
-﻿  EndState.cpp
-  Game.cpp
-  GameCharacter.cpp
-  GameMap.cpp
-  GameState.cpp
-  GameStateMachine.cpp
-  Ghost.cpp
-  MainMenuState.cpp
-  PacMan.cpp
-  PauseState.cpp
-  PlayState.cpp
-  SmartGhost.cpp
-  main.cpp
-  Generando código...
-C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(60): warning C4715: 'PacMan::handleEvent': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+﻿  MenuButton.cpp
+C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\MenuButton.cpp(28,14): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe

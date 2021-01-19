@@ -36,7 +36,10 @@ public:
 	
 	void handleEventos(SDL_Event& event)
 	{
-		for (EventHandler* e : manejadores) { if(e->handleEvent(event)) return; }
+		for (EventHandler* e : manejadores) 
+		{ 
+			if(e->handleEvent(event)) return;
+		}
 	}
 };
 
