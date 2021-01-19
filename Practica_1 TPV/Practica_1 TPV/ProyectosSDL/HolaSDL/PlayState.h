@@ -2,6 +2,7 @@
 #include "Game.h" // Necesario? Game ya lo tiene GameObject, pero quitarlo da mas errores
 #include "GameState.h"
 #include "PauseState.h"
+#include "EndState.h"
 #include "GameObject.h" // Necesario? GameObject ya lo tiene GameState pero quitarlo da mas errores
 #include "SmartGhost.h"
 #include "Ghost.h"
@@ -14,8 +15,8 @@
 #include <string>
 #include <sstream>
 
-class SmartGhost; //?
-class PacMan; //?
+class SmartGhost; 
+class PacMan; 
 
 class PlayState : public GameState
 {
@@ -39,7 +40,7 @@ public:
 	PlayState(Game* g, string name);
 
 
-	void finNivel();
+	void update();
 
 	string nombreNivel(int nMapa);
 	bool LeeArchivo(string archivo);

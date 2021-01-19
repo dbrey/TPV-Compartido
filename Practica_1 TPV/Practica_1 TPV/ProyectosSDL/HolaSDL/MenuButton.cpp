@@ -1,7 +1,6 @@
 #include "MenuButton.h"
 #include <stdio.h>
-#include <Windows.h>
-#include <WinUser.h>
+
 
 
 bool MenuButton::handleEvent(SDL_Event& event)
@@ -17,25 +16,18 @@ bool MenuButton::handleEvent(SDL_Event& event)
 
 	if (event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
 	{
-		POINT raton;
-		GetCursorPos(&raton);
+		
 												
 		SDL_Point p;
-		p.x = raton.x;
-		p.y = raton.y;
-
-		p.x *= 0.7;
+		p.x = event.button.x;
+		p.y = event.button.y;
 
 
 		SDL_Rect r = getDestRect();
-		/*r.x *= 1.80;
-		r.y *= 1.25;
-		//r.h *= 1.5;*/
 
 		if (SDL_PointInRect(&p, &r) == SDL_TRUE) // P ES RATON Y R EL RECTANGULO DEL BOTON
 		{
 			cboq(game);
-			//game->stMachine()->changeState();
 			return true;
 		}
 	}

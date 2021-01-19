@@ -78,19 +78,19 @@ void Ghost::SelecMov()
 // Selecciona la direccion y se mueve
 void Ghost::update()
 {
-    /*if (CambMove >= 70 || !game->trymove(getDestRect(), dir_actual, point, true))
+    if (CambMove >= 70 || !play->trymove(getDestRect(), dir_actual, point, true))
     {
         SelecMov();
         CambMove = 0;
     }
     
-    if (game->trymove(getDestRect(), dir_actual, point, true))
+    if (play->trymove(getDestRect(), dir_actual, point, true))
     {
-		SDL_Rect mapRect = game->map();
+		SDL_Rect mapRect = play->map();
 		Move(point, dir_actual, mapRect);
     }
 
-    CambMove++;*/
+    CambMove++;
 }
 
 // Mueve al fantasma a su posicion inicial

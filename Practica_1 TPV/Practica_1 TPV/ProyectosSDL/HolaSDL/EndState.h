@@ -9,10 +9,12 @@ class EndState : public GameState
 private:
 	MenuButton* salir;
 	MenuButton* menu;
-	bool victoria;
+	MenuButton* panelFinal;
 public:
-	EndState(Game* game);
+	EndState(Game* game , bool v);
 	static void regresarMenu(Game* game);
-	static void Exit(Game* game) { game->terminar(); };
+	static void Exit(Game* game);
+	static void Vacio(Game* game) {};
+
 };
 

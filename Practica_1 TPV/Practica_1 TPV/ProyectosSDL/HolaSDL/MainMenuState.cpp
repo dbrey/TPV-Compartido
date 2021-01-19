@@ -59,7 +59,6 @@ void MainMenuState::loadPartida(Game* game)
 	PlayState* cargarPartida = new PlayState(game, nombre.str());
 
 	game->stMachine()->pushState(cargarPartida);
-	// Llamar de alguna forma al LeeArchivo de PlayState y meterle el archivo a abrir como referencia
 }
 
 void MainMenuState::empezar(Game* game)

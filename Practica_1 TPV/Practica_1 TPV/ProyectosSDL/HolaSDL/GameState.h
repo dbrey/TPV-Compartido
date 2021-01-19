@@ -27,11 +27,10 @@ public:
 
 	virtual void update() 
 	{ 
-		for (GameObject* o : stage) 
+		for (GameObject* o : stage)
 		{
-			o->update(); 
+			o->update();
 		}
-		SDL_Delay(10);
 	}
 
 	void render()
@@ -46,5 +45,7 @@ public:
 			if(e->handleEvent(event)) return;
 		}
 	}
+
+	
 };
 

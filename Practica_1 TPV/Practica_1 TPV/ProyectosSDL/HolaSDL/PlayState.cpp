@@ -19,8 +19,10 @@ void PlayState::pausar()
 }
 
 
-void PlayState::finNivel()
+void PlayState::update()
 {
+	GameState::update();
+
 	for (auto it : objectstoErase)
 	{
 		delete* it;
@@ -28,17 +30,35 @@ void PlayState::finNivel()
 	}
 	objectstoErase.clear();
 
+
 	if (comida == 0)
 	{
 		nMapa++;
-		CambioMapa();
+		if (nMapa <= 5)
+		{
+			CambioMapa();
+		}
 	}
+
 
 	if (nMapa > 5 || vidas == 0)
 	{
-		g->stMachine()->popState(); //Borrar el estado game y volver al anterior estado que seria menu
+		
+		EndState* ending;
+		if (nMapa > 5)
+		{
+			ending = new EndState(g, true);
+		}
+		else
+		{
+			ending = new EndState(g, false);
+		}
+
+		g->stMachine()->pushState(ending);
+
 	}
 	SDL_Delay(10);
+
 }
 
 string PlayState::nombreNivel(int nMapa)
@@ -170,7 +190,28 @@ void PlayState::CambioMapa()
 void PlayState::SaveToFile()
 {
 	ofstream fil;
-	fil.open("../mapas/partida.txt");
+
+	cout << "Elige un archivo 1,2 o 3 ";
+	int eleccion;
+	
+	cin >> eleccion;
+
+	if (eleccion == 1)
+	{
+		fil.open("../mapas/partida.txt");
+
+	}
+	else if(eleccion == 2)
+	{
+		fil.open("../mapas/partida2.txt");
+
+	}
+	else if (eleccion == 3)
+	{
+		fil.open("../mapas/partida3.txt");
+
+	}
+	
 
 	if (!fil.is_open())
 	{

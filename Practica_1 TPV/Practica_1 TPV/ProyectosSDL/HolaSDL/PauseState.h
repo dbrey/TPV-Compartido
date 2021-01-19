@@ -8,14 +8,16 @@ class PauseState: public GameState
 {
 private:
 	MenuButton* guardar;
-	MenuButton* salir;
+	MenuButton* continuar;
 	MenuButton* volver;
 public:
 	PauseState(Game* game);
 	void update();
+	void SaveTooFile() {};
 	static void resume(Game* game);
 	static void regresarMenu(Game* game);
 	static void Save(Game* game);
+	static void Exit(Game* game);
 
 };
 

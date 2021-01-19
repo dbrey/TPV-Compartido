@@ -9,9 +9,9 @@
 #include <array>
 #include <list>
 using namespace std;
-const int NUM_TEXTURES = 9;
+const int NUM_TEXTURES = 11;
 
-const enum textureName { burguer, characters, food, wall, ex, p, man, restart, resume};
+const enum textureName { burguer, characters, food, wall, ex, p, man, restart, resume, win, lose};
 
 struct TextureAtribs
 {
@@ -23,7 +23,10 @@ struct TextureAtribs
 
 const TextureAtribs TEXTURE_ATRIBS[NUM_TEXTURES] =
 { { burguer, "..\\images\\burguer1.png",1,1 }, { characters, "..\\images\\characters1.png", 4, 14 }, { food, "..\\images\\food2.png", 1,1 }, { wall, "..\\images\\wall3.png", 1,1 }, { ex, "..\\images\\exit.png",1,3 },
-	{ p, "..\\images\\play.png",1,3 }, { man, "..\\images\\main.png",1,3 }, { restart, "..\\images\\restart.png",1,3 }, { resume, "..\\images\\resume.png",1,3 } };
+	{ p, "..\\images\\play.png",1,3 }, { man, "..\\images\\main.png",1,3 }, { restart, "..\\images\\restart.png",1,3 },
+	{ resume, "..\\images\\resume.png",1,3 }, {win, "..\\images\\victory.png", 1,3}, {lose, "..\\images\\lost.png", 1,3}
+};
+
 
 
 class Game

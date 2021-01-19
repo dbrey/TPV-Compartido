@@ -9,15 +9,15 @@ PauseState::PauseState(Game* game) : GameState(game)
 	int h1 = 100;
 
 	guardar = new MenuButton(p1, w1, h1, g, game->getTexture(7), Save);
-	salir = new MenuButton(p2, w1, h1, g, game->getTexture(4), regresarMenu);
-	volver = new MenuButton(p3, w1, h1, g, game->getTexture(8), resume);
+	continuar = new MenuButton(p2, w1, h1, g, game->getTexture(8), resume);
+	volver = new MenuButton(p3, w1, h1, g, game->getTexture(man), regresarMenu);
 
 	stage.push_back(guardar);
-	stage.push_back(salir);
+	stage.push_back(continuar);
 	stage.push_back(volver);
 
 	manejadores.push_back(guardar);
-	manejadores.push_back(salir);
+	manejadores.push_back(continuar);
 	manejadores.push_back(volver);
 }
 
@@ -26,10 +26,20 @@ void PauseState::update()
 	
 }
 
+void PauseState::Exit(Game* game)
+{
+	game->terminar();
+}
+
 void PauseState::Save(Game* game)
 {
 	game->stMachine()->popState();
-	//game->stMachine()->currentState()->
+	// Pedir a game el PlayState
+
+	dynamic_cast<PlayState*>(game->stMachine()->currentState())->SaveToFile();
+
+	
+		// Hacer static_cast/dynamic (mejor dynamic) del state
 }
 
 void PauseState::resume(Game* game)
@@ -40,6 +50,5 @@ void PauseState::resume(Game* game)
 void PauseState::regresarMenu(Game* game)
 {
 	MainMenuState* menu = new MainMenuState(game);
-
-	game->stMachine()->changeState(menu);
+	game->stMachine()->pushState(menu);
 }
