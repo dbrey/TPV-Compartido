@@ -1,6 +1,6 @@
 #include "GameStateMachine.h"
 
-
+// avanzamos al siguiente estado
 void GameStateMachine::popState()
 {
 	if (!states.empty())

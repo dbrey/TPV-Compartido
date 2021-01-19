@@ -1,7 +1,10 @@
 #include "PauseState.h"
+#include "checkML.h"
+
 
 PauseState::PauseState(Game* game) : GameState(game)
 {
+	// Creamos los botones y los añadimos a la lista de objetos y manejadores
 	Point2D p1 = Point2D(300, 50);
 	Point2D p2 = Point2D(300, 250);
 	Point2D p3 = Point2D(300, 450);
@@ -26,27 +29,27 @@ void PauseState::update()
 	
 }
 
+// Terminamos el juego
 void PauseState::Exit(Game* game)
 {
 	game->terminar();
 }
 
+// Guardamos la partida
 void PauseState::Save(Game* game)
 {
 	game->stMachine()->popState();
-	// Pedir a game el PlayState
 
 	dynamic_cast<PlayState*>(game->stMachine()->currentState())->SaveToFile();
-
-	
-		// Hacer static_cast/dynamic (mejor dynamic) del state
 }
 
+// Volvemos al estado anterior, continuando la partida
 void PauseState::resume(Game* game)
 {
 	game->stMachine()->popState();
 }
 
+// Vamos a un menu nuevo
 void PauseState::regresarMenu(Game* game)
 {
 	MainMenuState* menu = new MainMenuState(game);
@@ -55,6 +58,7 @@ void PauseState::regresarMenu(Game* game)
 
 PauseState::~PauseState()
 {
+	GameState::~GameState();
 	delete guardar;
 	delete continuar;
 	delete volver;

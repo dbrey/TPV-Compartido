@@ -1,16 +1,19 @@
 #include "PlayState.h"
 #include "checkML.h"
 
+// Si empezamos desde una partida nueva
 PlayState::PlayState(Game* g) : GameState(g)
 {
 	LeeArchivo(nombreNivel(nMapa));
 };
 
+// Si empezamos desde una partida guardada
 PlayState::PlayState(Game* g, string name) : GameState(g)
 {
 	LeeArchivo(name);
 }
 
+// Va al menu de Pausa
 void PlayState::pausar()
 {
 	PauseState* pausa = new PauseState(g);
@@ -61,15 +64,15 @@ void PlayState::update()
 
 }
 
+// Creamos un string con el numero del nivel
 string PlayState::nombreNivel(int nMapa)
 {
-	
 		stringstream nombre;
 		nombre << "../mapas/level0" << nMapa << ".dat";
 		return nombre.str();
-	
 }
 
+// Leemos el contenido del archivo y creamos el juego a partir de ahi
 bool PlayState::LeeArchivo(string archivo) {
 	bool read = true;  ifstream input;
 	input.open(archivo);
@@ -172,6 +175,7 @@ bool PlayState::LeeArchivo(string archivo) {
 	return read;
 }
 
+// Avanza al siguiente nivel
 void PlayState::CambioMapa()
 {
 	list<GameObject*>::iterator it = stage.begin();
@@ -187,6 +191,7 @@ void PlayState::CambioMapa()
 	LeeArchivo(nombreNivel(nMapa));
 }
 
+// Guardamos la partida en el archivo que queramos
 void PlayState::SaveToFile()
 {
 	ofstream fil;
@@ -266,6 +271,7 @@ void PlayState::SaveToFile()
 
 }
 
+// Hace conversion de las coordenadas del mapa a SDLPoint
 SDL_Point PlayState::mapCoordsToSDLPoint(Point2D& coords)
 {
 	SDL_Point aux;
@@ -313,6 +319,7 @@ bool PlayState::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool 
 
 }
 
+// Chequeamos si hay colision entre pacman y algun fantasma
 void PlayState::check() {
 	for (Ghost* g : fantasmas)
 	{
@@ -423,8 +430,16 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 
 PlayState::~PlayState()
 {
-	delete pac;
-	delete mapa;
+	for (auto objeto : stage)
+	{
+		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto);
+		if (objeto != nullptr)
+		{
+			delete[] objeto;
+		}
+	}
+
+	delete[] mapa;
 	objectstoErase.clear();
 	fantasmas.clear();
 	stage.clear();

@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
 	window_ = window;
 	renderer_ = renderer;
@@ -12,6 +13,7 @@ Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
 	stateMachine->pushState(menu);	
 }
 
+// Renderizamos todo lo del estado correspondiente
 void Game::render() {
 	SDL_RenderClear(renderer_);
 	
@@ -20,6 +22,7 @@ void Game::render() {
 	SDL_RenderPresent(renderer_);
 }
 
+// Actualizamos todos los objetos y eventos del estado correspondiente
 void Game::run() {
 	SDL_Event event;
 	while (!fin())
@@ -35,6 +38,7 @@ void Game::run() {
 	}
 }
 
+// Inicializamos las texturas
 void Game::IniTextures()
 {
 	try

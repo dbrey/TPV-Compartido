@@ -1,9 +1,12 @@
 #include "MainMenuState.h"
 #include "Game.h"
 #include "GameStateMachine.h"
+#include "checkML.h"
+
 
 MainMenuState::MainMenuState(Game* game) : GameState(game)
 {
+	// Creamos los botones y los añadimos a la lista de objetos y manejadores
 	Point2D p1 = Point2D(300, 50);
 	Point2D p2 = Point2D(300, 250);
 	Point2D p3 = Point2D(300, 450);
@@ -31,6 +34,7 @@ void MainMenuState::update()
 
 }
 
+// Cargamos una de las 3 partidas
 void MainMenuState::loadPartida(Game* game)
 {
 	int eleccion;
@@ -51,24 +55,20 @@ void MainMenuState::loadPartida(Game* game)
 	{
 		nombre << "../mapas/partida3.txt";
 	}
-	else
-	{
-	//	throw FileFormatError();
-	}
-
+	
 	PlayState* cargarPartida = new PlayState(game, nombre.str());
-
 	game->stMachine()->pushState(cargarPartida);
 }
 
+// Empezamos una nueva partida
 void MainMenuState::empezar(Game* game)
 {
 	PlayState* partidaNueva = new PlayState(game);
 
 	game->stMachine()->pushState(partidaNueva);
-	//Crear un estado PlayState, pushearlo en stMachine y cambiar a ese estado
 }
 
+// Terminamos el juego
 void MainMenuState::cerrar(Game* game)
 {
 	game->terminar();
@@ -77,7 +77,7 @@ void MainMenuState::cerrar(Game* game)
 
 MainMenuState::~MainMenuState()
 {
-	delete jugar;
-	delete salir;
-	delete cargar;
+	delete[] jugar;
+	delete[] salir;
+	delete[] cargar;
 }

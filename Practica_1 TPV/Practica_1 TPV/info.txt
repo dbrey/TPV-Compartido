@@ -1,3 +1,9 @@
 David Brey Plaza
 Pablo González Álvarez
 
+ERRORES
+- Al cargar una partida guardada, los fantasmas se colocan mal
+- El programa deja cierta cantidad de basura
+- Algunas excepciones no funcionan correctamente
+- Todas las excepciones de SDL_Error, no se han podido implementar
+- Solo hay un tipo de fantama dentro del juego (SmartGhost)
