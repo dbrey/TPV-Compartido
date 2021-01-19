@@ -1,6 +1,5 @@
 #include "Game.h"
 
-
 using namespace std;
 
 Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
@@ -28,8 +27,11 @@ void Game::run() {
 	while (!fin())
 	{
 		render();
+		if (SDL_PollEvent(&event) != 0)
+		{
+			stateMachine->currentState()->handleEventos(event);
 
-		stateMachine->currentState()->handleEventos(event);
+		}
 		stateMachine->currentState()->update();
 	}
 }

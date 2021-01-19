@@ -4,9 +4,14 @@
 
 MainMenuState::MainMenuState(Game* game) : GameState(game)
 {
+	/*Point2D p1 = Point2D(300, 50);
+	Point2D p2 = Point2D(300, 250);
+	Point2D p3 = Point2D(300, 450);*/
+
 	Point2D p1 = Point2D(300, 50);
 	Point2D p2 = Point2D(300, 250);
 	Point2D p3 = Point2D(300, 450);
+
 	int w1 = 200;
 	int h1 = 100;
 
@@ -27,12 +32,7 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 
 void MainMenuState::update()
 {
-	// Revisamos los handleEvent de todos los posibles eventos
-	SDL_Event event;
-	if (SDL_PollEvent(&event) != 0)
-	{
-		handleEventos(event);
-	}
+
 }
 
 void MainMenuState::loadPartida(Game* game)

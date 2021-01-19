@@ -11,17 +11,22 @@ bool MenuButton::handleEvent(SDL_Event& event)
 
 	// SDL_MOUSEBUTTONDOWN o SDL_MOUSEBUTTONUP? En el video de clase hace el segundo
 
+	// No pilla el SDL_MOUSEBUTTONDOWN ni el event button
+	
+	
 
-	if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
+	if (event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
 	{
 		POINT raton;
 		GetCursorPos(&raton);
-
+												
 		SDL_Point p;
 		p.x = raton.x;
 		p.y = raton.y;
 
 		SDL_Rect r = getDestRect();
+		r.x *= 1.80;
+		//r.y *= 2;
 
 		if (SDL_PointInRect(&p, &r) == SDL_TRUE) // P ES RATON Y R EL RECTANGULO DEL BOTON
 		{
