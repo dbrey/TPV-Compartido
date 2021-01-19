@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameObject.h"
+#include "checkML.h"
 
 enum MapCell { Empty, Wall, Food, Vitamins };
 class GameMap : public GameObject

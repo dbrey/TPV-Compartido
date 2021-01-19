@@ -2,6 +2,7 @@
 
 #include "GameCharacter.h"
 #include "EventHandler.h"
+#include "checkML.h"
 
 class PacMan : public GameCharacter, public EventHandler
 {

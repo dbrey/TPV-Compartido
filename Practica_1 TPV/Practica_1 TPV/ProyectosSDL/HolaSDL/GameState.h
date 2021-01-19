@@ -4,6 +4,7 @@
 #include <list> // Necesario? Al tener GameObject-->class Game --> list no deberia serlo, pero quitarlo da muchos errores
 #include "GameObject.h"
 #include "SDL.h"
+#include "checkML.h"
 
 class GameState
 {
@@ -26,7 +27,11 @@ public:
 
 	virtual void update() 
 	{ 
-		for (GameObject* o : stage) { o->update(); }
+		for (GameObject* o : stage) 
+		{
+			o->update(); 
+		}
+		SDL_Delay(10);
 	}
 
 	void render()

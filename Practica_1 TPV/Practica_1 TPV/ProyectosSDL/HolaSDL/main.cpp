@@ -7,6 +7,7 @@
 #include "PacManError.h"
 #include <iostream>
 #include "Game.h"
+#include "checkML.h"
 
 using namespace std;
 

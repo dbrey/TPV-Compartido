@@ -4,10 +4,6 @@
 
 MainMenuState::MainMenuState(Game* game) : GameState(game)
 {
-	/*Point2D p1 = Point2D(300, 50);
-	Point2D p2 = Point2D(300, 250);
-	Point2D p3 = Point2D(300, 450);*/
-
 	Point2D p1 = Point2D(300, 50);
 	Point2D p2 = Point2D(300, 250);
 	Point2D p3 = Point2D(300, 450);

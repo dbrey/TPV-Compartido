@@ -27,12 +27,13 @@ void Game::run() {
 	while (!fin())
 	{
 		render();
+		stateMachine->currentState()->update();
 		if (SDL_PollEvent(&event) != 0)
 		{
 			stateMachine->currentState()->handleEventos(event);
 
 		}
-		stateMachine->currentState()->update();
+
 	}
 }
 

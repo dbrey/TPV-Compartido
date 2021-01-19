@@ -1,4 +1,5 @@
 #include "PlayState.h"
+#include "checkML.h"
 
 PlayState::PlayState(Game* g) : GameState(g)
 {
@@ -14,23 +15,12 @@ void PlayState::pausar()
 {
 	PauseState* pausa = new PauseState(g);
 	g->stMachine()->pushState(pausa);
-	SaveToFile();
+	
 }
 
-void PlayState::update()
+
+void PlayState::finNivel()
 {
-	// Adaptar el metodo CambioMapa para que lo haga el update de PlayState
-	// Revisamos los handleEvent de todos los posibles eventos
-	SDL_Event event;
-	if (SDL_PollEvent(&event) != 0)
-	{
-		
-			handleEventos(event);
-		
-	}
-	
-
-
 	for (auto it : objectstoErase)
 	{
 		delete* it;
@@ -46,28 +36,18 @@ void PlayState::update()
 
 	if (nMapa > 5 || vidas == 0)
 	{
-		g->stMachine()->popState();//Borrar el estado game y volver al anterior estado que seria menu
+		g->stMachine()->popState(); //Borrar el estado game y volver al anterior estado que seria menu
 	}
 	SDL_Delay(10);
 }
 
 string PlayState::nombreNivel(int nMapa)
 {
-	cout << "Cargar nivel o empezar partida nueva? (0 o 1) ";
-	int opcion;
-	cin >> opcion;
-	if (opcion == 1)
-	{
+	
 		stringstream nombre;
 		nombre << "../mapas/level0" << nMapa << ".dat";
 		return nombre.str();
-	}
-	else
-	{
-		stringstream nombre;
-		nombre << "../mapas/partida.txt";
-		return nombre.str();
-	}
+	
 }
 
 bool PlayState::LeeArchivo(string archivo) {
@@ -147,8 +127,8 @@ bool PlayState::LeeArchivo(string archivo) {
 
 				Vector2D dir(dirx, diry);
 				pac = new PacMan(Point2D(x, y).getX(), Point2D(x, y).getY(), g, this, dir, tamCellX, tamCellY);
-				
 				stage.push_back(pac);
+				manejadores.push_back(pac);
 			}
 			else if (aux == "f") {
 				int x, y, dirx, diry;

@@ -50,6 +50,7 @@ bool PacMan::handleEvent(SDL_Event& tecla)
 			case SDLK_s:
 			{
 				play->pausar();
+				return true;
 			}
 			default:
 			{

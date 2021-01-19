@@ -24,9 +24,13 @@ bool MenuButton::handleEvent(SDL_Event& event)
 		p.x = raton.x;
 		p.y = raton.y;
 
+		p.x *= 0.7;
+
+
 		SDL_Rect r = getDestRect();
-		r.x *= 1.80;
-		//r.y *= 2;
+		/*r.x *= 1.80;
+		r.y *= 1.25;
+		//r.h *= 1.5;*/
 
 		if (SDL_PointInRect(&p, &r) == SDL_TRUE) // P ES RATON Y R EL RECTANGULO DEL BOTON
 		{

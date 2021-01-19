@@ -1,6 +1,7 @@
 #pragma once
 #include "PacManError.h"
 #include <iostream>
+#include "checkML.h"
 class FileNotFoundError : public PacManError
 {
 public:

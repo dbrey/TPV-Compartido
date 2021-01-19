@@ -1,5 +1,6 @@
 #pragma once
 #include "GameCharacter.h"
+#include "checkML.h"
 #include <array>
 
 class Ghost : public GameCharacter

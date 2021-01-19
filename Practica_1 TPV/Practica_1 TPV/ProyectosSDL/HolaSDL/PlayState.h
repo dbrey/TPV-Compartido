@@ -8,6 +8,7 @@
 #include "PacMan.h"
 #include "GameMap.h"
 
+#include "checkML.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -38,7 +39,7 @@ public:
 	PlayState(Game* g, string name);
 
 
-	void update();
+	void finNivel();
 
 	string nombreNivel(int nMapa);
 	bool LeeArchivo(string archivo);
@@ -46,6 +47,7 @@ public:
 	void SaveToFile();
 
 	void pausar();
+	
 
 	SDL_Point mapCoordsToSDLPoint(Point2D& coords);
 	Point2D SDLPointToMapCoords(int x, int y);
