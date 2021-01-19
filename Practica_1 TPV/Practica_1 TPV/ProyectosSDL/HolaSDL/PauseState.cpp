@@ -52,3 +52,10 @@ void PauseState::regresarMenu(Game* game)
 	MainMenuState* menu = new MainMenuState(game);
 	game->stMachine()->pushState(menu);
 }
+
+PauseState::~PauseState()
+{
+	delete guardar;
+	delete continuar;
+	delete volver;
+}

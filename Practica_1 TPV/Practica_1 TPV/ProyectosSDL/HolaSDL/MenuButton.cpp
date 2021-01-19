@@ -5,15 +5,6 @@
 
 bool MenuButton::handleEvent(SDL_Event& event)
 {
-	//Crear p y r
-
-
-	// SDL_MOUSEBUTTONDOWN o SDL_MOUSEBUTTONUP? En el video de clase hace el segundo
-
-	// No pilla el SDL_MOUSEBUTTONDOWN ni el event button
-	
-	
-
 	if (event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT) // Pulsa el raton
 	{
 		
@@ -52,8 +43,4 @@ SDL_Rect MenuButton::getDestRect()
 	return aux;
 }
 
-void MenuButton::clean()
-{
-	
-}
 

@@ -18,5 +18,6 @@ public:
 	static void cerrar(Game* game);
 	static void empezar(Game* game);
 
+	~MainMenuState();
 };
 

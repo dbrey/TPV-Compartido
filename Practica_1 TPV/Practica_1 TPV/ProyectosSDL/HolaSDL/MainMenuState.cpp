@@ -73,3 +73,11 @@ void MainMenuState::cerrar(Game* game)
 {
 	game->terminar();
 }
+
+
+MainMenuState::~MainMenuState()
+{
+	delete jugar;
+	delete salir;
+	delete cargar;
+}

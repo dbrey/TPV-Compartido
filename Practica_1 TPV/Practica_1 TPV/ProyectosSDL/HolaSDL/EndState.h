@@ -16,5 +16,6 @@ public:
 	static void Exit(Game* game);
 	static void Vacio(Game* game) {};
 
+	~EndState();
 };
 

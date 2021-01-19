@@ -423,6 +423,8 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 
 PlayState::~PlayState()
 {
+	delete pac;
+	delete mapa;
 	objectstoErase.clear();
 	fantasmas.clear();
 	stage.clear();

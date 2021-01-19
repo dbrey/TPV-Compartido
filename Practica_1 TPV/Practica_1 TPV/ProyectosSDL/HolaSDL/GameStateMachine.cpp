@@ -14,7 +14,6 @@ GameStateMachine::~GameStateMachine()
 {
 	while (!states.empty())
 	{
-		delete states.top();
 		states.pop();
 	}
 }

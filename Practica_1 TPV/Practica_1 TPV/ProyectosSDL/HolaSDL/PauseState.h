@@ -19,5 +19,6 @@ public:
 	static void Save(Game* game);
 	static void Exit(Game* game);
 
+	~PauseState();
 };
 
