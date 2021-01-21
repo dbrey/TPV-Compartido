@@ -12,6 +12,8 @@
 #include "checkML.h"
 #include <iostream>
 #include <string>
+#include "FileNotFoundError.h"
+#include "SDLError.h"
 
 using namespace std;
 

@@ -82,8 +82,6 @@ bool PlayState::LeeArchivo(string archivo) {
 		read = false;
 	}
 	else {
-		try
-		{
 			int x, y;
 			input >> x >> y;
 
@@ -122,12 +120,6 @@ bool PlayState::LeeArchivo(string archivo) {
 			}
 
 			stage.push_back(mapa);
-		}
-		catch (string& e)
-		{
-			throw FileFormatError(e);
-		}
-
 	}
 
 	// Si cargamos un mapa, miramos la posicion de los fantasmas y pacman
@@ -163,9 +155,10 @@ bool PlayState::LeeArchivo(string archivo) {
 				list<GameObject*>::iterator it = stage.insert(stage.end(), gh);
 				gh->setItList(it);
 			}
-			else //Ya solo puede sel el numero del mapa
+			else//Ya solo puede sel el numero del mapa
 			{
 				input >> nMapa;
+				if (nMapa > 5) throw FileFormatError("The map number"+ to_string(nMapa) + "dont exist");
 			}
 		}
 	}

@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Game.h"
 #include "checkML.h"
+#include "SDLError.h"
 
 using namespace std;
 
@@ -30,21 +31,16 @@ int main(int argc, char* argv[]){
 
 
 	// Ejecucion del metodo
-	if (window == nullptr || renderer == nullptr)
-		cout << "Error cargando SDL" << endl;
-	else
-	{
-		// Coge cualquier error aparte de otro tipo de errores (Ej: carga de texturas)
-		try 
-		{
-			Game game = Game(window, renderer);
-			game.run();
-		}
-		catch(PacManError& e)
-		{
-			cout << e.what();
-		}
-	}
+	if (window == nullptr || renderer == nullptr) throw SDLError(SDL_GetError());
+	
+	
+	// Coge cualquier error aparte de otro tipo de errores (Ej: carga de texturas)
+		
+	Game game = Game(window, renderer);
+	game.run();
+		
+		
+	
 
 	return 0;
 }

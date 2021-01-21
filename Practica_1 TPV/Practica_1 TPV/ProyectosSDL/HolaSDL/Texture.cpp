@@ -17,10 +17,10 @@ void Texture::libera() {
 // Carga una textura en el renderer(?) a partir de un archivo string
 void Texture::load(string filename, uint nRows, uint nCols) {
 	SDL_Surface* tempSurface = IMG_Load(filename.c_str());
-	if (tempSurface == nullptr) throw "Error loading surface from " + filename;
+	if (tempSurface == nullptr) throw FileNotFoundError(filename);
 	libera();
 	texture = SDL_CreateTextureFromSurface(renderer, tempSurface);
-	if (texture == nullptr) throw "Error loading texture from " + filename;
+	if (texture == nullptr) throw SDLError(SDL_GetError() + filename);
 	numRows = nRows;
 	numCols = nCols;
 	w = tempSurface->w;

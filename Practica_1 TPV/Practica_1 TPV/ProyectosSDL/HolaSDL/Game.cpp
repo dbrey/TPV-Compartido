@@ -41,17 +41,13 @@ void Game::run() {
 // Inicializamos las texturas
 void Game::IniTextures()
 {
-	try
+	
+	for (int i = 0; i < NUM_TEXTURES; ++i)
 	{
-		for (int i = 0; i < NUM_TEXTURES; ++i)
-		{
-			textures[i] = new Texture(renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
-		}
+		textures[i] = new Texture(renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
+		if(textures[i] == NULL) throw FileNotFoundError("de nombre" + TEXTURE_ATRIBS[i].fileName);
 	}
-	catch(string& e)
-	{
-		throw FileNotFoundError(e);
-	}
+	
 	
 }
 

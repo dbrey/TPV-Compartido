@@ -8,6 +8,6 @@ using namespace std;
 class PacManError : public logic_error
 {
 public:
-	PacManError(const string& m) : logic_error(m) {};
+	PacManError(string const m) : logic_error("Error:" + m) {};
 };
 
