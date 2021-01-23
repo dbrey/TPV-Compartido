@@ -150,7 +150,7 @@ bool PlayState::LeeArchivo(string archivo) {
 				input >> x >> y >> dirx >> diry;
 
 				Vector2D dir(dirx, diry);
-				SmartGhost* gh = new SmartGhost(mapCoordsToSDLPoint(Point2D(x, y)).x, mapCoordsToSDLPoint(Point2D(x, y)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+				SmartGhost* gh = new SmartGhost(Point2D(x, y).getX(), Point2D(x, y).getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
 				fantasmas.push_back(gh);
 				list<GameObject*>::iterator it = stage.insert(stage.end(), gh);
 				gh->setItList(it);
