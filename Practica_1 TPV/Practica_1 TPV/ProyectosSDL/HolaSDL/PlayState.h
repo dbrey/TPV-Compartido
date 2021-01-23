@@ -32,7 +32,8 @@ private:
 	PacMan* pac;
 	GameMap* mapa;
 	
-	list<SmartGhost*> fantasmas;
+	list<SmartGhost*> SmartFantasmas;
+	list<Ghost*> normalFantasmas;
 	list<list<GameObject*>::iterator> objectstoErase;
 public:
 

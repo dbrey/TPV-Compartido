@@ -108,12 +108,19 @@ bool PlayState::LeeArchivo(string archivo) {
 							stage.push_back(pac);
 							manejadores.push_back(pac);
 						}
-						else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8)) {
-							SmartGhost* gh = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
-							fantasmas.push_back(gh);
-							list<GameObject*>::iterator it = stage.insert(stage.end(), gh);
-							gh->setItList(it);
+						else if ( aux == 4) {
+							SmartGhost* smgh = new SmartGhost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+							SmartFantasmas.push_back(smgh);
+							list<GameObject*>::iterator it = stage.insert(stage.end(), smgh);
+							smgh->setItList(it);
 
+						}
+						else if ((aux == 5 || aux == 6 || aux == 7 || aux == 8))
+						{
+							Ghost* ngh = new Ghost(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY, aux);
+							normalFantasmas.push_back(ngh);
+							list<GameObject*>::iterator it = stage.insert(stage.end(), ngh);
+							ngh->setItList(it);
 						}
 					}
 				}
@@ -150,10 +157,20 @@ bool PlayState::LeeArchivo(string archivo) {
 				input >> x >> y >> dirx >> diry;
 
 				Vector2D dir(dirx, diry);
-				SmartGhost* gh = new SmartGhost(Point2D(x, y).getX(), Point2D(x, y).getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
-				fantasmas.push_back(gh);
-				list<GameObject*>::iterator it = stage.insert(stage.end(), gh);
-				gh->setItList(it);
+				SmartGhost* smghost = new SmartGhost(Point2D(x, y).getX(), Point2D(x, y).getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
+				SmartFantasmas.push_back(smghost);
+				list<GameObject*>::iterator it = stage.insert(stage.end(), smghost);
+				smghost->setItList(it);
+			}
+			else if ((aux == "5" || aux == "6" || aux == "7" || aux == "8"))
+			{
+				int x, y, dirx, diry;
+				input >> x >> y >> dirx >> diry;
+				
+				Ghost* nghost = new Ghost(Point2D(x, y).getX(), Point2D(x, y).getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, stoi(aux));
+				normalFantasmas.push_back(nghost);
+				list<GameObject*>::iterator it = stage.insert(stage.end(), nghost);
+				nghost->setItList(it);
 			}
 			else//Ya solo puede sel el numero del mapa
 			{
@@ -179,7 +196,7 @@ void PlayState::CambioMapa()
 	}
 
 	objectstoErase.clear();
-	fantasmas.clear();
+	SmartFantasmas.clear();
 	stage.clear();
 	LeeArchivo(nombreNivel(nMapa));
 }
@@ -314,7 +331,7 @@ bool PlayState::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool 
 
 // Chequeamos si hay colision entre pacman y algun fantasma
 void PlayState::check() {
-	for (Ghost* g : fantasmas)
+	for (Ghost* g : SmartFantasmas)
 	{
 		SDL_Rect rectg = g->getDestRect();
 		if (SDL_HasIntersection(&rectg, &pac->getDestRect()))
@@ -332,8 +349,8 @@ void PlayState::check() {
 void PlayState::ripFantasma(SmartGhost* sg)
 {
 	bool aux = false; //Para salir del bucle
-	list<SmartGhost*>::iterator it = fantasmas.begin();
-	while (it != fantasmas.end() && !aux) //Busca el fantasma y lo borra
+	list<SmartGhost*>::iterator it = SmartFantasmas.begin();
+	while (it != SmartFantasmas.end() && !aux) //Busca el fantasma y lo borra
 	{
 		if (sg == *it)
 		{
@@ -346,15 +363,15 @@ void PlayState::ripFantasma(SmartGhost* sg)
 
 bool PlayState::Hijo(SmartGhost* Sg)
 {
-	list<SmartGhost*>::iterator it = fantasmas.begin();
+	list<SmartGhost*>::iterator it = SmartFantasmas.begin();
 
-	while (it != fantasmas.end())
+	while (it != SmartFantasmas.end())
 	{
 		if (Sg != *it && !((*it)->EsHijo()) && ComprobarDistancia(Sg, it))
 		{
 			// Es probable que gh este dando error
 			SmartGhost* gh = new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, true);
-			fantasmas.push_back(gh);
+			SmartFantasmas.push_back(gh);
 			list<GameObject*>::iterator it = stage.insert(stage.end(), gh);
 			gh->setItList(it);
 			return true;
@@ -411,7 +428,7 @@ void PlayState::eraseGhost(list<GameObject*>::iterator it)
 {
 	GameObject* go = *it;
 	SmartGhost* g = dynamic_cast<SmartGhost*>(go);
-	fantasmas.remove(g);
+	SmartFantasmas.remove(g);
 	eraseObject(it);
 }
 
@@ -434,7 +451,7 @@ PlayState::~PlayState()
 
 	delete[] mapa;
 	objectstoErase.clear();
-	fantasmas.clear();
+	SmartFantasmas.clear();
 	stage.clear();
 }
 
