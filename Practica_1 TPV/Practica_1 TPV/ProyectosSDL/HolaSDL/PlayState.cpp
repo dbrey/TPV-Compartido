@@ -440,8 +440,12 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 
 PlayState::~PlayState()
 {
+
+	// Algo da error en esta destructora. 
+
 	for (auto objeto : stage)
 	{
+		// Al hacer el bucle, pilla tambien mapa, cuando no deberia y salta excepcion en la destructora del mapa
 		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto);
 		if (objeto != nullptr)
 		{

@@ -6,10 +6,6 @@
 
 class MainMenuState: public GameState
 {
-private:
-	MenuButton* jugar;
-	MenuButton* salir;
-	MenuButton* cargar;
 public:
 
 	MainMenuState(Game* game);
@@ -18,6 +14,5 @@ public:
 	static void cerrar(Game* game);
 	static void empezar(Game* game);
 
-	~MainMenuState();
 };
 

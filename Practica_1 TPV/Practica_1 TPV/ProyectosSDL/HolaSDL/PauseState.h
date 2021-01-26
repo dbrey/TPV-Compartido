@@ -6,10 +6,7 @@
 
 class PauseState: public GameState
 {
-private:
-	MenuButton* guardar;
-	MenuButton* continuar;
-	MenuButton* volver;
+
 public:
 	PauseState(Game* game);
 	void update();
@@ -19,6 +16,5 @@ public:
 	static void Save(Game* game);
 	static void Exit(Game* game);
 
-	~PauseState();
 };
 

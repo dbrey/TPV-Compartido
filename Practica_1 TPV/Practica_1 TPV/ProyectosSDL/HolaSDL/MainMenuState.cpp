@@ -14,9 +14,9 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5), empezar);
-	salir = new MenuButton(p2, w1, h1, g, game->getTexture(4), cerrar);
-	cargar = new MenuButton(p3, w1, h1, g, game->getTexture(7), loadPartida);
+	MenuButton* jugar = new MenuButton(p1, w1, h1, g, game->getTexture(5), empezar);
+	MenuButton* salir = new MenuButton(p2, w1, h1, g, game->getTexture(4), cerrar);
+	MenuButton* cargar = new MenuButton(p3, w1, h1, g, game->getTexture(7), loadPartida);
 
 	stage.push_back(jugar);
 	stage.push_back(salir);
@@ -26,7 +26,6 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 	manejadores.push_back(salir);
 	manejadores.push_back(cargar);
 
-	g->stMachine()->pushState(this);
 }
 
 void MainMenuState::update()
@@ -72,12 +71,4 @@ void MainMenuState::empezar(Game* game)
 void MainMenuState::cerrar(Game* game)
 {
 	game->terminar();
-}
-
-
-MainMenuState::~MainMenuState()
-{
-	delete[] jugar;
-	delete[] salir;
-	delete[] cargar;
 }

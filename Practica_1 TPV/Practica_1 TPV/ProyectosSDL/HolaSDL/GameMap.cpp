@@ -108,6 +108,7 @@ GameMap::~GameMap()
 {
 	for (int i = 0; i < cols; i++)
 	{
+		// Esto da error
 		delete[] Mapa[i];
 		Mapa[i] = nullptr;
 	}

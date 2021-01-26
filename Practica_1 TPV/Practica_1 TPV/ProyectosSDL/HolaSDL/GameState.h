@@ -20,12 +20,9 @@ public:
 		g = game;
 	}
 
-	~GameState() 
+	virtual ~GameState() 
 	{
 		for (GameObject* o : stage) { delete o; }
-
-		stage.clear();
-		manejadores.clear();
 	}
 
 	virtual void update() 

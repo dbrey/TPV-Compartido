@@ -11,9 +11,9 @@ PauseState::PauseState(Game* game) : GameState(game)
 	int w1 = 200;
 	int h1 = 100;
 
-	guardar = new MenuButton(p1, w1, h1, g, game->getTexture(7), Save);
-	continuar = new MenuButton(p2, w1, h1, g, game->getTexture(8), resume);
-	volver = new MenuButton(p3, w1, h1, g, game->getTexture(man), regresarMenu);
+	MenuButton* guardar = new MenuButton(p1, w1, h1, g, game->getTexture(7), Save);
+	MenuButton* continuar = new MenuButton(p2, w1, h1, g, game->getTexture(8), resume);
+	MenuButton* volver = new MenuButton(p3, w1, h1, g, game->getTexture(man), regresarMenu);
 
 	stage.push_back(guardar);
 	stage.push_back(continuar);
@@ -40,6 +40,14 @@ void PauseState::Save(Game* game)
 {
 	game->stMachine()->popState();
 
+
+	// 
+
+
+
+
+
+
 	dynamic_cast<PlayState*>(game->stMachine()->currentState())->SaveToFile();
 }
 
@@ -54,12 +62,4 @@ void PauseState::regresarMenu(Game* game)
 {
 	MainMenuState* menu = new MainMenuState(game);
 	game->stMachine()->pushState(menu);
-}
-
-PauseState::~PauseState()
-{
-	GameState::~GameState();
-	delete guardar;
-	delete continuar;
-	delete volver;
 }

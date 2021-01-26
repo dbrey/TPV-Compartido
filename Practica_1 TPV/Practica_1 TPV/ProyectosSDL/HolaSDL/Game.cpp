@@ -32,7 +32,6 @@ void Game::run() {
 		if (SDL_PollEvent(&event) != 0)
 		{
 			stateMachine->currentState()->handleEventos(event);
-
 		}
 
 	}

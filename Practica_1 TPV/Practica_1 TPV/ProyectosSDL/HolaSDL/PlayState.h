@@ -77,7 +77,7 @@ public:
 
 	void eraseGhost(list<GameObject*>::iterator it);
 	void eraseObject(list<GameObject*>::iterator it);
-	~PlayState(); // Necesario? La destructora del GameState puede deba encargarse de destruir cada estado en particular
+	~PlayState(); 
 
 
 };
