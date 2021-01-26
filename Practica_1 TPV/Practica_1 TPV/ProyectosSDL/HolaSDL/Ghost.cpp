@@ -6,8 +6,8 @@
 #include <cstdlib>
 
 
-Ghost::Ghost(int x, int y, Game* g, PlayState* pl,Vector2D dir,int ancho,int largo) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g,pl,ancho,largo) {
-
+Ghost::Ghost(int x, int y, Game* g, PlayState* pl,Vector2D dir,int ancho,int largo, int nF) : GameCharacter(Point2D(x, y), dir, g->getTexture(characters), g,pl,ancho,largo) {
+    nFantasma = nF;
 }
 
 // Comprobamos las direcciones a las que se puede mover el fantasma
@@ -112,7 +112,18 @@ void Ghost::render() {
         string aux = "textura fantasmas";
         throw FileNotFoundError(aux);
     }
-	textura->renderFrame(rect, 0, 8);
+    else
+    {
+        if (nFantasma == 5) { textura->renderFrame(rect, 0, 0); }
+        else if (nFantasma == 6) { textura->renderFrame(rect, 0, 2); }
+        else if (nFantasma == 7) { textura->renderFrame(rect, 0, 4); }
+        else if (nFantasma == 8) { textura->renderFrame(rect, 0, 6); }
+        else
+        {
+            throw FileFormatError("Hay un fantasma que se puede renderizar");
+        }
+    }
+    
     
 
 }
@@ -120,6 +131,15 @@ void Ghost::render() {
 // Guarda al fantasma en el fichero
 void Ghost::saveToFil(ofstream& fil)
 {
-    fil << "f " << point.getX() << " " << point.getY() << " " 
-        << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
+    if ((nFantasma == 5 || nFantasma == 6 || nFantasma == 7 || nFantasma == 8))
+    {
+        fil << to_string(nFantasma) + " " << point.getX() << " " << point.getY() << " "
+            << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
+    }
+    else
+    {
+        fil << "f " << point.getX() << " " << point.getY() << " "
+            << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
+    }
+    
 }

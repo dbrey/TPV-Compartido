@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  EndState.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
   Game.cpp
@@ -20,3 +21,6 @@ C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica
 C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\main.cpp(34,1): message : __declspec(nothrow), throw(), noexcept(true) o noexcept se han especificado en la función
 C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\HolaSDL\PacMan.cpp(61): warning C4715: 'PacMan::handleEvent': no todas las rutas de acceso de control devuelven un valor
   HolaSDL.vcxproj -> C:\Users\pablo\Desktop\TPV\TPV-Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+=======
+﻿  HolaSDL.vcxproj -> C:\Users\Usuario\Desktop\Carpeta Escritorio\UNIVERSIDAD\UNIVERSIDAD\Segundo\TPV\Compartido\TPV-Compartido\Practica_1 TPV\Practica_1 TPV\ProyectosSDL\bin\PacManDebug.exe
+>>>>>>> 7cff989ec58a6fa97c91f8e09521f7ad3fb1c0fc
