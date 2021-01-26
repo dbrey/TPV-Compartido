@@ -350,7 +350,7 @@ bool PlayState::Hijo(SmartGhost* Sg)
 
 	while (it != fantasmas.end())
 	{
-		if (Sg != *it && !((*it)->EsHijo()) && ComprobarDistancia(Sg, it))
+		if (Sg != *it && !((*it)->EsHijo()) && ComprobarDistancia(Sg, it) && !((*it)->Papa()))
 		{
 			// Es probable que gh este dando error
 			SmartGhost* gh = new SmartGhost(Sg->getPoint().getX(), Sg->getPoint().getY(), g, this, Vector2D(1, 0), tamCellX, tamCellY, true);

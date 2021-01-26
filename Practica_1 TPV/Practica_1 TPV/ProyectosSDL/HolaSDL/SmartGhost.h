@@ -24,6 +24,7 @@ public:
 	void render();
 	void Mueve();
 	bool EsHijo(){	return (edad < 1000);}
+	bool Papa() { return cuarentena < 2000; }
 	void Movimiento();
 
 	virtual ~SmartGhost() {};
