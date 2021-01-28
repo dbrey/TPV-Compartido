@@ -47,13 +47,3 @@ void EndState::regresarMenu(Game* game)
 	MainMenuState* menu = new MainMenuState(game);
 	game->stMachine()->pushState(menu);
 }
-
-
-EndState::~EndState()
-{
-	GameState::~GameState();
-
-	delete[] panelFinal;
-	delete[] salir;
-	delete[] menu;
-}

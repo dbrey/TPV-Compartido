@@ -40,14 +40,6 @@ void PauseState::Save(Game* game)
 {
 	game->stMachine()->popState();
 
-
-	// 
-
-
-
-
-
-
 	dynamic_cast<PlayState*>(game->stMachine()->currentState())->SaveToFile();
 }
 
