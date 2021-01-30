@@ -107,4 +107,6 @@ SDL_Rect GameMap::getDestRect()
 GameMap::~GameMap()
 {
 	delete[] Mapa;
+	//Mapa = nullptr; Se esta probando cosas
+
 }

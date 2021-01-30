@@ -106,11 +106,41 @@ void PacMan::render() {
 		string aux = "textura pacman";
 		throw FileNotFoundError(aux);
 	}
-	if (tiempoforce == 0)
-		textura->renderFrame(rect, 0, 10);
+
+	// Decidimos la direccion a la que apuntara el fantasma
+	int direccion = 0; // Por defecto derecha
+	if (dir_actual == Vector2D(-1, 0)) // Izquierda
+	{
+		direccion = 2;
+	}
+	else if (dir_actual == Vector2D(0, 1)) // Abajo
+	{
+		direccion = 1;
+	}
+	else if (dir_actual == Vector2D(0, -1)) // Arriba
+	{
+		direccion = 3;
+	}
+
+	// Hacemos que habra y cierre la boca en un tiempo determinado
+	if (nAnimacion >= 0 && nAnimacion <= 10)
+	{
+		textura->renderFrame(rect, direccion, 10);
+	}
+	else if (nAnimacion > 10 && nAnimacion <= 20) 
+	{
+		textura->renderFrame(rect, direccion, 11);
+	}
+
+	if (nAnimacion > 20)
+	{
+		nAnimacion = 0;
+	}
 	else
-		textura->renderFrame(rect, 0, 11);
-	
+	{
+		nAnimacion++;
+	}
+
 }
 
 // Guardamos a pacman en el fichero
