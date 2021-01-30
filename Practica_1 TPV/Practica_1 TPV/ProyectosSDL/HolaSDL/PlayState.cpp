@@ -446,9 +446,9 @@ PlayState::~PlayState()
 	for (auto objeto : stage)
 	{
 		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto);
-		if (objeto != nullptr)
+		if (aux != nullptr)
 		{
-			delete objeto;
+			delete aux;
 		}
 	}
 
