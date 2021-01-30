@@ -112,4 +112,6 @@ GameMap::~GameMap()
 	}
 
 	delete[] Mapa;
+	//Mapa = nullptr; Se esta probando cosas
+
 }

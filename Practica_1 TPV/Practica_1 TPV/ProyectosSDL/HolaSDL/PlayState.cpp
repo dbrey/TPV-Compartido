@@ -331,7 +331,23 @@ bool PlayState::trymove(const SDL_Rect rect, Vector2D dir, Point2D newPos, bool 
 
 // Chequeamos si hay colision entre pacman y algun fantasma
 void PlayState::check() {
+	// Checkeamos colisiones en la lista de fantasmas inteligentes
 	for (Ghost* g : SmartFantasmas)
+	{
+		SDL_Rect rectg = g->getDestRect();
+		if (SDL_HasIntersection(&rectg, &pac->getDestRect()))
+		{
+			if (pac->tiempo() == 0) {
+				pac->morir();
+			}
+			else {
+				g->morir();
+			}
+		}
+	}
+
+	// Checkeamos colisiones en la lista de fantasmas normales
+	for (Ghost* g : normalFantasmas)
 	{
 		SDL_Rect rectg = g->getDestRect();
 		if (SDL_HasIntersection(&rectg, &pac->getDestRect()))
@@ -452,6 +468,7 @@ PlayState::~PlayState()
 		}
 	}
 
+	delete mapa;
 	objectstoErase.clear();
 	SmartFantasmas.clear();
 	stage.clear();
