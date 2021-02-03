@@ -13,6 +13,29 @@ void GameCharacter::render() {
 	textura->render(rect);
 }
 
+void GameCharacter::panickGhost(SDL_Rect rect)
+{
+	if (nAnimacion >= 0 && nAnimacion <= 5)
+	{
+		textura->renderFrame(rect, 0, 12);
+
+	}
+	else if (nAnimacion > 5 && nAnimacion <= 10)
+	{
+		textura->renderFrame(rect, 1, 13);
+	}
+	else if (nAnimacion > 10 && nAnimacion <= 15)
+	{
+		textura->renderFrame(rect, 0, 13);
+	}
+	else if (nAnimacion > 15 && nAnimacion <= 20)
+	{
+		textura->renderFrame(rect, 1, 12);
+
+	}
+	
+}
+
 //Cogemos el rect del personaje
 SDL_Rect GameCharacter::getDestRect()
 { 

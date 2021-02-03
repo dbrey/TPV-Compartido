@@ -8,7 +8,6 @@ class PacMan : public GameCharacter, public EventHandler
 {
 private:
 	const uint32_t  duracion = 1000;
-	int nAnimacion = 0;
 	uint32_t  tiempoforce = 0;
 	Vector2D dir_sel;
 
