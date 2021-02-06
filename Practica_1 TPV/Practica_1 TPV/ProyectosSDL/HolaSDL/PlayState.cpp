@@ -273,7 +273,8 @@ void PlayState::SaveToFile()
 		fil << endl;
 		fil << nMapa;
 
-		g->terminar(); //Cerrar el bucle del juego
+		MainMenuState* menu = new MainMenuState(g); // Volvemos al menu principal
+		g->stMachine()->pushState(menu);
 
 		fil.close();
 	}
