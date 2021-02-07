@@ -108,7 +108,7 @@ GameMap::~GameMap()
 {
 	for (int i = 0; i < cols; i++)
 	{
-		delete[] Mapa[i];
+		delete Mapa[i];
 	}
 
 	delete[] Mapa;
