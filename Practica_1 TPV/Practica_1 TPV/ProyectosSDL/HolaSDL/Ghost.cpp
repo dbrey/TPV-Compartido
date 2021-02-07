@@ -114,14 +114,100 @@ void Ghost::render() {
     }
     else
     {
-        if (nFantasma == 5) { textura->renderFrame(rect, 0, 0); }
-        else if (nFantasma == 6) { textura->renderFrame(rect, 0, 2); }
-        else if (nFantasma == 7) { textura->renderFrame(rect, 0, 4); }
-        else if (nFantasma == 8) { textura->renderFrame(rect, 0, 6); }
+        if (play->getPac()->tiempo() == 0)
+        {
+            // Decidimos la direccion a la que apuntara el fantasma
+            int direccion = 0; // Por defecto derecha
+            if (dir_actual == Vector2D(-1, 0)) // Izquierda
+            {
+                direccion = 2;
+            }
+            else if (dir_actual == Vector2D(0, 1)) // Abajo
+            {
+                direccion = 1;
+            }
+            else if (dir_actual == Vector2D(0, -1)) // Arriba
+            {
+                direccion = 3;
+            }
+
+
+            if (nFantasma == 5)
+            {
+                if (nAnimacion >= 0 && nAnimacion <= 10)
+                {
+                    textura->renderFrame(rect, direccion, 0);
+
+                }
+                else if (nAnimacion > 10 && nAnimacion <= 20)
+                {
+                    textura->renderFrame(rect, direccion, 1);
+
+                }
+            }
+            else if (nFantasma == 6)
+            {
+                if (nAnimacion >= 0 && nAnimacion <= 10)
+                {
+                    textura->renderFrame(rect, direccion, 2);
+
+                }
+                else if (nAnimacion > 10 && nAnimacion <= 20)
+                {
+                    textura->renderFrame(rect, direccion, 3);
+
+                }
+            }
+            else if (nFantasma == 7)
+            {
+                if (nAnimacion >= 0 && nAnimacion <= 10)
+                {
+                    textura->renderFrame(rect, direccion, 4);
+
+                }
+                else if (nAnimacion > 10 && nAnimacion <= 20)
+                {
+                    textura->renderFrame(rect, direccion, 5);
+
+                }
+            }
+            else if (nFantasma == 8)
+            {
+                if (nAnimacion >= 0 && nAnimacion <= 10)
+                {
+                    textura->renderFrame(rect, direccion, 6);
+
+                }
+                else if (nAnimacion > 10 && nAnimacion <= 20)
+                {
+                    textura->renderFrame(rect, direccion, 7);
+
+                }
+
+
+
+            }
+            else
+            {
+                throw FileFormatError("Hay un fantasma que no se puede renderizar");
+            }
+
+            
+        }
         else
         {
-            throw FileFormatError("Hay un fantasma que se puede renderizar");
+            panickGhost(rect);
         }
+
+        if (nAnimacion > 20)
+        {
+            nAnimacion = 0;
+        }
+        else
+        {
+            nAnimacion++;
+        }
+        
     }
     
     

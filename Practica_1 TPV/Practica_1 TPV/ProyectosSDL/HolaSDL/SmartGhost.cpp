@@ -149,14 +149,63 @@ void SmartGhost::render()
 		string aux = "textura SmartGhost";
 		throw FileNotFoundError(aux);
 	}
-
-	if (edad > edadrip)
+	else if (edad > edadrip)
 	{
-		textura->renderFrame(rect, 0, 7);
+		if (nAnimacion >= 0 && nAnimacion <= 10)
+		{
+			textura->renderFrame(rect, 2, 12);
+
+		}
+		else if (nAnimacion > 10 && nAnimacion <= 20)
+		{
+			textura->renderFrame(rect, 2, 13);
+
+		}
 	}
 	else
 	{
-		textura->renderFrame(rect, 0, 8);
+		if (play->getPac()->tiempo() == 0)
+		{
+			// Decidimos la direccion a la que apuntara el fantasma
+			int direccion = 0; // Por defecto derecha
+			if (dir_actual == Vector2D(-1, 0)) // Izquierda
+			{
+				direccion = 2;
+			}
+			else if (dir_actual == Vector2D(0, 1)) // Abajo
+			{
+				direccion = 1;
+			}
+			else if (dir_actual == Vector2D(0, -1)) // Arriba
+			{
+				direccion = 3;
+			}
+
+			if (nAnimacion >= 0 && nAnimacion <= 10)
+			{
+				textura->renderFrame(rect, direccion, 8);
+
+			}
+			else if (nAnimacion > 10 && nAnimacion <= 20)
+			{
+				textura->renderFrame(rect, direccion, 9);
+
+			}
+		}
+		else
+		{
+			panickGhost(rect);
+		}
+	}
+
+
+	if (nAnimacion > 20)
+	{
+		nAnimacion = 0;
+	}
+	else
+	{
+		nAnimacion++;
 	}
 
 }
