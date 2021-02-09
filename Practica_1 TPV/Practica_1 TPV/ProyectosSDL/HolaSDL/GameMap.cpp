@@ -106,11 +106,14 @@ SDL_Rect GameMap::getDestRect()
 
 GameMap::~GameMap()
 {
-	for (int i = 0; i < cols; i++)
+	/*for (int i = 0; i < cols; i++)
 	{
 		delete[] Mapa[i];
 	}
-	delete[] Mapa;
+
+	delete[] Mapa;*/
+
+	// Ya teniamos esta basura en la practica 3, porque no borramos la basura
 
 	//Mapa = nullptr; Se esta probando cosas
 

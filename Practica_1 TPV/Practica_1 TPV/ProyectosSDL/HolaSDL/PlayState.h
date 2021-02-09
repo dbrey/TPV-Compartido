@@ -1,9 +1,9 @@
 #pragma once
-#include "Game.h" // Necesario? Game ya lo tiene GameObject, pero quitarlo da mas errores
+#include "Game.h" 
 #include "GameState.h"
 #include "PauseState.h"
 #include "EndState.h"
-#include "GameObject.h" // Necesario? GameObject ya lo tiene GameState pero quitarlo da mas errores
+#include "GameObject.h" 
 #include "SmartGhost.h"
 #include "Ghost.h"
 #include "PacMan.h"
@@ -24,7 +24,7 @@ private:
 
 	int tamCellX, tamCellY;
 	int comida = 0;
-	int nMapa = 0;
+	int nMapa = 1;
 
 	int vidas = 3;
 	int puntuacion = 0;

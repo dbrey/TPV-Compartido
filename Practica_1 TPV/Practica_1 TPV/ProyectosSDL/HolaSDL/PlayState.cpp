@@ -197,7 +197,9 @@ void PlayState::CambioMapa()
 
 	objectstoErase.clear();
 	SmartFantasmas.clear();
+	normalFantasmas.clear();
 	stage.clear();
+	manejadores.clear();
 	LeeArchivo(nombreNivel(nMapa));
 }
 
@@ -457,9 +459,8 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 
 PlayState::~PlayState()
 {
-
-	// Algo da error en esta destructora. 
-
+	// Innecesario
+	
 	for (auto objeto : stage)
 	{
 		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto);
@@ -469,8 +470,7 @@ PlayState::~PlayState()
 		}
 	}
 
-	delete mapa;
-
+	//delete mapa;
 	objectstoErase.clear();
 	SmartFantasmas.clear();
 	stage.clear();
