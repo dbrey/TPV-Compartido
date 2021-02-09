@@ -470,6 +470,7 @@ PlayState::~PlayState()
 	}
 
 	delete mapa;
+
 	objectstoErase.clear();
 	SmartFantasmas.clear();
 	stage.clear();
