@@ -100,7 +100,6 @@ void PacMan::render() {
 	rect.w = play->CellX();
 	rect.h = play->CellY();
 	
-	// Dependiendo si PacMan tiene el poder activo, le cambiamos el sprite
 	if (textura == NULL)
 	{
 		string aux = "textura pacman";
@@ -150,7 +149,4 @@ void PacMan::saveToFil(ofstream& fil)
 		<< dir_actual.GetX() << " " << dir_actual.GetY() << endl;
 }
 
-PacMan::~PacMan()
-{
-
-}
+PacMan::~PacMan() {}

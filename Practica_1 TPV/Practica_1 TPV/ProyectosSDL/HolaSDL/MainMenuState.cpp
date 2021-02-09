@@ -28,16 +28,11 @@ MainMenuState::MainMenuState(Game* game) : GameState(game)
 
 }
 
-void MainMenuState::update()
-{
-
-}
-
 // Cargamos una de las 3 partidas
 void MainMenuState::loadPartida(Game* game)
 {
 	int eleccion;
-
+	// Cargamos ficheros
 	cout << "Quieres cargar la partida 1, 2 o 3? ";
 	cin >> eleccion;
 	stringstream nombre;
@@ -55,6 +50,7 @@ void MainMenuState::loadPartida(Game* game)
 		nombre << "../mapas/partida3.txt";
 	}
 	
+	// Iniciamos partida con el fichero cargado
 	PlayState* cargarPartida = new PlayState(game, nombre.str());
 	game->stMachine()->pushState(cargarPartida);
 }

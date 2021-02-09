@@ -20,6 +20,7 @@ void Ghost::CheckMov()
     mov[2] = play->trymove(getDestRect(),arriba, point, true);
     mov[3] = play->trymove(getDestRect(),abajo, point, true);
 
+    // Dependiendo de la direccion seleccionada, nos aseguramos que no pueda ir hacia la direccion contraria de la escogida
     if (play->trymove(getDestRect(),dir_actual, point, true))
     {
         if (dir_actual == izquierda) { mov[0] = false; }
@@ -37,53 +38,56 @@ void Ghost::SelecMov()
     
     for (int cont = 0; cont < 4; cont++) { sel[cont] = cont; }
 
-        int aux = rand() % 4, i = 0;
-        while (!mov[aux] && i < 4) {
-            // Si la direccion seleccionada esta bloqueada, se descarta
-           if (!mov[aux]) {
-                int aux2 = 0;
-                while (sel[aux2] != aux && aux2 < 4) // Se meteria en este bucle y no saldria
-                    aux2++;
-                sel[aux] = -1;
-            }
-            // Escogemos una nueva direccion posible
+    int aux = rand() % 4, i = 0;
+    while (!mov[aux] && i < 4) {
+        // Si la direccion seleccionada esta bloqueada, se descarta
+        if (!mov[aux]) {
+            int aux2 = 0;
+            while (sel[aux2] != aux && aux2 < 4) // Se meteria en este bucle y no saldria
+                aux2++;
+            sel[aux] = -1;
+        }
+        // Escogemos una nueva direccion posible
+        aux = rand() % 4;
+        while (sel[aux] == -1)
             aux = rand() % 4;
-            while (sel[aux] == -1)
-                aux = rand() % 4;
-            i++;
-        }
+        i++;
+    }
 
-        if (mov[aux]) {
-            switch (aux) {
-                case 0: {
-                    dir_actual.setdir(1, 0); // derecha
-                    break;
-                }
-                case 1: {
-                    dir_actual.setdir(-1, 0); // izquierda
-                    break;
-                }
-                case 2: {
-                    dir_actual.setdir(0, -1); // arriba
-                    break;
-                }
-                case 3: {
-                    dir_actual.setdir(0, 1); // abajo
-                    break;
-                }
+    // Teniendo en cuenta la direccion escogida, la seleccionamos
+    if (mov[aux]) {
+        switch (aux) {
+            case 0: {
+                dir_actual.setdir(1, 0); // derecha
+                break;
+            }
+            case 1: {
+                dir_actual.setdir(-1, 0); // izquierda
+                break;
+            }
+            case 2: {
+                dir_actual.setdir(0, -1); // arriba
+                break;
+            }
+            case 3: {
+                dir_actual.setdir(0, 1); // abajo
+                break;
             }
         }
+    }
 }
 
 // Selecciona la direccion y se mueve
 void Ghost::update()
 {
+    // Si pasa X tiempo o choca contra una pared con su direccion actual, entonces cambiamos de movimiento
     if (CambMove >= 70 || !play->trymove(getDestRect(), dir_actual, point, true))
     {
         SelecMov();
         CambMove = 0;
     }
     
+    // Si no hay ningun problema, entonces seguimos moviendonos
     if (play->trymove(getDestRect(), dir_actual, point, true))
     {
 		SDL_Rect mapRect = play->map();
@@ -114,6 +118,7 @@ void Ghost::render() {
     }
     else
     {
+        // Si PacMan NO ha tomado una vitamina, entonces hacemos la animacion normal
         if (play->getPac()->tiempo() == 0)
         {
             // Decidimos la direccion a la que apuntara el fantasma
@@ -131,7 +136,9 @@ void Ghost::render() {
                 direccion = 3;
             }
 
-
+            // Dependiendo del tipo de fantasma (5,6,7,8) se escoge un frame diferente. Siendo "direccion" el numero de la fila a seleccionar 
+            // y el tipo de fantasma, la columna a elegir. [Todo esto en la imagen de personajes]
+            
             if (nFantasma == 5)
             {
                 if (nAnimacion >= 0 && nAnimacion <= 10)
@@ -199,6 +206,7 @@ void Ghost::render() {
             panickGhost(rect);
         }
 
+        // Avanzamos de animacion
         if (nAnimacion > 20)
         {
             nAnimacion = 0;
@@ -209,9 +217,6 @@ void Ghost::render() {
         }
         
     }
-    
-    
-
 }
 
 // Guarda al fantasma en el fichero
@@ -227,5 +232,4 @@ void Ghost::saveToFil(ofstream& fil)
         fil << "f " << point.getX() << " " << point.getY() << " "
             << dir_actual.GetX() << " " << dir_actual.GetY() << endl;
     }
-    
 }

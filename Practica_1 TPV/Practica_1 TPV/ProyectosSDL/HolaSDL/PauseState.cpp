@@ -24,11 +24,6 @@ PauseState::PauseState(Game* game) : GameState(game)
 	manejadores.push_back(volver);
 }
 
-void PauseState::update()
-{
-	
-}
-
 // Terminamos el juego
 void PauseState::Exit(Game* game)
 {
@@ -52,8 +47,6 @@ void PauseState::resume(Game* game)
 // Vamos a un menu nuevo
 void PauseState::regresarMenu(Game* game)
 {
-	// Mal
-	// 2 popstates (no acumular estados)
 	MainMenuState* menu = new MainMenuState(game);
 	game->stMachine()->pushState(menu);
 }

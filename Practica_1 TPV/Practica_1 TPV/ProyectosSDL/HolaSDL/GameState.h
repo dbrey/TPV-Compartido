@@ -1,7 +1,7 @@
 #pragma once
 
 #include "EventHandler.h"
-#include <list> // Necesario? Al tener GameObject-->class Game --> list no deberia serlo, pero quitarlo da muchos errores
+#include <list> 
 #include "GameObject.h"
 #include "SDL.h"
 #include "checkML.h"

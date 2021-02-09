@@ -4,7 +4,7 @@
 
 
 //La basura que marca en las lineas 13, 9 de gamemap y 90 de playstate corresponde a basura de la practica que no supimos borrar
-//y que enla tutoria del lunes nos dijiste que comentasemos para que lo supieses a la hora de corregir el examen
+//y que en la tutoria del lunes nos dijiste que comentasemos para que lo supieses a la hora de corregir el examen
 
 
 #include "SDL.h"

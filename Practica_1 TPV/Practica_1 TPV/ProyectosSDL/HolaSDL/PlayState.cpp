@@ -18,14 +18,15 @@ void PlayState::pausar()
 {
 	PauseState* pausa = new PauseState(g);
 	g->stMachine()->pushState(pausa);
-	
 }
 
 
 void PlayState::update()
 {
+	// Actualizamos todos los objetos de PlayState
 	GameState::update();
 
+	// Borramos todos los objetos del ObjectstoErase
 	for (auto it : objectstoErase)
 	{
 		delete* it;
@@ -33,7 +34,7 @@ void PlayState::update()
 	}
 	objectstoErase.clear();
 
-
+	// Comprobamos que todavia queda comida y si no, avanzamos de nivel
 	if (comida == 0)
 	{
 		nMapa++;
@@ -43,7 +44,7 @@ void PlayState::update()
 		}
 	}
 
-
+	// Si pasamos todos los nivels o perdemos todas las vidas
 	if (nMapa > 5 || vidas == 0)
 	{
 		
@@ -93,6 +94,7 @@ bool PlayState::LeeArchivo(string archivo) {
 			for (int i = 0; i < x; i++) {
 				for (int j = 0; j < y; j++) {
 					input >> aux;
+					// Mapa
 					if (aux == 1)
 						mapa->writeCell(j, i, Wall);
 					else if (aux == 2) {
@@ -103,6 +105,8 @@ bool PlayState::LeeArchivo(string archivo) {
 						mapa->writeCell(j, i, Vitamins);
 					else {
 						mapa->writeCell(j, i, Empty);
+
+						// Personajes
 						if (aux == 9) {
 							pac = new PacMan(mapCoordsToSDLPoint(Point2D(j, i)).x, mapCoordsToSDLPoint(Point2D(j, i)).y, g, this, Vector2D(1, 0), tamCellX, tamCellY);
 							stage.push_back(pac);
@@ -143,7 +147,7 @@ bool PlayState::LeeArchivo(string archivo) {
 			string aux;
 			input >> aux;
 			if (aux == "p") {
-				// Crear una nueva consrtuctora
+				// PacMan
 				int x, y, dirx, diry;
 				input >> x >> y >> dirx >> diry;
 
@@ -153,6 +157,7 @@ bool PlayState::LeeArchivo(string archivo) {
 				manejadores.push_back(pac);
 			}
 			else if (aux == "f") {
+				// Fantasma inteligente
 				int x, y, dirx, diry;
 				input >> x >> y >> dirx >> diry;
 
@@ -164,6 +169,7 @@ bool PlayState::LeeArchivo(string archivo) {
 			}
 			else if ((aux == "5" || aux == "6" || aux == "7" || aux == "8"))
 			{
+				// Fantasma normal
 				int x, y, dirx, diry;
 				input >> x >> y >> dirx >> diry;
 				
@@ -188,6 +194,7 @@ bool PlayState::LeeArchivo(string archivo) {
 // Avanza al siguiente nivel
 void PlayState::CambioMapa()
 {
+	// Borramos todo 
 	list<GameObject*>::iterator it = stage.begin();
 	while (it != stage.end())
 	{
@@ -200,6 +207,8 @@ void PlayState::CambioMapa()
 	normalFantasmas.clear();
 	stage.clear();
 	manejadores.clear();
+
+	// Leemos un nuevo nivel
 	LeeArchivo(nombreNivel(nMapa));
 }
 
@@ -212,7 +221,8 @@ void PlayState::SaveToFile()
 	int eleccion;
 	
 	cin >> eleccion;
-
+	
+	// Elegimos archivo a guardar
 	if (eleccion == 1)
 	{
 		fil.open("../mapas/partida.txt");
@@ -228,7 +238,6 @@ void PlayState::SaveToFile()
 		fil.open("../mapas/partida3.txt");
 
 	}
-	
 
 	if (!fil.is_open())
 	{
@@ -280,8 +289,6 @@ void PlayState::SaveToFile()
 
 		fil.close();
 	}
-
-
 }
 
 // Hace conversion de las coordenadas del mapa a SDLPoint
@@ -458,9 +465,7 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 }
 
 PlayState::~PlayState()
-{
-	// Innecesario pero necesario en la practica para evitar el fallo al borrar mapa
-	
+{	
 	for (auto objeto : stage)
 	{
 		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto); //Escoger solo los gamecharacter de todos los gameobjects

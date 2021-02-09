@@ -1,5 +1,5 @@
 #include "GameMap.h"
-#include "Game.h" // Necesario? Tenemos Game en GameObject, pero quitarlo da errores
+#include "Game.h"
 
 // Constructora
 GameMap::GameMap(int c, int f, Game* g,int x,int y) : GameObject(Point2D (0,0), x , y, g)
@@ -25,6 +25,7 @@ void GameMap::render() {
 			destRect.w = w;
 			destRect.h = h;
 
+			// Renderizamos dependiendo de la clase de celda que sea
 			if (Mapa[i][j] == Wall)
 			{
 				if (game->getTexture(wall) == NULL)
@@ -57,8 +58,6 @@ void GameMap::render() {
 	}
 }
 
-void GameMap::update() {}
-
 Point2D GameMap::SDLPointToMapCoords(int x, int y)
 {
 	Point2D aux = Point2D((x / w), (y / h));
@@ -70,6 +69,8 @@ bool GameMap::intersectsWall(const SDL_Rect& rect, bool g)
 {
 	Point2D topLeft = SDLPointToMapCoords(rect.x, rect.y);
 	Point2D botRight = Point2D(0,0);
+
+	// En caso de ser un fantasma, adaptamos el rect
 	if (g)
 	{
 		botRight = SDLPointToMapCoords((rect.x + rect.h - 1), (rect.y + rect.w - 1));
@@ -112,8 +113,6 @@ GameMap::~GameMap()
 	}
 
 	delete[] Mapa;*/
-
-	// Ya teniamos esta basura en la practica 3, porque no borramos la basura
 
 	//Mapa = nullptr; Se esta probando cosas
 

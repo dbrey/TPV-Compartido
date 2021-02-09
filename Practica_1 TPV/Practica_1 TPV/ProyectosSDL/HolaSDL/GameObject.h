@@ -14,7 +14,7 @@ public:
 
 	GameObject(Point2D p, int w1, int h1, Game* g) : point(p), w(w1), h(h1), game(g){}
 	virtual ~GameObject() {}
-	virtual void update() = 0; // GameMap tiene que tener el update y el render preparados
+	virtual void update() = 0; // Esto obliga a las clases que hereden GameObject, a tener su propio update, render y getDestRect
 	virtual void render() = 0;
     Point2D getPoint() { return point; }
 	virtual SDL_Rect getDestRect() = 0;

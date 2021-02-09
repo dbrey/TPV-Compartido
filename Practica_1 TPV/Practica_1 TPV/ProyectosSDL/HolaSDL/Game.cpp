@@ -38,8 +38,6 @@ void Game::render() {
 
 // Actualizamos todos los objetos y eventos del estado correspondiente
 void Game::run() {
-	
-
 	SDL_Event event;
 	while (!fin())
 	{
@@ -49,26 +47,23 @@ void Game::run() {
 		{
 			stateMachine->currentState()->handleEventos(event);
 		}
-
 	}
 }
 
 // Inicializamos las texturas
 void Game::IniTextures()
 {
-	
 	for (int i = 0; i < NUM_TEXTURES; ++i)
 	{
 		textures[i] = new Texture(renderer_, TEXTURE_ATRIBS[i].fileName, TEXTURE_ATRIBS[i].numRows, TEXTURE_ATRIBS[i].numCols);
 		if(textures[i] == NULL) throw FileNotFoundError("de nombre" + TEXTURE_ATRIBS[i].fileName);
-	}
-	
-	
+	}	
 }
 
 
 Game::~Game()
 {
+	// Borramos la maquina de estados, las texturas una a una y destruimos el renderer y la ventana
 	delete stateMachine;
 
 	for (int i = 0; i < NUM_TEXTURES; ++i)

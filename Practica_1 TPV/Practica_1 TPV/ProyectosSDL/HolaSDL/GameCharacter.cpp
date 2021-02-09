@@ -1,20 +1,9 @@
 #include "GameCharacter.h"
 #include "PlayState.h"
 
-
-// Renderiza al personaje
-void GameCharacter::render() {
-	SDL_Rect rect;
-	rect.x = point.getX();
-	rect.y = point.getY();
-	rect.w = w;
-	rect.h = h;
-
-	textura->render(rect);
-}
-
 void GameCharacter::panickGhost(SDL_Rect rect)
 {
+	// Dependiendo del nAnimacion, se elige un frame especifico, dando un efecto de parpadear por panico
 	if (nAnimacion >= 0 && nAnimacion <= 5)
 	{
 		textura->renderFrame(rect, 0, 12);
@@ -31,9 +20,7 @@ void GameCharacter::panickGhost(SDL_Rect rect)
 	else if (nAnimacion > 15 && nAnimacion <= 20)
 	{
 		textura->renderFrame(rect, 1, 12);
-
-	}
-	
+	}	
 }
 
 //Cogemos el rect del personaje

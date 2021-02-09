@@ -9,7 +9,7 @@ class MainMenuState: public GameState
 public:
 
 	MainMenuState(Game* game);
-	void update(); 
+	void update() {};
 	static void loadPartida(Game* game);
 	static void cerrar(Game* game);
 	static void empezar(Game* game);

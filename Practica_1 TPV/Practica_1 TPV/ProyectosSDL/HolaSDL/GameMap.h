@@ -24,7 +24,7 @@ public:
 
 	bool intersectsWall(const SDL_Rect& rect, bool g);
 	void render();
-	void update(); // Metodo para que no de error
+	void update() {}; // Metodo para que no de error
 	SDL_Rect getDestRect(); // Metodo para que no de error
 
 	Point2D SDLPointToMapCoords(int x, int y);

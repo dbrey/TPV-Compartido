@@ -1,7 +1,7 @@
 #pragma once
 #include "GameState.h"
 #include "MenuButton.h"
-#include "Game.h" // Se necesita?? Hay mas errores si se usa, pero si se tiene GameState-->include GameObject --> class Game
+#include "Game.h"
 #include "checkML.h"
 
 class PauseState: public GameState
@@ -9,7 +9,7 @@ class PauseState: public GameState
 
 public:
 	PauseState(Game* game);
-	void update();
+	void update() {};
 	void SaveTooFile() {};
 	static void resume(Game* game);
 	static void regresarMenu(Game* game);

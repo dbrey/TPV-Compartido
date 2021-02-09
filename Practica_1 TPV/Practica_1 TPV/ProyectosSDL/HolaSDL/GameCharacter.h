@@ -28,9 +28,7 @@ public:
 	void setItList(list<GameObject*>::iterator i) { it = i; }
 	virtual void saveToFil(ofstream& fil) = 0;
 	void Move(Point2D& pos, Vector2D dir, SDL_Rect mapRect);
-	virtual void render();
 	void panickGhost(SDL_Rect rect);
-	virtual void update() = 0;
 	virtual SDL_Rect getDestRect();
 	virtual ~GameCharacter() {};
 };
