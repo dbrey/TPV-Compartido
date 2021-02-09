@@ -459,11 +459,11 @@ void PlayState::eraseObject(list<GameObject*>::iterator it)
 
 PlayState::~PlayState()
 {
-	// Innecesario
+	// Innecesario pero necesario en la practica para evitar el fallo al borrar mapa
 	
 	for (auto objeto : stage)
 	{
-		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto);
+		GameCharacter* aux = dynamic_cast<GameCharacter*>(objeto); //Escoger solo los gamecharacter de todos los gameobjects
 		if (aux != nullptr)
 		{
 			delete aux;
