@@ -3,9 +3,23 @@
 using namespace std;
 
 
-Game::Game(SDL_Window* window, SDL_Renderer* renderer) {
+Game::Game() {
+	SDL_Window* window = nullptr;
+	SDL_Renderer* renderer = nullptr;
+	const uint winWidth = 800;
+	const uint winHeight = 600;
+
+	// Inicializacion del SLD, ventana, renderer y otros
+	SDL_Init(SDL_INIT_EVERYTHING);
+	window = SDL_CreateWindow("First test with SDL", SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED, winWidth, winHeight, SDL_WINDOW_SHOWN);
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
 	window_ = window;
 	renderer_ = renderer;
+
+	// Ejecucion del metodo
+	if (window == nullptr || renderer == nullptr) throw SDLError(SDL_GetError());
 	IniTextures();
 
 	stateMachine = new GameStateMachine();
@@ -24,6 +38,8 @@ void Game::render() {
 
 // Actualizamos todos los objetos y eventos del estado correspondiente
 void Game::run() {
+	
+
 	SDL_Event event;
 	while (!fin())
 	{

@@ -42,7 +42,7 @@ private:
 
 public:
 
-	Game(SDL_Window* window, SDL_Renderer* renderer);
+	Game();
 
 	Texture* getTexture(int i) { return textures[i]; }
 

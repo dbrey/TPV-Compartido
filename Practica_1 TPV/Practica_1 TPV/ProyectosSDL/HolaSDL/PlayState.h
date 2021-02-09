@@ -24,7 +24,7 @@ private:
 
 	int tamCellX, tamCellY;
 	int comida = 0;
-	int nMapa = 5;
+	int nMapa = 1;
 
 	int vidas = 3;
 	int puntuacion = 0;

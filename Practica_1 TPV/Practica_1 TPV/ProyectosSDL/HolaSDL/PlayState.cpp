@@ -197,7 +197,9 @@ void PlayState::CambioMapa()
 
 	objectstoErase.clear();
 	SmartFantasmas.clear();
+	normalFantasmas.clear();
 	stage.clear();
+	manejadores.clear();
 	LeeArchivo(nombreNivel(nMapa));
 }
 
